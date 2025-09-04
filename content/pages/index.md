@@ -8,13 +8,14 @@ sections:
       text: Thiago Peraro
       color: text-dark
       type: TitleBlock
-    subtitle: Empreendedor, pesquisador de IA e líder de comunidades
+    subtitle: 'Empreendedor, pesquisador de IA e líder de comunidade'
     text: >
-      Combinando a paixão por tecnologia e empreendedorismo, atuo como fundador da Clivia,
-      pesquisador de processamento de linguagem natural e lidero comunidades de inovação em Goiânia.
+      Combinando a paixão por tecnologia e empreendedorismo, atuo como fundador
+      da Clivia, pesquisador de processamento de linguagem natural e lidero
+      comunidades de inovação em Goiânia.
     actions:
       - label: Ver Projetos
-        altText: 'Ver meus projetos'
+        altText: Ver meus projetos
         url: /projects
         showIcon: true
         icon: arrowRight
@@ -23,7 +24,7 @@ sections:
         elementId: ''
         type: Button
       - label: Baixar CV
-        altText: 'Baixar currículo'
+        altText: Baixar currículo
         url: /cv/thiago-peraro-cv.pdf
         showIcon: true
         icon: arrowDown
@@ -60,7 +61,6 @@ sections:
         textAlign: left
       actions:
         justifyContent: flex-start
-
   - type: GenericSection
     title:
       text: Sobre mim
@@ -68,17 +68,18 @@ sections:
       type: TitleBlock
     subtitle: Minha atuação em IA e empreendedorismo
     text: >
-      Sou pesquisador de IA/LLM no CEIA-UFG, fundador da Clivia e community builder na Go.IAs.
-      Atuo como líder de comunidades empreendedoras e busco desenvolver soluções de impacto social
-      usando inteligência artificial.
-      
-      
-      Graduado em Ciência da Computação pela UFG (2019-2024), especializado em desenvolvimento 
-      back-end com Java e Spring Boot. Tenho experiência em pesquisa acadêmica como bolsista CNPq
-      e em desenvolvimento de sistemas para órgãos públicos.
+      Sou pesquisador de IA/LLM no CEIA-UFG, fundador da Clivia e community
+      builder na Go.IAs. Atuo como líder de comunidades empreendedoras e busco
+      desenvolver soluções de impacto social usando inteligência artificial.
+
+
+      Graduado em Ciência da Computação pela UFG (2019-2024), especializado em
+      desenvolvimento  back-end com Java e Spring Boot. Tenho experiência em
+      pesquisa acadêmica como bolsista CNPq e em desenvolvimento de sistemas
+      para órgãos públicos.
     actions:
       - label: Saiba Mais
-        altText: 'Saiba mais sobre minha trajetória'
+        altText: Saiba mais sobre minha trajetória
         url: /about
         showIcon: true
         icon: arrowRight
@@ -103,7 +104,6 @@ sections:
           - pl-4
           - pr-4
         justifyContent: center
-
   - type: FeaturedItemsSection
     title:
       text: Áreas de Atuação
@@ -117,9 +117,10 @@ sections:
       - type: FeaturedItem
         title: Pesquisa em IA/NLP
         text: >
-          Pesquisador de Processamento de Linguagem Natural no CEIA-UFG, bolsista CNPq.
-          Líder da equipe de IA do projeto Sobrevidas - chatbot para rastreamento de câncer 
-          de boca integrado ao SUS. Artigo premiado como melhor do Brasil no SBCAS 2025.
+          Pesquisador de Processamento de Linguagem Natural no CEIA-UFG,
+          bolsista CNPq. Líder da equipe de IA do projeto Sobrevidas - chatbot
+          para rastreamento de câncer  de boca integrado ao SUS. Artigo premiado
+          como melhor do Brasil no SBCAS 2025.
         actions: []
         elementId: ''
         styles:
@@ -138,9 +139,9 @@ sections:
       - type: FeaturedItem
         title: Empreendedorismo
         text: >
-          Fundador da Clivia - agente de IA para clínicas médicas que otimiza o atendimento
-          aos pacientes. Co-fundador da comunidade Magnatas.hub, promovendo networking
-          e desenvolvimento de negócios inovadores.
+          Fundador da Clivia - agente de IA para clínicas médicas que otimiza o
+          atendimento aos pacientes. Co-fundador da comunidade Magnatas.hub,
+          promovendo networking e desenvolvimento de negócios inovadores.
         actions: []
         elementId: ''
         styles:
@@ -159,9 +160,9 @@ sections:
       - type: FeaturedItem
         title: Liderança de Comunidades
         text: >
-          Community builder na Go.IAs, promovendo eventos e networking em inteligência artificial.
-          Palestrante em eventos da área, defendendo o uso ético da tecnologia e
-          compartilhando conhecimento sobre IA.
+          Community builder na Go.IAs, promovendo eventos e networking em
+          inteligência artificial. Palestrante em eventos da área, defendendo o
+          uso ético da tecnologia e compartilhando conhecimento sobre IA.
         actions: []
         elementId: ''
         styles:
@@ -191,7 +192,6 @@ sections:
         justifyContent: center
       subtitle:
         textAlign: center
-
   - type: FeaturedItemsSection
     title:
       text: Linha do Tempo
@@ -206,7 +206,7 @@ sections:
         title: 2019-2024 · Formação Acadêmica
         text: >
           **UFG - Ciência da Computação**
-          
+
           Graduação em Ciência da Computação na Universidade Federal de Goiás.
           Especialização em desenvolvimento back-end com Java e participação
           ativa em iniciativas acadêmicas e de pesquisa.
@@ -224,10 +224,10 @@ sections:
         title: 2019-2022 · Desenvolvedor Back-end
         text: >
           **GoiásPrev**
-          
-          Desenvolvedor back-end utilizando Spring Boot durante três anos
-          no órgão público GoiásPrev, implementando soluções para sistemas
-          de previdência do Estado de Goiás.
+
+          Desenvolvedor back-end utilizando Spring Boot durante três anos no
+          órgão público GoiásPrev, implementando soluções para sistemas de
+          previdência do Estado de Goiás.
         actions: []
         elementId: ''
         styles:
@@ -242,10 +242,10 @@ sections:
         title: 2023 · Liderança em Comunidades
         text: >
           **Magnatas.hub e Go.IAs**
-          
-          Co-fundador da comunidade de empreendedores Magnatas.hub e
-          community builder na Go.IAs, promovendo eventos e networking
-          em inteligência artificial.
+
+          Co-fundador da comunidade de empreendedores Magnatas.hub e community
+          builder na Go.IAs, promovendo eventos e networking em inteligência
+          artificial.
         actions: []
         elementId: ''
         styles:
@@ -260,10 +260,10 @@ sections:
         title: 2024-presente · Pesquisador CNPq
         text: >
           **CEIA-UFG | Projeto Sobrevidas**
-          
+
           Pesquisador de NLP no CEIA-UFG, bolsista CNPq. Líder da equipe de IA
-          do projeto Sobrevidas - chatbot integrado ao SUS para rastreamento
-          de câncer de boca. Artigo premiado como melhor do Brasil no SBCAS 2025.
+          do projeto Sobrevidas - chatbot integrado ao SUS para rastreamento de
+          câncer de boca. Artigo premiado como melhor do Brasil no SBCAS 2025.
         actions: []
         elementId: ''
         styles:
@@ -278,10 +278,10 @@ sections:
         title: 2024-presente · Fundador da Clivia
         text: >
           **IA para Clínicas Médicas**
-          
-          Fundador da Clivia, agente de IA que atua como SDR para clínicas médicas,
-          otimizando o atendimento aos pacientes e unindo empreendedorismo
-          com pesquisa para criar soluções escaláveis.
+
+          Fundador da Clivia, agente de IA que atua como SDR para clínicas
+          médicas, otimizando o atendimento aos pacientes e unindo
+          empreendedorismo com pesquisa para criar soluções escaláveis.
         actions: []
         elementId: ''
         styles:
@@ -296,10 +296,10 @@ sections:
         title: 2024-presente · Pesquisa Contínua
         text: >
           **Modelos de Linguagem e IA**
-          
-          Investigação contínua em LLMs e IA, atuando como palestrante em eventos,
-          compartilhando conhecimento e promovendo o uso ético da tecnologia
-          em diversas aplicações.
+
+          Investigação contínua em LLMs e IA, atuando como palestrante em
+          eventos, compartilhando conhecimento e promovendo o uso ético da
+          tecnologia em diversas aplicações.
         actions: []
         elementId: ''
         styles:
@@ -324,21 +324,20 @@ sections:
         justifyContent: center
       subtitle:
         textAlign: center
-
   - type: GenericSection
     title:
       text: Entre em Contato
       color: text-dark
       type: TitleBlock
-    subtitle: Fale comigo para parcerias, projetos ou palestras
+    subtitle: 'Fale comigo para parcerias, projetos ou palestras'
     text: >
-      Estou sempre aberto a novas conexões e oportunidades. Entre em contato para
-      discutir projetos de IA, parcerias empresariais ou convites para palestras
-      sobre inteligência artificial e empreendedorismo.
+      Estou sempre aberto a novas conexões e oportunidades. Entre em contato
+      para discutir projetos de IA, parcerias empresariais ou convites para
+      palestras sobre inteligência artificial e empreendedorismo.
     actions:
       - label: LinkedIn
-        altText: 'Conectar no LinkedIn'
-        url: https://www.linkedin.com/in/thiago-peraro/
+        altText: Conectar no LinkedIn
+        url: 'https://www.linkedin.com/in/thiago-peraro/'
         showIcon: true
         icon: linkedin
         iconPosition: right
@@ -346,7 +345,7 @@ sections:
         elementId: ''
         type: Button
       - label: Contato
-        altText: 'Página de contato'
+        altText: Página de contato
         url: /contact
         showIcon: true
         icon: mail
@@ -375,12 +374,12 @@ sections:
         textAlign: center
       actions:
         justifyContent: center
-
 seo:
   metaTitle: Thiago Peraro - Empreendedor e Pesquisador de IA
   metaDescription: >
     Portfólio de Thiago Peraro - empreendedor, pesquisador de IA no CEIA-UFG, 
-    fundador da Clivia e líder de comunidades. Confira a linha do tempo da carreira.
+    fundador da Clivia e líder de comunidades. Confira a linha do tempo da
+    carreira.
   socialImage: /images/main-hero.jpg
   type: Seo
 ---
