@@ -12,7 +12,7 @@ sections:
     text: >
       Combinando a paixão por tecnologia e empreendedorismo, atuo como fundador
       da Clivia, pesquisador de processamento de linguagem natural e lidero
-      comunidades de inovação em Goiânia.
+      comunidades de inovação e empreendedorismo em Goiânia.
     actions:
       - label: Ver Projetos
         altText: Ver meus projetos
