@@ -1,33 +1,33 @@
 {
     "logo": {
         "url": "/images/logo-white.svg",
-        "altText": "Logo light",
+        "altText": "Thiago Peraro",
         "type": "ImageBlock"
     },
-    "text": "A description of your brand",
+    "text": "Pesquisador de IA, empreendedor e líder de comunidades tech em Goiânia",
     "primaryLinks": {
-        "title": "Product",
+        "title": "Navegação",
         "links": [
             {
-                "label": "Features",
-                "altText": "Features page",
-                "url": "/",
+                "label": "Sobre",
+                "altText": "Sobre mim",
+                "url": "/about",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
                 "type": "Link"
             },
             {
-                "label": "Pricing",
-                "url": "/pricing",
+                "label": "Projetos",
+                "url": "/projects",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
                 "type": "Link"
             },
             {
-                "label": "Documentation",
-                "url": "/",
+                "label": "Experiência",
+                "url": "/experience",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
@@ -37,21 +37,31 @@
         "type": "FooterLinksGroup"
     },
     "secondaryLinks": {
-        "title": "Company",
+        "title": "Contato",
         "links": [
             {
-                "label": "Careers",
-                "altText": "careers page",
-                "url": "/careers",
-                "icon": "arrowRight",
+                "label": "LinkedIn",
+                "altText": "Perfil do LinkedIn",
+                "url": "https://www.linkedin.com/in/thiago-peraro/",
+                "icon": "linkedin",
                 "iconPosition": "right",
                 "style": "secondary",
                 "type": "Link"
             },
             {
-                "label": "Blog",
-                "url": "/blog",
-                "icon": "arrowRight",
+                "label": "GitHub",
+                "altText": "Perfil do GitHub",
+                "url": "https://github.com/tperaro",
+                "icon": "github",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            },
+            {
+                "label": "Email",
+                "altText": "Enviar email",
+                "url": "mailto:contato@thiagoperaro.dev",
+                "icon": "mail",
                 "iconPosition": "right",
                 "style": "secondary",
                 "type": "Link"
@@ -61,49 +71,32 @@
     },
     "socialLinks": [
         {
-            "altText": "GitHub link",
-            "url": "https://github.com/netlify",
-            "icon": "github",
-            "type": "Social"
-        },
-        {
-            "altText": "Twitter link",
-            "url": "https://twitter.com/netlify",
-            "icon": "twitter",
-            "type": "Social"
-        },
-        {
-            "altText": "LinkedIn link",
-            "url": "https://www.linkedin.com/company/netlify",
+            "label": "LinkedIn",
+            "altText": "LinkedIn",
+            "url": "https://www.linkedin.com/in/thiago-peraro/",
             "icon": "linkedin",
             "type": "Social"
         },
         {
-            "altText": "Email link",
-            "url": "/",
-            "icon": "mail",
+            "label": "GitHub",
+            "altText": "GitHub",
+            "url": "https://github.com/tperaro",
+            "icon": "github",
             "type": "Social"
         }
     ],
     "legalLinks": [
         {
-            "label": "Terms",
-            "url": "/",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "type": "Link"
-        },
-        {
-            "label": "Privacy",
-            "url": "/",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
+            "label": "Política de Privacidade",
+            "url": "/privacy",
             "type": "Link"
         }
     ],
-    "copyrightText": "Powered by [Netlify](https://www.netlify.com/)\n",
-    "colors": "bg-dark-fg-light",
+    "copyrightText": "© 2025 Thiago Peraro. Pesquisador CNPq | Fundador da Clivia | Todos os direitos reservados.",
+    "styles": {
+        "self": {
+            "padding": ["pt-16", "pb-8"]
+        }
+    },
     "type": "Footer"
 }
