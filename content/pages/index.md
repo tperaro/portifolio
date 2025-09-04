@@ -69,14 +69,16 @@ sections:
     subtitle: Minha atuação em IA e empreendedorismo
     text: >
       Sou pesquisador de IA/LLM no CEIA-UFG, fundador da Clivia e community
-      builder na Go.IAs. Atuo como líder de comunidades empreendedoras e busco
-      desenvolver soluções de impacto social usando inteligência artificial.
+      builder na Go.IAs. Atuo como líder da @magnatas.hub (comunidade
+      empreendedora)  e desenvolvo  soluções de impacto social usando
+      inteligência artificial.
 
 
-      Graduado em Ciência da Computação pela UFG (2019-2024), especializado em
-      desenvolvimento  back-end com Java e Spring Boot. Tenho experiência em
-      pesquisa acadêmica como bolsista CNPq e em desenvolvimento de sistemas
-      para órgãos públicos.
+      Graduando em Ciência da Computação pela UFG (2019-Presente), com história
+      em desenvolvimento  back-end utilizando Java e Spring Boot. Tenho
+      experiência em pesquisa acadêmica como bolsista CNPq, CEIA-UFG e
+      EMBRAPII,  desenvolvimento de sistemas para órgãos públicos, para minha
+      startup e para terceiros.
     actions:
       - label: Saiba Mais
         altText: Saiba mais sobre minha trajetória
