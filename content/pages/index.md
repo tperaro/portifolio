@@ -119,10 +119,12 @@ sections:
       - type: FeaturedItem
         title: Pesquisa em IA/NLP
         text: >
-          Pesquisador de Processamento de Linguagem Natural no CEIA-UFG,
-          bolsista CNPq. Líder da equipe de IA do projeto Sobrevidas - chatbot
-          para rastreamento de câncer  de boca integrado ao SUS. Artigo premiado
-          como melhor do Brasil no SBCAS 2025.
+          Pesquisador de Processamento de Linguagem Natural no CEIA-UFG e
+          bolsista CNPq (projeto sobrevidas).
+
+          Líder da equipe de IA do projeto Sobrevidas software para rastreamento
+          de câncer  de boca integrado ao SUS, onde fui co-autor do Artigo
+          premiado como melhor do Brasil no SBCAS 2025 na categoria ferramentas.
         actions: []
         elementId: ''
         styles:
