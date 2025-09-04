@@ -107,8 +107,8 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/abstract-feature2.svg
-          altText: Fundador Clivia
+          url: /images/LogoClivia.png
+          altText: Logo da Clivia
           elementId: ''
       - type: FeaturedItem
         title: Community Builder
@@ -163,7 +163,7 @@ sections:
     subtitle: Principais posições e conquistas ao longo da carreira
     items:
       - type: FeaturedItem
-        title: 2024 - presente | Pesquisador CNPq
+        title: 2024 - presente
         text: >
           **Centro de Excelência em IA - UFG**
           

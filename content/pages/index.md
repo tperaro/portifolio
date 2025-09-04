@@ -33,14 +33,10 @@ sections:
         elementId: ''
         type: Link
     media:
-      url: /images/main-hero.svg
+      url: /images/koru.png
       altText: Thiago Peraro - Empreendedor e Pesquisador de IA
       elementId: ''
       type: ImageBlock
-    badge:
-      label: Pesquisador CNPq
-      color: text-primary
-      type: Badge
     elementId: ''
     colors: bg-light-fg-dark
     styles:
@@ -261,14 +257,18 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: 2024-presente · Pesquisador CNPq
+        title: 2024-presente
         text: >
           **CEIA-UFG | Projeto Sobrevidas**
 
-          Pesquisador de NLP no CEIA-UFG, bolsista CNPq. Líder da equipe de IA
-          do projeto Sobrevidas - chatbot integrado ao SUS para rastreamento de
-          câncer de boca. Artigo premiado como melhor do Brasil no SBCAS 2025.
-        actions: []
+          Pesquisador de NLP no CEIA-UFG, bolsista CNPq. Líder da equipe de IA do projeto Sobrevidas, software para rastreamento
+          de câncer  de boca integrado ao SUS, onde fui co-autor do Artigo
+          premiado como melhor do Brasil no SBCAS 2025 na categoria ferramentas.
+        actions:
+          - label: Baixar artigo
+            url: /35620-1093-28716-1-10-20250608-2.pdf
+            style: primary
+            type: Link
         elementId: ''
         styles:
           self:

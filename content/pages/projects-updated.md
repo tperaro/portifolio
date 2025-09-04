@@ -61,9 +61,9 @@ sections:
           desenvolvimento de uma solução que pode salvar vidas através do diagnóstico 
           precoce. Projeto reconhecido nacionalmente.
         actions:
-          - label: Saiba Mais
-            altText: 'Saiba mais sobre o projeto'
-            url: '#'
+          - label: Baixar artigo
+            altText: 'Baixar artigo sobre o projeto'
+            url: /35620-1093-28716-1-10-20250608-2.pdf
             showIcon: true
             icon: arrowRight
             iconPosition: right
@@ -81,7 +81,7 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/img-placeholder.svg
+          url: /images/sobrevidas.png
           altText: Projeto Sobrevidas
           elementId: ''
       - type: FeaturedItem
@@ -96,7 +96,7 @@ sections:
         actions:
           - label: Conhecer Clivia
             altText: 'Conhecer a Clivia'
-            url: '#'
+            url: https://www.useclivia.com
             showIcon: true
             icon: arrowRight
             iconPosition: right
@@ -114,8 +114,8 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/img-placeholder.svg
-          altText: Clivia IA
+          url: /images/LogoClivia.png
+          altText: Logo da Clivia
           elementId: ''
       - type: FeaturedItem
         title: Sistemas GoiásPrev
@@ -147,8 +147,8 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/img-placeholder.svg
-          altText: Sistemas GoiásPrev
+          url: /images/goiasprev.jpg
+          altText: Logo GoiásPrev
           elementId: ''
     actions: []
     elementId: ''
@@ -200,6 +200,11 @@ sections:
               - pb-4
               - pl-4
               - pr-4
+        image:
+          type: ImageBlock
+          url: /images/MagnatasLogo.png
+          altText: Logo Magnatas.hub
+          elementId: ''
       - type: FeaturedItem
         title: Go.IAs
         text: >
@@ -227,6 +232,11 @@ sections:
               - pb-4
               - pl-4
               - pr-4
+        image:
+          type: ImageBlock
+          url: /images/logo-Goias.png
+          altText: Logo Go.IAs
+          elementId: ''
       - type: FeaturedItem
         title: Palestras e Eventos
         text: >
@@ -254,6 +264,11 @@ sections:
               - pb-4
               - pl-4
               - pr-4
+        image:
+          type: ImageBlock
+          url: /images/palestrante.png
+          altText: Palestrante
+          elementId: ''
     actions: []
     elementId: ''
     variant: three-col-grid

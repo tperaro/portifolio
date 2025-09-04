@@ -85,7 +85,7 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/abstract-feature1.svg
+          url: /images/sobrevidas.png
           altText: Projeto Sobrevidas
           elementId: ''
       - type: FeaturedItem
@@ -107,8 +107,8 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/abstract-feature2.svg
-          altText: Clivia IA
+          url: /images/LogoClivia.png
+          altText: Logo da Clivia
           elementId: ''
       - type: FeaturedItem
         title: Liderança em Comunidades
