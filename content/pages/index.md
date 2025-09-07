@@ -86,7 +86,7 @@ sections:
         elementId: ''
         type: Link
     media:
-      url: /images/hero2.svg
+      url: /images/builders.jpg
       altText: Sobre Thiago Peraro
       elementId: ''
       type: ImageBlock
@@ -203,7 +203,7 @@ sections:
     subtitle: Principais marcos da minha trajetória profissional
     items:
       - type: FeaturedItem
-        title: 2019-2024 · Formação Acadêmica
+        title: 2019-presente · Formação Acadêmica
         text: >
           **UFG - Ciência da Computação**
 
@@ -348,7 +348,7 @@ sections:
         style: primary
         elementId: ''
         type: Button
-      - label: Contato
+      - label: perarothiago@gmail.com
         altText: Página de contato
         url: /contact
         showIcon: true

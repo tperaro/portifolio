@@ -13,8 +13,8 @@ sections:
       Sou Thiago Peraro, empreendedor e pesquisador de inteligência artificial com foco 
       em processamento de linguagem natural. Minha trajetória combina experiência técnica 
       em desenvolvimento back-end, pesquisa acadêmica de ponta e liderança empreendedora.
-      
-      
+
+
       Graduado em Ciência da Computação pela Universidade Federal de Goiás (2019-2024), 
       atualmente sou pesquisador no CEIA-UFG como bolsista CNPq, onde lidero projetos 
       inovadores que aplicam IA para resolver problemas reais da sociedade.
@@ -150,37 +150,37 @@ sections:
     subtitle: Stack tecnológico e áreas de especialização
     text: >
       **Desenvolvimento Back-end:**
-      
+
       • Java e Spring Boot - 3+ anos de experiência no GoiásPrev
-      
+
       • Desenvolvimento de sistemas para órgãos públicos
-      
+
       • Arquitetura de software e APIs RESTful
-      
+
       • Bancos de dados relacionais e NoSQL
-      
-      
+
+
       **Inteligência Artificial:**
-      
+
       • Processamento de Linguagem Natural (NLP)
-      
+
       • Large Language Models (LLMs)
-      
+
       • Desenvolvimento de chatbots e agentes conversacionais
-      
+
       • Integração de IA em sistemas de saúde
-      
+
       • Pesquisa em modelos de linguagem aplicados
-      
-      
+
+
       **Empreendedorismo e Liderança:**
-      
+
       • Fundação e gestão de startups de tecnologia
-      
+
       • Community building e networking
-      
+
       • Palestras e eventos sobre IA e empreendedorismo
-      
+
       • Mentoria em projetos de inovação
     actions:
       - label: Ver Projetos
@@ -218,33 +218,33 @@ sections:
     subtitle: Trajetória acadêmica e científica
     text: >
       **Formação Acadêmica:**
-      
-      • **Bacharelado em Ciência da Computação** - UFG (2019-2024)
-      
+
+      • **Bacharelado em Ciência da Computação** - UFG (2019-presente)
+
       • Especialização em desenvolvimento back-end com Java
-      
+
       • Participação ativa em iniciativas de pesquisa e extensão
-      
-      
+
+
       **Pesquisa Atual:**
-      
+
       • **Pesquisador de NLP no CEIA-UFG** - Bolsista CNPq (2024-presente)
-      
+
       • Líder da equipe de IA do projeto Sobrevidas
-      
+
       • Desenvolvimento de chatbots para integração com SUS
-      
+
       • Pesquisa em modelos de linguagem para aplicações médicas
-      
-      
+
+
       **Publicações e Reconhecimentos:**
-      
+
       • Artigo premiado como melhor do Brasil no SBCAS 2025
-      
+
       • Pesquisas em processamento de linguagem natural aplicado à saúde
-      
+
       • Apresentações em eventos científicos e técnicos
-      
+
       • Contribuições para o avanço da IA ética e responsável
     actions:
       - label: Ver Experiência
@@ -286,13 +286,13 @@ sections:
       Acredito profundamente no poder transformador da inteligência artificial quando aplicada 
       de forma ética e responsável. Meu trabalho sempre busca o equilíbrio entre inovação 
       tecnológica e impacto social positivo.
-      
-      
+
+
       No projeto Sobrevidas, por exemplo, desenvolvemos uma solução que pode salvar vidas 
       através do diagnóstico precoce de câncer de boca. Na Clivia, criamos ferramentas que 
       humanizam o atendimento médico através da tecnologia.
-      
-      
+
+
       Como líder de comunidades, promovo o networking e a colaboração entre profissionais, 
       acreditando que a inovação surge da troca de conhecimentos e experiências. Defendo 
       sempre o uso ético da IA e a importância de desenvolvermos tecnologias que beneficiem 

@@ -67,9 +67,9 @@ sections:
       Sou pesquisador de IA/LLM no CEIA-UFG, fundador da Clivia e community builder na Go.IAs.
       Atuo como líder de comunidades empreendedoras e busco desenvolver soluções de impacto social
       usando inteligência artificial.
-      
-      
-      Graduado em Ciência da Computação pela UFG (2019-2024), especializado em desenvolvimento 
+
+
+      Graduando em Ciência da Computação pela UFG (2019-presente), especializado em desenvolvimento 
       back-end com Java e Spring Boot. Tenho experiência em pesquisa acadêmica como bolsista CNPq
       e em desenvolvimento de sistemas para órgãos públicos.
     actions:
@@ -83,7 +83,7 @@ sections:
         elementId: ''
         type: Link
     media:
-      url: /images/hero2.svg
+      url: /images/builders.jpg
       altText: Sobre Thiago Peraro
       elementId: ''
       type: ImageBlock
@@ -199,10 +199,10 @@ sections:
     subtitle: Principais marcos da minha trajetória profissional
     items:
       - type: FeaturedItem
-        title: 2019-2024 · Formação Acadêmica
+        title: 2019-presente · Formação Acadêmica
         text: >
           **UFG - Ciência da Computação**
-          
+
           Graduação em Ciência da Computação na Universidade Federal de Goiás.
           Especialização em desenvolvimento back-end com Java e participação
           ativa em iniciativas acadêmicas e de pesquisa.
@@ -220,7 +220,7 @@ sections:
         title: 2019-2022 · Desenvolvedor Back-end
         text: >
           **GoiásPrev**
-          
+
           Desenvolvedor back-end utilizando Spring Boot durante três anos
           no órgão público GoiásPrev, implementando soluções para sistemas
           de previdência do Estado de Goiás.
@@ -238,7 +238,7 @@ sections:
         title: 2023 · Liderança em Comunidades
         text: >
           **Magnatas.hub e Go.IAs**
-          
+
           Co-fundador da comunidade de empreendedores Magnatas.hub e
           community builder na Go.IAs, promovendo eventos e networking
           em inteligência artificial.
@@ -256,7 +256,7 @@ sections:
         title: 2024-presente
         text: >
           **CEIA-UFG | Projeto Sobrevidas**
-          
+
           Pesquisador de NLP no CEIA-UFG, bolsista CNPq. Líder da equipe de IA
           do projeto Sobrevidas - chatbot integrado ao SUS para rastreamento
           de câncer de boca. Artigo premiado como melhor do Brasil no SBCAS 2025.
@@ -278,7 +278,7 @@ sections:
         title: 2024-presente · Fundador da Clivia
         text: >
           **IA para Clínicas Médicas**
-          
+
           Fundador da Clivia, agente de IA que atua como SDR para clínicas médicas,
           otimizando o atendimento aos pacientes e unindo empreendedorismo
           com pesquisa para criar soluções escaláveis.
@@ -296,7 +296,7 @@ sections:
         title: 2024-presente · Pesquisa Contínua
         text: >
           **Modelos de Linguagem e IA**
-          
+
           Investigação contínua em LLMs e IA, atuando como palestrante em eventos,
           compartilhando conhecimento e promovendo o uso ético da tecnologia
           em diversas aplicações.
@@ -345,7 +345,7 @@ sections:
         style: primary
         elementId: ''
         type: Button
-      - label: Contato
+      - label: perarothiago@gmail.com
         altText: 'Página de contato'
         url: /contact
         showIcon: true

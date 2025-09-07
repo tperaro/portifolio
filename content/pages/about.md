@@ -204,7 +204,7 @@ sections:
     subtitle: Trajetória acadêmica e científica
     text: |
       **Formação Acadêmica:**
-      • **Bacharelado em Ciência da Computação** - UFG (2019-2024)
+      • **Bacharelado em Ciência da Computação** - UFG (2019-presente)
       • Especialização em desenvolvimento back-end com Java
       • Participação ativa em iniciativas de pesquisa e extensão
 

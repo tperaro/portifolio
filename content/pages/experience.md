@@ -56,15 +56,15 @@ sections:
         title: Pesquisador de NLP
         text: >
           **CEIA-UFG | 2024 - presente**
-          
+
           • Pesquisador de Processamento de Linguagem Natural - Bolsista CNPq
-          
+
           • Líder da equipe de IA do projeto Sobrevidas
-          
+
           • Desenvolvimento de chatbot integrado ao SUS para rastreamento de câncer de boca
-          
+
           • Artigo premiado como melhor do Brasil no SBCAS 2025
-          
+
           • Coordenação de equipe multidisciplinar de pesquisadores
         actions: []
         elementId: ''
@@ -85,15 +85,15 @@ sections:
         title: Fundador da Clivia
         text: >
           **Clivia IA | 2024 - presente**
-          
+
           • Fundador e CEO de startup de IA para clínicas médicas
-          
+
           • Desenvolvimento de agente de IA que atua como SDR
-          
+
           • Otimização do atendimento e relacionamento com pacientes
-          
+
           • Aplicação prática de research em soluções comerciais
-          
+
           • Liderança de produto e estratégia de crescimento
         actions: []
         elementId: ''
@@ -114,15 +114,15 @@ sections:
         title: Community Builder
         text: >
           **Go.IAs & Magnatas.hub | 2023 - presente**
-          
+
           • Community builder na Go.IAs - networking em IA
-          
+
           • Co-fundador da comunidade Magnatas.hub
-          
+
           • Organização de eventos e workshops
-          
+
           • Palestrante em eventos sobre IA e empreendedorismo
-          
+
           • Mentoria e desenvolvimento do ecossistema local
         actions: []
         elementId: ''
@@ -166,7 +166,7 @@ sections:
         title: 2024 - presente
         text: >
           **Centro de Excelência em IA - UFG**
-          
+
           Pesquisador de Processamento de Linguagem Natural com bolsa do CNPq. 
           Lidero a equipe de IA do projeto Sobrevidas, desenvolvendo chatbot 
           integrado ao SUS para rastreamento de câncer de boca. Coordeno 
@@ -186,7 +186,7 @@ sections:
         title: 2024 - presente | Founder & CEO
         text: >
           **Clivia - IA para Clínicas Médicas**
-          
+
           Fundei a Clivia para transformar o atendimento médico através de IA. 
           Nossa solução atua como SDR inteligente, otimizando o relacionamento 
           com pacientes e automatizando processos. Responsável por estratégia, 
@@ -205,7 +205,7 @@ sections:
         title: 2023 - presente | Community Leader
         text: >
           **Go.IAs & Magnatas.hub**
-          
+
           Co-fundei a comunidade Magnatas.hub e atuo como community builder 
           na Go.IAs. Promovo eventos, workshops e networking no ecossistema 
           de IA e empreendedorismo em Goiânia. Palestrante regular em eventos 
@@ -224,7 +224,7 @@ sections:
         title: 2019 - 2022 | Desenvolvedor Back-end
         text: >
           **GoiásPrev - Governo do Estado de Goiás**
-          
+
           Desenvolvedor back-end por três anos em órgão público, especializado 
           em Java e Spring Boot. Responsável por sistemas críticos de 
           previdência que atendem milhares de servidores públicos. Experiência 
@@ -240,10 +240,10 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: 2019 - 2024 | Formação Acadêmica
+        title: 2019 - presente | Formação Acadêmica
         text: >
           **Universidade Federal de Goiás**
-          
+
           Bacharelado em Ciência da Computação com especialização em 
           desenvolvimento back-end. Participação ativa em projetos de pesquisa 
           e extensão. Desenvolvimento de base sólida em algoritmos, estruturas 
@@ -262,7 +262,7 @@ sections:
         title: 2024 - presente | Pesquisa Contínua
         text: >
           **Inteligência Artificial e LLMs**
-          
+
           Investigação contínua em modelos de linguagem e suas aplicações 
           práticas. Desenvolvimento de soluções inovadoras usando LLMs, 
           fine-tuning de modelos e integração de IA em sistemas reais. 
@@ -298,41 +298,41 @@ sections:
     subtitle: Stack tecnológico e habilidades especializadas
     text: >
       **Desenvolvimento Back-end:**
-      
+
       • **Java & Spring Boot** - 3+ anos de experiência profissional
-      
+
       • **APIs RESTful** - Design e implementação de serviços escaláveis
-      
+
       • **Bancos de Dados** - PostgreSQL, MySQL, NoSQL
-      
+
       • **Arquitetura de Software** - Sistemas distribuídos e microserviços
-      
+
       • **Segurança** - Implementação de sistemas seguros para órgãos públicos
-      
-      
+
+
       **Inteligência Artificial:**
-      
+
       • **Processamento de Linguagem Natural (NLP)** - Especialização avançada
-      
+
       • **Large Language Models (LLMs)** - Fine-tuning e aplicações práticas
-      
+
       • **Chatbots Conversacionais** - Desenvolvimento end-to-end
-      
+
       • **Machine Learning** - Modelos preditivos e classificação
-      
+
       • **Integração de IA** - Implementação em sistemas reais
-      
-      
+
+
       **Liderança e Gestão:**
-      
+
       • **Liderança de Equipes** - Coordenação de pesquisadores e desenvolvedores
-      
+
       • **Gestão de Projetos** - Metodologias ágeis e entrega de resultados
-      
+
       • **Empreendedorismo** - Fundação e gestão de startups
-      
+
       • **Community Building** - Criação e liderança de comunidades tech
-      
+
       • **Public Speaking** - Palestras e apresentações técnicas
     actions:
       - label: Ver Projetos
@@ -370,31 +370,31 @@ sections:
     subtitle: Principais prêmios e reconhecimentos profissionais
     text: >
       **🏆 SBCAS 2025 - Melhor Artigo do Brasil**
-      
+
       Artigo sobre o projeto Sobrevidas reconhecido como melhor do país no 
       Simpósio Brasileiro de Computação Aplicada à Saúde 2025.
-      
-      
+
+
       **🎓 Bolsista CNPq**
-      
+
       Selecionado como bolsista do Conselho Nacional de Desenvolvimento 
       Científico e Tecnológico para pesquisa em IA aplicada à saúde.
-      
-      
+
+
       **🚀 Fundador de Startup Inovadora**
-      
+
       Criação da Clivia, reconhecida como solução inovadora no setor de 
       healthtech, aplicando IA para otimização de clínicas médicas.
-      
-      
+
+
       **👥 Líder de Comunidades**
-      
+
       Co-fundação da Magnatas.hub e liderança na Go.IAs, contribuindo para 
       o desenvolvimento do ecossistema de inovação em Goiânia.
-      
-      
+
+
       **🎤 Speaker Reconhecido**
-      
+
       Palestrante regular em eventos de tecnologia, compartilhando conhecimento 
       sobre IA ética e desenvolvimento de produtos inovadores.
     actions:
