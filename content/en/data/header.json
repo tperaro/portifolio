@@ -1,0 +1,25 @@
+{
+  "logo": {
+    "url": "/images/logo-dark.svg",
+    "altText": "Thiago Peraro",
+    "styles": {
+      "self": {
+        "margin": ["mr-3"]
+      }
+    },
+    "type": "ImageBlock"
+  },
+  "primaryLinks": [
+    { "label": "About", "url": "/about", "icon": "arrowRight", "iconPosition": "right", "style": "secondary", "type": "Link" },
+    { "label": "Projects", "altText": "Projects", "url": "/projects", "icon": "arrowRight", "iconPosition": "right", "style": "secondary", "type": "Link" },
+    { "label": "Experience", "altText": "Professional experience", "url": "/experience", "icon": "arrowRight", "iconPosition": "right", "style": "secondary", "type": "Link" },
+    { "label": "Blog", "altText": "Blog", "url": "/blog", "icon": "arrowRight", "iconPosition": "right", "style": "secondary", "type": "Link" }
+  ],
+  "secondaryLinks": [
+    { "label": "Contact", "altText": "Get in touch", "url": "/contact", "icon": "mail", "iconPosition": "right", "style": "primary", "type": "Button" }
+  ],
+  "styles": { "self": { "width": "narrow", "padding": ["pt-5", "pb-5"] } },
+  "type": "Header",
+  "isTitleVisible": false
+}
+

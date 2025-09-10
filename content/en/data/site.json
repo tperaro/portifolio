@@ -1,0 +1,9 @@
+{
+  "favicon": "/images/favicon.svg",
+  "footer": "content/en/data/footer.json",
+  "titleSuffix": "Thiago Peraro - Portfolio",
+  "defaultSocialImage": "/images/main-hero.jpg",
+  "type": "Config",
+  "header": "content/en/data/header.json"
+}
+

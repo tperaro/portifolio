@@ -14,6 +14,7 @@ import Badge from '../../atoms/Badge';
 import TitleBlock from '../../blocks/TitleBlock';
 import ChevronBigLeftIcon from '../../svgs/chevron-big-left';
 import ChevronBigRightIcon from '../../svgs/chevron-big-right';
+import { useTranslation } from '../../../i18n/useTranslation';
 
 export default function CarouselSection(props) {
     const { elementId, colors, backgroundImage, badge, title, subtitle, items = [], variant, styles = {}, enableAnnotations } = props;
@@ -84,6 +85,7 @@ function CarouselVariants(props) {
 function CarouselWithNavigation({ items = [], hasTopMargin, hasSectionTitle, hasAnnotations }) {
     const FeaturedItem = getComponent('FeaturedItem');
     const [swiperRef, setSwiperRef] = React.useState<SwiperClass>();
+    const { t } = useTranslation();
 
     return (
         <div className={classNames('w-full', 'relative', { 'mt-12': hasTopMargin })} {...(hasAnnotations && { 'data-sb-field-path': '.items' })}>
@@ -99,7 +101,7 @@ function CarouselWithNavigation({ items = [], hasTopMargin, hasSectionTitle, has
             <div className={classNames('sb-carousel-nav', items.length > 1 ? 'flex justify-center mt-8 xl:mt-0' : 'hidden')}>
                 <button
                     className="inline-flex items-center justify-center w-10 h-10 mx-2 rounded-full cursor-pointer sb-carousel-prev xl:absolute xl:left-0 xl:top-1/2 xl:-translate-y-1/2 xl:z-50"
-                    aria-label="Previous"
+                    aria-label={t('carousel.previous')}
                     onClick={() => {
                         swiperRef?.slidePrev();
                     }}
@@ -108,7 +110,7 @@ function CarouselWithNavigation({ items = [], hasTopMargin, hasSectionTitle, has
                 </button>
                 <button
                     className="inline-flex items-center justify-center w-10 h-10 mx-2 rounded-full cursor-pointer sb-carousel-next xl:absolute xl:right-0 xl:top-1/2 xl:-translate-y-1/2 xl:z-50"
-                    aria-label="Next"
+                    aria-label={t('carousel.next')}
                     onClick={() => {
                         swiperRef?.slideNext();
                     }}
@@ -123,6 +125,7 @@ function CarouselWithNavigation({ items = [], hasTopMargin, hasSectionTitle, has
 function CarouselMultipleWithNavigation({ items = [], hasTopMargin, hasSectionTitle, hasAnnotations }) {
     const FeaturedItem = getComponent('FeaturedItem');
     const [swiperRef, setSwiperRef] = React.useState<SwiperClass>();
+    const { t } = useTranslation();
     const itemsTotal = items.length;
     const itemsPerView = Math.floor(itemsTotal / 2);
 
@@ -150,7 +153,7 @@ function CarouselMultipleWithNavigation({ items = [], hasTopMargin, hasSectionTi
             <div className={classNames('sb-carousel-nav', itemsTotal > 1 ? 'flex justify-center gap-4 mt-8' : 'hidden')}>
                 <button
                     className="inline-flex items-center justify-center w-10 h-10 rounded-full cursor-pointer sb-carousel-prev"
-                    aria-label="Previous"
+                    aria-label={t('carousel.previous')}
                     onClick={() => {
                         swiperRef?.slidePrev();
                     }}
@@ -159,7 +162,7 @@ function CarouselMultipleWithNavigation({ items = [], hasTopMargin, hasSectionTi
                 </button>
                 <button
                     className="inline-flex items-center justify-center w-10 h-10 rounded-full cursor-pointer sb-carousel-next"
-                    aria-label="Next"
+                    aria-label={t('carousel.next')}
                     onClick={() => {
                         swiperRef?.slideNext();
                     }}

@@ -39,14 +39,22 @@ function Page(props) {
     );
 }
 
-export function getStaticPaths() {
-    const data = allContent();
-    const paths = resolveStaticPaths(data);
-    return { paths, fallback: false };
+export function getStaticPaths({ locales }) {
+    const allPaths = [];
+    (locales || ['pt', 'en']).forEach((locale) => {
+        const data = allContent({ locale });
+        const paths = resolveStaticPaths(data);
+        paths.forEach((p) => {
+            const clean = (p || '/').replace(/\/$/, '');
+            const slug = clean === '' || clean === '/' ? [] : clean.replace(/^\//, '').split('/');
+            allPaths.push({ params: { slug }, locale });
+        });
+    });
+    return { paths: allPaths, fallback: false };
 }
 
-export async function getStaticProps({ params }) {
-    const data = allContent();
+export async function getStaticProps({ params, locale }) {
+    const data = allContent({ locale });
     const urlPath = '/' + (params.slug || []).join('/');
     const props = await resolveStaticProps(urlPath, data);
     return { props };

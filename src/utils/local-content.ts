@@ -8,8 +8,13 @@ import { getPageUrl } from './page-utils';
 
 // TODO use types?
 
-const pagesDir = 'content/pages';
-const dataDir = 'content/data';
+function getDirs(locale?: string) {
+    const isPt = !locale || locale === 'pt';
+    return {
+        pagesDir: isPt ? 'content/pages' : `content/${locale}/pages`,
+        dataDir: isPt ? 'content/data' : `content/${locale}/data`
+    };
+}
 
 const allReferenceFields = {};
 Object.entries(allModels).forEach(([modelName, model]) => {
@@ -90,7 +95,8 @@ function resolveReferences(content, fileToContent) {
     }
 }
 
-export function allContent() {
+export function allContent(opts?: { locale?: string }) {
+    const { pagesDir, dataDir } = getDirs(opts?.locale);
     const [data, pages] = [dataDir, pagesDir].map((dir) => {
         return contentFilesInPath(dir).map((file) => readContent(file));
     });
