@@ -15,7 +15,7 @@
  */
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks';
 import { useReducedMotion } from '@/hooks';
 import { getAnimationConfig, createScrollVariants } from '@/utils/animation-config';
@@ -60,8 +60,8 @@ export default function AnimatedWrapper({
     );
   }
   
-  // Cast 'as' prop to motion component
-  const MotionComponent = motion[as] as any;
+  // Cast 'as' prop to m (lazy motion) component
+  const MotionComponent = m[as] as any;
   
   return (
     <MotionComponent
