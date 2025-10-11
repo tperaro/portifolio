@@ -10,7 +10,7 @@ const nextConfig = {
     i18n: {
         locales: ['pt', 'en'],
         defaultLocale: 'pt',
-        localeDetection: true
+        localeDetection: false
     },
     allowedDevOrigins: [
         '192.168.1.84'

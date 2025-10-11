@@ -8,6 +8,7 @@ import { getDataAttrs } from '../../../utils/get-data-attrs';
 import Section from '../Section';
 import TitleBlock from '../../blocks/TitleBlock';
 import { Action, Badge } from '../../atoms';
+import AnimatedWrapper from '../../atoms/AnimatedWrapper';
 
 export default function GenericSection(props) {
     const { elementId, colors, backgroundImage, badge, title, subtitle, text, actions = [], media, styles = {}, enableAnnotations } = props;
@@ -40,76 +41,80 @@ export default function GenericSection(props) {
                 )}
             >
                 {hasTextContent && (
-                    <div
-                        className={classNames('w-full', 'max-w-sectionBody', {
-                            'lg:max-w-[27.5rem]': hasMedia && hasXDirection
-                        })}
-                    >
-                        {badge && <Badge {...badge} {...(enableAnnotations && { 'data-sb-field-path': '.badge' })} />}
-                        {title && (
-                            <TitleBlock
-                                {...title}
-                                className={classNames({ 'mt-4': badge?.label })}
-                                {...(enableAnnotations && { 'data-sb-field-path': '.title' })}
-                            />
-                        )}
-                        {subtitle && (
-                            <p
-                                className={classNames('text-lg', 'sm:text-2xl', styles?.subtitle ? mapStyles(styles?.subtitle) : undefined, {
-                                    'mt-4': badge?.label || title?.text
-                                })}
-                                {...(enableAnnotations && { 'data-sb-field-path': '.subtitle' })}
-                            >
-                                {subtitle}
-                            </p>
-                        )}
-                        {text && (
-                            <Markdown
-                                options={{ forceBlock: true, forceWrapper: true }}
-                                className={classNames('sb-markdown', 'sm:text-lg', styles?.text ? mapStyles(styles?.text) : undefined, {
-                                    'mt-6': badge?.label || title?.text || subtitle
-                                })}
-                                {...(enableAnnotations && { 'data-sb-field-path': '.text' })}
-                            >
-                                {text}
-                            </Markdown>
-                        )}
-                        {actions.length > 0 && (
-                            <div
-                                className={classNames(
-                                    'flex',
-                                    'flex-wrap',
-                                    mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }),
-                                    'items-center',
-                                    'gap-4',
-                                    {
-                                        'mt-8': badge?.label || title?.text || subtitle || text
-                                    }
-                                )}
-                                {...(enableAnnotations && { 'data-sb-field-path': '.actions' })}
-                            >
-                                {actions.map((action, index) => (
-                                    <Action
-                                        key={index}
-                                        {...action}
-                                        className="lg:whitespace-nowrap"
-                                        {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })}
-                                    />
-                                ))}
-                            </div>
-                        )}
-                    </div>
+                    <AnimatedWrapper direction="up" preset="moderate">
+                        <div
+                            className={classNames('w-full', 'max-w-sectionBody', {
+                                'lg:max-w-[27.5rem]': hasMedia && hasXDirection
+                            })}
+                        >
+                            {badge && <Badge {...badge} {...(enableAnnotations && { 'data-sb-field-path': '.badge' })} />}
+                            {title && (
+                                <TitleBlock
+                                    {...title}
+                                    className={classNames({ 'mt-4': badge?.label })}
+                                    {...(enableAnnotations && { 'data-sb-field-path': '.title' })}
+                                />
+                            )}
+                            {subtitle && (
+                                <p
+                                    className={classNames('text-lg', 'sm:text-2xl', styles?.subtitle ? mapStyles(styles?.subtitle) : undefined, {
+                                        'mt-4': badge?.label || title?.text
+                                    })}
+                                    {...(enableAnnotations && { 'data-sb-field-path': '.subtitle' })}
+                                >
+                                    {subtitle}
+                                </p>
+                            )}
+                            {text && (
+                                <Markdown
+                                    options={{ forceBlock: true, forceWrapper: true }}
+                                    className={classNames('sb-markdown', 'sm:text-lg', styles?.text ? mapStyles(styles?.text) : undefined, {
+                                        'mt-6': badge?.label || title?.text || subtitle
+                                    })}
+                                    {...(enableAnnotations && { 'data-sb-field-path': '.text' })}
+                                >
+                                    {text}
+                                </Markdown>
+                            )}
+                            {actions.length > 0 && (
+                                <div
+                                    className={classNames(
+                                        'flex',
+                                        'flex-wrap',
+                                        mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }),
+                                        'items-center',
+                                        'gap-4',
+                                        {
+                                            'mt-8': badge?.label || title?.text || subtitle || text
+                                        }
+                                    )}
+                                    {...(enableAnnotations && { 'data-sb-field-path': '.actions' })}
+                                >
+                                    {actions.map((action, index) => (
+                                        <Action
+                                            key={index}
+                                            {...action}
+                                            className="lg:whitespace-nowrap"
+                                            {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })}
+                                        />
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    </AnimatedWrapper>
                 )}
                 {hasMedia && (
-                    <div
-                        className={classNames('w-full', 'flex', mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }), {
-                            'max-w-sectionBody': media.__metadata.modelName === 'FormBlock',
-                            'lg:w-[57.5%] lg:shrink-0': hasTextContent && hasXDirection,
-                            'lg:mt-10': badge?.label && media.__metadata.modelName === 'FormBlock' && hasXDirection
-                        })}
-                    >
-                        <Media media={media} hasAnnotations={enableAnnotations} />
-                    </div>
+                    <AnimatedWrapper direction="up" delay={0.2} preset="moderate">
+                        <div
+                            className={classNames('w-full', 'flex', mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }), {
+                                'max-w-sectionBody': media.__metadata.modelName === 'FormBlock',
+                                'lg:w-[57.5%] lg:shrink-0': hasTextContent && hasXDirection,
+                                'lg:mt-10': badge?.label && media.__metadata.modelName === 'FormBlock' && hasXDirection
+                            })}
+                        >
+                            <Media media={media} hasAnnotations={enableAnnotations} />
+                        </div>
+                    </AnimatedWrapper>
                 )}
             </div>
         </Section>

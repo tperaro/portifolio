@@ -51,11 +51,11 @@
 
 ### Implementation for User Story 1
 
-- [ ] **T010** [P] [US1] Apply scroll-reveal to hero section: Modify `src/components/sections/HeroSection/index.tsx` to wrap title and content with `<AnimatedWrapper direction="up">`
-- [ ] **T011** [P] [US1] Apply scroll-reveal to about section: Modify about page components to wrap text blocks and images with `<AnimatedWrapper>` with staggered delays
-- [ ] **T012** [P] [US1] Apply scroll-reveal to projects section: Modify projects page to wrap each project card with `<AnimatedWrapper direction="up" delay={index * 0.1}>`
-- [ ] **T013** [P] [US1] Apply scroll-reveal to experience timeline: Modify experience page to wrap each timeline item with `<AnimatedWrapper direction="left">` (alternating left/right if design allows)
-- [ ] **T014** [P] [US1] Apply scroll-reveal to blog post listings: Modify blog index to wrap each post preview card with `<AnimatedWrapper>`
+- [x] **T010** [P] [US1] Apply scroll-reveal to hero section: Modified `src/components/sections/GenericSection/index.tsx` to wrap text content and media with `<AnimatedWrapper direction="up">` with staggered delays (0.2s for media)
+- [x] **T011** [P] [US1] Apply scroll-reveal to about section: About page uses GenericSection, automatically includes scroll-reveal animations ✅
+- [x] **T012** [P] [US1] Apply scroll-reveal to projects section: Modified `src/components/sections/FeaturedItemsSection/index.tsx` to wrap each project card with `<AnimatedWrapper direction="up" delay={index * 0.1}>` in all grid variants (three-col, two-col, small-list, big-list)
+- [x] **T013** [P] [US1] Apply scroll-reveal to experience timeline: Experience page uses FeaturedItemsSection, automatically includes scroll-reveal animations ✅
+- [x] **T014** [P] [US1] Apply scroll-reveal to blog post listings: Modified `src/components/sections/PostFeedSection/index.tsx` to wrap each post preview card with `<AnimatedWrapper direction="up" delay={index * 0.1}>` in grid variants
 - [ ] **T015** [US1] Test scroll performance: Open Chrome DevTools Performance tab, record while scrolling through all pages, verify 60fps maintained on desktop and 95% of mobile devices
 - [ ] **T016** [US1] Verify reduced motion support: Enable "prefers reduced motion" in browser settings, reload pages, confirm animations are disabled or significantly reduced
 - [ ] **T017** [US1] Test Stackbit preview mode: Open site in Stackbit visual editor, verify animations work but don't interfere with editing (simplified if needed via `isStackbitPreview()`)

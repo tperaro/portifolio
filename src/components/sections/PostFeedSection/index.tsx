@@ -7,6 +7,7 @@ import Section from '../Section';
 import { Action, Badge } from '../../atoms';
 import TitleBlock from '../../blocks/TitleBlock';
 import PostFeedItem from './PostFeedItem';
+import AnimatedWrapper from '../../atoms/AnimatedWrapper';
 
 export default function PostFeedSection(props) {
     const {
@@ -142,18 +143,19 @@ function PostFeedThreeColGrid(props) {
             {...(hasAnnotations && annotatePosts && { 'data-sb-field-path': '.posts' })}
         >
             {posts.map((post, index) => (
-                <PostFeedItem
-                    key={index}
-                    post={post}
-                    showThumbnail={showThumbnail}
-                    showExcerpt={showExcerpt}
-                    showDate={showDate}
-                    showAuthor={showAuthor}
-                    hasSectionTitle={hasSectionTitle}
-                    hoverEffect={hoverEffect}
-                    sectionColors={colors}
-                    hasAnnotations={hasAnnotations}
-                />
+                <AnimatedWrapper key={index} direction="up" delay={index * 0.1} preset="moderate">
+                    <PostFeedItem
+                        post={post}
+                        showThumbnail={showThumbnail}
+                        showExcerpt={showExcerpt}
+                        showDate={showDate}
+                        showAuthor={showAuthor}
+                        hasSectionTitle={hasSectionTitle}
+                        hoverEffect={hoverEffect}
+                        sectionColors={colors}
+                        hasAnnotations={hasAnnotations}
+                    />
+                </AnimatedWrapper>
             ))}
         </div>
     );
@@ -182,18 +184,19 @@ function PostFeedTwoColGrid(props) {
             {...(hasAnnotations && annotatePosts && { 'data-sb-field-path': '.posts' })}
         >
             {posts.map((post, index) => (
-                <PostFeedItem
-                    key={index}
-                    post={post}
-                    showThumbnail={showThumbnail}
-                    showExcerpt={showExcerpt}
-                    showDate={showDate}
-                    showAuthor={showAuthor}
-                    hasSectionTitle={hasSectionTitle}
-                    hoverEffect={hoverEffect}
-                    sectionColors={colors}
-                    hasAnnotations={hasAnnotations}
-                />
+                <AnimatedWrapper key={index} direction="up" delay={index * 0.1} preset="moderate">
+                    <PostFeedItem
+                        post={post}
+                        showThumbnail={showThumbnail}
+                        showExcerpt={showExcerpt}
+                        showDate={showDate}
+                        showAuthor={showAuthor}
+                        hasSectionTitle={hasSectionTitle}
+                        hoverEffect={hoverEffect}
+                        sectionColors={colors}
+                        hasAnnotations={hasAnnotations}
+                    />
+                </AnimatedWrapper>
             ))}
         </div>
     );

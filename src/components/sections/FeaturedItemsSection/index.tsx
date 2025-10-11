@@ -7,6 +7,7 @@ import { getDataAttrs } from '../../../utils/get-data-attrs';
 import Section from '../Section';
 import { Action, Badge } from '../../atoms';
 import TitleBlock from '../../blocks/TitleBlock';
+import AnimatedWrapper from '../../atoms/AnimatedWrapper';
 
 export default function FeaturedItemsSection(props) {
     const { elementId, colors, backgroundImage, badge, title, subtitle, items = [], actions = [], variant, styles = {}, enableAnnotations } = props;
@@ -102,7 +103,9 @@ function FeaturedItemsThreeColGrid(props) {
             {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
         >
             {items.map((item, index) => (
-                <FeaturedItem key={index} {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                <AnimatedWrapper key={index} direction="up" delay={index * 0.1} preset="moderate">
+                    <FeaturedItem {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                </AnimatedWrapper>
             ))}
         </div>
     );
@@ -120,7 +123,9 @@ function FeaturedItemsTwoColGrid(props) {
             {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
         >
             {items.map((item, index) => (
-                <FeaturedItem key={index} {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                <AnimatedWrapper key={index} direction="up" delay={index * 0.1} preset="moderate">
+                    <FeaturedItem {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                </AnimatedWrapper>
             ))}
         </div>
     );
@@ -138,7 +143,9 @@ function FeaturedItemsSmallList(props) {
             {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
         >
             {items.map((item, index) => (
-                <FeaturedItem key={index} {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                <AnimatedWrapper key={index} direction="up" delay={index * 0.1} preset="moderate">
+                    <FeaturedItem {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                </AnimatedWrapper>
             ))}
         </div>
     );
@@ -153,7 +160,9 @@ function FeaturedItemsBigList(props) {
     return (
         <div className={classNames('w-full', 'grid', 'gap-10', { 'mt-12': hasTopMargin })} {...(hasAnnotations && { 'data-sb-field-path': '.items' })}>
             {items.map((item, index) => (
-                <FeaturedItem key={index} {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                <AnimatedWrapper key={index} direction="up" delay={index * 0.1} preset="moderate">
+                    <FeaturedItem {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                </AnimatedWrapper>
             ))}
         </div>
     );
