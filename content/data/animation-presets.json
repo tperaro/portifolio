@@ -1,0 +1,55 @@
+{
+  "presets": {
+    "subtle": {
+      "id": "subtle",
+      "name": "Subtle",
+      "description": "Minimal, understated animations for conservative professional look",
+      "config": {
+        "duration": 0.3,
+        "delay": 0,
+        "easing": "easeOut",
+        "stagger": 0.05
+      }
+    },
+    "moderate": {
+      "id": "moderate",
+      "name": "Moderate",
+      "description": "Balanced animations (default) - good for most portfolios",
+      "config": {
+        "duration": 0.6,
+        "delay": 0.1,
+        "easing": "easeInOut",
+        "stagger": 0.1
+      }
+    },
+    "dramatic": {
+      "id": "dramatic",
+      "name": "Dramatic",
+      "description": "Bold, attention-grabbing animations for creative portfolios",
+      "config": {
+        "duration": 0.9,
+        "delay": 0.2,
+        "easing": "backOut",
+        "stagger": 0.15
+      }
+    },
+    "none": {
+      "id": "none",
+      "name": "No Animation",
+      "description": "Disable animations (accessibility mode)",
+      "config": {
+        "duration": 0,
+        "delay": 0,
+        "easing": "linear",
+        "stagger": 0
+      }
+    }
+  },
+  "default": "moderate",
+  "version": "1.0.0",
+  "notes": {
+    "usage": "Import this file in animation utilities to access preset configurations",
+    "customization": "Developers can add custom presets by extending the presets object",
+    "accessibility": "The 'none' preset should be automatically selected when prefers-reduced-motion is enabled"
+  }
+}
