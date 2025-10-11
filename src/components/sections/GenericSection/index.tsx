@@ -41,12 +41,14 @@ export default function GenericSection(props) {
                 )}
             >
                 {hasTextContent && (
-                    <AnimatedWrapper direction="up" preset="moderate">
-                        <div
-                            className={classNames('w-full', 'max-w-sectionBody', {
-                                'lg:max-w-[27.5rem]': hasMedia && hasXDirection
-                            })}
-                        >
+                    <AnimatedWrapper 
+                        direction="up" 
+                        preset="moderate"
+                        className={classNames('w-full', 'max-w-sectionBody', {
+                            'lg:max-w-[27.5rem]': hasMedia && hasXDirection
+                        })}
+                    >
+                        <div>
                             {badge && <Badge {...badge} {...(enableAnnotations && { 'data-sb-field-path': '.badge' })} />}
                             {title && (
                                 <TitleBlock
@@ -104,16 +106,17 @@ export default function GenericSection(props) {
                     </AnimatedWrapper>
                 )}
                 {hasMedia && (
-                    <AnimatedWrapper direction="up" delay={0.2} preset="moderate">
-                        <div
-                            className={classNames('w-full', 'flex', mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }), {
-                                'max-w-sectionBody': media.__metadata.modelName === 'FormBlock',
-                                'lg:w-[57.5%] lg:shrink-0': hasTextContent && hasXDirection,
-                                'lg:mt-10': badge?.label && media.__metadata.modelName === 'FormBlock' && hasXDirection
-                            })}
-                        >
-                            <Media media={media} hasAnnotations={enableAnnotations} />
-                        </div>
+                    <AnimatedWrapper 
+                        direction="up" 
+                        delay={0.2} 
+                        preset="moderate"
+                        className={classNames('w-full', 'flex', mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }), {
+                            'max-w-sectionBody': media.__metadata.modelName === 'FormBlock',
+                            'lg:w-[57.5%] lg:shrink-0': hasTextContent && hasXDirection,
+                            'lg:mt-10': badge?.label && media.__metadata.modelName === 'FormBlock' && hasXDirection
+                        })}
+                    >
+                        <Media media={media} hasAnnotations={enableAnnotations} />
                     </AnimatedWrapper>
                 )}
             </div>
