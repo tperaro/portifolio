@@ -9,7 +9,8 @@ topSections:
       color: text-dark
       type: TitleBlock
     subtitle: This is the subtitle
-    posts: []
+    posts:
+      - content/en/pages/blog/blog-live-clivia.md
     showThumbnail: true
     showExcerpt: true
     showDate: true

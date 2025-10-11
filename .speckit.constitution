@@ -1,0 +1,462 @@
+# Project Constitution: Thiago Peraro Portfolio
+
+## Project Overview
+A multilingual (Portuguese/English) personal portfolio and blog website built with Next.js 15, featuring a headless CMS architecture powered by Stackbit, showcasing Thiago Peraro's work as an AI researcher, entrepreneur, and community builder.
+
+## Technology Stack
+
+### Core Framework
+- **Next.js**: 15.5.0 (Latest stable)
+- **React**: 19.1.0 (Latest)
+- **TypeScript**: 5.6.2
+- **Node Version**: 18.x (specified in `.nvmrc` and `stackbit.config.ts`)
+
+### Content Management
+- **Stackbit CMS**: Visual editor integration with Git-based content source
+  - Content stored in `content/` directory as Markdown files with YAML frontmatter
+  - Models defined in `sources/local/models/`
+  - Presets in `sources/local/presets/`
+- **Front Matter**: 4.0.2 - YAML frontmatter parsing
+- **Marked**: 14.1.2 - Markdown to HTML conversion
+- **Markdown-to-JSX**: 7.7.3 - Markdown rendering in React
+
+### Styling & UI
+- **Tailwind CSS**: 3.4.3
+- **PostCSS**: For CSS processing
+- **Classnames**: 2.5.1 - Dynamic className composition
+- **Swiper**: 11.1.4 - Carousel/slider functionality
+
+### Search & Discovery
+- **Algolia Search**:
+  - `algoliasearch`: 4.24.0
+  - `@algolia/autocomplete-js`: 1.17.1
+  - `@algolia/autocomplete-theme-classic`: 1.17.1
+
+### Build & Development Tools
+- **TypeScript**: Type safety across the codebase
+- **Prettier**: 3.3.2 - Code formatting
+- **Autoprefixer**: 10.4.19 - CSS vendor prefixing
+
+## Architecture Patterns
+
+### 1. File-Based Routing
+- Next.js App Router pattern using catch-all routes: `[[...slug]].js`
+- Dynamic page generation based on content directory structure
+- Trailing slashes enabled in `next.config.js`
+
+### 2. Content Architecture
+```
+content/
+├── data/           # Reusable data objects (people, site config, styles)
+│   ├── person*.json
+│   ├── site.json
+│   ├── style.json
+│   ├── header.json
+│   └── footer.json
+└── pages/          # Page content (Markdown + YAML frontmatter)
+    ├── index.md
+    ├── about.md
+    ├── projects.md
+    ├── experience.md
+    ├── contact.md
+    ├── careers.md
+    ├── pricing.md
+    └── blog/
+        ├── index.md
+        └── *.md (individual blog posts)
+```
+
+### 3. Component Architecture
+```
+src/components/
+├── atoms/          # Basic building blocks (Badge, Button, Link, ImageBlock)
+├── blocks/         # Composite elements (TitleBlock, TextBlock)
+├── sections/       # Page sections (HeroSection, FeaturedPeopleSection)
+├── layouts/        # Page layouts (PageLayout, PostLayout)
+├── svgs/           # SVG icon components
+└── components-registry.ts  # Dynamic component loading
+```
+
+**Component Loading Strategy**:
+- Dynamic imports via Next.js `dynamic()` for code splitting
+- Components mapped by model name for runtime selection
+- Registry pattern in `components-registry.ts`
+
+### 4. Type System
+- TypeScript with relaxed configuration (`strict: false`)
+- Model types generated from Stackbit schema
+- Component props loosely typed (room for improvement)
+
+### 5. Internationalization (i18n)
+- **Locales**: Portuguese (pt) default, English (en)
+- **Locale Detection**: Enabled
+- **Implementation**: Next.js i18n configuration in `next.config.js`
+- **Translations**: Managed in `src/i18n/translations.ts`
+
+### 6. Static Asset Management
+```
+public/
+└── images/        # All static images, including blog assets
+```
+- Stackbit configured for static asset references
+- Upload directory: `public/images/`
+- Public path: `/`
+
+## Data Flow
+
+### Content → Page Rendering Pipeline
+1. **Content Source**: Markdown files with YAML frontmatter in `content/pages/`
+2. **Model Validation**: Stackbit models validate content structure
+3. **Static Props Resolution**: `utils/static-props-resolvers.js` fetches content
+4. **Dynamic Routing**: `pages/[[...slug]].js` receives props
+5. **Component Registry**: Maps content types to React components
+6. **Layout Rendering**: Base layout wraps page content
+7. **SEO Injection**: `utils/seo-utils.js` handles meta tags
+
+### Content Models Structure
+- **Page Models**: PageLayout, PostLayout, PostFeedLayout
+- **Section Models**: GenericSection, HeroSection, FeaturedPeopleSection, etc.
+- **Block Models**: TitleBlock, TextBlock, ImageBlock, Button, Link
+- **Data Models**: Person, Site, Header, Footer, Style
+
+## Configuration Files
+
+### next.config.js
+```javascript
+{
+  trailingSlash: true,           // URLs end with /
+  reactStrictMode: true,         // React strict mode enabled
+  i18n: {
+    locales: ['pt', 'en'],
+    defaultLocale: 'pt',
+    localeDetection: true
+  },
+  allowedDevOrigins: ['192.168.1.84']  // Development network access
+}
+```
+
+### tsconfig.json
+- **Target**: ES2018
+- **Module**: ESNext with Node resolution
+- **JSX**: preserve (handled by Next.js)
+- **Base URL**: `.` (root-relative imports)
+- **Strict**: false (flexible typing)
+
+### tailwind.config.js
+- Custom configuration for portfolio theme
+- Extends default Tailwind utilities
+- Theme customization in `content/data/style.json`
+
+### stackbit.config.ts
+- **Content Source**: Git-based (local files)
+- **Content Directories**: `['content']`
+- **Static Assets**: `public/images/`
+- **Style Model**: ThemeStyle
+- **Site Map**: Custom URL path generation
+  - Blog posts: `/blog/{slug}/`
+  - Blog index: `/blog/`
+  - Other pages: `/{slug}/`
+
+## Coding Conventions
+
+### File Naming
+- **Components**: PascalCase directories with `index.tsx` (e.g., `Badge/index.tsx`)
+- **Utilities**: kebab-case (e.g., `map-styles-to-class-names.ts`)
+- **Content**: kebab-case markdown (e.g., `nextjs-14-server-actions.md`)
+- **Models**: PascalCase (e.g., `PageLayout.ts`)
+
+### Import Patterns
+- **Absolute imports** from project root (baseUrl: ".")
+- **Relative imports** for local component dependencies
+- **Dynamic imports** for large/conditional components
+
+### Component Patterns
+```typescript
+// Standard component structure
+import * as React from 'react';
+import classNames from 'classnames';
+import { mapStylesToClassNames as mapStyles } from '@/utils/...';
+
+export default function ComponentName(props) {
+  const { prop1, prop2 = 'default', styles, className } = props;
+  
+  return (
+    <div className={classNames('base-classes', className, mapStyles(styles))}>
+      {/* Content */}
+    </div>
+  );
+}
+```
+
+### Styling Approach
+- **Tailwind-first**: Utility classes for styling
+- **Dynamic classes**: `classNames()` for conditional styling
+- **Style mapping**: `mapStylesToClassNames()` utility for CMS-driven styles
+- **Color system**: Defined in ThemeStyle model (bg-light-fg-dark, bg-neutral, etc.)
+
+## Content Conventions
+
+### YAML Frontmatter Structure
+```yaml
+---
+title: Page Title
+slug: url-slug
+type: PageLayout | PostLayout | PostFeedLayout
+date: 'YYYY-MM-DD'  # For blog posts
+excerpt: >-
+  Multi-line description
+  using YAML folded scalar
+featuredImage:
+  url: /images/filename.ext
+  altText: Descriptive alt text
+  type: ImageBlock
+seo:
+  metaTitle: SEO Title
+  metaDescription: SEO Description
+  socialImage: /images/social-share.jpg
+  type: Seo
+colors: bg-light-fg-dark | bg-neutral-fg-dark
+sections:
+  - type: SectionType
+    # Section properties
+---
+```
+
+### Blog Post Conventions
+- **Location**: `content/pages/blog/`
+- **Slug**: Matches filename (without .md)
+- **Date**: ISO format in YAML frontmatter
+- **Featured posts**: `isFeatured: true` flag
+- **Author**: Reference to `content/data/person*.json`
+- **Images**: Stored in `/public/images/`
+
+### Markdown Content Guidelines
+- **Headings**: Use ## for main sections (# reserved for page title)
+- **Code blocks**: Fenced with language identifier
+- **Links**: Absolute internal links start with `/`
+- **Images**: Use `/images/` path prefix
+
+## Development Workflow
+
+### Local Development
+```bash
+npm run dev          # Start Next.js dev server (default port 3000)
+stackbit dev         # Start Stackbit visual editor (separate terminal)
+```
+
+### Production Build
+```bash
+npm run build        # Create optimized production build
+npm start           # Start production server
+```
+
+### Port Configuration
+- **Default**: 3000
+- **Fallback**: Automatic (3002, 3003, etc.) if port occupied
+- **Network Access**: Configured in `allowedDevOrigins`
+
+## Environment Variables
+
+### Required for Full Functionality
+```env
+# Stackbit Visual Editor
+STACKBIT_PREVIEW=<value>
+
+# Algolia Search (Optional)
+NEXT_PUBLIC_ALGOLIA_APP_ID=<app-id>
+NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY=<search-key>
+NEXT_PUBLIC_ALGOLIA_INDEX_NAME=<index-name>
+```
+
+## Performance Optimizations
+
+### Implemented
+1. **Dynamic imports**: Large components loaded on-demand
+2. **Static generation**: Pre-rendered pages at build time
+3. **Image optimization**: Next.js Image component (ready for migration)
+4. **Code splitting**: Automatic via Next.js and dynamic imports
+5. **Tailwind purging**: Unused CSS removed in production
+
+### Opportunities
+1. Migrate to `next/image` for ImageBlock components
+2. Add proper TypeScript strict types
+3. Implement React.memo for expensive renders
+4. Add service worker for offline support
+5. Optimize bundle size with dependency analysis
+
+## SEO Strategy
+
+### Implemented Features
+- **Meta tags**: Title, description, social share images
+- **Structured data**: Via `seo-utils.js`
+- **Sitemap generation**: Through Stackbit site map configuration
+- **Trailing slashes**: Consistent URL structure
+- **i18n**: Multi-language support for broader reach
+
+### Meta Tag Structure
+- Page title from content or fallback to site title
+- Description from excerpt or content
+- Social share images from featuredImage
+- OpenGraph and Twitter Card support
+
+## Accessibility Considerations
+
+### Current Implementation
+- Alt text for all images via ImageBlock model
+- Semantic HTML structure in components
+- Link labels with `altText` property
+- Color contrast through Tailwind theme
+
+### Improvement Areas
+- Add ARIA labels where needed
+- Keyboard navigation testing
+- Screen reader testing
+- Focus management for dynamic content
+
+## Security Considerations
+
+### Content Security
+- Git-based CMS: Content version controlled
+- Static generation: No database vulnerabilities
+- Asset validation: Stackbit handles uploads
+
+### Best Practices
+- Keep dependencies updated (renovate.json configured)
+- Environment variables for sensitive data
+- HTTPS enforcement (via Netlify)
+- CSP headers (configure in netlify.toml)
+
+## Testing Strategy (To Be Implemented)
+
+### Recommended Approach
+```
+tests/
+├── unit/              # Component unit tests (Jest + RTL)
+├── integration/       # Page integration tests
+├── e2e/              # End-to-end tests (Playwright)
+└── visual/           # Visual regression tests
+```
+
+### Testing Priorities
+1. Component rendering with different props
+2. Content model validation
+3. URL routing and redirects
+4. SEO meta tag generation
+5. Multi-language content switching
+
+## Deployment
+
+### Platform: Netlify
+- **Build Command**: `npm run build`
+- **Publish Directory**: `.next`
+- **Node Version**: 18
+- **Configuration**: `netlify.toml`
+
+### Build Process
+1. Install dependencies
+2. Run Next.js build
+3. Generate static pages
+4. Optimize assets
+5. Deploy to CDN
+
+## Project Maintenance
+
+### Dependency Updates
+- **Renovate**: Automated dependency updates configured
+- **Strategy**: Minor/patch updates automatic, major manual review
+- **Schedule**: Weekly checks
+
+### Content Maintenance
+- Blog posts in `content/pages/blog/`
+- Person data in `content/data/person*.json`
+- Site configuration in `content/data/site.json`
+- Header/Footer in respective JSON files
+
+### Version Control
+- **Main branch**: Production-ready code
+- **Develop branch**: Active development
+- **Feature branches**: `feature/*`, `fix/*`, `content/*`
+
+## Error Handling
+
+### Build-Time Errors
+- YAML parsing errors: Check frontmatter syntax
+- Missing models: Ensure content type matches defined models
+- Image references: Verify file paths in `public/images/`
+
+### Runtime Errors
+- 404 pages: Custom error page in `pages/_error.js`
+- Content not found: Graceful fallbacks in static props
+- API failures: Error boundaries (to be implemented)
+
+## Documentation Standards
+
+### Code Comments
+- JSDoc for utility functions
+- Inline comments for complex logic
+- Model field descriptions in Stackbit schema
+
+### README Files
+- Main README: Project setup and overview
+- Component README: Usage examples (as needed)
+- Content README: Editorial guidelines (to be created)
+
+## Future Considerations
+
+### Potential Enhancements
+1. **CMS Migration**: Consider Sanity or Contentful for richer editing
+2. **E-commerce**: Add product/service showcase
+3. **Newsletter**: Integrate email capture
+4. **Analytics**: Add Google Analytics or Plausible
+5. **Comments**: Blog post commenting system
+6. **Dark Mode**: Theme switching capability
+7. **Search**: Full-text search beyond Algolia
+8. **Performance Monitoring**: Add Sentry or similar
+9. **A/B Testing**: Experiment framework
+10. **Content Scheduling**: Publish dates and drafts
+
+### Technical Debt
+1. Strengthen TypeScript usage (enable strict mode gradually)
+2. Add comprehensive test coverage
+3. Migrate to App Router (Next.js 13+ paradigm)
+4. Optimize image loading with next/image
+5. Implement proper error boundaries
+6. Add loading states for async content
+7. Centralize theme/style management
+8. Document component prop interfaces
+
+## Team Guidelines
+
+### Adding New Content Types
+1. Define model in `sources/local/models/`
+2. Create component in `src/components/`
+3. Register in `components-registry.ts`
+4. Add preset in `sources/local/presets/`
+5. Update documentation
+
+### Creating New Pages
+1. Add markdown file in `content/pages/`
+2. Follow YAML frontmatter conventions
+3. Use existing section types or create new
+4. Add images to `public/images/`
+5. Test in Stackbit visual editor
+
+### Styling New Components
+1. Use Tailwind utility classes
+2. Support `styles` prop for CMS control
+3. Accept `className` for consumer overrides
+4. Use `classNames()` for conditional styles
+5. Map CMS styles via `mapStyles()` utility
+
+## Contact & Support
+
+- **Repository**: https://github.com/tperaro/portifolio
+- **Owner**: Thiago Peraro
+- **Email**: perarothiago@gmail.com
+- **Stackbit Support**: https://answers.netlify.com/
+
+---
+
+**Last Updated**: October 11, 2025
+**Constitution Version**: 1.0.0
+**Project Version**: 1.0.0

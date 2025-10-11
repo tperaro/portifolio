@@ -9,11 +9,14 @@
     "dependencies": {
         "@algolia/autocomplete-js": "^1.17.1",
         "@algolia/autocomplete-theme-classic": "^1.17.1",
+        "aceternity-ui": "^0.2.2",
         "algoliasearch": "^4.24.0",
         "classnames": "^2.5.1",
         "dayjs": "^1.11.11",
+        "framer-motion": "^11.18.2",
         "front-matter": "^4.0.2",
         "glob": "^10.4.2",
+        "intersection-observer": "^0.12.2",
         "markdown-to-jsx": "^7.7.3",
         "marked": "^14.1.2",
         "next": "15.5.0",
@@ -24,8 +27,8 @@
     },
     "devDependencies": {
         "@base2/pretty-print-object": "^1.0.2",
-        "@stackbit/cms-git": "^1.0.32",
-        "@stackbit/types": "^2.1.10",
+        "@stackbit/cms-git": "^1.0.35",
+        "@stackbit/types": "^2.1.14",
         "@types/glob": "^8.1.0",
         "@types/react": "^19.1.0",
         "@types/react-dom": "^19.1.1",
@@ -33,5 +36,15 @@
         "prettier": "^3.3.2",
         "typescript": "^5.6.2"
     },
-    "main": "next.config.js"
+    "main": "next.config.js",
+    "overrides": {
+        "@octokit/core": "^7.0.5",
+        "@octokit/graphql": "^9.0.2",
+        "@octokit/plugin-paginate-rest": "^13.2.0",
+        "@octokit/request": "^10.0.5",
+        "@octokit/request-error": "^7.0.1",
+        "@octokit/rest": "^21.0.0",
+        "esbuild": "^0.25.10",
+        "tmp": "^0.2.5"
+    }
 }

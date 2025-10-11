@@ -31,6 +31,9 @@ export function getComponent(key: string): ComponentType {
  *     return <Section {...section} />;
  */
 const components = {
+    AnimatedCard: dynamic(() => import('./blocks/AnimatedCard')),
+    AnimatedHeroSection: dynamic(() => import('./sections/AnimatedHeroSection')),
+    AnimatedWrapper: dynamic(() => import('./atoms/AnimatedWrapper')),
     AutoCompletePosts: dynamic(() => import('./blocks/SearchBlock/AutoCompletePosts')),
     CarouselSection: dynamic(() => import('./sections/CarouselSection')),
     CheckboxFormControl: dynamic(() => import('./blocks/FormBlock/CheckboxFormControl')),
