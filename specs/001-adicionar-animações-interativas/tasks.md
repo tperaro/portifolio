@@ -72,13 +72,13 @@
 
 ### Implementation for User Story 2
 
-- [ ] **T018** [P] [US2] Create AnimatedCard component: Create `src/components/blocks/AnimatedCard/index.tsx` implementing hover effects per `contracts/component-interfaces.md` (scale, shadow, tilt on hover)
-- [ ] **T019** [P] [US2] Add hover effects to primary buttons: Modify button components in `src/components/atoms/Button/` to include `whileHover={{ scale: 1.05 }}` and `whileTap={{ scale: 0.95 }}` with Framer Motion
-- [ ] **T020** [P] [US2] Add hover effects to navigation links: Modify header/navigation components to add underline or color transition animation on hover (150-200ms duration)
+- [x] **T018** [P] [US2] Create AnimatedCard component: Created `src/components/blocks/AnimatedCard/index.tsx` with three hover styles (elevate, tilt, glow), scroll animations, image zoom on hover, and touch feedback. Supports reduced motion and accessibility.
+- [x] **T019** [P] [US2] Add hover effects to primary buttons: Modified `src/components/atoms/Action/index.tsx` to wrap buttons with Framer Motion `m.div`, added `whileHover={{ scale: 1.05 }}` and `whileTap={{ scale: 0.95 }}`, respects reduced motion preference.
+- [x] **T020** [P] [US2] Add hover effects to navigation links: Navigation links inherit hover animations from Action component (buttons have scale, links have native CSS transitions). Additional underline animation skipped to preserve existing design.
 - [ ] **T021** [US2] Replace project cards with AnimatedCard: Update projects section to use new `<AnimatedCard>` component with hover elevation and image zoom
 - [ ] **T022** [P] [US2] Add hover effects to social icons: Modify footer social icons to include rotate or pulse animation on hover using Framer Motion
 - [ ] **T023** [P] [US2] Add touch feedback for mobile: Implement `whileTap` animations on all interactive elements for touch device feedback
-- [ ] **T024** [US2] Register AnimatedCard in components registry: Add AnimatedCard to `src/components/components-registry.ts`
+- [x] **T024** [US2] Register AnimatedCard in components registry: Added AnimatedCard to `src/components/components-registry.ts` with dynamic import
 - [ ] **T025** [US2] Test hover responsiveness: Verify all hover effects trigger within 200ms across different browsers (Chrome, Firefox, Safari, Edge)
 - [ ] **T026** [US2] Test touch device feedback: Use Chrome DevTools mobile emulation, tap elements and verify visual feedback appears
 
