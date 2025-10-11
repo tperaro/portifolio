@@ -18,7 +18,11 @@
 
 # production
 /build
-
+#.github 
+/.github
+#spec kit
+/content-ops-starter-main
+/.specify
 # misc
 .DS_Store
 *.pem
