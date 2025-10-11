@@ -1,0 +1,293 @@
+# Tasks: Adicionar Animações Interativas ao Portfólio
+
+**Input**: Design documents from `/specs/001-adicionar-animações-interativas/`  
+**Prerequisites**: plan.md, spec.md, research.md, data-model.md, contracts/component-interfaces.md, quickstart.md
+
+**Tests**: Tests are OPTIONAL for this feature. No explicit test requirements were specified in the feature specification, so test tasks are NOT included. Testing can be added later if needed.
+
+**Organization**: Tasks are grouped by user story to enable independent implementation and testing of each story.
+
+---
+
+## Format: `[ID] [P?] [Story] Description`
+- **[P]**: Can run in parallel (different files, no dependencies)
+- **[Story]**: Which user story this task belongs to (US1, US2, US3, US4)
+- Include exact file paths in descriptions
+
+---
+
+## Phase 1: Setup (Shared Infrastructure)
+
+**Purpose**: Project initialization and dependency installation
+
+- [x] **T001** [P] Verify dependencies installed: Check `aceternity-ui`, `framer-motion`, `intersection-observer` in `package.json`
+- [x] **T002** [P] Configure Tailwind CSS for Aceternity UI: Add `node_modules/aceternity-ui/**/*.{js,ts,jsx,tsx}` to `content` array in `tailwind.config.js`
+- [x] **T003** [P] Create TypeScript types file: Create `src/types/animation.ts` with interfaces from `data-model.md` (AnimationPreset, ComponentAnimationConfig, etc.)
+- [x] **T004** Create animation configuration utility: Create `src/utils/animation-config.ts` with `getAnimationConfig()` and `isStackbitPreview()` functions per `quickstart.md`
+
+---
+
+## Phase 2: Foundational (Blocking Prerequisites)
+
+**Purpose**: Core infrastructure that MUST be complete before ANY user story can be implemented
+
+**⚠️ CRITICAL**: No user story work can begin until this phase is complete
+
+- [x] **T005** Setup Framer Motion in Next.js app: Modify `src/pages/_app.js` to wrap with `<LazyMotion>` and `<AnimatePresence>` per `quickstart.md`
+- [x] **T006** [P] Create `useReducedMotion` hook: Create `src/hooks/useReducedMotion.tsx` that detects `prefers-reduced-motion` media query
+- [x] **T007** [P] Create `useScrollAnimation` hook: Create `src/hooks/useScrollAnimation.tsx` with Intersection Observer logic per `contracts/component-interfaces.md`
+- [x] **T008** Create base AnimatedWrapper component: Create `src/components/atoms/AnimatedWrapper/index.tsx` implementing interface from `contracts/component-interfaces.md` (universal wrapper for scroll-reveal) - Fixed TypeScript module resolution with path aliases
+- [x] **T009** Register AnimatedWrapper in components registry: Add AnimatedWrapper to `src/components/components-registry.ts`
+
+**Checkpoint**: Foundation ready - user story implementation can now begin in parallel
+
+---
+
+## Phase 3: User Story 1 - Entrada Suave de Elementos ao Rolar (Priority: P1) 🎯 MVP
+
+**Goal**: Implementar scroll-reveal animations para elementos da página aparecerem de forma suave conforme o usuário rola. Esta é a animação fundamental que cria experiência profissional.
+
+**Independent Test**: Visitar qualquer página do portfólio (home, about, projects), rolar para baixo e observar se os elementos aparecem com animação suave quando entram no viewport. Testar também com `prefers-reduced-motion` ativado para verificar que animações são desabilitadas.
+
+### Implementation for User Story 1
+
+- [ ] **T010** [P] [US1] Apply scroll-reveal to hero section: Modify `src/components/sections/HeroSection/index.tsx` to wrap title and content with `<AnimatedWrapper direction="up">`
+- [ ] **T011** [P] [US1] Apply scroll-reveal to about section: Modify about page components to wrap text blocks and images with `<AnimatedWrapper>` with staggered delays
+- [ ] **T012** [P] [US1] Apply scroll-reveal to projects section: Modify projects page to wrap each project card with `<AnimatedWrapper direction="up" delay={index * 0.1}>`
+- [ ] **T013** [P] [US1] Apply scroll-reveal to experience timeline: Modify experience page to wrap each timeline item with `<AnimatedWrapper direction="left">` (alternating left/right if design allows)
+- [ ] **T014** [P] [US1] Apply scroll-reveal to blog post listings: Modify blog index to wrap each post preview card with `<AnimatedWrapper>`
+- [ ] **T015** [US1] Test scroll performance: Open Chrome DevTools Performance tab, record while scrolling through all pages, verify 60fps maintained on desktop and 95% of mobile devices
+- [ ] **T016** [US1] Verify reduced motion support: Enable "prefers reduced motion" in browser settings, reload pages, confirm animations are disabled or significantly reduced
+- [ ] **T017** [US1] Test Stackbit preview mode: Open site in Stackbit visual editor, verify animations work but don't interfere with editing (simplified if needed via `isStackbitPreview()`)
+
+**Checkpoint**: At this point, User Story 1 should be fully functional - all pages have smooth scroll-reveal animations that respect accessibility preferences
+
+---
+
+## Phase 4: User Story 2 - Animações de Hover em Elementos Interativos (Priority: P2)
+
+**Goal**: Implementar feedback visual imediato em hover para botões, links, cards e ícones, criando interface mais responsiva e intuitiva.
+
+**Independent Test**: Navegar pelo site e passar cursor sobre botões, cards de projetos, links de navegação e ícones sociais. Cada elemento deve responder visualmente com transformação suave. Testar também em touch device simulado.
+
+### Implementation for User Story 2
+
+- [ ] **T018** [P] [US2] Create AnimatedCard component: Create `src/components/blocks/AnimatedCard/index.tsx` implementing hover effects per `contracts/component-interfaces.md` (scale, shadow, tilt on hover)
+- [ ] **T019** [P] [US2] Add hover effects to primary buttons: Modify button components in `src/components/atoms/Button/` to include `whileHover={{ scale: 1.05 }}` and `whileTap={{ scale: 0.95 }}` with Framer Motion
+- [ ] **T020** [P] [US2] Add hover effects to navigation links: Modify header/navigation components to add underline or color transition animation on hover (150-200ms duration)
+- [ ] **T021** [US2] Replace project cards with AnimatedCard: Update projects section to use new `<AnimatedCard>` component with hover elevation and image zoom
+- [ ] **T022** [P] [US2] Add hover effects to social icons: Modify footer social icons to include rotate or pulse animation on hover using Framer Motion
+- [ ] **T023** [P] [US2] Add touch feedback for mobile: Implement `whileTap` animations on all interactive elements for touch device feedback
+- [ ] **T024** [US2] Register AnimatedCard in components registry: Add AnimatedCard to `src/components/components-registry.ts`
+- [ ] **T025** [US2] Test hover responsiveness: Verify all hover effects trigger within 200ms across different browsers (Chrome, Firefox, Safari, Edge)
+- [ ] **T026** [US2] Test touch device feedback: Use Chrome DevTools mobile emulation, tap elements and verify visual feedback appears
+
+**Checkpoint**: At this point, User Stories 1 AND 2 should both work independently - site has scroll animations AND interactive hover effects
+
+---
+
+## Phase 5: User Story 3 - Transições de Página e Navegação (Priority: P3)
+
+**Goal**: Implementar transições suaves entre páginas e scroll suave para links âncora, criando sensação de aplicativo fluido.
+
+**Independent Test**: Clicar em links de navegação entre páginas e observar transições suaves (fade-in/out). Clicar em links âncora e verificar scroll suave até seção alvo.
+
+### Implementation for User Story 3
+
+- [ ] **T027** [P] [US3] Create `usePageTransition` hook: Create `src/hooks/usePageTransition.ts` to manage page transition state per `contracts/component-interfaces.md`
+- [ ] **T028** [US3] Implement page transition wrapper: Modify `src/pages/_app.js` to add `<motion.div>` with `initial={{ opacity: 0 }}`, `animate={{ opacity: 1 }}`, `exit={{ opacity: 0 }}` around `<Component />`
+- [ ] **T029** [P] [US3] Implement smooth scroll for anchor links: Create utility function in `src/utils/smooth-scroll.ts` that uses `scrollIntoView({ behavior: 'smooth' })` or Framer Motion's `animate()`
+- [ ] **T030** [US3] Apply smooth scroll to navigation: Modify internal navigation links to call smooth scroll function instead of default jump behavior
+- [ ] **T031** [P] [US3] Add loading indicator for page transitions: Create loading spinner/bar component that shows during page navigation (uses `usePageTransition` hook state)
+- [ ] **T032** [US3] Test page transitions: Navigate between all pages (home → about → projects → experience → blog) and verify smooth fade transitions without flashing
+- [ ] **T033** [US3] Test browser back button: Use browser back button, verify transition animation works correctly in reverse
+- [ ] **T034** [US3] Test anchor links: Click internal anchor links, verify smooth scroll with appropriate easing (800-1000ms duration)
+- [ ] **T035** [US3] Test slow connection: Simulate slow 3G in DevTools, verify loading indicator appears and transitions don't feel broken
+
+**Checkpoint**: All three user stories (scroll-reveal, hover, page transitions) should now work together harmoniously
+
+---
+
+## Phase 6: User Story 4 - Animações Especiais no Hero Section (Priority: P3)
+
+**Goal**: Adicionar "wow factor" com animações diferenciadas no hero da página inicial (typing effect, background animado, entrada sequencial).
+
+**Independent Test**: Visitar apenas a página inicial e observar o hero section. Título deve ter efeito de digitação, background deve ter animação sutil, elementos devem entrar sequencialmente. Testar também em mobile para verificar simplificação.
+
+### Implementation for User Story 4
+
+- [ ] **T036** [P] [US4] Create AnimatedHeroSection component: Create `src/components/sections/AnimatedHeroSection/index.tsx` implementing typing effect and background animations per `contracts/component-interfaces.md`
+- [ ] **T037** [P] [US4] Implement typing animation effect: Use Framer Motion or Aceternity UI's typewriter component to animate hero title character-by-character (2-3s duration)
+- [ ] **T038** [P] [US4] Add animated background: Implement parallax or gradient animation in hero background using Framer Motion (subtle movement only, ~5-10px offset)
+- [ ] **T039** [US4] Implement sequential element entrance: Use stagger animation for hero subtitle, CTA buttons, and image/avatar with 150ms delay between each
+- [ ] **T040** [US4] Replace hero section on homepage: Update `content/pages/index.md` or homepage component to use new `<AnimatedHeroSection>` instead of default hero
+- [ ] **T041** [US4] Optimize for mobile: Add conditional logic to simplify/disable background animation on mobile devices (detect viewport width or `isMobile` utility)
+- [ ] **T042** [US4] Prevent re-animation on scroll: Ensure typing effect and entrance animations only play once on initial page load, not when scrolling back to top
+- [ ] **T043** [US4] Test hero animations: Load homepage fresh, verify typing effect completes smoothly, background moves subtly, elements enter sequentially
+- [ ] **T044** [US4] Test reduced motion: With `prefers-reduced-motion` enabled, verify hero special effects are disabled showing static content
+- [ ] **T045** [US4] Test mobile performance: Open on real mobile device or emulation, verify background animation is simplified and performance remains smooth
+
+**Checkpoint**: All four user stories complete - site has full animation system including special hero effects
+
+---
+
+## Phase 7: Polish & Cross-Cutting Concerns
+
+**Purpose**: Final improvements that affect multiple user stories
+
+- [ ] **T046** [P] Create animation presets configuration: Create `content/data/animation-presets.json` with subtle/moderate/dramatic/none presets per `data-model.md`
+- [ ] **T047** [P] Update project documentation: Add animation system documentation to `README.md` or create `docs/ANIMATIONS.md` explaining how to use AnimatedWrapper and other components
+- [ ] **T048** Run bundle size analysis: Execute `npm run build -- --analyze` (or similar) to verify total bundle increase is ≤50KB gzipped as per success criteria
+- [ ] **T049** Run Lighthouse audit: Run Lighthouse on homepage and 2-3 other pages, verify FCP increase is ≤200ms and performance score remains 90+
+- [ ] **T050** [P] Verify all acceptance scenarios: Go through each acceptance scenario from `spec.md` (25 total across all user stories) and manually verify each passes
+- [ ] **T051** Cross-browser testing: Test animations in Chrome, Firefox, Safari, and Edge (latest 2 versions each), document any inconsistencies
+- [ ] **T052** Accessibility audit: Run axe or WAVE accessibility checker, verify zero violations related to animations (WCAG 2.1 AA compliance)
+- [ ] **T053** [P] Code cleanup and refactoring: Review all animation code for DRY violations, extract common patterns, improve TypeScript types
+- [ ] **T054** Security review: Review `SECURITY-EXCEPTIONS.md`, confirm Aceternity UI is still in acceptable risk state, document any new findings
+- [ ] **T055** Run quickstart.md validation: Follow steps in `quickstart.md` on fresh clone to verify developer onboarding process works
+
+---
+
+## Dependencies & Execution Order
+
+### Phase Dependencies
+
+- **Setup (Phase 1)**: No dependencies - can start immediately
+- **Foundational (Phase 2)**: Depends on Setup completion (T001-T004) - BLOCKS all user stories
+- **User Stories (Phase 3-6)**: All depend on Foundational phase completion (T005-T009)
+  - User stories CAN proceed in parallel if multiple developers available
+  - OR sequentially in priority order: US1 (P1) → US2 (P2) → US3 (P3) → US4 (P3)
+- **Polish (Phase 7)**: Depends on all user stories being complete
+
+### User Story Dependencies
+
+- **User Story 1 (P1)**: Can start after Foundational (Phase 2) - No dependencies on other stories
+- **User Story 2 (P2)**: Can start after Foundational (Phase 2) - Builds on US1 but independently testable (adds hover to elements that already have scroll-reveal)
+- **User Story 3 (P3)**: Can start after Foundational (Phase 2) - Independent of US1/US2 (different concern: navigation vs element animations)
+- **User Story 4 (P3)**: Can start after Foundational (Phase 2) - Independent of all others (isolated to hero section)
+
+### Within Each User Story
+
+- Tasks marked [P] can run in parallel (different files/components)
+- Sequential tasks build on previous work (e.g., T024 registers component created in T018)
+- Testing/verification tasks come after implementation tasks within each story
+
+### Parallel Opportunities
+
+**Phase 1 (Setup)**: All 4 tasks can run in parallel
+
+**Phase 2 (Foundational)**: Tasks T006, T007 (hooks) can run in parallel; T008-T009 sequential after T005
+
+**Phase 3 (User Story 1)**: Tasks T010-T014 can all run in parallel (different pages/components); T015-T017 sequential after implementation
+
+**Phase 4 (User Story 2)**: Tasks T018-T023 can all run in parallel; T024-T026 sequential after implementation
+
+**Phase 5 (User Story 3)**: Tasks T027, T029, T031 can run in parallel; others sequential
+
+**Phase 6 (User Story 4)**: Tasks T036-T039 can run in parallel; others sequential
+
+**Phase 7 (Polish)**: Tasks T046-T047, T050, T053-T054 can run in parallel
+
+---
+
+## Parallel Example: User Story 1 Implementation
+
+```bash
+# Launch all page modifications together (different files):
+Task T010: "Apply scroll-reveal to hero section in src/components/sections/HeroSection/index.tsx"
+Task T011: "Apply scroll-reveal to about section"
+Task T012: "Apply scroll-reveal to projects section"
+Task T013: "Apply scroll-reveal to experience timeline"
+Task T014: "Apply scroll-reveal to blog post listings"
+
+# After all complete, run verification tasks sequentially:
+Task T015: "Test scroll performance"
+Task T016: "Verify reduced motion support"
+Task T017: "Test Stackbit preview mode"
+```
+
+---
+
+## Implementation Strategy
+
+### MVP First (User Story 1 Only - Recommended for Solo Developer)
+
+1. **Complete Phase 1**: Setup (T001-T004) → ~30 minutes
+2. **Complete Phase 2**: Foundational (T005-T009) → ~2-3 hours
+   - **CRITICAL GATE**: Test that AnimatedWrapper works before proceeding
+3. **Complete Phase 3**: User Story 1 (T010-T017) → ~3-4 hours
+4. **STOP and VALIDATE**: Thoroughly test scroll-reveal on all pages
+5. **Deploy/Demo**: MVP is now live with core animation feature!
+
+**Total MVP Time**: ~1 day of focused work
+
+### Incremental Delivery (Add Features Gradually)
+
+1. **Week 1**: Setup + Foundational + US1 (scroll-reveal) → Deploy MVP
+2. **Week 2**: US2 (hover effects) → Deploy enhanced version
+3. **Week 3**: US3 (page transitions) → Deploy smooth navigation
+4. **Week 4**: US4 (hero specials) → Deploy final "wow factor"
+5. **Week 5**: Polish phase → Final production-ready version
+
+Each story adds value without breaking previous stories.
+
+### Parallel Team Strategy (3-4 Developers)
+
+With multiple developers:
+
+1. **Day 1**: Team completes Setup + Foundational together (T001-T009)
+2. **Day 2-3**: Once Foundational is done, split work:
+   - **Developer A**: User Story 1 (T010-T017) - scroll-reveal
+   - **Developer B**: User Story 2 (T018-T026) - hover effects
+   - **Developer C**: User Story 3 (T027-T035) - page transitions
+   - **Developer D**: User Story 4 (T036-T045) - hero specials
+3. **Day 4**: Integration testing and Polish phase together (T046-T055)
+
+**Total Team Time**: ~4 days to complete all features
+
+---
+
+## Task Summary
+
+- **Total Tasks**: 55
+- **Setup Phase**: 4 tasks
+- **Foundational Phase**: 5 tasks (CRITICAL - blocks all stories)
+- **User Story 1 (P1)**: 8 tasks (MVP - scroll-reveal)
+- **User Story 2 (P2)**: 9 tasks (hover effects)
+- **User Story 3 (P3)**: 9 tasks (page transitions)
+- **User Story 4 (P3)**: 10 tasks (hero specials)
+- **Polish Phase**: 10 tasks
+- **Parallelizable Tasks**: 31 tasks marked with [P]
+- **Estimated Solo Development Time**: 5-7 days
+- **Estimated Team Development Time (3-4 devs)**: 4-5 days
+
+---
+
+## Success Criteria Mapping
+
+Each task contributes to specific success criteria from `spec.md`:
+
+- **SC-001** (60fps performance): T015, T045, T049
+- **SC-002** (FCP ≤200ms increase): T048, T049
+- **SC-003** (hover feedback <200ms): T025
+- **SC-004 & SC-005** (engagement metrics): All user stories contribute
+- **SC-006** (reduced motion): T016, T044
+- **SC-007** (95% device compatibility): T015, T026, T031, T051
+- **SC-008** (WCAG 2.1 AA): T052
+- **SC-009** (bundle size ≤50KB): T048
+- **SC-010** (user interaction): T050
+
+---
+
+## Notes
+
+- **[P]** tasks = different files, no dependencies - safe to parallelize
+- **[Story]** label maps task to specific user story for traceability
+- Each user story is independently completable and testable
+- **No test tasks included** - feature spec did not explicitly request TDD approach
+- Testing is covered through manual verification tasks (T015-T017, T025-T026, T032-T035, T043-T045, T050-T052)
+- Commit after each task or logical group of parallel tasks
+- Stop at any checkpoint to validate story independently before proceeding
+- Use `quickstart.md` as reference for implementation patterns
+- Consult `contracts/component-interfaces.md` for TypeScript interface definitions
+- Refer to `SECURITY-DECISION.md` and `ACETERNITY-SECURITY.md` for dependency security context

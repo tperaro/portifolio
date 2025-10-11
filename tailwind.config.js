@@ -2,7 +2,12 @@ const plugin = require('tailwindcss/plugin');
 const themeStyle = require('./content/data/style.json');
 
 module.exports = {
-    content: ['./src/**/*.{js,ts,jsx,tsx}', './content/**/*', './.sourcebit-nextjs-cache.json'],
+    content: [
+        './src/**/*.{js,ts,jsx,tsx}',
+        './content/**/*',
+        './.sourcebit-nextjs-cache.json',
+        './node_modules/aceternity-ui/**/*.{js,ts,jsx,tsx}'
+    ],
     safelist: [
         'text-neutral',
         'text-light',
