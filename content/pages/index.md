@@ -3,11 +3,8 @@ title: Thiago Peraro - Empreendedor e Pesquisador de IA
 slug: /
 type: PageLayout
 sections:
-  - type: GenericSection
-    title:
-      text: Thiago Peraro
-      color: text-dark
-      type: TitleBlock
+  - type: AnimatedHeroSection
+    title: Thiago Peraro
     subtitle: 'Empreendedor, pesquisador de IA e líder de comunidade'
     text: >
       Combinando a paixão por tecnologia e empreendedorismo, atuo como fundador
@@ -35,28 +32,22 @@ sections:
     media:
       url: /images/koru.png
       altText: Thiago Peraro - Empreendedor e Pesquisador de IA
-      elementId: ''
-      type: ImageBlock
-    elementId: ''
+      type: image
+    backgroundAnimation: gradient
+    typingEffect: true
+    typingSpeed: 15
+    preset: moderate
+    elementId: hero
     colors: bg-light-fg-dark
     styles:
       self:
-        alignItems: center
-        flexDirection: row
         padding:
           - pt-16
           - pb-12
           - pl-4
           - pr-4
-        justifyContent: center
       title:
-        textAlign: left
-      subtitle:
-        textAlign: left
-      text:
-        textAlign: left
-      actions:
-        justifyContent: flex-start
+        fontWeight: bold
   - type: GenericSection
     title:
       text: Sobre mim

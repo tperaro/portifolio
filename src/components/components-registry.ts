@@ -32,6 +32,7 @@ export function getComponent(key: string): ComponentType {
  */
 const components = {
     AnimatedCard: dynamic(() => import('./blocks/AnimatedCard')),
+    AnimatedHeroSection: dynamic(() => import('./sections/AnimatedHeroSection')),
     AnimatedWrapper: dynamic(() => import('./atoms/AnimatedWrapper')),
     AutoCompletePosts: dynamic(() => import('./blocks/SearchBlock/AutoCompletePosts')),
     CarouselSection: dynamic(() => import('./sections/CarouselSection')),
