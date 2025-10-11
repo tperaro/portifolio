@@ -5,6 +5,7 @@ import Markdown from 'markdown-to-jsx';
 import { mapStylesToClassNames as mapStyles } from '../../../../utils/map-styles-to-class-names';
 import Action from '../../../atoms/Action';
 import ImageBlock from '../../../blocks/ImageBlock';
+import AnimatedWrapper from '../../../atoms/AnimatedWrapper';
 
 export default function FeaturedItem(props) {
     const { elementId, title, tagline, subtitle, text, image, actions = [], colors = 'bg-light-fg-dark', styles = {}, hasSectionTitle } = props;
@@ -15,8 +16,9 @@ export default function FeaturedItem(props) {
     const hasImage = !!image?.url;
 
     return (
-        <div
-            id={elementId}
+        <AnimatedWrapper
+            direction="up"
+            preset="moderate"
             className={classNames(
                 'sb-card',
                 colors,
@@ -31,11 +33,16 @@ export default function FeaturedItem(props) {
                     : undefined,
                 styles?.self?.borderRadius ? mapStyles({ borderRadius: styles?.self?.borderRadius }) : undefined,
                 styles?.self?.textAlign ? mapStyles({ textAlign: styles?.self?.textAlign }) : undefined,
-                'overflow-hidden'
+                'overflow-hidden',
+                'transition-all duration-300',
+                'hover:scale-[1.02] hover:shadow-lg'
             )}
-            data-sb-field-path={fieldPath}
         >
-            <div className={classNames('w-full', 'flex', mapFlexDirectionStyles(flexDirection, hasTextContent, hasImage), 'gap-6')}>
+            <div 
+                id={elementId}
+                className={classNames('w-full', 'flex', mapFlexDirectionStyles(flexDirection, hasTextContent, hasImage), 'gap-6')}
+                data-sb-field-path={fieldPath}
+            >
                 {hasImage && (
                     <ImageBlock
                         {...image}
@@ -114,7 +121,7 @@ export default function FeaturedItem(props) {
                     </div>
                 )}
             </div>
-        </div>
+        </AnimatedWrapper>
     );
 }
 
