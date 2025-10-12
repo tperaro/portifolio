@@ -3,21 +3,18 @@ title: About Me - Thiago Peraro
 slug: /about
 type: PageLayout
 sections:
-  - type: GenericSection
-    title:
-      text: About Me
-      color: text-dark
-      type: TitleBlock
+  - type: AnimatedHeroSection
+    title: About Me
     subtitle: Entrepreneur and researcher passionate about AI
     text: >
-      I’m Thiago Peraro, an artificial intelligence researcher focused on
+      I'm Thiago Peraro, an artificial intelligence researcher focused on
       natural language processing, and an entrepreneur. My journey blends
       strong back-end development experience, applied academic research, and
       entrepreneurial leadership.
 
 
       Computer Science graduate from the Federal University of Goiás
-      (2019–2024). I’m currently a researcher at CEIA-UFG as a CNPq fellow,
+      (2019–2024). I'm currently a researcher at CEIA-UFG as a CNPq fellow,
       leading innovative projects that apply AI to real problems.
     actions:
       - label: LinkedIn
@@ -41,20 +38,13 @@ sections:
     media:
       url: /images/Thiago_Peraro-Magnatas.jpeg
       altText: Thiago Peraro
-      elementId: ''
-      type: ImageBlock
-    elementId: ''
+      type: image
+    backgroundAnimation: gradient
+    typingEffect: true
+    typingSpeed: 15
+    preset: moderate
+    elementId: about-hero
     colors: bg-light-fg-dark
-    styles:
-      self:
-        alignItems: center
-        flexDirection: row
-        padding:
-          - pt-16
-          - pb-16
-          - pl-4
-          - pr-4
-        justifyContent: center
   - type: FeaturedItemsSection
     title:
       text: Key Achievements
