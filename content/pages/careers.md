@@ -2,13 +2,8 @@
 title: Careers
 slug: careers
 sections:
-  - title:
-      text: A team that works closely together
-      color: text-dark
-      styles:
-        self:
-          textAlign: center
-      type: TitleBlock
+  - type: AnimatedHeroSection
+    title: A team that works closely together
     subtitle: Section subtitle
     text: >
       There are many variations of passages of Lorem Ipsum available, but the
@@ -23,30 +18,15 @@ sections:
         iconPosition: right
         style: primary
         type: Button
-    colors: bg-neutral-fg-dark
-    styles:
-      self:
-        padding:
-          - pt-40
-          - pl-4
-          - pb-40
-          - pr-4
-        alignItems: center
-        flexDirection: row-reverse
-        justifyContent: center
-      text:
-        textAlign: center
-      subtitle:
-        textAlign: center
-    type: GenericSection
-    backgroundImage:
-      type: BackgroundImage
-      altText: altText of the image
-      backgroundSize: cover
-      backgroundPosition: center
-      backgroundRepeat: no-repeat
-      opacity: 100
+    media:
       url: /images/abstract-background.svg
+      type: image
+    backgroundAnimation: gradient
+    typingEffect: true
+    typingSpeed: 15
+    preset: moderate
+    elementId: careers-hero
+    colors: bg-neutral-fg-dark
   - title:
       text: Meet the team
       color: text-dark
