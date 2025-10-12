@@ -39,15 +39,6 @@ sections:
     preset: moderate
     elementId: hero
     colors: bg-light-fg-dark
-        justifyContent: center
-      title:
-        textAlign: left
-      subtitle:
-        textAlign: left
-      text:
-        textAlign: left
-      actions:
-        justifyContent: flex-start
   - type: GenericSection
     title:
       text: About Me
