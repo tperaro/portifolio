@@ -3,11 +3,8 @@ title: Projetos - Thiago Peraro
 slug: /projects
 type: PageLayout
 sections:
-  - type: GenericSection
-    title:
-      text: Meus Projetos
-      color: text-dark
-      type: TitleBlock
+  - type: AnimatedHeroSection
+    title: Meus Projetos
     subtitle: Principais projetos em IA e empreendedorismo
     text: >
       Aqui você pode conferir os principais projetos que desenvolvi e lidero, 
@@ -26,20 +23,13 @@ sections:
     media:
       url: /images/hero.svg
       altText: Projetos de Thiago Peraro
-      elementId: ''
-      type: ImageBlock
-    elementId: ''
+      type: image
+    backgroundAnimation: gradient
+    typingEffect: true
+    typingSpeed: 15
+    preset: moderate
+    elementId: projects-hero
     colors: bg-light-fg-dark
-    styles:
-      self:
-        alignItems: center
-        flexDirection: row
-        padding:
-          - pt-16
-          - pb-8
-          - pl-4
-          - pr-4
-        justifyContent: center
 
   - type: FeaturedItemsSection
     title:

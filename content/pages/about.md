@@ -3,11 +3,8 @@ title: Sobre Mim - Thiago Peraro
 slug: /about
 type: PageLayout
 sections:
-  - type: GenericSection
-    title:
-      text: Sobre Mim
-      color: text-dark
-      type: TitleBlock
+  - type: AnimatedHeroSection
+    title: Sobre Mim
     subtitle: Empreendedor e pesquisador apaixonado por IA
     text: >
       Sou Thiago Peraro, empreendedor e pesquisador de inteligência artificial
@@ -42,20 +39,13 @@ sections:
     media:
       url: /images/Thiago_Peraro-Magnatas.jpeg
       altText: Thiago Peraro
-      elementId: ''
-      type: ImageBlock
-    elementId: ''
+      type: image
+    backgroundAnimation: gradient
+    typingEffect: true
+    typingSpeed: 15
+    preset: moderate
+    elementId: about-hero
     colors: bg-light-fg-dark
-    styles:
-      self:
-        alignItems: center
-        flexDirection: row
-        padding:
-          - pt-16
-          - pb-16
-          - pl-4
-          - pr-4
-        justifyContent: center
   - type: FeaturedItemsSection
     title:
       text: Principais Conquistas

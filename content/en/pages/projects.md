@@ -3,14 +3,11 @@ title: Projects - Thiago Peraro
 slug: /projects
 type: PageLayout
 sections:
-  - type: GenericSection
-    title:
-      text: My Projects
-      color: text-dark
-      type: TitleBlock
+  - type: AnimatedHeroSection
+    title: My Projects
     subtitle: Key projects in AI and entrepreneurship
     text: >
-      Here are the main projects I’ve built and lead — from award-winning
+      Here are the main projects I've built and lead — from award-winning
       academic research to innovative startups. Each project reflects a
       commitment to applying technology to real-world problems.
     actions:
@@ -26,16 +23,13 @@ sections:
     media:
       url: /images/hero.svg
       altText: Projects by Thiago Peraro
-      elementId: ''
-      type: ImageBlock
-    elementId: ''
+      type: image
+    backgroundAnimation: gradient
+    typingEffect: true
+    typingSpeed: 15
+    preset: moderate
+    elementId: projects-hero
     colors: bg-light-fg-dark
-    styles:
-      self:
-        alignItems: center
-        flexDirection: row
-        padding: [pt-16, pb-8, pl-4, pr-4]
-        justifyContent: center
 
   - type: FeaturedItemsSection
     title:
@@ -355,9 +349,13 @@ sections:
         padding: [pt-16, pb-16, pl-4, pr-4]
         justifyContent: center
         textAlign: center
-      title: { textAlign: center }
-      subtitle: { textAlign: center }
-      text: { textAlign: center }
-      actions: { justifyContent: center }
+      title:
+        textAlign: center
+      subtitle:
+        textAlign: center
+      text:
+        textAlign: center
+      actions:
+        justifyContent: center
 ---
 

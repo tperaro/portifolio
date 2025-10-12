@@ -3,11 +3,8 @@ title: Professional Experience - Thiago Peraro
 slug: /experience
 type: PageLayout
 sections:
-  - type: GenericSection
-    title:
-      text: Professional Experience
-      color: text-dark
-      type: TitleBlock
+  - type: AnimatedHeroSection
+    title: Professional Experience
     subtitle: A path across research, development and entrepreneurship
     text: >
       My career combines solid back-end development, cutting-edge academic
@@ -26,20 +23,13 @@ sections:
     media:
       url: /images/hero2.svg
       altText: Professional Experience
-      elementId: ''
-      type: ImageBlock
-    elementId: ''
+      type: image
+    backgroundAnimation: gradient
+    typingEffect: true
+    typingSpeed: 15
+    preset: moderate
+    elementId: experience-hero
     colors: bg-light-fg-dark
-    styles:
-      self:
-        alignItems: center
-        flexDirection: row
-        padding:
-          - pt-16
-          - pb-8
-          - pl-4
-          - pr-4
-        justifyContent: center
 
   - type: FeaturedItemsSection
     title:
