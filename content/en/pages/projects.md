@@ -349,9 +349,13 @@ sections:
         padding: [pt-16, pb-16, pl-4, pr-4]
         justifyContent: center
         textAlign: center
-      title: { textAlign: center }
-      subtitle: { textAlign: center }
-      text: { textAlign: center }
-      actions: { justifyContent: center }
+      title:
+        textAlign: center
+      subtitle:
+        textAlign: center
+      text:
+        textAlign: center
+      actions:
+        justifyContent: center
 ---
 
