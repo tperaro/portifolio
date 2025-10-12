@@ -46,15 +46,6 @@ sections:
     preset: moderate
     elementId: about-hero
     colors: bg-light-fg-dark
-    styles:
-      self:
-        padding:
-          - pt-16
-          - pb-12
-          - pl-4
-          - pr-4
-      title:
-        fontWeight: bold
   - type: FeaturedItemsSection
     title:
       text: Principais Conquistas
