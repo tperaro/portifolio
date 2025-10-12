@@ -6,7 +6,7 @@ excerpt: >-
   Explore os insights valiosos da live "Agent Brasil" do canal Sandeco, com Thiago Peraro. Aprenda sobre mentalidade empreendedora, Business Model Canvas, MVPs, o método Sprint e ferramentas essenciais para validar e construir sua startup do zero.
 featuredImage:
   url: /images/liveEmpreendedorismo.jpeg
-  altText: Live Empreendedorismo – Agent Brasil (Sandeco)
+  altText: Thumbnail do post sobre insights de startups
   type: ImageBlock
   styles:
     self:
@@ -51,7 +51,7 @@ Cada fase exige atenção e processos específicos para lidar com clientes, func
 ## O Poder do Business Model Canvas (BMC)
 
 Para transformar uma ideia em negócio, Thiago apresentou o **Business Model Canvas (BMC)**, um quadro que ajuda a listar os componentes essenciais de um modelo de negócio:
-
+![Exemplo de Business Model Canvas](https://www.google.com/url?sa=i&url=https%3A%2F%2Fpm3.com.br%2Fblog%2Fbusiness-model-canvas-como-aplicar-este-framework%2F&psig=AOvVaw0KJaRESl6gPgwcyWu8GVo-&ust=1757510451085000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCICD4uTiy48DFQAAAAAdAAAAABAE)
 
 - **Parcerias Chave:** Quem são seus parceiros (ex: processadores de pagamento, APIs de mapas para Uber).
 - **Atividades Chave:** O que a empresa faz para operar e sobreviver (ex: marketing de aquisição, desenvolvimento da plataforma).
@@ -64,9 +64,6 @@ Para transformar uma ideia em negócio, Thiago apresentou o **Business Model Can
 - **Estrutura de Custos:** Quais são os gastos.
 
 O canal Sandeco disponibiliza um link para baixar o BMC, incentivando a iteração e o registro de aprendizados.
-
-![Business Model Canvas (BMC) – Exemplo visual](/images/BMC.jpeg)
-
 
 ## Sua Empresa é uma Startup ou Tradicional? O Checklist
 
@@ -110,8 +107,6 @@ O MVP não tem uma única forma. Thiago apresentou vários tipos:
 ## O MVP Experiment Canvas: Um Guia para Testes Precisos
 
 Para ir além do BMC e do Sprint, Thiago apresentou o **MVP Experiment Canvas**, uma ferramenta para planejar e documentar experimentos de MVP. Ele ajuda a anotar hipóteses, métricas de sucesso, resultados e próximos passos, permitindo iterar com base em dados concretos.
-
-![MVP Experiment Canvas – Modelo de referência](/images/mvp-experiment-canvas-xl.png)
 
 ## A Ferramenta Secreta: GPT Personalizado para Empreendedores!
 
