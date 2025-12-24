@@ -171,16 +171,7 @@ sections:
           Comunidade de empreendedores focada em networking e desenvolvimento 
           de negócios inovadores. Promovemos eventos, workshops e conexões 
           entre profissionais do ecossistema empreendedor de Goiânia.
-        actions:
-          - label: Skool
-            altText: 'Ver no Skool'
-            url: '#'
-            showIcon: true
-            icon: arrowRight
-            iconPosition: right
-            style: secondary
-            elementId: ''
-            type: Link
+        actions: []
         elementId: ''
         styles:
           self:

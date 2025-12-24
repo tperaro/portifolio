@@ -21,6 +21,9 @@ export default function FeaturedItem(props) {
             preset="moderate"
             className={classNames(
                 'sb-card',
+                'h-full',
+                'flex',
+                'flex-col',
                 colors,
                 styles?.self?.margin ? mapStyles({ margin: styles?.self?.margin }) : undefined,
                 styles?.self?.padding ? mapStyles({ padding: styles?.self?.padding }) : undefined,
@@ -40,7 +43,7 @@ export default function FeaturedItem(props) {
         >
             <div 
                 id={elementId}
-                className={classNames('w-full', 'flex', mapFlexDirectionStyles(flexDirection, hasTextContent, hasImage), 'gap-6')}
+                className={classNames('w-full', 'flex', 'flex-1', mapFlexDirectionStyles(flexDirection, hasTextContent, hasImage), 'gap-6')}
                 data-sb-field-path={fieldPath}
             >
                 {hasImage && (
@@ -54,7 +57,7 @@ export default function FeaturedItem(props) {
                 )}
                 {hasTextContent && (
                     <div
-                        className={classNames('w-full', {
+                        className={classNames('w-full', 'flex', 'flex-col', 'flex-1', {
                             'xs:grow': hasImage && (flexDirection === 'row' || flexDirection === 'row-reversed')
                         })}
                     >
@@ -102,8 +105,9 @@ export default function FeaturedItem(props) {
                                     mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }),
                                     'items-center',
                                     'gap-4',
+                                    'mt-auto',
                                     {
-                                        'mt-6': tagline || title || subtitle || text
+                                        'pt-6': tagline || title || subtitle || text
                                     }
                                 )}
                                 {...(fieldPath && { 'data-sb-field-path': '.actions' })}

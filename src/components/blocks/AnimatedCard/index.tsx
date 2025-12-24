@@ -18,7 +18,7 @@
  */
 
 import React from 'react';
-import { m } from 'framer-motion';
+import { m, cubicBezier, easeInOut, easeOut } from 'framer-motion';
 import classNames from 'classnames';
 import { useScrollAnimation } from '@/hooks';
 import { useReducedMotion } from '@/hooks';
@@ -111,25 +111,26 @@ export default function AnimatedCard({
       return {};
     }
 
+    const cubicEase = cubicBezier(0.4, 0, 0.2, 1);
     switch (hoverStyle) {
       case 'elevate':
         return {
           y: -8,
           boxShadow: '0 20px 40px rgba(0, 0, 0, 0.15)',
-          transition: { duration: 0.3, ease: [0.4, 0, 0.2, 1] }
+          transition: { duration: 0.3, ease: cubicEase }
         };
       case 'tilt':
         return {
           rotateZ: 2,
           scale: 1.02,
           boxShadow: '0 15px 30px rgba(0, 0, 0, 0.12)',
-          transition: { duration: 0.3, ease: [0.4, 0, 0.2, 1] }
+          transition: { duration: 0.3, ease: cubicEase }
         };
       case 'glow':
         return {
           scale: 1.02,
           boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)',
-          transition: { duration: 0.3, ease: [0.4, 0, 0.2, 1] }
+          transition: { duration: 0.3, ease: cubicEase }
         };
       default:
         return {};
@@ -148,6 +149,30 @@ export default function AnimatedCard({
     visible: { opacity: 1, y: 0 }
   };
 
+  // Convert easing to Framer Motion compatible format
+  const getEasing = () => {
+    if (typeof config.easing === 'string') {
+      // Map string names to Framer Motion easing functions
+      const easingMap: Record<string, any> = {
+        linear: 'linear',
+        easeIn: 'easeIn',
+        easeOut: easeOut,
+        easeInOut: easeInOut,
+        circIn: 'circIn',
+        circOut: 'circOut',
+        circInOut: 'circInOut',
+        backIn: 'backIn',
+        backOut: 'backOut',
+        backInOut: 'backInOut'
+      };
+      return easingMap[config.easing] || easeInOut;
+    }
+    if (Array.isArray(config.easing) && config.easing.length === 4) {
+      return cubicBezier(config.easing[0], config.easing[1], config.easing[2], config.easing[3]);
+    }
+    return easeInOut;
+  };
+
   const animationProps = animateOnScroll && !prefersReducedMotion ? {
     ref: ref as any,
     initial: 'hidden',
@@ -156,7 +181,7 @@ export default function AnimatedCard({
     transition: {
       duration: config.duration,
       delay: delay + config.delay,
-      ease: config.easing
+      ease: getEasing()
     }
   } : {};
 
@@ -188,7 +213,7 @@ export default function AnimatedCard({
             alt={image.altText}
             className="w-full h-full object-cover"
             whileHover={prefersReducedMotion ? {} : { scale: 1.1 }}
-            transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+            transition={{ duration: 0.4, ease: cubicBezier(0.4, 0, 0.2, 1) }}
           />
         </div>
       )}

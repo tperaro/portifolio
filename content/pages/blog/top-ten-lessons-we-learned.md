@@ -1,6 +1,7 @@
 ---
 title: 'Desvendando o Mundo das Startups: Insights e Ferramentas Essenciais do Canal Sandeco'
 slug: desvendando-o-mundo-das-startups-insights-e-ferramentas-essenciais-do-canal-sandeco
+translationKey: top-ten-lessons
 date: '2025-09-08'
 excerpt: >-
   Explore os insights valiosos da live "Agent Brasil" do canal Sandeco, com Thiago Peraro. Aprenda sobre mentalidade empreendedora, Business Model Canvas, MVPs, o método Sprint e ferramentas essenciais para validar e construir sua startup do zero.

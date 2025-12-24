@@ -1,6 +1,7 @@
 ---
 title: 'Clívia: Como a IA Transforma Atendimento e Vendas em Clínicas Médicas'
 slug: clivia-como-a-ia-transforma-atendimento-e-vendas-em-clinicas-medicas
+translationKey: blog-live-clivia
 date: '2025-01-02'
 excerpt: >-
   Descubra como a Clívia, uma startup inovadora, está utilizando agentes de IA

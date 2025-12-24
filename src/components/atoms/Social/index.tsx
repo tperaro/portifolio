@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import { m } from 'framer-motion';
+import { m, easeInOut, easeOut } from 'framer-motion';
 import Link from '../Link';
 import { iconMap } from '../../svgs';
 import { useReducedMotion } from '@/hooks';
@@ -24,11 +24,11 @@ export default function Social(props) {
                   transition: {
                       rotate: {
                           duration: 0.5,
-                          ease: 'easeInOut'
+                          ease: easeInOut
                       },
                       scale: {
                           duration: 0.2,
-                          ease: 'easeOut'
+                          ease: easeOut
                       }
                   }
               },

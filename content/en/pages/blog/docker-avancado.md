@@ -1,29 +1,29 @@
 ---
-title: 'Docker para Desenvolvedores: Além do Básico'
-slug: docker-para-desenvolvedores-avancado
+title: 'Docker for Developers: Beyond the Basics'
+slug: docker-for-developers-advanced
 translationKey: docker-avancado
 date: '2024-03-10'
 excerpt: >
-  Técnicas avançadas de Docker para melhorar o workflow de desenvolvimento, 
-  incluindo multi-stage builds, Docker Compose e otimizações de performance.
+  Advanced Docker techniques to improve development workflow, including
+  multi-stage builds, Docker Compose and performance optimizations.
 featuredImage:
   url: /images/img-placeholder.svg
   altText: Docker Advanced Techniques
   type: ImageBlock
 seo:
-  metaTitle: 'Docker Avançado para Desenvolvedores: Guia Completo'
+  metaTitle: 'Advanced Docker for Developers: Complete Guide'
   metaDescription: >
-    Aprenda técnicas avançadas de Docker: multi-stage builds, otimizações, 
-    Docker Compose e melhores práticas para desenvolvimento.
-  metaTags: ['docker', 'devops', 'containers', 'desenvolvimento']
+    Learn advanced Docker techniques: multi-stage builds, optimizations,
+    Docker Compose and best practices for development.
+  metaTags: ['docker', 'devops', 'containers', 'development']
 type: PostLayout
 ---
 
-Docker se tornou essencial no desenvolvimento moderno, mas muitos desenvolvedores ficam apenas no básico. Neste post, compartilho técnicas avançadas que uso no dia a dia para otimizar workflows e melhorar a eficiência.
+Docker has become essential in modern development, but many developers stay with the basics. In this post, I share advanced techniques I use daily to optimize workflows and improve efficiency.
 
-## Multi-Stage Builds: O Game Changer
+## Multi-Stage Builds: The Game Changer
 
-Multi-stage builds permitem criar imagens menores e mais seguras:
+Multi-stage builds allow creating smaller and more secure images:
 
 ```dockerfile
 # Build stage
@@ -39,7 +39,7 @@ RUN npm run build
 FROM node:18-alpine AS production
 WORKDIR /app
 
-# Copiar apenas dependências de produção
+# Copy only production dependencies
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/package.json ./
@@ -48,11 +48,11 @@ EXPOSE 3000
 CMD ["node", "dist/index.js"]
 ```
 
-### Resultado: 800MB → 150MB
+### Result: 800MB → 150MB
 
-## Docker Compose Avançado
+## Advanced Docker Compose
 
-### 1. Profiles para Diferentes Ambientes
+### 1. Profiles for Different Environments
 
 ```yaml
 version: '3.8'
@@ -94,23 +94,23 @@ volumes:
   postgres_data:
 ```
 
-Uso:
+Usage:
 
 ```bash
-# Desenvolvimento
+# Development
 docker-compose --profile app up
 
-# Apenas banco para testes
+# Database only for testing
 docker-compose --profile db-only up
 
-# Produção com proxy
+# Production with proxy
 docker-compose --profile production up
 ```
 
-### 2. Override Files para Ambientes
+### 2. Override Files for Environments
 
 ```yaml
-# docker-compose.override.yml (desenvolvimento)
+# docker-compose.override.yml (development)
 version: '3.8'
 services:
   app:
@@ -123,7 +123,7 @@ services:
 ```
 
 ```yaml
-# docker-compose.prod.yml (produção)
+# docker-compose.prod.yml (production)
 version: '3.8'
 services:
   app:
@@ -138,37 +138,37 @@ services:
           memory: 256M
 ```
 
-## Otimizações de Performance
+## Performance Optimizations
 
-### 1. Layer Caching Inteligente
+### 1. Smart Layer Caching
 
 ```dockerfile
 FROM node:18-alpine
 
 WORKDIR /app
 
-# Copiar apenas package.json primeiro (caching)
+# Copy only package.json first (caching)
 COPY package*.json ./
 RUN npm ci --only=production
 
-# Copiar código depois
+# Copy code after
 COPY . .
 
-# Build apenas se código mudou
+# Build only if code changed
 RUN npm run build
 
 EXPOSE 3000
 CMD ["npm", "start"]
 ```
 
-### 2. .dockerignore Otimizado
+### 2. Optimized .dockerignore
 
 ```dockerignore
-# Dependências
+# Dependencies
 node_modules
 npm-debug.log
 
-# Arquivos de desenvolvimento
+# Development files
 .git
 .gitignore
 README.md
@@ -177,11 +177,11 @@ README.md
 coverage
 .npm
 
-# Arquivos de build local
+# Local build files
 dist
 build
 
-# Arquivos de IDE
+# IDE files
 .vscode
 .idea
 *.swp
@@ -196,9 +196,9 @@ logs
 .parcel-cache
 ```
 
-## Desenvolvimento com Hot Reload
+## Development with Hot Reload
 
-### Dockerfile para desenvolvimento:
+### Development Dockerfile:
 
 ```dockerfile
 FROM node:18-alpine
@@ -208,18 +208,18 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-# Instalar nodemon globalmente
+# Install nodemon globally
 RUN npm install -g nodemon
 
 COPY . .
 
 EXPOSE 3000
 
-# Usar nodemon em desenvolvimento
+# Use nodemon in development
 CMD ["nodemon", "--legacy-watch", "src/index.js"]
 ```
 
-### Docker Compose com volumes:
+### Docker Compose with volumes:
 
 ```yaml
 version: '3.8'
@@ -232,12 +232,12 @@ services:
       - "3000:3000"
     volumes:
       - .:/app
-      - /app/node_modules  # Volume anônimo para node_modules
+      - /app/node_modules  # Anonymous volume for node_modules
     environment:
       - NODE_ENV=development
 ```
 
-## Health Checks e Monitoring
+## Health Checks and Monitoring
 
 ```dockerfile
 FROM node:18-alpine
@@ -255,7 +255,7 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
 CMD ["npm", "start"]
 ```
 
-### Implementando endpoint de health:
+### Implementing health endpoint:
 
 ```javascript
 // src/health.js
@@ -270,12 +270,12 @@ app.get('/health', (req, res) => {
       memory: process.memoryUsage()
     }
   };
-  
+
   res.status(200).json(healthcheck);
 });
 ```
 
-## BuildKit e Advanced Features
+## BuildKit and Advanced Features
 
 ### 1. Parallel Builds
 
@@ -307,7 +307,7 @@ FROM node:18-alpine
 WORKDIR /app
 COPY package*.json ./
 
-# Mount cache para npm
+# Mount cache for npm
 RUN --mount=type=cache,target=/root/.npm \
     npm ci --only=production
 
@@ -315,14 +315,14 @@ COPY . .
 CMD ["npm", "start"]
 ```
 
-## Segurança em Containers
+## Security in Containers
 
 ### 1. Non-root User
 
 ```dockerfile
 FROM node:18-alpine
 
-# Criar usuário não-root
+# Create non-root user
 RUN addgroup -g 1001 -S nodejs
 RUN adduser -S nextjs -u 1001
 
@@ -330,33 +330,33 @@ WORKDIR /app
 COPY . .
 RUN npm ci --only=production
 
-# Mudar ownership dos arquivos
+# Change ownership of files
 RUN chown -R nextjs:nodejs /app
 
-# Mudar para usuário não-root
+# Switch to non-root user
 USER nextjs
 
 EXPOSE 3000
 CMD ["npm", "start"]
 ```
 
-### 2. Scan de Vulnerabilidades
+### 2. Vulnerability Scanning
 
 ```bash
-# Scan de imagem
+# Image scan
 docker scan myapp:latest
 
-# Usando Trivy
+# Using Trivy
 trivy image myapp:latest
 
-# Integração com CI/CD
+# CI/CD integration
 docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
   aquasec/trivy image myapp:latest
 ```
 
-## Scripts de Automação
+## Automation Scripts
 
-### Makefile para Docker:
+### Makefile for Docker:
 
 ```makefile
 .PHONY: build run test clean
@@ -389,9 +389,9 @@ prod:
 	docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
 
-## Debugging em Containers
+## Debugging in Containers
 
-### 1. Debug com Node.js
+### 1. Debug with Node.js
 
 ```dockerfile
 FROM node:18-alpine
@@ -400,14 +400,14 @@ WORKDIR /app
 COPY . .
 RUN npm install
 
-# Expor porta de debug
+# Expose debug port
 EXPOSE 3000 9229
 
-# Comando com debug habilitado
+# Command with debug enabled
 CMD ["node", "--inspect=0.0.0.0:9229", "src/index.js"]
 ```
 
-### 2. Docker Compose para debug:
+### 2. Docker Compose for debug:
 
 ```yaml
 version: '3.8'
@@ -424,9 +424,9 @@ services:
       - NODE_ENV=development
 ```
 
-## Monitoramento e Logs
+## Monitoring and Logs
 
-### 1. Centralizando Logs
+### 1. Centralized Logging
 
 ```yaml
 version: '3.8'
@@ -438,7 +438,7 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
-    
+
   fluentd:
     image: fluent/fluentd:latest
     volumes:
@@ -447,7 +447,7 @@ services:
       - elasticsearch
 ```
 
-### 2. Métricas com Prometheus
+### 2. Metrics with Prometheus
 
 ```yaml
 version: '3.8'
@@ -456,7 +456,7 @@ services:
     build: .
     ports:
       - "3000:3000"
-      - "9090:9090"  # Métricas
+      - "9090:9090"  # Metrics
 
   prometheus:
     image: prom/prometheus
@@ -466,18 +466,18 @@ services:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
 ```
 
-## Conclusão
+## Conclusion
 
-Docker oferece muito mais do que containerização básica. Com essas técnicas avançadas, você pode:
+Docker offers much more than basic containerization. With these advanced techniques, you can:
 
-- **Reduzir tamanho** das imagens significativamente
-- **Acelerar builds** com caching inteligente
-- **Melhorar segurança** com práticas adequadas
-- **Automatizar workflows** de desenvolvimento e deploy
-- **Monitorar aplicações** efetivamente
+- **Reduce image size** significantly
+- **Speed up builds** with smart caching
+- **Improve security** with proper practices
+- **Automate workflows** for development and deployment
+- **Monitor applications** effectively
 
-O investimento em aprender essas técnicas se paga rapidamente em produtividade e qualidade do código.
+The investment in learning these techniques pays off quickly in productivity and code quality.
 
 ---
 
-*Quer discutir mais sobre Docker e DevOps? Me encontre no [LinkedIn](https://www.linkedin.com/in/thiago-peraro/) ou confira meus projetos no [GitHub](https://github.com/tperaro).*
+*Want to discuss more about Docker and DevOps? Find me on [LinkedIn](https://www.linkedin.com/in/thiago-peraro/) or check my projects on [GitHub](https://github.com/tperaro).*

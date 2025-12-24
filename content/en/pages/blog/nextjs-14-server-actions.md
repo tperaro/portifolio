@@ -1,29 +1,29 @@
 ---
-title: 'Next.js 14 e Server Actions: Modernizando Aplicações React'
+title: 'Next.js 14 and Server Actions: Modernizing React Applications'
 slug: nextjs-14-server-actions
 translationKey: nextjs-14-server-actions
 date: '2024-02-20'
 excerpt: >
-  Explorando as novas Server Actions do Next.js 14 e como elas simplificam 
-  o desenvolvimento full-stack com React.
+  Exploring the new Server Actions from Next.js 14 and how they simplify
+  full-stack development with React.
 featuredImage:
   url: /images/img-placeholder.svg
   altText: Next.js 14 Server Actions
   type: ImageBlock
 seo:
-  metaTitle: 'Next.js 14 Server Actions: Guia Completo'
+  metaTitle: 'Next.js 14 Server Actions: Complete Guide'
   metaDescription: >
-    Aprenda a usar Server Actions do Next.js 14 para criar aplicações 
-    React modernas e performáticas.
+    Learn to use Next.js 14 Server Actions to create modern and performant
+    React applications.
   metaTags: ['nextjs', 'react', 'server-actions', 'fullstack']
 type: PostLayout
 ---
 
-O Next.js 14 trouxe uma revolução com as Server Actions, permitindo que executemos código no servidor diretamente de componentes React. Neste post, exploro como essa funcionalidade está mudando o desenvolvimento full-stack.
+Next.js 14 brought a revolution with Server Actions, allowing us to execute code on the server directly from React components. In this post, I explore how this functionality is changing full-stack development.
 
-## O Que São Server Actions?
+## What Are Server Actions?
 
-Server Actions são funções assíncronas que executam no servidor e podem ser chamadas diretamente de componentes React, seja do lado cliente ou servidor. Elas eliminam a necessidade de criar rotas API separadas para muitas operações.
+Server Actions are asynchronous functions that run on the server and can be called directly from React components, either client-side or server-side. They eliminate the need to create separate API routes for many operations.
 
 ```typescript
 'use server'
@@ -34,21 +34,21 @@ import { db } from '@/lib/db'
 export async function createPost(formData: FormData) {
   const title = formData.get('title') as string
   const content = formData.get('content') as string
-  
+
   const post = await db.post.create({
     data: { title, content }
   })
-  
+
   revalidatePath('/posts')
   return { success: true, postId: post.id }
 }
 ```
 
-## Casos de Uso Práticos
+## Practical Use Cases
 
-### 1. Formulários Sem JavaScript
+### 1. Forms Without JavaScript
 
-Server Actions funcionam mesmo com JavaScript desabilitado:
+Server Actions work even with JavaScript disabled:
 
 ```tsx
 import { createPost } from '@/actions/posts'
@@ -56,32 +56,32 @@ import { createPost } from '@/actions/posts'
 export default function CreatePostForm() {
   return (
     <form action={createPost}>
-      <input name="title" placeholder="Título do post" required />
-      <textarea name="content" placeholder="Conteúdo" required />
-      <button type="submit">Criar Post</button>
+      <input name="title" placeholder="Post title" required />
+      <textarea name="content" placeholder="Content" required />
+      <button type="submit">Create Post</button>
     </form>
   )
 }
 ```
 
-### 2. Operações de Banco Otimizadas
+### 2. Optimized Database Operations
 
-Com Server Actions, podemos fazer operações complexas no servidor:
+With Server Actions, we can perform complex operations on the server:
 
 ```typescript
 'use server'
 
 export async function updateUserProfile(userId: string, data: ProfileData) {
-  // Validação no servidor
+  // Server-side validation
   const validatedData = profileSchema.parse(data)
-  
-  // Múltiplas operações em uma transação
+
+  // Multiple operations in one transaction
   await db.$transaction(async (tx) => {
     await tx.user.update({
       where: { id: userId },
       data: validatedData
     })
-    
+
     await tx.activityLog.create({
       data: {
         userId,
@@ -90,14 +90,14 @@ export async function updateUserProfile(userId: string, data: ProfileData) {
       }
     })
   })
-  
+
   revalidatePath(`/profile/${userId}`)
 }
 ```
 
-### 3. Upload de Arquivos
+### 3. File Upload
 
-Handling de uploads fica muito mais simples:
+File handling becomes much simpler:
 
 ```typescript
 'use server'
@@ -106,16 +106,16 @@ import { put } from '@vercel/blob'
 
 export async function uploadImage(formData: FormData) {
   const file = formData.get('image') as File
-  
+
   if (!file) {
-    throw new Error('Arquivo é obrigatório')
+    throw new Error('File is required')
   }
-  
+
   const blob = await put(file.name, file, {
     access: 'public',
   })
-  
-  // Salvar referência no banco
+
+  // Save reference in database
   await db.image.create({
     data: {
       url: blob.url,
@@ -123,14 +123,14 @@ export async function uploadImage(formData: FormData) {
       size: file.size
     }
   })
-  
+
   return { url: blob.url }
 }
 ```
 
-## Integração com Hooks
+## Integration with Hooks
 
-Para interações mais complexas, podemos usar hooks:
+For more complex interactions, we can use hooks:
 
 ```tsx
 'use client'
@@ -140,10 +140,10 @@ import { createPost } from '@/actions/posts'
 
 function SubmitButton() {
   const { pending } = useFormStatus()
-  
+
   return (
     <button type="submit" disabled={pending}>
-      {pending ? 'Criando...' : 'Criar Post'}
+      {pending ? 'Creating...' : 'Create Post'}
     </button>
   )
 }
@@ -151,17 +151,17 @@ function SubmitButton() {
 export default function PostForm() {
   return (
     <form action={createPost}>
-      <input name="title" placeholder="Título" />
-      <textarea name="content" placeholder="Conteúdo" />
+      <input name="title" placeholder="Title" />
+      <textarea name="content" placeholder="Content" />
       <SubmitButton />
     </form>
   )
 }
 ```
 
-## Tratamento de Erros
+## Error Handling
 
-Server Actions têm suporte nativo para tratamento de erros:
+Server Actions have native support for error handling:
 
 ```typescript
 'use server'
@@ -171,28 +171,28 @@ export async function deletePost(postId: string) {
     const post = await db.post.findUnique({
       where: { id: postId }
     })
-    
+
     if (!post) {
-      return { error: 'Post não encontrado' }
+      return { error: 'Post not found' }
     }
-    
+
     await db.post.delete({
       where: { id: postId }
     })
-    
+
     revalidatePath('/posts')
     return { success: true }
-    
+
   } catch (error) {
-    console.error('Erro ao deletar post:', error)
-    return { error: 'Erro interno do servidor' }
+    console.error('Error deleting post:', error)
+    return { error: 'Internal server error' }
   }
 }
 ```
 
-## Validação com Zod
+## Validation with Zod
 
-Combinando Server Actions com Zod para validação robusta:
+Combining Server Actions with Zod for robust validation:
 
 ```typescript
 'use server'
@@ -200,8 +200,8 @@ Combinando Server Actions com Zod para validação robusta:
 import { z } from 'zod'
 
 const postSchema = z.object({
-  title: z.string().min(1, 'Título é obrigatório').max(100),
-  content: z.string().min(10, 'Conteúdo deve ter pelo menos 10 caracteres'),
+  title: z.string().min(1, 'Title is required').max(100),
+  content: z.string().min(10, 'Content must have at least 10 characters'),
   tags: z.array(z.string()).optional()
 })
 
@@ -211,30 +211,30 @@ export async function createPost(formData: FormData) {
     content: formData.get('content'),
     tags: formData.getAll('tags')
   }
-  
+
   const validationResult = postSchema.safeParse(rawData)
-  
+
   if (!validationResult.success) {
     return {
-      error: 'Dados inválidos',
+      error: 'Invalid data',
       fieldErrors: validationResult.error.flatten().fieldErrors
     }
   }
-  
+
   const { title, content, tags } = validationResult.data
-  
+
   const post = await db.post.create({
     data: { title, content, tags }
   })
-  
+
   revalidatePath('/posts')
   redirect(`/posts/${post.id}`)
 }
 ```
 
-## Otimizações de Performance
+## Performance Optimizations
 
-### 1. Revalidação Inteligente
+### 1. Smart Revalidation
 
 ```typescript
 'use server'
@@ -244,22 +244,22 @@ export async function updatePost(postId: string, data: PostData) {
     where: { id: postId },
     data
   })
-  
-  // Revalidar apenas as páginas necessárias
+
+  // Revalidate only necessary pages
   revalidatePath(`/posts/${postId}`)
-  revalidatePath('/posts') // Lista de posts
-  revalidateTag('user-posts') // Posts do usuário
+  revalidatePath('/posts') // Posts list
+  revalidateTag('user-posts') // User's posts
 }
 ```
 
-### 2. Streaming de Dados
+### 2. Data Streaming
 
 ```tsx
 import { Suspense } from 'react'
 
 async function PostsList() {
   const posts = await getPosts() // Server Action
-  
+
   return (
     <div>
       {posts.map(post => (
@@ -278,9 +278,9 @@ export default function PostsPage() {
 }
 ```
 
-## Comparação: Antes vs Depois
+## Comparison: Before vs After
 
-### Antes (API Routes)
+### Before (API Routes)
 
 ```typescript
 // app/api/posts/route.ts
@@ -290,7 +290,7 @@ export async function POST(request: Request) {
   return Response.json(post)
 }
 
-// Componente cliente
+// Client component
 const handleSubmit = async (data) => {
   const response = await fetch('/api/posts', {
     method: 'POST',
@@ -301,7 +301,7 @@ const handleSubmit = async (data) => {
 }
 ```
 
-### Depois (Server Actions)
+### After (Server Actions)
 
 ```typescript
 // actions/posts.ts
@@ -316,31 +316,31 @@ export async function createPost(formData: FormData) {
   return post
 }
 
-// Componente
+// Component
 <form action={createPost}>
   {/* inputs */}
 </form>
 ```
 
-## Melhores Práticas
+## Best Practices
 
-1. **Use TypeScript:** Server Actions se beneficiam muito da tipagem estática
-2. **Validação sempre:** Nunca confie em dados do cliente
-3. **Revalidação inteligente:** Seja específico sobre o que revalidar
-4. **Tratamento de erros:** Sempre retorne estados de erro claros
-5. **Progressive Enhancement:** Forms devem funcionar sem JS
+1. **Use TypeScript:** Server Actions greatly benefit from static typing
+2. **Always validate:** Never trust client data
+3. **Smart revalidation:** Be specific about what to revalidate
+4. **Error handling:** Always return clear error states
+5. **Progressive Enhancement:** Forms should work without JS
 
-## Conclusão
+## Conclusion
 
-As Server Actions do Next.js 14 representam um grande passo na simplificação do desenvolvimento full-stack. Elas oferecem:
+Next.js 14 Server Actions represent a big step in simplifying full-stack development. They offer:
 
-- **DX melhorado:** Menos boilerplate e configuração
-- **Performance:** Execução no servidor com revalidação inteligente
-- **Progressivo:** Funciona com e sem JavaScript
-- **Type-safe:** Integração natural com TypeScript
+- **Improved DX:** Less boilerplate and configuration
+- **Performance:** Server execution with smart revalidation
+- **Progressive:** Works with and without JavaScript
+- **Type-safe:** Natural integration with TypeScript
 
-Se você ainda não experimentou Server Actions, recomendo fortemente começar com casos simples como formulários e evoluir para operações mais complexas.
+If you haven't tried Server Actions yet, I strongly recommend starting with simple cases like forms and evolving to more complex operations.
 
 ---
 
-*Já está usando Server Actions em seus projetos? Compartilhe sua experiência no [LinkedIn](https://www.linkedin.com/in/thiago-peraro/) ou veja mais conteúdo técnico no meu [GitHub](https://github.com/tperaro).*
+*Already using Server Actions in your projects? Share your experience on [LinkedIn](https://www.linkedin.com/in/thiago-peraro/) or check more technical content on my [GitHub](https://github.com/tperaro).*

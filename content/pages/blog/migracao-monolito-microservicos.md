@@ -1,6 +1,7 @@
 ---
 title: 'Como Migrei de Monólito para Microserviços: Lições Aprendidas'
 slug: migracao-monolito-microservicos
+translationKey: migracao-monolito-microservicos
 date: '2024-01-15'
 excerpt: >
   Compartilho minha experiência migrando uma aplicação monolítica para 

@@ -144,7 +144,7 @@ sections:
           **Co-founder | 2023–present**
           
           Entrepreneurs community focused on networking and business growth.
-          Events, workshops and connections in Goiânia’s ecosystem.
+          Events, workshops and connections in Goiânia's ecosystem.
         actions:
           - label: Skool
             altText: See on Skool

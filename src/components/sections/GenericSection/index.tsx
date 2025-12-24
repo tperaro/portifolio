@@ -45,10 +45,13 @@ export default function GenericSection(props) {
                         direction="up" 
                         preset="moderate"
                         className={classNames('w-full', 'max-w-sectionBody', {
-                            'lg:max-w-[27.5rem]': hasMedia && hasXDirection
+                            'lg:max-w-[27.5rem]': hasMedia && hasXDirection,
+                            'mx-auto': styles?.text?.textAlign === 'center' || styles?.title?.textAlign === 'center' || styles?.subtitle?.textAlign === 'center'
                         })}
                     >
-                        <div>
+                        <div className={classNames({
+                            'text-center': styles?.text?.textAlign === 'center' || styles?.title?.textAlign === 'center' || styles?.subtitle?.textAlign === 'center'
+                        })}>
                             {badge && <Badge {...badge} {...(enableAnnotations && { 'data-sb-field-path': '.badge' })} />}
                             {title && (
                                 <TitleBlock

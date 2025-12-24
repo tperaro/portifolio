@@ -23,7 +23,7 @@
  */
 
 import { useEffect, useRef, useState } from 'react';
-import { useAnimation, AnimationControls } from 'framer-motion';
+import { useAnimation } from 'framer-motion';
 
 export interface UseScrollAnimationOptions {
   /**
@@ -70,7 +70,7 @@ export interface UseScrollAnimationReturn {
   /**
    * Framer Motion animation controls
    */
-  controls: AnimationControls;
+  controls: ReturnType<typeof useAnimation>;
 }
 
 export function useScrollAnimation(
