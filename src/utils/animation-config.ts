@@ -5,6 +5,7 @@
  * Provides utility functions for animation configuration and detection.
  */
 
+import { cubicBezier, easeInOut, easeOut } from 'framer-motion';
 import type { AnimationConfig, PresetName } from '../types/animation';
 
 /**
@@ -61,7 +62,7 @@ export function getAnimationConfig(preset: PresetName = 'moderate'): AnimationCo
       enabled: false, 
       duration: 0, 
       delay: 0, 
-      easing: 'linear', 
+      easing: 'linear' as any, 
       stagger: 0 
     };
   }
@@ -72,7 +73,7 @@ export function getAnimationConfig(preset: PresetName = 'moderate'): AnimationCo
       enabled: true, 
       duration: 0.2, 
       delay: 0, 
-      easing: 'easeOut', 
+      easing: easeOut, 
       stagger: 0.05 
     };
   }
@@ -83,7 +84,7 @@ export function getAnimationConfig(preset: PresetName = 'moderate'): AnimationCo
       enabled: true,
       duration: 0.3,
       delay: 0,
-      easing: 'easeOut',
+      easing: easeOut,
       stagger: 0.05
     };
   }
@@ -93,25 +94,25 @@ export function getAnimationConfig(preset: PresetName = 'moderate'): AnimationCo
     subtle: { 
       duration: 0.3, 
       delay: 0, 
-      easing: 'easeOut', 
+      easing: easeOut, 
       stagger: 0.05 
     },
     moderate: { 
       duration: 0.6, 
       delay: 0.1, 
-      easing: 'easeInOut', 
+      easing: easeInOut, 
       stagger: 0.1 
     },
     dramatic: { 
       duration: 0.9, 
       delay: 0.2, 
-      easing: [0.25, 0.46, 0.45, 0.94] as any, // easeOutQuad cubic-bezier
+      easing: cubicBezier(0.25, 0.46, 0.45, 0.94), // easeOutQuad cubic-bezier
       stagger: 0.15 
     },
     none: {
       duration: 0,
       delay: 0,
-      easing: 'linear',
+      easing: 'linear' as any,
       stagger: 0
     }
   };

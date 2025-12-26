@@ -7,9 +7,24 @@ export default function LanguageSwitcher({ className = '' }: { className?: strin
 
     const changeLocale = async (nextLocale: string) => {
         try {
-            await router.push({ pathname, query }, asPath, { locale: nextLocale });
+            // Check if we're on a blog post page (not the blog index)
+            const isBlogPost = asPath.match(/^\/(en\/)?blog\/[^/]+\/?$/) && !asPath.endsWith('/blog') && !asPath.endsWith('/blog/');
+            
+            if (isBlogPost) {
+                // For blog posts, redirect to the blog index page in the target language
+                const blogPath = nextLocale === 'en' ? '/en/blog' : '/blog';
+                await router.push(blogPath, blogPath, { locale: nextLocale, scroll: false });
+            } else {
+                // For other pages, try to navigate to the same path
+                await router.push({ pathname, query }, undefined, { locale: nextLocale, scroll: false });
+            }
         } catch (e) {
-            // no-op
+            // If navigation fails, try to go to the home page in the target locale
+            try {
+                await router.push('/', '/', { locale: nextLocale });
+            } catch (err) {
+                // no-op
+            }
         }
     };
 

@@ -99,11 +99,20 @@ function FeaturedItemsThreeColGrid(props) {
     const FeaturedItem = getComponent('FeaturedItem');
     return (
         <div
-            className={classNames('w-full', 'grid', 'gap-10', 'sm:grid-cols-2', 'lg:grid-cols-3', { 'mt-12': hasTopMargin })}
+            className={classNames(
+                'w-full',
+                'grid',
+                'gap-10',
+                'sm:grid-cols-2',
+                'lg:grid-cols-3',
+                'items-stretch',
+                'auto-rows-fr',
+                { 'mt-12': hasTopMargin }
+            )}
             {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
         >
             {items.map((item, index) => (
-                <AnimatedWrapper key={index} direction="up" delay={index * 0.1} preset="moderate">
+                <AnimatedWrapper key={index} direction="up" delay={index * 0.1} preset="moderate" className="h-full">
                     <FeaturedItem {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
                 </AnimatedWrapper>
             ))}
@@ -119,11 +128,19 @@ function FeaturedItemsTwoColGrid(props) {
     const FeaturedItem = getComponent('FeaturedItem');
     return (
         <div
-            className={classNames('w-full', 'grid', 'gap-10', 'sm:grid-cols-2', { 'mt-12': hasTopMargin })}
+            className={classNames(
+                'w-full',
+                'grid',
+                'gap-10',
+                'sm:grid-cols-2',
+                'items-stretch',
+                'auto-rows-fr',
+                { 'mt-12': hasTopMargin }
+            )}
             {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
         >
             {items.map((item, index) => (
-                <AnimatedWrapper key={index} direction="up" delay={index * 0.1} preset="moderate">
+                <AnimatedWrapper key={index} direction="up" delay={index * 0.1} preset="moderate" className="h-full">
                     <FeaturedItem {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
                 </AnimatedWrapper>
             ))}

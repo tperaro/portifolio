@@ -1,6 +1,7 @@
 ---
 title: 'Projeto Sobrevidas: IA que Salva Vidas no SUS'
 slug: projeto-sobrevidas-ia-sus
+translationKey: projeto-sobrevidas
 date: '2024-08-15'
 excerpt: >
   Como desenvolvemos um chatbot integrado ao SUS para rastreamento de câncer de boca 

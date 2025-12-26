@@ -195,7 +195,7 @@ export interface AnimationConfig {
   enabled: boolean;
   duration: number;
   delay: number;
-  easing: string | number[];
+  easing: string | number[] | ((t: number) => number);
   stagger: number;
 }
 

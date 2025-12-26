@@ -13,7 +13,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { m } from 'framer-motion';
+import { m, cubicBezier } from 'framer-motion';
 import classNames from 'classnames';
 import { useReducedMotion } from '@/hooks';
 import { getAnimationConfig } from '@/utils/animation-config';
@@ -181,6 +181,8 @@ export default function AnimatedHeroSection(props: AnimatedHeroSectionProps): Re
     }
   };
 
+  const cubicEase = cubicBezier(0.4, 0, 0.2, 1);
+  
   const itemVariants = prefersReducedMotion || !config.enabled
     ? {}
     : {
@@ -190,7 +192,7 @@ export default function AnimatedHeroSection(props: AnimatedHeroSectionProps): Re
           y: 0,
           transition: {
             duration: 0.6,
-            ease: [0.4, 0, 0.2, 1]
+            ease: cubicEase
           }
         }
       };
@@ -204,7 +206,7 @@ export default function AnimatedHeroSection(props: AnimatedHeroSectionProps): Re
           scale: 1,
           transition: {
             duration: 0.8,
-            ease: [0.4, 0, 0.2, 1],
+            ease: cubicEase,
             delay: 0.3
           }
         }
