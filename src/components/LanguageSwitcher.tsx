@@ -13,10 +13,10 @@ export default function LanguageSwitcher({ className = '' }: { className?: strin
             if (isBlogPost) {
                 // For blog posts, redirect to the blog index page in the target language
                 const blogPath = nextLocale === 'en' ? '/en/blog' : '/blog';
-                await router.push(blogPath);
+                await router.push(blogPath, blogPath, { locale: nextLocale, scroll: false });
             } else {
                 // For other pages, try to navigate to the same path
-                await router.push({ pathname, query }, asPath, { locale: nextLocale });
+                await router.push({ pathname, query }, undefined, { locale: nextLocale, scroll: false });
             }
         } catch (e) {
             // If navigation fails, try to go to the home page in the target locale

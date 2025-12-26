@@ -99,7 +99,16 @@ function FeaturedItemsThreeColGrid(props) {
     const FeaturedItem = getComponent('FeaturedItem');
     return (
         <div
-            className={classNames('w-full', 'grid', 'gap-10', 'sm:grid-cols-2', 'lg:grid-cols-3', 'items-stretch', { 'mt-12': hasTopMargin })}
+            className={classNames(
+                'w-full',
+                'grid',
+                'gap-10',
+                'sm:grid-cols-2',
+                'lg:grid-cols-3',
+                'items-stretch',
+                'auto-rows-fr',
+                { 'mt-12': hasTopMargin }
+            )}
             {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
         >
             {items.map((item, index) => (
@@ -119,7 +128,15 @@ function FeaturedItemsTwoColGrid(props) {
     const FeaturedItem = getComponent('FeaturedItem');
     return (
         <div
-            className={classNames('w-full', 'grid', 'gap-10', 'sm:grid-cols-2', 'items-stretch', { 'mt-12': hasTopMargin })}
+            className={classNames(
+                'w-full',
+                'grid',
+                'gap-10',
+                'sm:grid-cols-2',
+                'items-stretch',
+                'auto-rows-fr',
+                { 'mt-12': hasTopMargin }
+            )}
             {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
         >
             {items.map((item, index) => (
