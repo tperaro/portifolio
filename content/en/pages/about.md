@@ -138,6 +138,9 @@ sections:
     text: |
       **Back-end Development:**
       • Java & Spring Boot — 3+ years at GoiásPrev
+      • SQL, Git & GitLab
+      • Linux (server administration)
+      • Agile methodologies and software engineering best practices
       • Public sector systems development
       • Software architecture and RESTful APIs
       • Relational and NoSQL databases

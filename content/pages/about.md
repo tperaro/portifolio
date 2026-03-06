@@ -143,6 +143,9 @@ sections:
     text: |
       **Desenvolvimento Back-end:**
       • Java e Spring Boot - 3+ anos de experiência no GoiásPrev
+      • SQL, Git e GitLab
+      • Linux (Servidor Linux)
+      • Metodologias ágeis e boas práticas de engenharia de software
       • Desenvolvimento de sistemas para órgãos públicos
       • Arquitetura de software e APIs RESTful
       • Bancos de dados relacionais e NoSQL
