@@ -81,10 +81,10 @@ sections:
       - type: FeaturedItem
         title: Fundação da Clivia
         text: >
-          Em 2024, fundei a Clivia, uma startup que desenvolve agentes de IA
-          especializados  para clínicas médicas. Nossa solução atua como SDR
-          inteligente, otimizando o  atendimento aos pacientes e demonstrando
-          como a IA pode transformar o setor de saúde.
+          Em 2025, fundei a Clivia, um sistema multiagente para clínicas médicas
+          que converte leads no WhatsApp e reduz no-shows. Uma experiência de
+          empreendedorismo que combinou pesquisa em IA com impacto real no
+          setor de saúde (fev 2025 – jan 2026).
         actions: []
         elementId: ''
         styles:
@@ -149,10 +149,12 @@ sections:
 
       **Inteligência Artificial:**
       • Processamento de Linguagem Natural (NLP)
-      • Large Language Models (LLMs)
+      • Large Language Models (LLMs) e RAG
+      • Agentes de IA e sistemas multiagentes (LangGraph, MCP)
+      • IA Prompting e GPTs Personalizados
+      • n8n — automação de fluxos com IA
       • Desenvolvimento de chatbots e agentes conversacionais
       • Integração de IA em sistemas de saúde
-      • Pesquisa em modelos de linguagem aplicados
 
       **Empreendedorismo e Liderança:**
       • Fundação e gestão de startups de tecnologia
@@ -251,9 +253,9 @@ sections:
 
 
       No projeto Sobrevidas, por exemplo, desenvolvemos uma solução que pode
-      salvar vidas  através do diagnóstico precoce de câncer de boca. Na Clivia,
-      criamos ferramentas que  humanizam o atendimento médico através da
-      tecnologia.
+      salvar vidas através do diagnóstico precoce de câncer de boca. Na Clivia,
+      construí ferramentas que humanizaram o atendimento médico através da
+      tecnologia, aplicando pesquisa em produto real.
 
 
       Como líder de comunidades, promovo o networking e a colaboração entre

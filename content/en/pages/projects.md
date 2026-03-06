@@ -69,11 +69,11 @@ sections:
       - type: FeaturedItem
         title: Clivia — AI for Clinics
         text: >
-          **Own Startup | 2024–present**
-          
-          Specialized AI agent acting as SDR for clinics, optimizing patient
-          care and operational efficiency. Combines AI research and
-          entrepreneurship to create scalable health solutions.
+          **Own Startup | Feb 2025 – Jan 2026**
+
+          Multi-agent system for medical clinics that converts WhatsApp leads
+          and reduces no-shows. Combined AI research and entrepreneurship to
+          create real-world health impact.
         actions:
           - label: Visit Clivia
             altText: Visit Clivia website

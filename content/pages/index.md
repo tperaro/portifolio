@@ -270,13 +270,13 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: 2024-presente · Fundador da Clivia
+        title: fev 2025 – jan 2026 · Fundador da Clivia
         text: >
           **IA para Clínicas Médicas**
 
-          Fundador da Clivia, agente de IA que atua como SDR para clínicas
-          médicas, otimizando o atendimento aos pacientes e unindo
-          empreendedorismo com pesquisa para criar soluções escaláveis.
+          Fundador da Clivia, sistema multiagente para clínicas médicas que
+          converte leads no WhatsApp e reduz no-shows. Uniu empreendedorismo
+          e pesquisa para criar uma solução de impacto real na saúde.
         actions: []
         elementId: ''
         styles:

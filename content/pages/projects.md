@@ -77,12 +77,11 @@ sections:
       - type: FeaturedItem
         title: Clivia - IA para Clínicas
         text: >
-          **Startup Própria | 2024-presente**
-          
-          Agente de IA especializado que atua como SDR para clínicas médicas, 
-          otimizando o atendimento aos pacientes e aumentando a eficiência 
-          operacional. Combina minha experiência em IA com visão empreendedora 
-          para criar soluções escaláveis no setor de saúde.
+          **Startup Própria | fev 2025 – jan 2026**
+
+          Sistema multiagente para clínicas médicas que converte leads no WhatsApp
+          e reduz no-shows. Combinou pesquisa em IA com visão empreendedora para
+          gerar impacto real no setor de saúde.
         actions:
           - label: Conhecer Clivia
             altText: 'Conhecer a Clivia'

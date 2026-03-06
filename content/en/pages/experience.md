@@ -64,19 +64,17 @@ sections:
           altText: NLP Researcher
           elementId: ''
       - type: FeaturedItem
-        title: Clivia Founder
+        title: EMBRAPII Researcher
         text: >
-          **Clivia AI | 2024 – present**
+          **EMBRAPII | Oct 2023 – Oct 2024**
 
-          • Founder & CEO of an AI startup for clinics
+          • Researcher in multidisciplinary project (AI, Software Eng., Entrepreneurship)
 
-          • AI agent acting as SDR
+          • Led a team of 7 — EdTech "Minha Aula de Excelência"
 
-          • Patient relationship optimization
+          • Methodologies: Lean, Stage-Gate, Sprints, ISO 12207, SWEBOK
 
-          • Turning research into products
-
-          • Product leadership and growth strategy
+          • Recognized for performance and leadership among 60 program fellows
         actions: []
         elementId: ''
         styles:
@@ -144,13 +142,30 @@ sections:
             textAlign: left
             padding: [pt-4, pb-4, pl-4, pr-4]
       - type: FeaturedItem
-        title: 2024 – present | Founder & CEO
+        title: Feb 2025 – Jan 2026 | Founder & CEO
         text: >
           **Clivia — AI for Clinics**
 
-          Founded Clivia to transform medical care with AI. Our SDR-like agent
-          improves patient relationships and automates workflows. I lead product
-          strategy and the team.
+          Founded Clivia, a multi-agent system that applies sales techniques to
+          convert leads on WhatsApp for medical clinics, reducing no-shows. Led
+          product strategy and the team.
+      - type: FeaturedItem
+        title: Oct 2023 – Oct 2024 | Researcher
+        text: >
+          **EMBRAPII — Brazilian Agency for Industrial Research and Innovation**
+
+          Multidisciplinary project in AI, Software Engineering and Entrepreneurship.
+          Led a team of 7 building the EdTech "Minha Aula de Excelência". Applied
+          Lean, Stage-Gate, Sprints, ISO 12207 and SWEBOK. Recognized for leadership
+          and performance among 60 program fellows.
+      - type: FeaturedItem
+        title: Jan–Aug 2024 / Jan–Feb 2025 | Back-end Developer
+        text: >
+          **Totem TI — outsourced at GoiásPrev**
+
+          Back-end development for GoiásPrev (state pension agency). Java, Spring,
+          JSP, JasperReports. Requirements engineering, microservices architecture
+          and ISO 12207 / SWEBOK compliance.
         actions: []
         elementId: ''
         styles:
@@ -171,12 +186,13 @@ sections:
             textAlign: left
             padding: [pt-4, pb-4, pl-4, pr-4]
       - type: FeaturedItem
-        title: 2019 – 2022 | Back-end Developer
+        title: Jan 2022 – Aug 2024 | Back-end Developer
         text: >
-          **GoiásPrev — State Government**
+          **GoiásPrev / Minsait — State Government**
 
-          Back-end developer for three years using Java and Spring Boot in
-          critical pension systems. Experience with availability and security.
+          Intern promoted to full-time developer. Back-end for critical pension
+          systems serving thousands of public servants. Java 8/11, Spring Boot,
+          JSP, iReport, JDBC. High availability and security in government systems.
         actions: []
         elementId: ''
         styles:
@@ -245,9 +261,15 @@ sections:
 
       • **LLMs** — Fine-tuning and practical applications
 
-      • **Conversational Chatbots** — End-to-end development
+      • **AI Agents & Multi-agent Systems** — LangGraph, MCP
 
-      • **Machine Learning** — Predictive models and classification
+      • **RAG** — Retrieval-Augmented Generation
+
+      • **AI Prompting and Custom GPTs**
+
+      • **n8n** — AI workflow automation and orchestration
+
+      • **Conversational Chatbots** — End-to-end development
 
       • **AI Integration** — Real-world systems
 

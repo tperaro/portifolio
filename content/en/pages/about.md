@@ -77,10 +77,10 @@ sections:
       - type: FeaturedItem
         title: Clivia Founder
         text: >
-          In 2024 I founded Clivia, a startup building specialized AI agents
-          for medical clinics. Our solution acts as an intelligent SDR,
-          optimizing patient care and demonstrating how AI can transform
-          healthcare.
+          In 2025 I founded Clivia, a multi-agent system for medical clinics
+          that converts WhatsApp leads and reduces no-shows. An entrepreneurship
+          experience combining AI research with real-world health impact
+          (Feb 2025 – Jan 2026).
         actions: []
         elementId: ''
         styles:
@@ -144,10 +144,12 @@ sections:
 
       **Artificial Intelligence:**
       • Natural Language Processing (NLP)
-      • Large Language Models (LLMs)
+      • Large Language Models (LLMs) and RAG
+      • AI Agents and multi-agent systems (LangGraph, MCP)
+      • AI Prompting and Custom GPTs
+      • n8n — AI workflow automation
       • Chatbots and conversational agents
       • AI integration in healthcare systems
-      • Applied research in language models
 
       **Entrepreneurship & Leadership:**
       • Startup building and management

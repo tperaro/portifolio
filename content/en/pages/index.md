@@ -255,13 +255,13 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: 2024–present · Clivia Founder
+        title: Feb 2025 – Jan 2026 · Clivia Founder
         text: >
           **AI for Medical Clinics**
 
-          Founder of Clivia, an AI agent that acts as an SDR for clinics,
-          optimizing patient care and combining entrepreneurship with research
-          to build scalable solutions.
+          Founder of Clivia, a multi-agent system for medical clinics that
+          converts WhatsApp leads and reduces no-shows. Combined entrepreneurship
+          with AI research to deliver real-world health impact.
         actions: []
         elementId: ''
         styles:

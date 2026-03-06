@@ -72,19 +72,17 @@ sections:
           altText: Pesquisador NLP
           elementId: ''
       - type: FeaturedItem
-        title: Fundador da Clivia
+        title: Pesquisador — EMBRAPII
         text: >
-          **Clivia IA | 2024 - presente**
+          **EMBRAPII | out 2023 – out 2024**
 
-          • Fundador e CEO de startup de IA para clínicas médicas
+          • Pesquisador em projeto multidisciplinar (IA, Eng. de Software, Empreendedorismo)
 
-          • Desenvolvimento de agente de IA que atua como SDR
+          • Líder de equipe de 7 pessoas — EdTech "Minha Aula de Excelência"
 
-          • Otimização do atendimento e relacionamento com pacientes
+          • Metodologias: Lean, Stage-Gate, Sprints, ISO 12207, SWEBOK
 
-          • Aplicação prática de research em soluções comerciais
-
-          • Liderança de produto e estratégia de crescimento
+          • Reconhecimento de performance entre 60 bolsistas do programa
         actions: []
         elementId: ''
         styles:
@@ -173,14 +171,14 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: 2024 - presente | Founder & CEO
+        title: fev 2025 – jan 2026 | Founder & CEO
         text: >
           **Clivia - IA para Clínicas Médicas**
 
-          Fundei a Clivia para transformar o atendimento médico através de IA. 
-          Nossa solução atua como SDR inteligente, otimizando o relacionamento 
-          com pacientes e automatizando processos. Responsável por estratégia, 
-          desenvolvimento de produto e liderança da equipe.
+          Fundei a Clivia, um sistema multiagente que implementa técnicas de
+          vendas para clínicas médicas, convertendo leads recebidos no WhatsApp
+          e reduzindo no-shows. Responsável por estratégia, desenvolvimento de
+          produto e liderança da equipe.
         actions: []
         elementId: ''
         styles:
@@ -211,14 +209,30 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: 2019 - 2022 | Desenvolvedor Back-end
+        title: out 2023 – out 2024 | Pesquisador
         text: >
-          **GoiásPrev - Governo do Estado de Goiás**
+          **EMBRAPII — Empresa Brasileira de Pesquisa e Inovação Industrial**
 
-          Desenvolvedor back-end por três anos em órgão público, especializado 
-          em Java e Spring Boot. Responsável por sistemas críticos de 
-          previdência que atendem milhares de servidores públicos. Experiência 
-          em desenvolvimento para alta disponibilidade e segurança.
+          Projeto multidisciplinar em IA, Engenharia de Software e Empreendedorismo.
+          Liderei equipe de 7 pessoas no desenvolvimento da EdTech "Minha Aula de
+          Excelência". Metodologias: Lean, Stage-Gate, Sprints, ISO 12207 e SWEBOK.
+          Reconhecido por performance e liderança entre 60 bolsistas do programa.
+      - type: FeaturedItem
+        title: jan–ago 2024 / jan–fev 2025 | Desenvolvedor Back-end
+        text: >
+          **Totem TI — terceirizado no GoiásPrev**
+
+          Prestação de serviços de back-end para o GoiásPrev (órgão de previdência
+          estadual). Java, Spring, JSP, JasperReports. Levantamento de requisitos,
+          arquitetura de microsserviços e conformidade com ISO 12207 e SWEBOK.
+      - type: FeaturedItem
+        title: jan 2022 – ago 2024 | Desenvolvedor Back-end
+        text: >
+          **GoiásPrev / Minsait - Governo do Estado de Goiás**
+
+          Estagiário promovido a efetivo. Desenvolvedor back-end em sistemas
+          críticos de previdência para servidores públicos. Java 8/11, Spring Boot,
+          JSP, iReport, JDBC. Alta disponibilidade e segurança em sistemas governamentais.
         actions: []
         elementId: ''
         styles:
@@ -306,9 +320,15 @@ sections:
 
       • **Large Language Models (LLMs)** - Fine-tuning e aplicações práticas
 
-      • **Chatbots Conversacionais** - Desenvolvimento end-to-end
+      • **Agentes de IA e Sistemas Multiagentes** - LangGraph, MCP
 
-      • **Machine Learning** - Modelos preditivos e classificação
+      • **RAG** - Retrieval-Augmented Generation
+
+      • **IA Prompting e GPTs Personalizados**
+
+      • **n8n** - Automação e orquestração de fluxos com IA
+
+      • **Chatbots Conversacionais** - Desenvolvimento end-to-end
 
       • **Integração de IA** - Implementação em sistemas reais
 
