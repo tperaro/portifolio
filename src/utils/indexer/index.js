@@ -10,7 +10,7 @@ export async function index() {
     }
 
     console.time('Indexing duration');
-    const data = allContent();
+    const data = allContent({ locale: 'en' });
     const posts = data.pages.filter((p) => p.__metadata.modelName == 'PostLayout');
 
     const objectsToIndex = buildObjectsToIndex(posts);

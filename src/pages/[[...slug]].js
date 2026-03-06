@@ -41,7 +41,7 @@ function Page(props) {
 
 export function getStaticPaths({ locales }) {
     const allPaths = [];
-    (locales || ['pt', 'en']).forEach((locale) => {
+    (locales || ['en', 'pt']).forEach((locale) => {
         const data = allContent({ locale });
         const paths = resolveStaticPaths(data);
         paths.forEach((p) => {

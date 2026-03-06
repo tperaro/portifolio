@@ -5,10 +5,10 @@ numOfPostsPerPage: 8
 enableSearch: true
 topSections:
   - title:
-      text: Featured Post
+      text: Featured Article
       color: text-dark
       type: TitleBlock
-    subtitle: This is the subtitle
+    subtitle: Selected writing on AI, software engineering and entrepreneurship
     posts:
       - content/en/pages/blog/blog-live-clivia.md
     showThumbnail: true
@@ -31,11 +31,11 @@ styles:
   title:
     textAlign: center
 seo:
-  metaTitle: Blog - Demo site
+  metaTitle: Blog | Thiago Peraro
   metaDescription: >-
-    This is the blog of the demo site where we post about technology, product,
-    and design.
-  socialImage: /images/img-placeholder.svg
+    Selected articles on applied AI, backend engineering, entrepreneurship and
+    building useful products.
+  socialImage: /images/main-hero.jpg
   type: Seo
 type: PostFeedLayout
 bottomSections: []
