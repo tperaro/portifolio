@@ -220,10 +220,10 @@ export const SKILLS: Skill[] = [
     context: 'Automated Docker image builds for Count on Sheep — eliminated human error in build and packaging.',
     projects: ['Count on Sheep'] },
   /* Integrations */
-  { id: 'n8n', name: 'n8n', cat: 'integrations', level: 'advanced', start: 2025, end: null,
+  { id: 'n8n', name: 'n8n', cat: 'integrations', level: 'advanced', start: 2024, end: null,
     desc: 'Workflow automation: REST API triggers, webhook orchestration, complex branching flows.',
-    context: 'Automated Count on Sheep\'s full client onboarding workflow — reduced ops manual work by ~5h per new client.',
-    projects: ['Count on Sheep', 'Peraro Assessoria clients'] },
+    context: 'Used across multiple projects: Clivia (lead qualification flows), Sobrevidas (clinical notification pipelines), CEIA Koru (assessment triggers), and Count on Sheep (full client onboarding — reduced ops manual work by ~5h per new client).',
+    projects: ['Clivia', 'Sobrevidas (CEIA)', 'CEIA Koru', 'Count on Sheep', 'Peraro Assessoria clients'] },
   { id: 'hubspot', name: 'HubSpot API', cat: 'integrations', level: 'proficient', start: 2025, end: null,
     desc: 'CRM integration: contacts, deals, lifecycle stages, property updates.',
     context: 'Automated contact and deal creation on form submissions — gave sales team real-time pipeline visibility without manual entry.',
