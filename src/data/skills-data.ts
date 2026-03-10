@@ -110,7 +110,7 @@ export const SKILLS: Skill[] = [
     projects: ['sobrevidas-backend'] },
   { id: 'keycloak', name: 'Keycloak', cat: 'java', level: 'proficient', start: 2024, end: 2025,
     desc: 'Identity and access management: OAuth2/OIDC provider, PKCE flow, RBAC. Integrated with Spring Boot, FastAPI and Streamlit.',
-    context: 'Implemented centralized SSO across Count on Sheep\'s internal stack and the Sobrevidas clinical platform.',
+    context: 'Implemented centralized SSO for the Sobrevidas clinical platform — replaced ad-hoc auth schemes with PKCE-based OIDC, enabling centralized user management across all internal tools.',
     projects: ['sobrevidas-backend', 'CEIA infrastructure'] },
   { id: 'postgresql-java', name: 'PostgreSQL / JPA', cat: 'java', level: 'advanced', start: 2022, end: 2025,
     desc: 'JPA/Hibernate ORM, Spring Data, raw JDBC for legacy. Complex queries and performance tuning.',
@@ -239,4 +239,8 @@ export const SKILLS: Skill[] = [
     desc: 'Evolution API integration for AI-powered customer conversations at scale.',
     context: 'Powered Clivia\'s AI SDR — automated lead qualification and appointment booking for medical clinics via WhatsApp.',
     projects: ['Clivia'] },
+  { id: 'supabase', name: 'Supabase', cat: 'integrations', level: 'proficient', start: 2025, end: null,
+    desc: 'Python client, RPCs, vector store (pgvector), upsert, relational queries, SSO (Auth), distributed leader election (PostgreSQL advisory locks).',
+    context: 'Used as Count on Sheep\'s SSO provider and vector store for document RAG (pgvector) — advisory locks ensured single-worker job processing across a multi-instance deployment.',
+    projects: ['Count on Sheep', 'quick-front-end'] },
 ];
