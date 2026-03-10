@@ -1,8 +1,8 @@
 import '../css/main.css';
 import { useEffect } from 'react';
-import { LazyMotion, domAnimation, AnimatePresence, m } from 'framer-motion';
+import { LazyMotion, domAnimation, AnimatePresence, m, MotionConfig } from 'framer-motion';
 import gsap from 'gsap';
-import Lenis from '@studio-freight/lenis';
+import Lenis from 'lenis';
 import LoadingIndicator from '@/components/atoms/LoadingIndicator';
 
 const pageVariants = {
@@ -15,7 +15,7 @@ const pageVariants = {
     exit: {
         opacity: 0,
         y: -20,
-        transition: { duration: 0.3 }
+        transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }
     }
 };
 
@@ -39,32 +39,42 @@ export default function MyApp({ Component, pageProps, router }) {
         gsap.ticker.add(onTick);
         gsap.ticker.lagSmoothing(0);
 
+        const onRouteChangeComplete = () => {
+            lenis.scrollTo(0, { immediate: true });
+        };
+
+        router.events.on('routeChangeComplete', onRouteChangeComplete);
+
         return () => {
             gsap.ticker.remove(onTick);
+            gsap.ticker.lagSmoothing(500, 33); // restore GSAP defaults
+            router.events.off('routeChangeComplete', onRouteChangeComplete);
             lenis.destroy();
         };
     }, []);
 
     return (
-        <LazyMotion features={domAnimation} strict>
-            {/* Loading indicator for page transitions */}
-            <LoadingIndicator duration={400} />
+        <MotionConfig reducedMotion="user">
+            <LazyMotion features={domAnimation} strict>
+                {/* Loading indicator for page transitions */}
+                <LoadingIndicator duration={400} />
 
-            <AnimatePresence mode="wait" initial={false}>
-                <m.div
-                    key={router.route}
-                    variants={pageVariants}
-                    initial="initial"
-                    animate="animate"
-                    exit="exit"
-                    style={{
-                        width: '100%',
-                        minHeight: '100vh'
-                    }}
-                >
-                    <Component {...pageProps} />
-                </m.div>
-            </AnimatePresence>
-        </LazyMotion>
+                <AnimatePresence mode="wait" initial={false}>
+                    <m.div
+                        key={router.asPath}
+                        variants={pageVariants}
+                        initial="initial"
+                        animate="animate"
+                        exit="exit"
+                        style={{
+                            width: '100%',
+                            minHeight: '100vh'
+                        }}
+                    >
+                        <Component {...pageProps} />
+                    </m.div>
+                </AnimatePresence>
+            </LazyMotion>
+        </MotionConfig>
     );
 }
