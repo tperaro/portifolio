@@ -119,9 +119,10 @@ export default function SkillsDetailPanel({ skillId, locale = 'pt' }: SkillsDeta
                     {p}
                   </span>
                   {tip && (
-                    <div className="absolute bottom-full left-0 mb-2 w-64 bg-neutral-900 text-white text-xs rounded-lg px-3 py-2 leading-relaxed shadow-lg pointer-events-none opacity-0 group-hover/proj:opacity-100 transition-opacity duration-150 z-10">
+                    <div className="absolute top-full left-0 mt-2 w-64 bg-white text-neutral-800 text-xs rounded-lg px-3 py-2 leading-relaxed shadow-lg border border-neutral-200 pointer-events-none opacity-0 group-hover/proj:opacity-100 transition-opacity duration-150 z-10">
+                      <div className="absolute bottom-full left-4 border-4 border-transparent border-b-neutral-200" />
+                      <div className="absolute bottom-full left-4 translate-y-px border-4 border-transparent border-b-white" />
                       {tip}
-                      <div className="absolute top-full left-4 border-4 border-transparent border-t-neutral-900" />
                     </div>
                   )}
                 </div>
