@@ -5,7 +5,7 @@ type: PageLayout
 sections:
   - type: AnimatedHeroSection
     title: Sobre Mim
-    subtitle: Empreendedor e pesquisador apaixonado por IA
+    subtitle: Responsável de tecnologia, pesquisador de IA e empreendedor
     text: >
       Sou Thiago Peraro, empreendedor e pesquisador de inteligência artificial
       com foco  em processamento de linguagem natural. Minha trajetória combina
@@ -13,10 +13,10 @@ sections:
       ponta e liderança empreendedora.
 
 
-      Graduado em Ciência da Computação pela Universidade Federal de Goiás
-      (2019-2024),  atualmente sou pesquisador no CEIA-UFG como bolsista CNPq,
-      onde lidero projetos  inovadores que aplicam IA para resolver problemas
-      reais da sociedade.
+      Graduando em Ciência da Computação pela UFG (2019-presente, ~83%
+      concluído), atualmente sou responsável de tecnologia na Count on Sheep
+      (consultoria americana de crypto taxes) e pesquisador no CEIA-UFG como
+      bolsista CNPq, aplicando IA para resolver problemas reais.
     actions:
       - label: LinkedIn
         altText: Conectar no LinkedIn
@@ -142,7 +142,7 @@ sections:
     subtitle: Stack tecnológico e áreas de especialização
     text: |
       **Desenvolvimento Back-end:**
-      • Java e Spring Boot - 3+ anos de experiência no GoiásPrev
+      • Java e Spring Boot - 4+ anos de experiência (GoiásPrev + Count on Sheep)
       • SQL, Git e GitLab
       • Linux (Servidor Linux)
       • Metodologias ágeis e boas práticas de engenharia de software
@@ -284,6 +284,46 @@ sections:
         padding:
           - pt-16
           - pb-16
+          - pl-4
+          - pr-4
+        justifyContent: center
+        textAlign: center
+      title:
+        textAlign: center
+      subtitle:
+        textAlign: center
+      text:
+        textAlign: center
+      actions:
+        justifyContent: center
+  - type: GenericSection
+    title:
+      text: Evolução Técnica Detalhada
+      color: text-dark
+      type: TitleBlock
+    subtitle: Timeline interativa de skills por ano e categoria
+    text: >
+      Explore minha trajetória técnica de forma interativa — veja quais skills
+      adquiri em cada ano, os projetos associados e o contexto profissional de cada tecnologia.
+    actions:
+      - label: Explorar Skills
+        altText: Ver timeline de habilidades técnicas
+        url: /skills
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: ''
+        type: Button
+    elementId: skills-cta
+    colors: bg-neutral-fg-dark
+    styles:
+      self:
+        alignItems: center
+        flexDirection: col
+        padding:
+          - pt-12
+          - pb-12
           - pl-4
           - pr-4
         justifyContent: center
