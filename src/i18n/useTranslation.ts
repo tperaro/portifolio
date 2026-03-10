@@ -7,8 +7,8 @@ function get(obj: any, path: string, fallback?: string) {
 
 export function useTranslation() {
     const { locale: rawLocale } = useRouter();
-    const locale = (rawLocale as Locale) || 'pt';
-    const dict = translations[locale] ?? translations.pt;
+    const locale = (rawLocale as Locale) || 'en';
+    const dict = translations[locale] ?? translations.en;
     const t = (key: string, fallback?: string) => get(dict, key, fallback);
     return { t, locale };
 }

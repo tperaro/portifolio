@@ -9,10 +9,11 @@ import { getPageUrl } from './page-utils';
 // TODO use types?
 
 function getDirs(locale?: string) {
-    const isPt = !locale || locale === 'pt';
+    const normalizedLocale = locale ?? 'en';
+    const isPt = normalizedLocale === 'pt';
     return {
-        pagesDir: isPt ? 'content/pages' : `content/${locale}/pages`,
-        dataDir: isPt ? 'content/data' : `content/${locale}/data`
+        pagesDir: isPt ? 'content/pages' : `content/${normalizedLocale}/pages`,
+        dataDir: isPt ? 'content/data' : `content/${normalizedLocale}/data`
     };
 }
 

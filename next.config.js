@@ -8,8 +8,8 @@ const nextConfig = {
     trailingSlash: true,
     reactStrictMode: true,
     i18n: {
-        locales: ['pt', 'en'],
-        defaultLocale: 'pt',
+        locales: ['en', 'pt'],
+        defaultLocale: 'en',
         localeDetection: false
     },
     allowedDevOrigins: [
