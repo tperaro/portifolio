@@ -195,10 +195,10 @@ export const SKILLS: Skill[] = [
     context: 'Implemented a 7-phase animated loading sequence for Count on Sheep\'s dashboard — received direct positive feedback from CEO. Also used in this portfolio website for scroll-reveal and section transitions.',
     projects: ['dashboard (COS)', 'portfolio'] },
   /* DevOps / Infra */
-  { id: 'docker', name: 'Docker + Compose', cat: 'devops', level: 'advanced', start: 2024, end: null,
+  { id: 'docker', name: 'Docker + Compose', cat: 'devops', level: 'advanced', start: 2023, end: null,
     desc: 'Multi-service Compose stacks, non-root containers, CI/CD with registry push, Docker Swarm.',
-    context: 'Containerized all Count on Sheep services — reproducible environments eliminated environment-specific bugs and enabled one-command staging deployments.',
-    projects: ['sobrevidas-backend', 'Count on Sheep', 'Clivia'] },
+    context: 'Containerized all Count on Sheep services — reproducible environments eliminated environment-specific bugs and enabled one-command staging deployments. Also used at GoiasPrev for local development and deployment of Java services.',
+    projects: ['GoiasPrev', 'sobrevidas-backend', 'Count on Sheep', 'Clivia'] },
   { id: 'jenkins', name: 'Jenkins CI/CD', cat: 'devops', level: 'proficient', start: 2024, end: 2025,
     desc: 'Jenkinsfile pipelines with build, test, sonar, and Discord webhook notifications.',
     context: 'Built Sobrevidas\'s full CI pipeline — cut manual deploy errors to zero and gave the team instant quality gate feedback.',
