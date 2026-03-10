@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
+import { m } from 'framer-motion';
 
 import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
 import { Link, Action } from '../../atoms';
@@ -265,6 +266,7 @@ function SiteLogoLink({ title, logo, enableAnnotations }) {
 
 function ListOfLinks(props) {
     const { links = [], colors, enableAnnotations, inMobileMenu = false } = props;
+    const { asPath } = useRouter();
 
     return (
         <>
@@ -280,10 +282,16 @@ function ListOfLinks(props) {
                         />
                     );
                 } else {
+                    const linkUrl = link.url ?? '';
+                    const isRootUrl = linkUrl === '/' || linkUrl === '/pt' || linkUrl === '/en';
+                    const isActive = isRootUrl
+                        ? asPath === linkUrl
+                        : linkUrl !== '' && (asPath === linkUrl || asPath.startsWith(linkUrl + '/'));
+
                     return (
                         <li
                             key={index}
-                            className={classNames(inMobileMenu ? 'border-t' : 'py-2', {
+                            className={classNames('relative', inMobileMenu ? 'border-t' : 'py-2', {
                                 'py-4': inMobileMenu && link.__metadata.modelName === 'Button'
                             })}
                         >
@@ -294,6 +302,14 @@ function ListOfLinks(props) {
                                 })}
                                 {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })}
                             />
+                            {!inMobileMenu && isActive && (
+                                <m.div
+                                    layoutId="nav-indicator"
+                                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-current"
+                                    style={{ originX: 0 }}
+                                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                                />
+                            )}
                         </li>
                     );
                 }

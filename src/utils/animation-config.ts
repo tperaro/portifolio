@@ -246,3 +246,20 @@ export function debugAnimation(componentName: string, config: AnimationConfig): 
 export function shouldEnableAnimations(): boolean {
   return !prefersReducedMotion() && !isLowPerformanceDevice();
 }
+
+/**
+ * Premium easing curves (Stripe/Linear style)
+ * Use these named constants for consistent, high-quality motion across the codebase.
+ */
+export const EASING = {
+  // Smooth, premium feel
+  smooth: [0.25, 0.1, 0.25, 1] as [number, number, number, number],
+  // Fast start, gradual end (content reveals)
+  reveal: [0.76, 0, 0.24, 1] as [number, number, number, number],
+  // Standard cubic
+  standard: [0.4, 0, 0.2, 1] as [number, number, number, number],
+  // Ease out quad
+  easeOutQuad: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
+  // Spring-like (overshoot slightly)
+  spring: [0.34, 1.56, 0.64, 1] as [number, number, number, number],
+} as const;
