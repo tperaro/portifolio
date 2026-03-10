@@ -132,7 +132,7 @@ export const SKILLS: Skill[] = [
     context: 'Backed Clivia\'s AI SDR, Count on Sheep\'s onboarding backend, and CEIA\'s Koru chatbot. Async SSE enabled sub-second LLM response delivery.',
     projects: ['Clivia', 'onboarding-AI', 'assessment-api', 'CEIA'] },
   { id: 'flask', name: 'Flask', cat: 'python', level: 'proficient', start: 2026, end: null,
-    desc: 'Full-stack Flask with app factory pattern, blueprints, Jinja2, Flask-WTF, Flask-Limiter, gunicorn.',
+    desc: 'Full-stack Flask with app factory pattern, blueprints, Jinja2, Flask-Limiter, gunicorn.',
     context: 'Built Count on Sheep\'s human-confirmation portal — replaced manual spreadsheet onboarding, cutting ops workload by several hours per new client.',
     projects: ['human-confirmation (Count on Sheep)'] },
   { id: 'pydantic', name: 'Pydantic v2', cat: 'python', level: 'advanced', start: 2024, end: null,
