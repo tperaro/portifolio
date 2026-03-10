@@ -192,8 +192,8 @@ export const SKILLS: Skill[] = [
     projects: ['quick-front-end (COS)', 'CEIA koru-dashboard'] },
   { id: 'framer', name: 'Framer Motion', cat: 'frontend', level: 'familiar', start: 2026, end: null,
     desc: 'Complex animations: scroll-reveal, page transitions, 7-phase loading sequences.',
-    context: 'Implemented a 7-phase animated loading sequence for Count on Sheep\'s dashboard — received direct positive feedback from CEO.',
-    projects: ['dashboard (COS)'] },
+    context: 'Implemented a 7-phase animated loading sequence for Count on Sheep\'s dashboard — received direct positive feedback from CEO. Also used in this portfolio website for scroll-reveal and section transitions.',
+    projects: ['dashboard (COS)', 'portfolio'] },
   /* DevOps / Infra */
   { id: 'docker', name: 'Docker + Compose', cat: 'devops', level: 'advanced', start: 2024, end: null,
     desc: 'Multi-service Compose stacks, non-root containers, CI/CD with registry push, Docker Swarm.',
