@@ -10,3 +10,7 @@ export { useScrollAnimation, default as useScrollAnimationDefault } from './useS
 export type { UseScrollAnimationOptions, UseScrollAnimationReturn } from './useScrollAnimation';
 export { usePageTransition } from './usePageTransition';
 export type { UsePageTransitionOptions, UsePageTransitionReturn } from './usePageTransition';
+export { useMagneticCursor } from './useMagneticCursor';
+export type { UseMagneticCursorOptions } from './useMagneticCursor';
+export { useParallaxOnHover } from './useParallaxOnHover';
+export type { UseParallaxOnHoverOptions } from './useParallaxOnHover';
