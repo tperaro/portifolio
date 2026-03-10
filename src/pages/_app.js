@@ -1,23 +1,62 @@
 import '../css/main.css';
+import { useEffect } from 'react';
 import { LazyMotion, domAnimation, AnimatePresence, m } from 'framer-motion';
+import gsap from 'gsap';
+import Lenis from '@studio-freight/lenis';
 import LoadingIndicator from '@/components/atoms/LoadingIndicator';
 
+const pageVariants = {
+    initial: { opacity: 0, y: 20 },
+    animate: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }
+    },
+    exit: {
+        opacity: 0,
+        y: -20,
+        transition: { duration: 0.3 }
+    }
+};
+
 export default function MyApp({ Component, pageProps, router }) {
+    useEffect(() => {
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (prefersReducedMotion) {
+            return;
+        }
+
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+        });
+
+        const onTick = (time) => {
+            lenis.raf(time * 1000);
+        };
+
+        gsap.ticker.add(onTick);
+        gsap.ticker.lagSmoothing(0);
+
+        return () => {
+            gsap.ticker.remove(onTick);
+            lenis.destroy();
+        };
+    }, []);
+
     return (
         <LazyMotion features={domAnimation} strict>
             {/* Loading indicator for page transitions */}
             <LoadingIndicator duration={400} />
-            
+
             <AnimatePresence mode="wait" initial={false}>
                 <m.div
                     key={router.route}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{
-                        duration: 0.4,
-                        ease: 'easeInOut'
-                    }}
+                    variants={pageVariants}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
                     style={{
                         width: '100%',
                         minHeight: '100vh'
