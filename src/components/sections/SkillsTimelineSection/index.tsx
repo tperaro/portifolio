@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { CAREER } from '../../../data/skills-data';
+import { CAREER, SKILLS } from '../../../data/skills-data';
 import SkillsSidebar from './SkillsSidebar';
 import SkillsYearPanel from './SkillsYearPanel';
 import SkillsDetailPanel from './SkillsDetailPanel';
@@ -17,6 +17,7 @@ interface SkillsTimelineSectionProps {
 type Mode = 'year' | 'skill';
 
 const LATEST_YEAR = Math.max(...CAREER.map(c => c.year));
+const DEFAULT_SKILL_ID = SKILLS[0]?.id ?? 'langgraph';
 
 export default function SkillsTimelineSection(props: SkillsTimelineSectionProps) {
   const { title, subtitle, locale = 'pt', elementId, ...rest } = props;
@@ -36,7 +37,7 @@ export default function SkillsTimelineSection(props: SkillsTimelineSectionProps)
   const handleModeChange = (newMode: Mode) => {
     setMode(newMode);
     if (newMode === 'skill' && !selectedSkillId) {
-      setSelectedSkillId('langgraph'); // default skill
+      setSelectedSkillId(DEFAULT_SKILL_ID); // default skill
     }
   };
 
@@ -50,6 +51,7 @@ export default function SkillsTimelineSection(props: SkillsTimelineSectionProps)
         <div className="flex w-fit">
           <button
             onClick={() => handleModeChange('year')}
+            aria-pressed={mode === 'year'}
             className={`px-5 py-2 text-sm font-medium rounded-l transition-colors ${
               mode === 'year'
                 ? 'bg-neutral-900 text-white'
@@ -60,6 +62,7 @@ export default function SkillsTimelineSection(props: SkillsTimelineSectionProps)
           </button>
           <button
             onClick={() => handleModeChange('skill')}
+            aria-pressed={mode === 'skill'}
             className={`px-5 py-2 text-sm font-medium rounded-r transition-colors border-l-0 ${
               mode === 'skill'
                 ? 'bg-neutral-900 text-white'
@@ -89,7 +92,7 @@ export default function SkillsTimelineSection(props: SkillsTimelineSectionProps)
           />
         ) : (
           <SkillsDetailPanel
-            skillId={selectedSkillId ?? 'langgraph'}
+            skillId={selectedSkillId ?? DEFAULT_SKILL_ID}
             locale={locale}
           />
         )}
