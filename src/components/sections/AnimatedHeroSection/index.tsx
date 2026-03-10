@@ -1,19 +1,22 @@
 /**
  * AnimatedHeroSection Component
  * Feature: 001-adicionar-animações-interativas
- * 
+ *
  * Hero section with special animations:
- * - Typing effect on title
+ * - Typing effect on title (typingEffect=true)
+ * - Character stagger animation on title (typingEffect=false)
+ * - CSS noise overlay
+ * - Animated scroll indicator
  * - Animated background (gradient/particles)
  * - Sequential element entrance
  * - Respects reduced motion preferences
  * - Optimized for mobile (simplified animations)
- * 
+ *
  * User Story 4: "Wow factor" animations for homepage hero
  */
 
 import React, { useState, useEffect } from 'react';
-import { m, cubicBezier } from 'framer-motion';
+import { m, cubicBezier, useScroll, useTransform } from 'framer-motion';
 import classNames from 'classnames';
 import { useReducedMotion } from '@/hooks';
 import { getAnimationConfig } from '@/utils/animation-config';
@@ -25,17 +28,17 @@ interface AnimatedHeroSectionProps {
    * Hero title (supports typing effect)
    */
   title: string;
-  
+
   /**
    * Optional subtitle
    */
   subtitle?: string;
-  
+
   /**
    * Text content
    */
   text?: string;
-  
+
   /**
    * Call-to-action buttons
    */
@@ -45,7 +48,7 @@ interface AnimatedHeroSectionProps {
     type: 'primary' | 'secondary';
     [key: string]: any;
   }>;
-  
+
   /**
    * Hero image/media
    */
@@ -55,55 +58,96 @@ interface AnimatedHeroSectionProps {
     type?: 'image' | 'video';
     [key: string]: any;
   };
-  
+
   /**
    * Background animation type
    * @default 'gradient'
    */
   backgroundAnimation?: 'gradient' | 'particles' | 'none';
-  
+
   /**
    * Enable typing effect on title
    * @default true
    */
   typingEffect?: boolean;
-  
+
   /**
    * Typing speed (characters per second)
    * @default 15
    */
   typingSpeed?: number;
-  
+
   /**
    * Animation preset
    * @default 'moderate'
    */
   preset?: 'subtle' | 'moderate' | 'dramatic';
-  
+
   /**
    * Additional CSS classes
    */
   className?: string;
-  
+
   /**
    * Stackbit field paths for CMS
    */
   'data-sb-field-path'?: string;
-  
+
   /**
    * Element ID
    */
   elementId?: string;
-  
+
   /**
    * Colors
    */
   colors?: string;
-  
+
   /**
    * Styles
    */
   styles?: any;
+}
+
+// 3b. CSS Noise Background Overlay
+function NoiseOverlay() {
+  return (
+    <div
+      aria-hidden="true"
+      style={{
+        position: 'absolute',
+        inset: 0,
+        pointerEvents: 'none',
+        zIndex: 1,
+        opacity: 0.04,
+        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+        backgroundRepeat: 'repeat',
+        backgroundSize: '256px 256px',
+      }}
+    />
+  );
+}
+
+// 3c. Animated Scroll Indicator
+function ScrollIndicator() {
+  const { scrollY } = useScroll();
+  const opacity = useTransform(scrollY, [0, 100], [1, 0]);
+
+  return (
+    <m.div
+      style={{ opacity, position: 'absolute', bottom: '2rem', left: '50%', x: '-50%' }}
+      aria-hidden="true"
+    >
+      <m.div
+        animate={{ y: [0, 8, 0] }}
+        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </m.div>
+    </m.div>
+  );
 }
 
 export default function AnimatedHeroSection(props: AnimatedHeroSectionProps): React.JSX.Element {
@@ -138,10 +182,10 @@ export default function AnimatedHeroSection(props: AnimatedHeroSectionProps): Re
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
-    
+
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
@@ -153,9 +197,8 @@ export default function AnimatedHeroSection(props: AnimatedHeroSectionProps): Re
       return;
     }
 
-    const charactersPerMs = typingSpeed / 1000;
     let currentIndex = 0;
-    
+
     const typingInterval = setInterval(() => {
       if (currentIndex <= title.length) {
         setDisplayedTitle(title.slice(0, currentIndex));
@@ -182,7 +225,7 @@ export default function AnimatedHeroSection(props: AnimatedHeroSectionProps): Re
   };
 
   const cubicEase = cubicBezier(0.4, 0, 0.2, 1);
-  
+
   const itemVariants = prefersReducedMotion || !config.enabled
     ? {}
     : {
@@ -209,6 +252,23 @@ export default function AnimatedHeroSection(props: AnimatedHeroSectionProps): Re
             ease: cubicEase,
             delay: 0.3
           }
+        }
+      };
+
+  // 3a. Character stagger variants
+  const titleVariants = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.03 } }
+  };
+
+  const charVariants = prefersReducedMotion || !config.enabled
+    ? {}
+    : {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }
         }
       };
 
@@ -275,6 +335,10 @@ export default function AnimatedHeroSection(props: AnimatedHeroSectionProps): Re
   const hasTextContent = !!(subtitle || text || actions.length > 0);
   const hasMedia = !!media?.url;
 
+  // 3a. Determine whether to use character stagger
+  const useCharStagger = !typingEffect || prefersReducedMotion;
+  const chars = title.split('');
+
   return (
     <section
       id={elementId}
@@ -289,6 +353,9 @@ export default function AnimatedHeroSection(props: AnimatedHeroSectionProps): Re
     >
       {/* Background Animation */}
       {getBackgroundAnimation()}
+
+      {/* 3b. CSS Noise Overlay */}
+      {!prefersReducedMotion && <NoiseOverlay />}
 
       {/* Content */}
       <m.div
@@ -307,21 +374,48 @@ export default function AnimatedHeroSection(props: AnimatedHeroSectionProps): Re
             'flex-1',
             hasMedia ? 'md:w-1/2' : 'max-w-3xl'
           )}>
-            {/* Title with Typing Effect */}
-            <m.h1
-              className={classNames(
-                'text-4xl md:text-5xl lg:text-6xl font-bold',
-                'mb-6',
-                styles?.title?.fontWeight ? `font-${styles.title.fontWeight}` : undefined
-              )}
-              variants={typingEffect && !prefersReducedMotion ? {} : itemVariants}
-              {...(fieldPath && { 'data-sb-field-path': '.title' })}
-            >
-              {displayedTitle}
-              {typingEffect && !isTypingComplete && !prefersReducedMotion && (
-                <span className="animate-pulse">|</span>
-              )}
-            </m.h1>
+            {/* Title: character stagger when typingEffect=false, typing effect otherwise */}
+            {useCharStagger ? (
+              <m.h1
+                className={classNames(
+                  'text-4xl md:text-5xl lg:text-6xl font-bold',
+                  'mb-6',
+                  styles?.title?.fontWeight ? `font-${styles.title.fontWeight}` : undefined
+                )}
+                variants={prefersReducedMotion || !config.enabled ? {} : titleVariants}
+                initial="hidden"
+                animate="visible"
+                {...(fieldPath && { 'data-sb-field-path': '.title' })}
+              >
+                {prefersReducedMotion || !config.enabled
+                  ? title
+                  : chars.map((char, i) => (
+                      <m.span
+                        key={i}
+                        variants={charVariants}
+                        style={{ display: 'inline-block' }}
+                      >
+                        {char === ' ' ? '\u00A0' : char}
+                      </m.span>
+                    ))
+                }
+              </m.h1>
+            ) : (
+              <m.h1
+                className={classNames(
+                  'text-4xl md:text-5xl lg:text-6xl font-bold',
+                  'mb-6',
+                  styles?.title?.fontWeight ? `font-${styles.title.fontWeight}` : undefined
+                )}
+                variants={typingEffect && !prefersReducedMotion ? {} : itemVariants}
+                {...(fieldPath && { 'data-sb-field-path': '.title' })}
+              >
+                {displayedTitle}
+                {typingEffect && !isTypingComplete && !prefersReducedMotion && (
+                  <span className="animate-pulse">|</span>
+                )}
+              </m.h1>
+            )}
 
             {/* Subtitle */}
             {subtitle && (
@@ -394,6 +488,9 @@ export default function AnimatedHeroSection(props: AnimatedHeroSectionProps): Re
           )}
         </div>
       </m.div>
+
+      {/* 3c. Scroll Indicator */}
+      {!prefersReducedMotion && <ScrollIndicator />}
     </section>
   );
 }

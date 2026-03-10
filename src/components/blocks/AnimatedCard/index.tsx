@@ -1,10 +1,10 @@
 /**
  * AnimatedCard Component
  * Feature: 001-adicionar-animações-interativas
- * 
+ *
  * Pre-styled card component with hover and scroll animations.
  * Provides interactive feedback on hover/tap and smooth scroll-reveal.
- * 
+ *
  * Usage:
  * ```tsx
  * <AnimatedCard
@@ -22,6 +22,7 @@ import { m, cubicBezier, easeInOut, easeOut } from 'framer-motion';
 import classNames from 'classnames';
 import { useScrollAnimation } from '@/hooks';
 import { useReducedMotion } from '@/hooks';
+import { useParallaxOnHover } from '@/hooks';
 import { getAnimationConfig } from '@/utils/animation-config';
 
 interface AnimatedCardProps {
@@ -29,12 +30,12 @@ interface AnimatedCardProps {
    * Card title
    */
   title: string;
-  
+
   /**
    * Card description
    */
   description?: string;
-  
+
   /**
    * Card image
    */
@@ -42,7 +43,7 @@ interface AnimatedCardProps {
     url: string;
     altText: string;
   };
-  
+
   /**
    * Optional link
    */
@@ -50,35 +51,35 @@ interface AnimatedCardProps {
     url: string;
     label: string;
   };
-  
+
   /**
    * Hover animation style
    * @default 'elevate'
    */
   hoverStyle?: 'elevate' | 'tilt' | 'glow' | 'none';
-  
+
   /**
    * Scroll reveal animation
    * @default true
    */
   animateOnScroll?: boolean;
-  
+
   /**
    * Animation delay
    * @default 0
    */
   delay?: number;
-  
+
   /**
    * Additional CSS classes
    */
   className?: string;
-  
+
   /**
    * Callback when card is clicked
    */
   onClick?: () => void;
-  
+
   /**
    * Test ID
    */
@@ -104,6 +105,9 @@ export default function AnimatedCard({
     threshold: 0.2,
     enabled: animateOnScroll && config.enabled && !prefersReducedMotion
   });
+
+  // Hover parallax on image
+  const { ref: parallaxRef, x: imgX, y: imgY } = useParallaxOnHover({ intensity: 8 });
 
   // Hover variants based on style
   const getHoverVariant = () => {
@@ -143,7 +147,7 @@ export default function AnimatedCard({
     transition: { duration: 0.1 }
   };
 
-  // Scroll animation variants
+  // Scroll animation variants (body text: title, description, link)
   const scrollVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 }
@@ -207,28 +211,36 @@ export default function AnimatedCard({
       data-testid={testId}
     >
       {image && (
-        <div className="relative w-full h-48 overflow-hidden">
+        <m.div
+          ref={parallaxRef as React.Ref<HTMLDivElement>}
+          className="relative w-full h-48 overflow-hidden"
+          initial={!prefersReducedMotion ? { clipPath: 'inset(100% 0 0 0)' } : {}}
+          whileInView={!prefersReducedMotion ? { clipPath: 'inset(0% 0 0 0)' } : {}}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
+        >
           <m.img
             src={image.url}
             alt={image.altText}
             className="w-full h-full object-cover"
+            style={{ x: imgX, y: imgY }}
             whileHover={prefersReducedMotion ? {} : { scale: 1.1 }}
             transition={{ duration: 0.4, ease: cubicBezier(0.4, 0, 0.2, 1) }}
           />
-        </div>
+        </m.div>
       )}
-      
+
       <div className="p-6">
         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
           {title}
         </h3>
-        
+
         {description && (
           <p className="text-gray-600 dark:text-gray-300 mb-4">
             {description}
           </p>
         )}
-        
+
         {link && (
           <a
             href={link.url}
