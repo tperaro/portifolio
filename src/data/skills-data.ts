@@ -46,6 +46,39 @@ export interface Achievement {
   descEn?: string;
 }
 
+export const PROJECT_DESCRIPTIONS: Record<string, string> = {
+  'GoiasPrev / Minsait':        'State pension fund (120k users) — Java back-end, salary processing, Spring Boot migration.',
+  'GoiasPrev':                   'State pension fund (120k users) — Java back-end, salary processing, Spring Boot migration.',
+  'Clivia':                      'AI startup for medical clinics — AI SDR with LangGraph & WhatsApp API, automated lead qualification.',
+  'Count on Sheep':              'US crypto tax consulting firm — full tech stack built from scratch as sole Tech Lead.',
+  'Count on Sheep infra':        'VPS infrastructure for Count on Sheep — Traefik + Portainer + Docker Swarm, 8+ services.',
+  'Count on Sheep STT pipeline': 'Real-time speech-to-text pipeline for live tax consultations — sub-500ms latency with AI meeting summaries.',
+  'CEIA':                        'Center for AI Excellence at UFG — NLP research, CNPq scholarship, Sobrevidas & Koru projects.',
+  'CEIA research':               'Center for AI Excellence at UFG — NLP research, CNPq scholarship, Sobrevidas & Koru projects.',
+  'CEIA Koru':                   'Koru: AI chatbot for skill assessment of engineering students, deployed with CEIA/SENAI.',
+  'CEIA infrastructure':         'Internal CEIA tooling and SSO infrastructure.',
+  'CEIA koru-dashboard':         'Evaluation dashboard for CEIA\'s Koru chatbot — real-time quality and latency metrics.',
+  'assessment-api':              'Pydantic-AI multi-agent API powering CEIA\'s Koru competency assessment chatbot.',
+  'assessment-api (CEIA/Koru)':  'Pydantic-AI multi-agent API powering CEIA\'s Koru competency assessment chatbot.',
+  'sobrevidas-backend':          'Oral cancer screening platform for Brazil\'s SUS — Spring Boot, Keycloak, best paper at SBCAS 2025.',
+  'Sobrevidas (CEIA)':           'Oral cancer screening platform for Brazil\'s SUS — Spring Boot, Keycloak, best paper at SBCAS 2025.',
+  'onboarding-AI':               'AI-assisted client onboarding backend for Count on Sheep — FastAPI + LangGraph.',
+  'human-confirmation (Count on Sheep)': 'Internal web portal replacing spreadsheet-based onboarding — Flask, DocuSign, HubSpot integration.',
+  'human-confirmation':          'Internal web portal replacing spreadsheet-based onboarding — Flask, DocuSign, HubSpot integration.',
+  'dashboard (COS)':             'Internal React 19 dashboard for Count on Sheep — LLMOps metrics, cost tracking, analytics.',
+  'quick-front-end (COS)':       'Streamlit LLMOps dashboard for Count on Sheep leadership — cost, quality, latency visibility.',
+  'process-map (COS)':           'Interactive Canvas 2D process map for Count on Sheep — zero-dependency pan/zoom workflow explorer.',
+  'journaling (COS)':            'Internal CLI daemon for activity tracking with daily AI-generated standup reports.',
+  'agnofirst':                   'AI newsletter agent — news search, synthesis and delivery, prototyped with Agno framework.',
+  'EMBRAPII':                    'EMBRAPII Capacitação 4.0 — led 7-person EdTech team, 960h certification, recognized top leader.',
+  'Peraro Assessoria clients':   'Freelance automation projects via Peraro Assessoria — n8n workflows for legal and SMB clients.',
+  'limajr Advogados (Peraro Assessoria)': 'Law firm automation — SharePoint document sync via Microsoft Graph API.',
+  'Evtek proposal (Peraro Assessoria)': 'WhatsApp AI SDR proposal for Evtek via Peraro Assessoria.',
+  'Totem TI':                    'Freelance Java back-end contract.',
+  'dashboard':                   'Internal React 19 dashboard for Count on Sheep — LLMOps metrics, cost tracking, analytics.',
+  'portfolio':                   'This portfolio website — Next.js 15, TypeScript, Tailwind, Framer Motion, built with AI-assisted workflows.',
+};
+
 export const CAREER: CareerEntry[] = [
   { year: 2019, role: 'CS Student', company: 'UFG', type: 'education',
     note: 'Started Computer Science degree; algorithms, data structures, software engineering foundations.' },

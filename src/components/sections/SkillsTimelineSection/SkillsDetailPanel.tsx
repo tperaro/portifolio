@@ -1,6 +1,6 @@
 // src/components/sections/SkillsTimelineSection/SkillsDetailPanel.tsx
 import React from 'react';
-import { CATEGORIES, SKILLS } from '../../../data/skills-data';
+import { CATEGORIES, SKILLS, PROJECT_DESCRIPTIONS } from '../../../data/skills-data';
 
 interface SkillsDetailPanelProps {
   skillId: string;
@@ -111,11 +111,22 @@ export default function SkillsDetailPanel({ skillId, locale = 'pt' }: SkillsDeta
         <div>
           <p className="text-[10px] font-semibold uppercase tracking-widest text-neutral-400 mb-2">{labels.projects}</p>
           <div className="flex flex-wrap gap-2">
-            {skill.projects.map((p) => (
-              <span key={p} className="text-xs px-3 py-1 border border-neutral-200 rounded bg-white text-neutral-700 font-medium">
-                {p}
-              </span>
-            ))}
+            {skill.projects.map((p) => {
+              const tip = PROJECT_DESCRIPTIONS[p];
+              return (
+                <div key={p} className="relative group/proj">
+                  <span className={`text-xs px-3 py-1 border rounded font-medium cursor-default select-none transition-colors ${tip ? 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-400 hover:bg-neutral-50' : 'border-neutral-200 bg-white text-neutral-700'}`}>
+                    {p}
+                  </span>
+                  {tip && (
+                    <div className="absolute bottom-full left-0 mb-2 w-64 bg-neutral-900 text-white text-xs rounded-lg px-3 py-2 leading-relaxed shadow-lg pointer-events-none opacity-0 group-hover/proj:opacity-100 transition-opacity duration-150 z-10">
+                      {tip}
+                      <div className="absolute top-full left-4 border-4 border-transparent border-t-neutral-900" />
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       )}
