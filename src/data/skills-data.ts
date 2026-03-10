@@ -14,6 +14,7 @@ export interface CareerEntry {
 export interface Category {
   id: string;
   label: string;
+  labelEn: string;
   color: string;
 }
 
@@ -65,12 +66,12 @@ export const CAREER: CareerEntry[] = [
 ];
 
 export const CATEGORIES: Category[] = [
-  { id: 'java',         label: 'Java / Back-end',  color: '#475569' },
-  { id: 'python',       label: 'Python / APIs',     color: '#4338ca' },
-  { id: 'ai',           label: 'AI / LLM',          color: '#7c3aed' },
-  { id: 'frontend',     label: 'Frontend',          color: '#0284c7' },
-  { id: 'devops',       label: 'DevOps / Infra',    color: '#059669' },
-  { id: 'integrations', label: 'Integrações',       color: '#d97706' },
+  { id: 'java',         label: 'Java / Back-end',  labelEn: 'Java / Back-end',  color: '#475569' },
+  { id: 'python',       label: 'Python / APIs',     labelEn: 'Python / APIs',     color: '#4338ca' },
+  { id: 'ai',           label: 'AI / LLM',          labelEn: 'AI / LLM',          color: '#7c3aed' },
+  { id: 'frontend',     label: 'Frontend',          labelEn: 'Frontend',          color: '#0284c7' },
+  { id: 'devops',       label: 'DevOps / Infra',    labelEn: 'DevOps / Infra',    color: '#059669' },
+  { id: 'integrations', label: 'Integrações',       labelEn: 'Integrations',      color: '#d97706' },
 ];
 
 export const ACHIEVEMENTS: Achievement[] = [

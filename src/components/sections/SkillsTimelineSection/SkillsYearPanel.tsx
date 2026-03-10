@@ -111,7 +111,7 @@ export default function SkillsYearPanel({ year, onSkillClick, locale = 'pt' }: S
             <div key={catId} className="mb-4">
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-2.5 h-2.5 rounded-sm" style={{ background: cat?.color }} />
-                <span className="text-[11px] font-bold uppercase tracking-wide text-neutral-500">{cat?.label}</span>
+                <span className="text-[11px] font-bold uppercase tracking-wide text-neutral-500">{locale === 'en' ? (cat?.labelEn ?? cat?.label) : cat?.label}</span>
                 <span className="ml-auto text-[10px] text-neutral-400 bg-neutral-100 px-1.5 rounded-full">{skills.length}</span>
               </div>
               <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">

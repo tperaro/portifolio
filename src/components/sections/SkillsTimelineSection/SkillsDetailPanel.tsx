@@ -49,7 +49,7 @@ export default function SkillsDetailPanel({ skillId, locale = 'pt' }: SkillsDeta
             {levelLabel[locale]?.[skill.level]}
           </span>
           <span className="text-xs border border-neutral-200 px-2 py-0.5 rounded-full text-neutral-500 bg-neutral-50">
-            {cat?.label}
+            {locale === 'en' ? (cat?.labelEn ?? cat?.label) : cat?.label}
           </span>
         </div>
         <p className="text-sm text-neutral-500">{skill.start}–{skill.end ?? (locale === 'en' ? 'present' : 'presente')}</p>

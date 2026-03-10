@@ -93,7 +93,7 @@ export default function SkillsSidebar({
               className="w-full flex items-center gap-2 px-3 py-2.5 text-left hover:bg-neutral-50 transition-colors"
             >
               <span className="w-2 h-2 rounded-sm flex-shrink-0" style={{ background: cat.color }} />
-              <span className="text-xs font-semibold text-neutral-600 flex-1 leading-tight">{cat.label}</span>
+              <span className="text-xs font-semibold text-neutral-600 flex-1 leading-tight">{locale === 'en' ? cat.labelEn : cat.label}</span>
               <span className="text-[10px] text-neutral-400 bg-neutral-100 px-1.5 rounded-full">{catSkills.length}</span>
               <span className={`text-[8px] text-neutral-400 transition-transform ${isOpen ? 'rotate-90' : ''}`}>▶</span>
             </button>
