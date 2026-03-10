@@ -12,6 +12,22 @@ export const translations: Record<Locale, Dict> = {
         carousel: {
             previous: 'Anterior',
             next: 'Próximo'
+        },
+        skills: {
+            page_title: 'Habilidades Técnicas',
+            page_subtitle: 'Explore minha evolução técnica por ano ou por categoria de skill',
+            by_year: 'Por Ano',
+            by_skill: 'Por Skill',
+            timeline: 'Linha do Tempo',
+            categories: 'Categorias',
+            new_this_year: 'Skills deste ano',
+            active_skills: 'Skills ativas',
+            achievements: 'Conquistas',
+            context: 'Contexto Profissional',
+            academic: 'Base Acadêmica',
+            projects: 'Projetos',
+            select_skill: 'Selecione uma skill',
+            present: 'presente',
         }
     },
     en: {
@@ -23,6 +39,22 @@ export const translations: Record<Locale, Dict> = {
         carousel: {
             previous: 'Previous',
             next: 'Next'
+        },
+        skills: {
+            page_title: 'Technical Skills',
+            page_subtitle: 'Explore my technical evolution by year or skill category',
+            by_year: 'By Year',
+            by_skill: 'By Skill',
+            timeline: 'Timeline',
+            categories: 'Categories',
+            new_this_year: 'New this year',
+            active_skills: 'Active skills',
+            achievements: 'Achievements',
+            context: 'Professional Context',
+            academic: 'Academic Foundation',
+            projects: 'Projects',
+            select_skill: 'Select a skill',
+            present: 'present',
         }
     }
 };
