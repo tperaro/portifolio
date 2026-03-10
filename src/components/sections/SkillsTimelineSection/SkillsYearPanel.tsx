@@ -67,8 +67,12 @@ export default function SkillsYearPanel({ year, onSkillClick, locale = 'pt' }: S
               <div key={`${a.year}-${a.label}`} className="flex items-start gap-3 bg-white border border-neutral-200 rounded-lg px-4 py-3">
                 <span className="text-xl">{a.icon}</span>
                 <div>
-                  <p className="text-sm font-semibold text-neutral-800">{a.label}</p>
-                  <p className="text-xs text-neutral-500">{a.desc}</p>
+                  <p className="text-sm font-semibold text-neutral-800">
+                    {locale === 'en' ? (a.labelEn ?? a.label) : a.label}
+                  </p>
+                  <p className="text-xs text-neutral-500">
+                    {locale === 'en' ? (a.descEn ?? a.desc) : a.desc}
+                  </p>
                 </div>
               </div>
             ))}

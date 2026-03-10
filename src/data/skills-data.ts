@@ -41,6 +41,8 @@ export interface Achievement {
   icon: string;
   label: string;
   desc: string;
+  labelEn?: string;
+  descEn?: string;
 }
 
 export const CAREER: CareerEntry[] = [
@@ -72,12 +74,24 @@ export const CATEGORIES: Category[] = [
 ];
 
 export const ACHIEVEMENTS: Achievement[] = [
-  { year: 2022, icon: '💼', label: 'Primeiro emprego', desc: 'Estagiário na GoiasPrev/Minsait' },
-  { year: 2023, icon: '🏗️', label: 'Primeiro time liderado', desc: 'Time de 7 pessoas no EMBRAPII Capacitação 4.0' },
-  { year: 2024, icon: '🚀', label: 'Fundação da Clivia', desc: 'IA para clínicas médicas' },
-  { year: 2024, icon: '🔬', label: 'Pesquisador CNPq', desc: 'Bolsista no CEIA-UFG / Projeto Sobrevidas' },
-  { year: 2025, icon: '🏆', label: 'Melhor artigo SBCAS 2025', desc: 'Categoria ferramentas — Sobrevidas oral cancer AI' },
-  { year: 2026, icon: '🌎', label: 'Tech Lead internacional', desc: 'Responsável de tecnologia na Count on Sheep (EUA)' },
+  { year: 2022, icon: '🎓', label: 'Primeiro emprego', desc: 'Promovido de estagiário a dev full-time na Minsait. Back-end Java no sistema de previdência GoiasPrev (120k usuários).',
+    labelEn: 'First professional role', descEn: 'Promoted from intern to full-time developer at Minsait. Java back-end for GoiasPrev pension system (120k users).' },
+  { year: 2023, icon: '🏅', label: 'Líder destaque EMBRAPII', desc: 'Liderou time de 7 pessoas no Capacitação 4.0. Reconhecido entre os melhores de 60 fellows. 960h de certificação.',
+    labelEn: 'EMBRAPII top leader', descEn: 'Led 7-person EdTech team in Capacitação 4.0. Recognized as standout leader among 60 fellows. 960h certification.' },
+  { year: 2024, icon: '🚀', label: 'Fundação da Clivia', desc: 'Fundou startup de IA para clínicas médicas: AI SDR com LangGraph, WhatsApp API, Python/FastAPI.',
+    labelEn: 'Clivia founded', descEn: 'Founded AI startup for medical clinics: AI SDR with LangGraph, WhatsApp API, Python/FastAPI.' },
+  { year: 2024, icon: '🔬', label: 'Pesquisador CNPq', desc: 'Ingressou no CEIA-UFG como pesquisador NLP com bolsa CNPq. Projeto Sobrevidas (triagem de câncer bucal para o SUS).',
+    labelEn: 'CNPq researcher', descEn: 'Joined CEIA-UFG as NLP Researcher with CNPq scholarship. Project Sobrevidas (oral cancer screening chatbot for SUS).' },
+  { year: 2024, icon: '🏆', label: '6º lugar nacional CGE-GO', desc: 'Competição nacional CGE-GO, top 6 entre centenas. 1º prêmio era R$1,5M.',
+    labelEn: '6th place nationally', descEn: 'CGE-GO national competition, top 6 out of hundreds. 1st prize was R$1.5M.' },
+  { year: 2025, icon: '📄', label: 'Melhor artigo — SBCAS 2025', desc: 'Artigo Sobrevidas premiado como melhor do simpósio nacional de computação em saúde do Brasil.',
+    labelEn: 'Best paper — SBCAS 2025', descEn: 'Sobrevidas article awarded best paper at Brazil\'s national health computing symposium.' },
+  { year: 2025, icon: '🎤', label: 'Palestrante Campus Party', desc: 'Keynote na CPGoiás5 como "Founder CLIVIA & CEIA Researcher".',
+    labelEn: 'Campus Party speaker', descEn: 'Keynote speaker at CPGoiás5 as "Founder CLIVIA & CEIA Researcher".' },
+  { year: 2025, icon: '🎓', label: 'Startup School — 6º lugar', desc: 'Competiu com 54 startups no LINK (maior escola de negócios do Brasil). Terminou em 6º — top 11%.',
+    labelEn: 'Startup School — 6th place', descEn: 'Competed with 54 startups at LINK (Brazil\'s biggest business school). Finished 6th — top 11%.' },
+  { year: 2026, icon: '⚡', label: 'Tech Lead internacional', desc: 'Único responsável de tecnologia na Count on Sheep (EUA). Construiu toda a stack do zero.',
+    labelEn: 'Tech Lead @ Count on Sheep', descEn: 'Sole tech lead at US crypto tax consulting firm. Built entire tech stack from scratch.' },
 ];
 
 export const SKILLS: Skill[] = [
@@ -138,9 +152,9 @@ export const SKILLS: Skill[] = [
     context: 'Architected Count on Sheep\'s 7-agent STT pipeline and Clivia\'s AI SDR — reducing manual outreach work by ~80%.',
     projects: ['Clivia', 'Count on Sheep (7-agent STT)', 'CEIA Koru'] },
   { id: 'crewai', name: 'CrewAI', cat: 'ai', level: 'proficient', start: 2024, end: 2025,
-    desc: 'Multi-agent system design for the Clivia medical clinic SDR product.',
-    context: 'Built Clivia\'s first AI SDR — automated lead qualification via WhatsApp, achieving 40%+ message open rates.',
-    projects: ['Clivia'] },
+    desc: 'Multi-agent system design and orchestration; evaluated and prototyped during the AI tooling exploration phase.',
+    context: 'Evaluated CrewAI as a multi-agent framework during initial AI tooling research — informed the decision to adopt LangGraph as the primary orchestration layer for production workloads.',
+    projects: ['CEIA research'] },
   { id: 'rag', name: 'RAG / GraphRAG', cat: 'ai', level: 'advanced', start: 2025, end: null,
     desc: 'RAG pipelines: LightRAG, LanceDB, pgvector, FAISS, chunking, embeddings (OpenAI + local).',
     context: 'Reduced time-to-answer for complex tax document queries from hours of manual search to under 30 seconds.',

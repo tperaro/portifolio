@@ -48,26 +48,24 @@ export default function SkillsTimelineSection(props: SkillsTimelineSectionProps)
         <h1 className="text-2xl font-bold text-neutral-900 mb-1">{labels.pageTitle}</h1>
         <p className="text-sm text-neutral-500 mb-5">{labels.pageSubtitle}</p>
         {/* Mode toggle */}
-        <div className="flex w-fit">
+        <div className="inline-flex rounded-lg p-1 gap-1" style={{ background: 'rgba(42,42,42,0.12)' }}>
           <button
             onClick={() => handleModeChange('year')}
             aria-pressed={mode === 'year'}
-            className={`px-5 py-2 text-sm font-medium rounded-l transition-colors ${
-              mode === 'year'
-                ? 'bg-neutral-900 text-white'
-                : 'bg-white text-neutral-600 border border-neutral-200 hover:bg-neutral-50'
-            }`}
+            className="px-5 py-2 text-sm rounded-md font-semibold transition-all"
+            style={mode === 'year'
+              ? { background: '#2a2a2a', color: '#fff' }
+              : { background: 'transparent', color: '#2a2a2a', opacity: 0.6 }}
           >
             {labels.byYear}
           </button>
           <button
             onClick={() => handleModeChange('skill')}
             aria-pressed={mode === 'skill'}
-            className={`px-5 py-2 text-sm font-medium rounded-r transition-colors border-l-0 ${
-              mode === 'skill'
-                ? 'bg-neutral-900 text-white'
-                : 'bg-white text-neutral-600 border border-neutral-200 hover:bg-neutral-50'
-            }`}
+            className="px-5 py-2 text-sm rounded-md font-semibold transition-all"
+            style={mode === 'skill'
+              ? { background: '#2a2a2a', color: '#fff' }
+              : { background: 'transparent', color: '#2a2a2a', opacity: 0.6 }}
           >
             {labels.bySkill}
           </button>
