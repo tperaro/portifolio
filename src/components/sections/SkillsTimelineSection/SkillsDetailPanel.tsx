@@ -17,6 +17,11 @@ const MIN_YEAR = 2019;
 const MAX_YEAR = 2026;
 const TOTAL_YEARS = MAX_YEAR - MIN_YEAR + 1;
 
+const levelLabel: Record<string, Record<string, string>> = {
+  pt: { advanced: 'Avançado', proficient: 'Proficiente', familiar: 'Familiar' },
+  en: { advanced: 'Advanced', proficient: 'Proficient', familiar: 'Familiar' },
+};
+
 export default function SkillsDetailPanel({ skillId, locale = 'pt' }: SkillsDetailPanelProps) {
   const skill = SKILLS.find(s => s.id === skillId);
   if (!skill) return (
@@ -29,11 +34,6 @@ export default function SkillsDetailPanel({ skillId, locale = 'pt' }: SkillsDeta
   const endYear = skill.end ?? MAX_YEAR;
   const barStart = ((skill.start - MIN_YEAR) / TOTAL_YEARS) * 100;
   const barWidth = ((endYear - skill.start + 1) / TOTAL_YEARS) * 100;
-
-  const levelLabel: Record<string, Record<string, string>> = {
-    pt: { advanced: 'Avançado', proficient: 'Proficiente', familiar: 'Familiar' },
-    en: { advanced: 'Advanced', proficient: 'Proficient', familiar: 'Familiar' },
-  };
 
   const labels = locale === 'en'
     ? { desc: 'Description', context: 'Professional Context', projects: 'Projects', timeline: 'Timeline', academic: 'Academic Foundation' }
@@ -111,8 +111,8 @@ export default function SkillsDetailPanel({ skillId, locale = 'pt' }: SkillsDeta
         <div>
           <p className="text-[10px] font-semibold uppercase tracking-widest text-neutral-400 mb-2">{labels.projects}</p>
           <div className="flex flex-wrap gap-2">
-            {skill.projects.map((p, i) => (
-              <span key={i} className="text-xs px-3 py-1 border border-neutral-200 rounded bg-white text-neutral-700 font-medium">
+            {skill.projects.map((p) => (
+              <span key={p} className="text-xs px-3 py-1 border border-neutral-200 rounded bg-white text-neutral-700 font-medium">
                 {p}
               </span>
             ))}
