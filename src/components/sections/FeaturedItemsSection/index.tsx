@@ -1,5 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
+import { m, cubicBezier } from 'framer-motion';
 
 import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
 import { getComponent } from '../../components-registry';
@@ -7,7 +8,26 @@ import { getDataAttrs } from '../../../utils/get-data-attrs';
 import Section from '../Section';
 import { Action, Badge } from '../../atoms';
 import TitleBlock from '../../blocks/TitleBlock';
-import AnimatedWrapper from '../../atoms/AnimatedWrapper';
+
+// Container variant: triggers stagger on children
+const containerVariants = {
+    hidden: {},
+    visible: {
+        transition: {
+            staggerChildren: 0.08
+        }
+    }
+};
+
+// Child item variant: each card fades + slides up
+const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.5, ease: cubicBezier(0.4, 0, 0.2, 1) }
+    }
+};
 
 export default function FeaturedItemsSection(props) {
     const { elementId, colors, backgroundImage, badge, title, subtitle, items = [], actions = [], variant, styles = {}, enableAnnotations } = props;
@@ -98,7 +118,7 @@ function FeaturedItemsThreeColGrid(props) {
     }
     const FeaturedItem = getComponent('FeaturedItem');
     return (
-        <div
+        <m.div
             className={classNames(
                 'w-full',
                 'grid',
@@ -109,14 +129,18 @@ function FeaturedItemsThreeColGrid(props) {
                 'auto-rows-fr',
                 { 'mt-12': hasTopMargin }
             )}
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-50px' }}
             {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
         >
             {items.map((item, index) => (
-                <AnimatedWrapper key={index} direction="up" delay={index * 0.1} preset="moderate" className="h-full">
+                <m.div key={index} variants={itemVariants} className="h-full">
                     <FeaturedItem {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
-                </AnimatedWrapper>
+                </m.div>
             ))}
-        </div>
+        </m.div>
     );
 }
 
@@ -127,7 +151,7 @@ function FeaturedItemsTwoColGrid(props) {
     }
     const FeaturedItem = getComponent('FeaturedItem');
     return (
-        <div
+        <m.div
             className={classNames(
                 'w-full',
                 'grid',
@@ -137,14 +161,18 @@ function FeaturedItemsTwoColGrid(props) {
                 'auto-rows-fr',
                 { 'mt-12': hasTopMargin }
             )}
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-50px' }}
             {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
         >
             {items.map((item, index) => (
-                <AnimatedWrapper key={index} direction="up" delay={index * 0.1} preset="moderate" className="h-full">
+                <m.div key={index} variants={itemVariants}>
                     <FeaturedItem {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
-                </AnimatedWrapper>
+                </m.div>
             ))}
-        </div>
+        </m.div>
     );
 }
 
@@ -155,16 +183,20 @@ function FeaturedItemsSmallList(props) {
     }
     const FeaturedItem = getComponent('FeaturedItem');
     return (
-        <div
+        <m.div
             className={classNames('w-full', 'max-w-3xl', 'grid', 'gap-10', { 'mt-12': hasTopMargin })}
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-50px' }}
             {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
         >
             {items.map((item, index) => (
-                <AnimatedWrapper key={index} direction="up" delay={index * 0.1} preset="moderate">
+                <m.div key={index} variants={itemVariants}>
                     <FeaturedItem {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
-                </AnimatedWrapper>
+                </m.div>
             ))}
-        </div>
+        </m.div>
     );
 }
 
@@ -175,13 +207,20 @@ function FeaturedItemsBigList(props) {
     }
     const FeaturedItem = getComponent('FeaturedItem');
     return (
-        <div className={classNames('w-full', 'grid', 'gap-10', { 'mt-12': hasTopMargin })} {...(hasAnnotations && { 'data-sb-field-path': '.items' })}>
+        <m.div
+            className={classNames('w-full', 'grid', 'gap-10', { 'mt-12': hasTopMargin })}
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-50px' }}
+            {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
+        >
             {items.map((item, index) => (
-                <AnimatedWrapper key={index} direction="up" delay={index * 0.1} preset="moderate">
+                <m.div key={index} variants={itemVariants}>
                     <FeaturedItem {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
-                </AnimatedWrapper>
+                </m.div>
             ))}
-        </div>
+        </m.div>
     );
 }
 
