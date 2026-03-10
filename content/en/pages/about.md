@@ -238,5 +238,36 @@ sections:
         textAlign: center
       actions:
         justifyContent: center
+  - type: GenericSection
+    title:
+      text: Detailed Technical Evolution
+      color: text-dark
+      type: TitleBlock
+    subtitle: Interactive skills timeline by year and category
+    text: >
+      Explore my technical journey interactively — see which skills I acquired
+      each year, the associated projects, and the professional context behind
+      each technology.
+    actions:
+      - label: Explore Skills
+        altText: View technical skills timeline
+        url: /skills
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: ''
+        type: Button
+    elementId: skills-cta
+    colors: bg-neutral-fg-dark
+    styles:
+      self:
+        alignItems: center
+        flexDirection: col
+        padding:
+          - pt-12
+          - pb-12
+          - pl-4
+          - pr-4
 ---
 
