@@ -11,6 +11,7 @@
   },
   "primaryLinks": [
     { "label": "About", "url": "/about", "icon": "arrowRight", "iconPosition": "right", "style": "secondary", "type": "Link" },
+    { "label": "Skills", "altText": "Technical skills", "url": "/skills", "icon": "arrowRight", "iconPosition": "right", "style": "secondary", "type": "Link" },
     { "label": "Projects", "altText": "Projects", "url": "/projects", "icon": "arrowRight", "iconPosition": "right", "style": "secondary", "type": "Link" },
     { "label": "Experience", "altText": "Professional experience", "url": "/experience", "icon": "arrowRight", "iconPosition": "right", "style": "secondary", "type": "Link" },
     { "label": "Blog", "altText": "Blog", "url": "/blog", "icon": "arrowRight", "iconPosition": "right", "style": "secondary", "type": "Link" }

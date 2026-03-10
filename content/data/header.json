@@ -19,6 +19,15 @@
             "type": "Link"
         },
         {
+            "label": "Skills",
+            "altText": "Habilidades técnicas",
+            "url": "/skills",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "type": "Link"
+        },
+        {
             "label": "Projetos",
             "altText": "Projetos",
             "url": "/projects",
