@@ -166,7 +166,7 @@ export const SKILLS: Skill[] = [
     projects: ['Clivia', 'Count on Sheep', 'CEIA'] },
   { id: 'voice-stt', name: 'Voice / STT', cat: 'ai', level: 'proficient', start: 2025, end: null,
     desc: 'Real-time STT: Deepgram (Nova-3, WebSocket), AWS Transcribe Streaming, KWS sidecar, LLM corrector.',
-    context: 'Built Count on Sheep\'s real-time STT pipeline for live client tax consultations — sub-500ms latency, AI meeting summaries became primary client deliverable.',
+    context: 'Built Count on Sheep\'s real-time STT pipeline for live client tax consultations — sub-500ms latency, AI meeting summaries became primary client deliverable. At CEIA, tackled 4,000+ OOV terms in clinical Portuguese speech, reaching near state-of-the-art recognition accuracy.',
     projects: ['Count on Sheep STT pipeline'] },
   { id: 'mcp', name: 'MCP (Model Context Protocol)', cat: 'ai', level: 'proficient', start: 2026, end: null,
     desc: 'Custom MCP client (lazy server discovery, tool routing, stdio/SSE/streamable-http) and FastMCP server.',
