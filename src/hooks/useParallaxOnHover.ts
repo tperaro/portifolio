@@ -18,6 +18,7 @@
 
 import { useEffect, useRef } from 'react';
 import { useMotionValue, useSpring } from 'framer-motion';
+import { useReducedMotion } from './useReducedMotion';
 
 export interface UseParallaxOnHoverOptions {
   /** Max pixels to move in each direction. @default 8 */
@@ -37,6 +38,8 @@ export function useParallaxOnHover(options: UseParallaxOnHoverOptions = {}) {
   const x = useSpring(rawX, SPRING_CONFIG);
   const y = useSpring(rawY, SPRING_CONFIG);
 
+  const prefersReducedMotion = useReducedMotion();
+
   useEffect(() => {
     // SSR guard
     if (typeof window === 'undefined') return;
@@ -44,8 +47,8 @@ export function useParallaxOnHover(options: UseParallaxOnHoverOptions = {}) {
     // Only enable for fine-pointer (mouse) devices
     if (!window.matchMedia('(pointer: fine)').matches) return;
 
-    // Respect prefers-reduced-motion
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // Respect prefers-reduced-motion (reactive: re-runs if user toggles OS setting)
+    if (prefersReducedMotion) return;
 
     const element = ref.current;
     if (!element) return;
@@ -55,9 +58,9 @@ export function useParallaxOnHover(options: UseParallaxOnHoverOptions = {}) {
       const relX = (event.clientX - rect.left) / rect.width;
       const relY = (event.clientY - rect.top) / rect.height;
 
-      // Move inner element in the opposite direction to the cursor
-      rawX.set(-(relX - 0.5) * intensity * 2);
-      rawY.set(-(relY - 0.5) * intensity * 2);
+      // (relX - 0.5) ranges from -0.5 to 0.5; multiply by 2 to reach full [-intensity, intensity] range
+      rawX.set(-(relX - 0.5) * 2 * intensity);
+      rawY.set(-(relY - 0.5) * 2 * intensity);
     };
 
     const handleMouseLeave = () => {
@@ -72,7 +75,7 @@ export function useParallaxOnHover(options: UseParallaxOnHoverOptions = {}) {
       element.removeEventListener('mousemove', handleMouseMove);
       element.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, [intensity, rawX, rawY]);
+  }, [intensity, prefersReducedMotion]);
 
   return { ref, x, y };
 }

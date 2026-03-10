@@ -14,6 +14,7 @@
 
 import { useEffect, useRef } from 'react';
 import { useMotionValue, useSpring } from 'framer-motion';
+import { useReducedMotion } from './useReducedMotion';
 
 export interface UseMagneticCursorOptions {
   /** How far the element moves toward the cursor (0–1 scale). @default 0.3 */
@@ -35,6 +36,8 @@ export function useMagneticCursor(options: UseMagneticCursorOptions = {}) {
   const x = useSpring(rawX, SPRING_CONFIG);
   const y = useSpring(rawY, SPRING_CONFIG);
 
+  const prefersReducedMotion = useReducedMotion();
+
   useEffect(() => {
     // SSR guard
     if (typeof window === 'undefined') return;
@@ -42,8 +45,8 @@ export function useMagneticCursor(options: UseMagneticCursorOptions = {}) {
     // Disable on touch/coarse-pointer devices (mobile)
     if (window.matchMedia('(pointer: coarse)').matches) return;
 
-    // Respect prefers-reduced-motion
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // Respect prefers-reduced-motion (reactive: re-runs if user toggles OS setting)
+    if (prefersReducedMotion) return;
 
     const element = ref.current;
     if (!element) return;
@@ -78,7 +81,7 @@ export function useMagneticCursor(options: UseMagneticCursorOptions = {}) {
       window.removeEventListener('mousemove', handleMouseMove);
       element.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, [strength, radius, rawX, rawY]);
+  }, [strength, radius, prefersReducedMotion]);
 
   return { ref, x, y };
 }
