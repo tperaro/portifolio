@@ -248,7 +248,7 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: 2024-presente
+        title: 2024-presente · Pesquisador de NLP
         text: >
           **CEIA-UFG | Projeto Sobrevidas**
 
@@ -270,13 +270,13 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: 2024-presente · Pesquisa Contínua
+        title: fev 2025 – jan 2026 · Fundador da Clivia
         text: >
-          **Modelos de Linguagem e IA**
+          **IA para Clínicas Médicas**
 
-          Investigação contínua em LLMs e IA, atuando como palestrante em
-          eventos, compartilhando conhecimento e promovendo o uso ético da
-          tecnologia em diversas aplicações.
+          Fundador da Clivia, sistema multiagente para clínicas médicas que
+          converte leads no WhatsApp e reduz no-shows. Uniu empreendedorismo
+          e pesquisa para criar uma solução de impacto real na saúde.
         actions: []
         elementId: ''
         styles:
@@ -288,13 +288,13 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: fev 2025 – jan 2026 · Fundador da Clivia
+        title: dez 2025–presente · Tech Lead
         text: >
-          **IA para Clínicas Médicas**
+          **Count on Sheep — Empresa de Cripto Tax (EUA)**
 
-          Fundador da Clivia, sistema multiagente para clínicas médicas que
-          converte leads no WhatsApp e reduz no-shows. Uniu empreendedorismo
-          e pesquisa para criar uma solução de impacto real na saúde.
+          Único tech lead responsável por toda a stack tecnológica. Construído
+          do zero: pipeline de STT em tempo real, sistema multiagente de IA,
+          plataforma de onboarding de clientes e ferramentas internas.
         actions: []
         elementId: ''
         styles:

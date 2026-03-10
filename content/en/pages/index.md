@@ -233,7 +233,7 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: 2024–present
+        title: 2024–present · NLP Researcher
         text: >
           **CEIA-UFG | Sobrevidas Project**
 
@@ -273,12 +273,13 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: 2024–present · Ongoing Research
+        title: Dec 2025–present · Tech Lead
         text: >
-          **Language Models and AI**
+          **Count on Sheep — US Crypto Tax Firm**
 
-          Continuous investigation of LLMs and AI; public speaking,
-          sharing knowledge and promoting ethical technology.
+          Sole tech lead responsible for the entire technology stack. Built
+          from scratch: real-time STT pipeline, multi-agent AI system,
+          client onboarding platform, and internal tooling.
         actions: []
         elementId: ''
         styles:
