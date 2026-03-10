@@ -19,6 +19,8 @@ const LEVEL_LABELS: Record<string, Record<string, string>> = {
   en: { advanced: 'advanced', proficient: 'proficient',  familiar: 'familiar' },
 };
 
+const totalYears = CAREER[CAREER.length - 1].year - CAREER[0].year + 1;
+
 export default function SkillsYearPanel({ year, onSkillClick, locale = 'pt' }: SkillsYearPanelProps) {
   const career = CAREER.find(c => c.year === year);
   const skillsThisYear = SKILLS.filter(s => s.start <= year && (s.end === null || s.end >= year));
@@ -33,8 +35,8 @@ export default function SkillsYearPanel({ year, onSkillClick, locale = 'pt' }: S
   });
 
   const labels = locale === 'en'
-    ? { newThisYear: 'New this year', active: 'Active skills', achievements: 'Achievements', note: 'Context' }
-    : { newThisYear: 'Skills deste ano', active: 'Skills ativas', achievements: 'Conquistas', note: 'Contexto' };
+    ? { newThisYear: 'New this year', active: 'Active skills', achievements: 'Achievements' }
+    : { newThisYear: 'Skills deste ano', active: 'Skills ativas', achievements: 'Conquistas' };
 
   return (
     <div className="flex-1 overflow-y-auto p-6">
@@ -61,8 +63,8 @@ export default function SkillsYearPanel({ year, onSkillClick, locale = 'pt' }: S
         <div className="mb-5">
           <p className="text-[10px] font-semibold uppercase tracking-widest text-neutral-400 mb-2">{labels.achievements}</p>
           <div className="flex flex-col gap-2">
-            {achievements.map((a, i) => (
-              <div key={i} className="flex items-start gap-3 bg-white border border-neutral-200 rounded-lg px-4 py-3">
+            {achievements.map((a) => (
+              <div key={`${a.year}-${a.label}`} className="flex items-start gap-3 bg-white border border-neutral-200 rounded-lg px-4 py-3">
                 <span className="text-xl">{a.icon}</span>
                 <div>
                   <p className="text-sm font-semibold text-neutral-800">{a.label}</p>
@@ -113,7 +115,7 @@ export default function SkillsYearPanel({ year, onSkillClick, locale = 'pt' }: S
                   <button
                     key={skill.id}
                     onClick={() => onSkillClick(skill.id)}
-                    className="bg-white border border-neutral-200 rounded-lg p-2.5 text-left hover:shadow-sm hover:-translate-y-0.5 transition-all group"
+                    className="bg-white border border-neutral-200 rounded-lg p-2.5 text-left hover:shadow-sm hover:-translate-y-0.5 transition-all"
                   >
                     <div className="flex items-start justify-between gap-1">
                       <span className="text-xs font-semibold text-neutral-800 leading-tight">{skill.name}</span>
@@ -127,7 +129,7 @@ export default function SkillsYearPanel({ year, onSkillClick, locale = 'pt' }: S
                         className="h-full rounded-full opacity-70"
                         style={{
                           background: cat?.color,
-                          width: `${Math.min(100, ((year - skill.start + 1) / 8) * 100)}%`,
+                          width: `${Math.min(100, ((year - skill.start + 1) / totalYears) * 100)}%`,
                         }}
                       />
                     </div>
