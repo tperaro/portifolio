@@ -49,7 +49,7 @@ export interface Achievement {
 export const PROJECT_DESCRIPTIONS: Record<string, string> = {
   'GoiasPrev / Minsait':        'State pension fund (120k users) — Java back-end, salary processing, Spring Boot migration.',
   'GoiasPrev':                   'State pension fund (120k users) — Java back-end, salary processing, Spring Boot migration.',
-  'Clivia':                      'AI startup for medical clinics — AI SDR with LangGraph & WhatsApp API, automated lead qualification.',
+  'Clivia':                      'My AI startup for medical clinics — AI SDR with LangGraph & WhatsApp API, automated lead qualification.',
   'Count on Sheep':              'US crypto tax consulting firm — full tech stack built from scratch as sole Tech Lead.',
   'Count on Sheep infra':        'VPS infrastructure for Count on Sheep — Traefik + Portainer + Docker Swarm, 8+ services.',
   'Count on Sheep STT pipeline': 'Real-time speech-to-text pipeline for live tax consultations — sub-500ms latency with AI meeting summaries.',
@@ -113,7 +113,7 @@ export const ACHIEVEMENTS: Achievement[] = [
   { year: 2023, icon: '🏅', label: 'Líder destaque EMBRAPII', desc: 'Liderou time de 7 pessoas no Capacitação 4.0. Reconhecido entre os melhores de 60 fellows. 960h de certificação.',
     labelEn: 'EMBRAPII top leader', descEn: 'Led 7-person EdTech team in Capacitação 4.0. Recognized as standout leader among 60 fellows. 960h certification.' },
   { year: 2024, icon: '🚀', label: 'Fundação da Clivia', desc: 'Fundou startup de IA para clínicas médicas: AI SDR com LangGraph, WhatsApp API, Python/FastAPI.',
-    labelEn: 'Clivia founded', descEn: 'Founded AI startup for medical clinics: AI SDR with LangGraph, WhatsApp API, Python/FastAPI.' },
+    labelEn: 'Clivia founded', descEn: 'Founded My AI startup for medical clinics: AI SDR with LangGraph, WhatsApp API, Python/FastAPI.' },
   { year: 2024, icon: '🔬', label: 'Pesquisador CNPq', desc: 'Ingressou no CEIA-UFG como pesquisador NLP com bolsa CNPq. Projeto Sobrevidas (triagem de câncer bucal para o SUS).',
     labelEn: 'CNPq researcher', descEn: 'Joined CEIA-UFG as NLP Researcher with CNPq scholarship. Project Sobrevidas (oral cancer screening chatbot for SUS).' },
   { year: 2024, icon: '🏆', label: '6º lugar nacional CGE-GO', desc: 'Competição nacional CGE-GO, top 6 entre centenas. 1º prêmio era R$1,5M.',
