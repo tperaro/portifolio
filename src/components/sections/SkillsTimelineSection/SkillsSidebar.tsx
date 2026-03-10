@@ -1,6 +1,6 @@
 // src/components/sections/SkillsTimelineSection/SkillsSidebar.tsx
 import React, { useState } from 'react';
-import { CAREER, CATEGORIES, SKILLS, ACHIEVEMENTS, type CareerEntry, type Category } from '../../../data/skills-data';
+import { CAREER, CATEGORIES, SKILLS, ACHIEVEMENTS } from '../../../data/skills-data';
 
 interface SkillsSidebarProps {
   mode: 'year' | 'skill';
@@ -19,7 +19,7 @@ export default function SkillsSidebar({
   onSelectSkill,
   locale = 'pt',
 }: SkillsSidebarProps) {
-  const [openCats, setOpenCats] = useState<Set<string>>(new Set(['ai']));
+  const [openCats, setOpenCats] = useState<Set<string>>(new Set([CATEGORIES[0]?.id ?? '']));
 
   const toggleCat = (catId: string) => {
     setOpenCats(prev => {
@@ -46,7 +46,10 @@ export default function SkillsSidebar({
             return (
               <li
                 key={entry.year}
+                role="button"
+                tabIndex={0}
                 onClick={() => onSelectYear(entry.year)}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onSelectYear(entry.year); } }}
                 className={`px-4 py-3 cursor-pointer border-l-2 transition-colors ${
                   isActive
                     ? 'border-neutral-900 bg-[#F0F0F8]'
@@ -99,7 +102,10 @@ export default function SkillsSidebar({
                 {catSkills.map(skill => (
                   <li
                     key={skill.id}
+                    role="button"
+                    tabIndex={0}
                     onClick={() => onSelectSkill(skill.id)}
+                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onSelectSkill(skill.id); } }}
                     className={`pl-7 pr-3 py-1.5 text-[11px] cursor-pointer transition-colors ${
                       selectedSkillId === skill.id
                         ? 'text-indigo-600 font-semibold bg-indigo-50'
