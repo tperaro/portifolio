@@ -131,7 +131,7 @@ export default function SkillsYearPanel({ year, onSkillClick, locale = 'pt' }: S
                         }}
                       />
                     </div>
-                    <p className="text-[9px] text-neutral-400 mt-1">{skill.start}–{skill.end ?? 'atual'}</p>
+                    <p className="text-[9px] text-neutral-400 mt-1">{skill.start}–{skill.end ?? (locale === 'en' ? 'present' : 'atual')}</p>
                   </button>
                 ))}
               </div>
