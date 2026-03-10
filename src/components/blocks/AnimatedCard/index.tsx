@@ -216,7 +216,7 @@ export default function AnimatedCard({
           className="relative w-full h-48 overflow-hidden"
           initial={!prefersReducedMotion ? { clipPath: 'inset(100% 0 0 0)' } : {}}
           whileInView={!prefersReducedMotion ? { clipPath: 'inset(0% 0 0 0)' } : {}}
-          viewport={{ once: true, margin: '-50px' }}
+          viewport={{ once: true, margin: '200px' }}
           transition={{ duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
         >
           <m.img
