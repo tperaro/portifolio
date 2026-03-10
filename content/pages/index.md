@@ -270,13 +270,13 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: fev 2025 – jan 2026 · Fundador da Clivia
+        title: 2024-presente · Pesquisa Contínua
         text: >
-          **IA para Clínicas Médicas**
+          **Modelos de Linguagem e IA**
 
-          Fundador da Clivia, sistema multiagente para clínicas médicas que
-          converte leads no WhatsApp e reduz no-shows. Uniu empreendedorismo
-          e pesquisa para criar uma solução de impacto real na saúde.
+          Investigação contínua em LLMs e IA, atuando como palestrante em
+          eventos, compartilhando conhecimento e promovendo o uso ético da
+          tecnologia em diversas aplicações.
         actions: []
         elementId: ''
         styles:
@@ -288,13 +288,13 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: 2024-presente · Pesquisa Contínua
+        title: fev 2025 – jan 2026 · Fundador da Clivia
         text: >
-          **Modelos de Linguagem e IA**
+          **IA para Clínicas Médicas**
 
-          Investigação contínua em LLMs e IA, atuando como palestrante em
-          eventos, compartilhando conhecimento e promovendo o uso ético da
-          tecnologia em diversas aplicações.
+          Fundador da Clivia, sistema multiagente para clínicas médicas que
+          converte leads no WhatsApp e reduz no-shows. Uniu empreendedorismo
+          e pesquisa para criar uma solução de impacto real na saúde.
         actions: []
         elementId: ''
         styles:
