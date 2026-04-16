@@ -61,3 +61,7 @@ docs/superpowers/
 # Generated TS
 /next-env.d.ts
 /tsconfig.tsbuildinfo
+
+# Local video work artifacts (backups / intermediate encodes)
+/public/hero-robot/*.backup.mp4
+/public/hero-robot/robot-cross.mp4

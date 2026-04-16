@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
 import { m } from 'framer-motion';
@@ -198,8 +199,11 @@ function HeaderLogoCenteredPrimaryCentered(props) {
 function MobileMenu(props) {
     const { title, logo, primaryLinks = [], secondaryLinks = [], colors = 'bg-light-fg-dark', styles = {}, enableAnnotations } = props;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
     const router = useRouter();
     const { t } = useTranslation();
+
+    useEffect(() => setMounted(true), []);
 
     const openMobileMenu = () => {
         setIsMenuOpen(true);
@@ -223,33 +227,37 @@ function MobileMenu(props) {
         };
     }, [router.events]);
 
+    const overlay = (
+        <div className={classNames(colors, 'fixed', 'inset-0', styles?.self?.padding ?? 'p-4', 'overflow-y-auto', 'z-[100]', isMenuOpen ? 'block' : 'hidden')}>
+            <div className="flex flex-col min-h-full">
+                <div className="flex items-center justify-between mb-10">
+                    {(title || logo?.url) && <SiteLogoLink title={title} logo={logo} enableAnnotations={enableAnnotations} />}
+                    <button aria-label={t('header.close_menu')} title={t('header.close_menu')} className="p-2 -mr-1 focus:outline-none" onClick={closeMobileMenu}>
+                        <CloseIcon className="w-6 h-6 fill-current" />
+                    </button>
+                </div>
+                {primaryLinks.length > 0 && (
+                    <ul {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })}>
+                        <ListOfLinks links={primaryLinks} enableAnnotations={enableAnnotations} inMobileMenu />
+                    </ul>
+                )}
+                {secondaryLinks.length > 0 && (
+                    <ul {...(enableAnnotations && { 'data-sb-field-path': 'secondaryLinks' })}>
+                        <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} inMobileMenu />
+                    </ul>
+                )}
+                <div className="mt-6"><LanguageSwitcher /></div>
+            </div>
+        </div>
+    );
+
     return (
         <div className="ml-auto lg:hidden">
             <button aria-label={t('header.open_menu')} title={t('header.open_menu')} className="p-2 -mr-1 focus:outline-none" onClick={openMobileMenu}>
                 <span className="sr-only">{t('header.open_menu')}</span>
                 <MenuIcon className="w-6 h-6 fill-current" />
             </button>
-            <div className={classNames(colors, 'fixed', 'inset-0', styles?.self?.padding ?? 'p-4', 'overflow-y-auto', 'z-10', isMenuOpen ? 'block' : 'hidden')}>
-                <div className="flex flex-col min-h-full">
-                    <div className="flex items-center justify-between mb-10">
-                        {(title || logo?.url) && <SiteLogoLink title={title} logo={logo} enableAnnotations={enableAnnotations} />}
-                        <button aria-label={t('header.close_menu')} title={t('header.close_menu')} className="p-2 -mr-1 focus:outline-none" onClick={closeMobileMenu}>
-                            <CloseIcon className="w-6 h-6 fill-current" />
-                        </button>
-                    </div>
-                    {primaryLinks.length > 0 && (
-                        <ul {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })}>
-                            <ListOfLinks links={primaryLinks} enableAnnotations={enableAnnotations} inMobileMenu />
-                        </ul>
-                    )}
-                    {secondaryLinks.length > 0 && (
-                        <ul {...(enableAnnotations && { 'data-sb-field-path': 'secondaryLinks' })}>
-                            <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} inMobileMenu />
-                        </ul>
-                    )}
-                    <div className="mt-6"><LanguageSwitcher /></div>
-                </div>
-            </div>
+            {mounted && createPortal(overlay, document.body)}
         </div>
     );
 }
