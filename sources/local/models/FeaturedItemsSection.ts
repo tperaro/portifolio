@@ -101,6 +101,11 @@ export const FeaturedItemsSection: Model = {
                     label: 'Toggle list',
                     value: 'toggle-list',
                     thumbnail: 'https://assets.stackbit.com/components/images/default/toggle-list.png'
+                },
+                {
+                    label: 'Timeline',
+                    value: 'timeline',
+                    thumbnail: 'https://assets.stackbit.com/components/images/default/small-list.png'
                 }
             ],
             group: 'styles',

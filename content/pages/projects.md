@@ -44,12 +44,13 @@ sections:
       - type: FeaturedItem
         title: Projeto Sobrevidas 🏆
         text: >
-          **CEIA-UFG | Prêmio Nacional SBCAS 2025**
-          
-          Chatbot integrado ao SUS para rastreamento de câncer de boca, desenvolvido 
-          com técnicas avançadas de NLP. Como líder da equipe de IA, coordeno o 
-          desenvolvimento de uma solução que pode salvar vidas através do diagnóstico 
-          precoce. Projeto reconhecido nacionalmente.
+          **Bolsista CNPq | 2024 – presente | Prêmio Nacional SBCAS 2025**
+
+          Chatbot integrado ao SUS para rastreamento de câncer de boca,
+          desenvolvido com técnicas avançadas de NLP. Como líder da equipe de
+          IA, coordeno o desenvolvimento de uma solução que pode salvar vidas
+          através do diagnóstico precoce. **Co-autor do artigo premiado como
+          melhor do Brasil no SBCAS 2025** (categoria ferramentas).
         actions:
           - label: Baixar artigo
             altText: 'Baixar artigo sobre o projeto'
@@ -75,17 +76,23 @@ sections:
           altText: Projeto Sobrevidas
           elementId: ''
       - type: FeaturedItem
-        title: Clivia - IA para Clínicas
+        title: onboarding-AI — Count on Sheep
         text: >
-          **Startup Própria | fev 2025 – jan 2026**
+          **Responsável Técnico | jan 2026 – presente**
 
-          Sistema multiagente para clínicas médicas que converte leads no WhatsApp
-          e reduz no-shows. Combinou pesquisa em IA com visão empreendedora para
-          gerar impacto real no setor de saúde.
+          API FastAPI principal da Count on Sheep (consultoria americana de
+          cripto taxes), construída do zero como único responsável técnico.
+          Pipeline de extração de transcrições com **7 agentes LangGraph** em
+          3 fases paralelas (participantes, perfil cripto/DeFi/tax, DCA,
+          logística, pain points). **STT em tempo real** via AWS Transcribe
+          Streaming com state machine de sessão, KWS sidecar para termos cripto
+          e LLM corrector. Sistema de email com **140+ templates Jinja2** e
+          roteamento inteligente por estágio, software e tipo de cliente.
+          Integrações HubSpot, DocuSign, Stripe, Gmail e Google Workspace.
         actions:
-          - label: Conhecer Clivia
-            altText: 'Conhecer a Clivia'
-            url: https://www.useclivia.com
+          - label: Count on Sheep
+            altText: 'Count on Sheep'
+            url: https://countonsheep.com
             showIcon: true
             icon: arrowRight
             iconPosition: right
@@ -103,8 +110,61 @@ sections:
               - pr-4
         image:
           type: ImageBlock
+          url: /images/abstract-feature1.svg
+          altText: onboarding-AI Count on Sheep
+          elementId: ''
+      - type: FeaturedItem
+        title: Clivia — IA para Clínicas (encerrada)
+        text: >
+          **Fundador & CEO | mar 2024 – dez 2025**
+
+          Plataforma multi-agente LLM para clínicas médicas — SDR inteligente
+          via WhatsApp. Arquitetei toda a stack: FastAPI, LangGraph Supervisor
+          (StateGraph com RedisSaver checkpointer), LiteLLM proxy self-hosted
+          com router e fallback, Langfuse para observabilidade, **Docker
+          Swarm com 40+ containers em produção**. Migrou de CrewAI (v1) para
+          LangGraph Supervisor (v2). Encerrada em dez/2025.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-6
+              - pb-6
+              - pl-4
+              - pr-4
+        image:
+          type: ImageBlock
           url: /images/LogoClivia.png
           altText: Logo da Clivia
+          elementId: ''
+      - type: FeaturedItem
+        title: Projeto Koru — CEIA-UFG
+        text: >
+          **Pesquisador NLP | dez 2024 – presente**
+
+          Sistema multi-agente (LangGraph) para avaliação de soft skills e
+          competências de liderança, no CEIA-UFG/AKCIT. Responsável pelo
+          **koru-dashboard** (Streamlit + Plotly + TimescaleDB) com
+          observabilidade em tempo real e pelos testes de **Red Team
+          adversarial com DeepTeam** (prompt injection e vulnerabilidades).
+          Projeto distinto do Sobrevidas — aqui a pesquisa é em avaliação
+          automatizada de competências humanas.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-6
+              - pb-6
+              - pl-4
+              - pr-4
+        image:
+          type: ImageBlock
+          url: /images/koru.png
+          altText: Projeto Koru
           elementId: ''
       - type: FeaturedItem
         title: Sistemas GoiásPrev
@@ -188,11 +248,12 @@ sections:
       - type: FeaturedItem
         title: Go.IAs
         text: >
-          **Community Builder | 2023-presente**
-          
-          Líder de comunidade focada em inteligência artificial, promovendo 
-          eventos, networking e conhecimento sobre IA. Conectamos profissionais, 
-          pesquisadores e entusiastas da área.
+          **Community Builder | 2023–presente | 450+ membros**
+
+          Líder de comunidade focada em inteligência artificial, promovendo
+          eventos, networking e disseminação de pesquisa universitária.
+          Palestrante regular. Conectamos profissionais, pesquisadores e
+          entusiastas da área em Goiânia.
         actions:
           - label: Join Community
             altText: 'Participar da comunidade'

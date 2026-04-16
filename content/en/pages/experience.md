@@ -39,19 +39,21 @@ sections:
     subtitle: Positions and responsibilities
     items:
       - type: FeaturedItem
-        title: NLP Researcher
+        title: Sole Tech Lead — Count on Sheep
         text: >
-          **CEIA-UFG | 2024 – present**
+          **Count on Sheep (USA) | Jan 2026 – present**
 
-          • NLP Researcher — CNPq fellow
+          • Sole technical owner of the company (US crypto tax consulting)
 
-          • Lead of the AI team in Sobrevidas
+          • Built `onboarding-AI` (FastAPI) from scratch
 
-          • SUS-integrated chatbot for oral cancer screening
+          • LangGraph pipeline with 7 agents across 3 parallel phases
 
-          • Best paper in Brazil at SBCAS 2025
+          • Real-time STT (AWS Transcribe Streaming + KWS sidecar + LLM corrector)
 
-          • Coordination of a multidisciplinary research team
+          • Email system with 140+ Jinja2 templates and smart routing
+
+          • Integrations with HubSpot, DocuSign, Stripe and Gmail
         actions: []
         elementId: ''
         styles:
@@ -61,20 +63,23 @@ sections:
         image:
           type: ImageBlock
           url: /images/abstract-feature1.svg
-          altText: NLP Researcher
+          altText: Count on Sheep
           elementId: ''
       - type: FeaturedItem
-        title: EMBRAPII Researcher
+        title: NLP Researcher — CEIA-UFG (Koru Project)
         text: >
-          **EMBRAPII | Oct 2023 – Oct 2024**
+          **CEIA-UFG & AKCIT | Dec 2024 – present**
 
-          • Researcher in multidisciplinary project (AI, Software Eng., Entrepreneurship)
+          • NLP researcher on the Koru Project — multi-agent system for
+          soft-skill and leadership assessment
 
-          • Led a team of 7 — EdTech "Minha Aula de Excelência"
+          • LangGraph architecture (Supervisor, StateGraph)
 
-          • Methodologies: Lean, Stage-Gate, Sprints, ISO 12207, SWEBOK
+          • Owner of the koru-dashboard (Streamlit + Plotly + TimescaleDB)
 
-          • Recognized for performance and leadership among 60 program fellows
+          • Adversarial Red Team testing with DeepTeam (prompt injection)
+
+          • Maintains the team's service infrastructure
         actions: []
         elementId: ''
         styles:
@@ -83,23 +88,47 @@ sections:
             padding: [pt-6, pb-6, pl-4, pr-4]
         image:
           type: ImageBlock
-          url: /images/LogoClivia.png
-          altText: Clivia Logo
+          url: /images/koru.png
+          altText: Koru Project
+          elementId: ''
+      - type: FeaturedItem
+        title: CNPq Fellow — Sobrevidas Project
+        text: >
+          **CNPq | 2024 – present**
+
+          • NLP researcher — CNPq fellow
+
+          • Lead of the AI team at the Sobrevidas Project (oral cancer / SUS)
+
+          • Co-author of the paper **awarded best in Brazil at SBCAS 2025**
+          (tools category)
+
+          • Distinct from Koru — focus on public health and epidemiological
+          surveillance
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding: [pt-6, pb-6, pl-4, pr-4]
+        image:
+          type: ImageBlock
+          url: /images/sobrevidas.png
+          altText: Sobrevidas Project
           elementId: ''
       - type: FeaturedItem
         title: Community Builder
         text: >
           **Go.IAs & Magnatas.hub | 2023 – present**
 
-          • Community builder in AI
+          • Community builder at Go.IAs (**450+ members**) — events,
+          networking and dissemination of university research
 
-          • Co-founder of Magnatas.hub
+          • Co-founder and leader of Magnatas.hub (~80–90 entrepreneurs)
 
-          • Events and workshops organization
+          • Regular speaker at AI and entrepreneurship events
 
-          • Talks about AI and entrepreneurship
-
-          • Mentoring and ecosystem development
+          • Mentoring and local ecosystem development
         actions: []
         elementId: ''
         styles:
@@ -128,13 +157,15 @@ sections:
     subtitle: Highlights across the years
     items:
       - type: FeaturedItem
-        title: 2024 – present
+        title: Jan 2026 – present | Sole Tech Lead
         text: >
-          **Center of Excellence in AI — UFG**
+          **Count on Sheep — US Crypto Tax Consulting**
 
-          NLP researcher with a CNPq grant. I lead the AI team of Sobrevidas,
-          building a SUS-integrated chatbot for oral cancer screening and
-          managing research deliverables with direct public health impact.
+          Sole person responsible for the entire technology stack. Built
+          `onboarding-AI` (FastAPI) from scratch: extraction pipeline with 7
+          LangGraph agents across 3 parallel phases, real-time STT with AWS
+          Transcribe Streaming, email system with 140+ Jinja2 templates, and
+          integrations with HubSpot, DocuSign, Stripe and Gmail.
         actions: []
         elementId: ''
         styles:
@@ -142,13 +173,47 @@ sections:
             textAlign: left
             padding: [pt-4, pb-4, pl-4, pr-4]
       - type: FeaturedItem
-        title: Feb 2025 – Jan 2026 | Founder & CEO
+        title: Dec 2024 – present | NLP Researcher (CEIA)
         text: >
-          **Clivia — AI for Clinics**
+          **CEIA-UFG & AKCIT — Koru Project**
 
-          Founded Clivia, a multi-agent system that applies sales techniques to
-          convert leads on WhatsApp for medical clinics, reducing no-shows. Led
-          product strategy and the team.
+          NLP researcher on the Koru Project, a LangGraph-based multi-agent
+          system for soft-skill and leadership assessment. Owner of the
+          koru-dashboard (Streamlit + Plotly + TimescaleDB) and adversarial
+          Red Team tests with DeepTeam. Started as NLP Junior, progressed to
+          NLP Researcher.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding: [pt-4, pb-4, pl-4, pr-4]
+      - type: FeaturedItem
+        title: 2024 – present | CNPq Fellow (Sobrevidas Project)
+        text: >
+          **CNPq — Sobrevidas Project (SUS)**
+
+          CNPq fellow and lead of the AI team at the Sobrevidas Project — a
+          SUS-integrated chatbot for oral cancer screening. Co-author of the
+          paper **awarded best in Brazil at SBCAS 2025** (tools category).
+          Distinct from Koru — focus on public health and NLP for
+          epidemiological surveillance.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding: [pt-4, pb-4, pl-4, pr-4]
+      - type: FeaturedItem
+        title: Mar 2024 – Dec 2025 | Founder & CEO · Clivia (closed)
+        text: >
+          **Clivia — AI for Medical Clinics**
+
+          Founded and operated Clivia, a multi-agent LLM platform for medical
+          clinics (intelligent SDR via WhatsApp). Architected the full stack —
+          FastAPI, LangGraph Supervisor (migrated from CrewAI), self-hosted
+          LiteLLM proxy, Redis checkpointer, Docker Swarm with **40+
+          containers in production**. Closed in Dec 2025.
       - type: FeaturedItem
         title: Oct 2023 – Oct 2024 | Researcher
         text: >
@@ -218,8 +283,10 @@ sections:
         text: >
           **Artificial Intelligence and LLMs**
 
-          Continuous investigation of language models and real applications,
-          fine-tuning and AI integration; ethics and social impact focus.
+          Continuous investigation of language models and real applications —
+          multi-agent systems (LangGraph), MCP (Model Context Protocol, custom
+          client and FastMCP server), LLMOps (LiteLLM, OpenLit, Langfuse) and
+          Red Team (DeepTeam, Deepeval). Ethics and social impact focus.
         actions: []
         elementId: ''
         styles:
@@ -228,7 +295,7 @@ sections:
             padding: [pt-4, pb-4, pl-4, pr-4]
     actions: []
     elementId: ''
-    variant: small-list
+    variant: timeline
     colors: bg-light-fg-dark
     styles:
       self:
@@ -244,47 +311,80 @@ sections:
     text: >
       **Back-end Development:**
 
-      • **Java & Spring Boot** — 3+ years professional experience
+      • **Java & Spring Boot** — 4+ years; Flyway (60+ migrations), RabbitMQ
+      (Spring AMQP), Spring Security OAuth2 (Keycloak RS256/JWKs)
 
-      • **RESTful APIs** — Design and implementation
+      • **Python** — FastAPI, Pydantic v2, asyncio, Flask
 
-      • **Databases** — PostgreSQL, MySQL, NoSQL
+      • **RESTful APIs and microservices** — design and implementation of
+      scalable services
 
-      • **Software Architecture** — Distributed systems and microservices
-
-      • **Security** — Secure systems for public institutions
+      • **Databases** — PostgreSQL, Supabase, pgvector, MySQL, Redis
 
 
-      **Artificial Intelligence:**
+      **AI and Multi-agent Systems:**
 
-      • **NLP** — Advanced specialization
+      • **LangGraph** — Supervisor, StateGraph, RedisSaver and
+      AsyncPostgresSaver checkpointers
 
-      • **LLMs** — Fine-tuning and practical applications
+      • **MCP (Model Context Protocol)** — custom client and FastMCP server
+      implemented from scratch
 
-      • **AI Agents & Multi-agent Systems** — LangGraph, MCP
+      • **CrewAI, LangChain (LCEL), Agno** — agent orchestration
 
-      • **RAG** — Retrieval-Augmented Generation
+      • **RAG / GraphRAG** — pgvector, FAISS, Supabase vector store, adaptive
+      chunking with n-gram overlap
 
-      • **AI Prompting and Custom GPTs**
+      • **Custom Text2SQL / GenBI** using LangChain `create_sql_agent`
 
-      • **n8n** — AI workflow automation and orchestration
 
-      • **Conversational Chatbots** — End-to-end development
+      **LLMOps, Observability and Guardrails:**
 
-      • **AI Integration** — Real-world systems
+      • **LiteLLM** — self-hosted proxy with router and fallback
+
+      • **Langfuse** — distributed tracing with CallbackHandler +
+      llm-as-a-judge Evaluator
+
+      • **OpenLit, Helicone** — cost/latency/tokens
+
+      • **DeepTeam** — adversarial Red Team (prompt injection)
+
+      • **Deepeval** — guardrails for toxicity, bias and hate speech
+
+      • **PydanticAI** — structured validation of agent outputs
+
+      • **OpenTelemetry, Prometheus, Loki, Grafana**
+
+
+      **Real-time STT:**
+
+      • **AWS Transcribe Streaming** — WebSocket with session state machine
+      (idle/connecting/streaming/reconnecting), KWS sidecar, 4-hour limit
+
+      • **Deepgram Nova-3** — STT via WebSocket streaming
+
+      • **OpenAI Whisper** — offline transcription
+
+      • **LLM corrector** — real-time correction of technical terms
+
+
+      **Infrastructure and DevOps:**
+
+      • **Docker Swarm** — 40+ containers orchestrated in production (Clivia)
+
+      • **GitOps CI/CD** — GitHub Actions → Docker Hub → Portainer webhook
+
+      • **Ollama** — local inference with multiple instances
 
 
       **Leadership & Management:**
 
-      • **Team Leadership** — Researchers and developers
+      • **Technical leadership** — sole tech owner at Count on Sheep; CEO of
+      Clivia for ~21 months
 
-      • **Project Management** — Agile and delivery
+      • **Community Building** — Go.IAs (450+ members), Magnatas.hub (~80–90)
 
-      • **Entrepreneurship** — Startup building
-
-      • **Community Building** — Tech communities
-
-      • **Public Speaking** — Talks and technical presentations
+      • **Public Speaking** — regular speaker at AI and entrepreneurship events
     actions:
       - label: View Projects
         altText: View portfolio
@@ -318,26 +418,34 @@ sections:
     text: >
       **🏆 SBCAS 2025 — Best Paper (Brazil)**
 
-      Sobrevidas paper recognized as best in the Brazilian Symposium on
-      Applied Computing in Health 2025.
+      Sobrevidas paper recognized as best in the Brazilian Symposium on Applied
+      Computing in Health 2025 (tools category).
 
 
       **🎓 CNPq Fellow**
 
       Selected by the National Council for Scientific and Technological
-      Development for research in applied AI for health.
+      Development for research in applied AI for health (Sobrevidas Project).
 
 
-      **🚀 Innovative Startup Founder**
+      **🎖️ EMBRAPII — Standout Leader**
 
-      Creator of Clivia, recognized as an innovative healthtech solution using
-      AI to optimize clinics.
+      Recognized as a standout leader among 60 fellows of the EMBRAPII program,
+      mentored by 8 PhD advisors across AI, Software Engineering and
+      Entrepreneurship.
+
+
+      **🚀 AI Startup Founder**
+
+      Founded and operated Clivia (Mar 2024 – Dec 2025), a multi-agent
+      healthtech platform — end-to-end architecture on Docker Swarm with 40+
+      containers in production.
 
 
       **👥 Community Leader**
 
-      Co-founder of Magnatas.hub and leader at Go.IAs, contributing to the
-      innovation ecosystem in Goiânia.
+      Co-founder of Magnatas.hub and leader at Go.IAs (**450+ members**),
+      contributing to the innovation ecosystem in Goiânia.
 
 
       **🎤 Recognized Speaker**

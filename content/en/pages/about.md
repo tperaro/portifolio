@@ -5,17 +5,19 @@ type: PageLayout
 sections:
   - type: AnimatedHeroSection
     title: About Me
-    subtitle: Entrepreneur and researcher passionate about AI
+    subtitle: Tech lead, AI researcher and entrepreneur
     text: >
-      I'm Thiago Peraro, an artificial intelligence researcher focused on
-      natural language processing, and an entrepreneur. My journey blends
-      strong back-end development experience, applied academic research, and
-      entrepreneurial leadership.
+      I'm Thiago Peraro, an AI researcher and tech lead focused on natural
+      language processing and multi-agent systems. My journey blends 4+ years
+      of back-end development (Java/Spring), applied academic research, and
+      product-level technical leadership.
 
 
-      Computer Science graduate from the Federal University of Goiás
-      (2019–2024). I'm currently a researcher at CEIA-UFG as a CNPq fellow,
-      leading innovative projects that apply AI to real problems.
+      Computer Science undergrad at UFG (2019–present, ~83% complete).
+      Currently sole tech lead at Count on Sheep (US crypto tax consulting),
+      NLP researcher at CEIA-UFG on the Koru project, and CNPq fellow on the
+      Sobrevidas project. Founded and operated Clivia (Mar 2024 – Dec 2025).
+      Open to new opportunities in AI Engineering.
     actions:
       - label: LinkedIn
         altText: Connect on LinkedIn
@@ -75,12 +77,13 @@ sections:
           altText: Sobrevidas Project
           elementId: ''
       - type: FeaturedItem
-        title: Clivia Founder
+        title: Clivia — Own Startup (Mar 2024 – Dec 2025)
         text: >
-          In 2025 I founded Clivia, a multi-agent system for medical clinics
-          that converts WhatsApp leads and reduces no-shows. An entrepreneurship
-          experience combining AI research with real-world health impact
-          (Feb 2025 – Jan 2026).
+          Founded and operated Clivia, a multi-agent LLM platform for medical
+          clinics (intelligent SDR via WhatsApp). Architected the full stack
+          from scratch — FastAPI, LangGraph Supervisor, LiteLLM, Redis
+          checkpointer, Docker Swarm with 40+ containers. **Closed in Dec
+          2025** when joining Count on Sheep.
         actions: []
         elementId: ''
         styles:
@@ -137,28 +140,35 @@ sections:
     subtitle: Tech stack and areas of expertise
     text: |
       **Back-end Development:**
-      • Java & Spring Boot — 3+ years at GoiásPrev
-      • SQL, Git & GitLab
-      • Linux (server administration)
-      • Agile methodologies and software engineering best practices
-      • Public sector systems development
-      • Software architecture and RESTful APIs
-      • Relational and NoSQL databases
+      • Java & Spring Boot — 4+ years; Flyway (60+ migrations), RabbitMQ,
+        Spring Security OAuth2 (GoiásPrev + Count on Sheep)
+      • Python — FastAPI, Pydantic v2, asyncio
+      • SQL — PostgreSQL, Supabase, pgvector
+      • RESTful APIs, microservices architecture, Linux
 
-      **Artificial Intelligence:**
-      • Natural Language Processing (NLP)
-      • Large Language Models (LLMs) and RAG
-      • AI Agents and multi-agent systems (LangGraph, MCP)
-      • AI Prompting and Custom GPTs
-      • n8n — AI workflow automation
-      • Chatbots and conversational agents
-      • AI integration in healthcare systems
+      **AI and LLMOps:**
+      • Multi-agent systems — LangGraph (Supervisor, StateGraph, RedisSaver
+        and AsyncPostgresSaver checkpointers), CrewAI, LangChain (LCEL)
+      • MCP (Model Context Protocol) — custom client and FastMCP server
+        implemented from scratch
+      • RAG / GraphRAG — pgvector, FAISS, Supabase vector store
+      • LLMOps — LiteLLM (self-hosted proxy with router and fallback),
+        OpenLit, Helicone, Langfuse (tracing + llm-as-a-judge Evaluator)
+      • Red Team and Guardrails — DeepTeam (prompt injection, adversarial),
+        Deepeval (toxicity, bias, hate speech)
+      • Real-time STT — AWS Transcribe Streaming (WebSocket state machine,
+        KWS sidecar), Deepgram Nova-3, OpenAI Whisper
+      • Custom Text2SQL / GenBI, local Ollama
+
+      **Infrastructure and DevOps:**
+      • Docker Swarm — 40+ containers in production (Clivia)
+      • CI/CD — GitHub Actions → Docker Hub → Portainer redeploy
+      • Observability — Langfuse, LangSmith, Prometheus, Grafana, Loki
 
       **Entrepreneurship & Leadership:**
-      • Startup building and management
-      • Community building and networking
-      • Public speaking on AI and entrepreneurship
-      • Mentoring innovation projects
+      • Founded, operated, and closed an LLM startup (Clivia)
+      • Community building — Go.IAs (450+ members) and Magnatas.hub
+      • Regular speaker on AI and entrepreneurship
     actions:
       - label: View Projects
         altText: See my projects
@@ -200,8 +210,9 @@ sections:
 
 
       In Sobrevidas, for example, we built a solution that can save lives by
-      enabling early diagnosis of oral cancer. At Clivia, we create tools that
-      humanize medical care through technology.
+      enabling early diagnosis of oral cancer. At Clivia (Mar 2024 – Dec 2025),
+      I built production-grade multi-agent tools that humanized medical care
+      through technology.
 
 
       As a community leader, I promote networking and collaboration, believing

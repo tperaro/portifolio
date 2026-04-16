@@ -43,19 +43,21 @@ sections:
     subtitle: Posições e responsabilidades atuais
     items:
       - type: FeaturedItem
-        title: Pesquisador de NLP
+        title: Responsável de Tecnologia — Count on Sheep
         text: >
-          **CEIA-UFG | 2024 - presente**
+          **Count on Sheep (EUA) | jan 2026 – presente**
 
-          • Pesquisador de Processamento de Linguagem Natural - Bolsista CNPq
+          • Único responsável técnico da empresa (consultoria de cripto taxes)
 
-          • Líder da equipe de IA do projeto Sobrevidas
+          • Construí `onboarding-AI` (FastAPI) do zero
 
-          • Desenvolvimento de chatbot integrado ao SUS para rastreamento de câncer de boca
+          • Pipeline LangGraph com 7 agentes em 3 fases paralelas
 
-          • Artigo premiado como melhor do Brasil no SBCAS 2025
+          • STT em tempo real (AWS Transcribe Streaming + KWS sidecar + LLM corrector)
 
-          • Coordenação de equipe multidisciplinar de pesquisadores
+          • Sistema de email com 140+ templates Jinja2 e roteamento inteligente
+
+          • Integrações HubSpot, DocuSign, Stripe, Gmail
         actions: []
         elementId: ''
         styles:
@@ -69,20 +71,23 @@ sections:
         image:
           type: ImageBlock
           url: /images/abstract-feature1.svg
-          altText: Pesquisador NLP
+          altText: Count on Sheep
           elementId: ''
       - type: FeaturedItem
-        title: Pesquisador — EMBRAPII
+        title: Pesquisador NLP — CEIA-UFG (Projeto Koru)
         text: >
-          **EMBRAPII | out 2023 – out 2024**
+          **CEIA-UFG & AKCIT | dez 2024 – presente**
 
-          • Pesquisador em projeto multidisciplinar (IA, Eng. de Software, Empreendedorismo)
+          • Pesquisador NLP no Projeto Koru — sistema multi-agente para
+          avaliação de soft skills e competências de liderança
 
-          • Líder de equipe de 7 pessoas — EdTech "Minha Aula de Excelência"
+          • Arquitetura com LangGraph (Supervisor, StateGraph)
 
-          • Metodologias: Lean, Stage-Gate, Sprints, ISO 12207, SWEBOK
+          • Responsável pelo koru-dashboard (Streamlit + Plotly + TimescaleDB)
 
-          • Reconhecimento de performance entre 60 bolsistas do programa
+          • Testes de Red Team adversarial com DeepTeam (prompt injection)
+
+          • Cuida da infraestrutura dos serviços do time
         actions: []
         elementId: ''
         styles:
@@ -95,21 +100,48 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/LogoClivia.png
-          altText: Logo da Clivia
+          url: /images/koru.png
+          altText: Projeto Koru
+          elementId: ''
+      - type: FeaturedItem
+        title: Bolsista CNPq — Projeto Sobrevidas
+        text: >
+          **CNPq | 2024 – presente**
+
+          • Pesquisador de NLP — Bolsista CNPq
+
+          • Líder da equipe de IA do Projeto Sobrevidas (câncer de boca / SUS)
+
+          • Co-autor do artigo **premiado como melhor do Brasil no SBCAS 2025**
+          (categoria ferramentas)
+
+          • Projeto distinto do Koru — foco em saúde pública e vigilância epidemiológica
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-6
+              - pb-6
+              - pl-4
+              - pr-4
+        image:
+          type: ImageBlock
+          url: /images/sobrevidas.png
+          altText: Projeto Sobrevidas
           elementId: ''
       - type: FeaturedItem
         title: Community Builder
         text: >
-          **Go.IAs & Magnatas.hub | 2023 - presente**
+          **Go.IAs & Magnatas.hub | 2023 – presente**
 
-          • Community builder na Go.IAs - networking em IA
+          • Community builder na Go.IAs (**450+ membros**) — eventos,
+          networking e disseminação de pesquisa universitária em IA
 
-          • Co-fundador da comunidade Magnatas.hub
+          • Co-fundador e líder do Magnatas.hub (~80–90 empreendedores)
 
-          • Organização de eventos e workshops
-
-          • Palestrante em eventos sobre IA e empreendedorismo
+          • Palestrante regular em eventos sobre IA e empreendedorismo
 
           • Mentoria e desenvolvimento do ecossistema local
         actions: []
@@ -151,15 +183,15 @@ sections:
     subtitle: Principais posições e conquistas ao longo da carreira
     items:
       - type: FeaturedItem
-        title: 2024 - presente
+        title: jan 2026 – presente | Responsável de Tecnologia
         text: >
-          **Centro de Excelência em IA - UFG**
+          **Count on Sheep — Consultoria de Cripto Taxes (EUA)**
 
-          Pesquisador de Processamento de Linguagem Natural com bolsa do CNPq. 
-          Lidero a equipe de IA do projeto Sobrevidas, desenvolvendo chatbot 
-          integrado ao SUS para rastreamento de câncer de boca. Coordeno 
-          pesquisadores e gerencio o desenvolvimento de soluções que impactam 
-          diretamente a saúde pública brasileira.
+          Único responsável por toda a tecnologia da empresa. Construí do zero
+          o `onboarding-AI` (FastAPI): pipeline de extração com 7 agentes
+          LangGraph em 3 fases paralelas, STT em tempo real com AWS Transcribe
+          Streaming, sistema de email com 140+ templates Jinja2 e integrações
+          HubSpot, DocuSign, Stripe e Gmail.
         actions: []
         elementId: ''
         styles:
@@ -171,14 +203,55 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: fev 2025 – jan 2026 | Founder & CEO
+        title: dez 2024 – presente | Pesquisador NLP (CEIA)
         text: >
-          **Clivia - IA para Clínicas Médicas**
+          **CEIA-UFG & AKCIT — Projeto Koru**
 
-          Fundei a Clivia, um sistema multiagente que implementa técnicas de
-          vendas para clínicas médicas, convertendo leads recebidos no WhatsApp
-          e reduzindo no-shows. Responsável por estratégia, desenvolvimento de
-          produto e liderança da equipe.
+          Pesquisador NLP no Projeto Koru, sistema multi-agente (LangGraph)
+          para avaliação de soft skills e competências de liderança. Responsável
+          pelo koru-dashboard (Streamlit + Plotly + TimescaleDB) e pelos testes
+          de Red Team adversarial com DeepTeam. Iniciou como NLP Junior,
+          evoluiu para NLP Researcher.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+      - type: FeaturedItem
+        title: 2024 – presente | Bolsista CNPq (Projeto Sobrevidas)
+        text: >
+          **CNPq — Projeto Sobrevidas (SUS)**
+
+          Bolsista CNPq e líder da equipe de IA do Projeto Sobrevidas,
+          chatbot integrado ao SUS para rastreamento de câncer de boca.
+          Co-autor do artigo **premiado como melhor do Brasil no SBCAS 2025**
+          (categoria ferramentas). Projeto distinto do Koru — foco em saúde
+          pública e NLP aplicado à vigilância epidemiológica.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+      - type: FeaturedItem
+        title: mar 2024 – dez 2025 | Founder & CEO · Clivia (encerrada)
+        text: >
+          **Clivia — IA para Clínicas Médicas**
+
+          Fundei e operei a Clivia, plataforma multi-agente LLM para clínicas
+          médicas (SDR inteligente via WhatsApp). Arquitetei toda a stack de
+          zero — FastAPI, LangGraph Supervisor (migração de CrewAI), LiteLLM
+          proxy self-hosted, Redis checkpointer, Docker Swarm com **40+
+          containers em produção**. Encerrada em dez/2025.
         actions: []
         elementId: ''
         styles:
@@ -263,14 +336,15 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: 2024 - presente | Pesquisa Contínua
+        title: 2024 – presente | Pesquisa Contínua
         text: >
           **Inteligência Artificial e LLMs**
 
-          Investigação contínua em modelos de linguagem e suas aplicações 
-          práticas. Desenvolvimento de soluções inovadoras usando LLMs, 
-          fine-tuning de modelos e integração de IA em sistemas reais. 
-          Foco em aplicações éticas e de impacto social.
+          Investigação contínua em modelos de linguagem e suas aplicações
+          práticas — sistemas multi-agente (LangGraph), MCP (Model Context
+          Protocol, cliente e servidor FastMCP), LLMOps (LiteLLM, OpenLit,
+          Langfuse) e Red Team (DeepTeam, Deepeval). Foco em aplicações éticas
+          e de impacto social.
         actions: []
         elementId: ''
         styles:
@@ -283,7 +357,7 @@ sections:
               - pr-4
     actions: []
     elementId: ''
-    variant: small-list
+    variant: timeline
     colors: bg-light-fg-dark
     styles:
       self:
@@ -303,47 +377,81 @@ sections:
     text: >
       **Desenvolvimento Back-end:**
 
-      • **Java & Spring Boot** - 3+ anos de experiência profissional
+      • **Java & Spring Boot** — 4+ anos; Flyway (60+ migrations), RabbitMQ
+      (Spring AMQP), Spring Security OAuth2 (Keycloak RS256/JWKs)
 
-      • **APIs RESTful** - Design e implementação de serviços escaláveis
+      • **Python** — FastAPI, Pydantic v2, asyncio, Flask
 
-      • **Bancos de Dados** - PostgreSQL, MySQL, NoSQL
+      • **APIs RESTful e microsserviços** — design e implementação de serviços
+      escaláveis
 
-      • **Arquitetura de Software** - Sistemas distribuídos e microserviços
-
-      • **Segurança** - Implementação de sistemas seguros para órgãos públicos
+      • **Bancos de dados** — PostgreSQL, Supabase, pgvector, MySQL, Redis
 
 
-      **Inteligência Artificial:**
+      **Inteligência Artificial e Sistemas Multi-agente:**
 
-      • **Processamento de Linguagem Natural (NLP)** - Especialização avançada
+      • **LangGraph** — Supervisor, StateGraph, RedisSaver e
+      AsyncPostgresSaver checkpointers
 
-      • **Large Language Models (LLMs)** - Fine-tuning e aplicações práticas
+      • **MCP (Model Context Protocol)** — cliente customizado e servidor
+      FastMCP implementados do zero
 
-      • **Agentes de IA e Sistemas Multiagentes** - LangGraph, MCP
+      • **CrewAI, LangChain (LCEL), Agno** — orquestração de agentes
 
-      • **RAG** - Retrieval-Augmented Generation
+      • **RAG / GraphRAG** — pgvector, FAISS, Supabase vector store, chunking
+      adaptativo com n-gram overlap
 
-      • **IA Prompting e GPTs Personalizados**
+      • **Text2SQL / GenBI** customizado com LangChain `create_sql_agent`
 
-      • **n8n** - Automação e orquestração de fluxos com IA
 
-      • **Chatbots Conversacionais** - Desenvolvimento end-to-end
+      **LLMOps, Observabilidade e Guardrails:**
 
-      • **Integração de IA** - Implementação em sistemas reais
+      • **LiteLLM** — proxy self-hosted com router e fallback entre modelos
+
+      • **Langfuse** — tracing distribuído com CallbackHandler + llm-as-a-judge
+      Evaluator
+
+      • **OpenLit, Helicone** — custo/latência/tokens
+
+      • **DeepTeam** — Red Team adversarial (prompt injection)
+
+      • **Deepeval** — guardrails de toxicidade, preconceito e hate speech
+
+      • **PydanticAI** — validação estruturada de respostas
+
+      • **OpenTelemetry, Prometheus, Loki, Grafana**
+
+
+      **STT em Tempo Real:**
+
+      • **AWS Transcribe Streaming** — WebSocket com state machine de sessão
+      (idle/connecting/streaming/reconnecting), KWS sidecar, limite de 4h
+
+      • **Deepgram Nova-3** — STT via WebSocket streaming
+
+      • **OpenAI Whisper** — transcrição offline
+
+      • **LLM corrector** — correção em tempo real de termos técnicos
+
+
+      **Infraestrutura e DevOps:**
+
+      • **Docker Swarm** — 40+ containers orquestrados em produção (Clivia)
+
+      • **CI/CD GitOps** — GitHub Actions → Docker Hub → Portainer webhook
+
+      • **Ollama** — inferência local com múltiplas instâncias
 
 
       **Liderança e Gestão:**
 
-      • **Liderança de Equipes** - Coordenação de pesquisadores e desenvolvedores
+      • **Liderança técnica** — responsável único pela tecnologia da Count on
+      Sheep; CEO da Clivia durante ~21 meses
 
-      • **Gestão de Projetos** - Metodologias ágeis e entrega de resultados
+      • **Community Building** — Go.IAs (450+ membros), Magnatas.hub (~80–90)
 
-      • **Empreendedorismo** - Fundação e gestão de startups
-
-      • **Community Building** - Criação e liderança de comunidades tech
-
-      • **Public Speaking** - Palestras e apresentações técnicas
+      • **Public Speaking** — palestrante regular em eventos de IA e
+      empreendedorismo
     actions:
       - label: Ver Projetos
         altText: 'Ver portfolio de projetos'
@@ -379,33 +487,44 @@ sections:
       type: TitleBlock
     subtitle: Principais prêmios e reconhecimentos profissionais
     text: >
-      **🏆 SBCAS 2025 - Melhor Artigo do Brasil**
+      **🏆 SBCAS 2025 — Melhor Artigo do Brasil**
 
-      Artigo sobre o projeto Sobrevidas reconhecido como melhor do país no 
-      Simpósio Brasileiro de Computação Aplicada à Saúde 2025.
+      Artigo sobre o projeto Sobrevidas reconhecido como melhor do país no
+      Simpósio Brasileiro de Computação Aplicada à Saúde 2025 (categoria
+      ferramentas).
 
 
       **🎓 Bolsista CNPq**
 
-      Selecionado como bolsista do Conselho Nacional de Desenvolvimento 
-      Científico e Tecnológico para pesquisa em IA aplicada à saúde.
+      Selecionado como bolsista do Conselho Nacional de Desenvolvimento
+      Científico e Tecnológico para pesquisa em IA aplicada à saúde (projeto
+      Sobrevidas).
 
 
-      **🚀 Fundador de Startup Inovadora**
+      **🎖️ EMBRAPII — Líder destaque**
 
-      Criação da Clivia, reconhecida como solução inovadora no setor de 
-      healthtech, aplicando IA para otimização de clínicas médicas.
+      Reconhecido como líder destaque entre 60 bolsistas do programa EMBRAPII,
+      acompanhado por 8 mentores doutores em IA, Engenharia de Software e
+      Empreendedorismo.
+
+
+      **🚀 Fundador de Startup de IA**
+
+      Fundei e operei a Clivia (mar 2024 – dez 2025), plataforma multi-agente
+      para healthtech — arquitetura end-to-end em Docker Swarm com 40+
+      containers em produção.
 
 
       **👥 Líder de Comunidades**
 
-      Co-fundação da Magnatas.hub e liderança na Go.IAs, contribuindo para 
-      o desenvolvimento do ecossistema de inovação em Goiânia.
+      Co-fundação do Magnatas.hub e liderança na Go.IAs (**450+ membros**),
+      contribuindo para o desenvolvimento do ecossistema de inovação em
+      Goiânia.
 
 
       **🎤 Speaker Reconhecido**
 
-      Palestrante regular em eventos de tecnologia, compartilhando conhecimento 
+      Palestrante regular em eventos de tecnologia, compartilhando conhecimento
       sobre IA ética e desenvolvimento de produtos inovadores.
     actions:
       - label: Convite para Palestras

@@ -85,13 +85,7 @@
             "type": "Social"
         }
     ],
-    "legalLinks": [
-        {
-            "label": "Política de Privacidade",
-            "url": "/privacy",
-            "type": "Link"
-        }
-    ],
+    "legalLinks": [],
     "copyrightText": "© 2025 Thiago Peraro. Pesquisador CNPq | Fundador da Clivia | Todos os direitos reservados.",
     "styles": {
         "self": {

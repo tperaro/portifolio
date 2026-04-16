@@ -7,16 +7,18 @@ sections:
     title: Sobre Mim
     subtitle: Responsável de tecnologia, pesquisador de IA e empreendedor
     text: >
-      Sou Thiago Peraro, empreendedor e pesquisador de inteligência artificial
-      com foco  em processamento de linguagem natural. Minha trajetória combina
-      experiência técnica  em desenvolvimento back-end, pesquisa acadêmica de
-      ponta e liderança empreendedora.
+      Sou Thiago Peraro, pesquisador de IA e responsável técnico com foco em
+      processamento de linguagem natural e sistemas multi-agente. Minha
+      trajetória combina experiência sólida em back-end (4+ anos em Java/Spring),
+      pesquisa acadêmica e liderança técnica de produto.
 
 
-      Graduando em Ciência da Computação pela UFG (2019-presente, ~83%
-      concluído), atualmente sou responsável de tecnologia na Count on Sheep
-      (consultoria americana de crypto taxes) e pesquisador no CEIA-UFG como
-      bolsista CNPq, aplicando IA para resolver problemas reais.
+      Graduando em Ciência da Computação pela UFG (2019–presente, ~83%
+      concluído). Atualmente sou responsável por toda a tecnologia na Count on
+      Sheep (consultoria americana de cripto taxes), pesquisador NLP no
+      CEIA-UFG no projeto Koru e bolsista CNPq no projeto Sobrevidas. Fundei e
+      operei a Clivia (mar 2024 – dez 2025). Estou aberto a novas
+      oportunidades em AI Engineering.
     actions:
       - label: LinkedIn
         altText: Conectar no LinkedIn
@@ -79,12 +81,13 @@ sections:
           altText: Projeto Sobrevidas
           elementId: ''
       - type: FeaturedItem
-        title: Fundação da Clivia
+        title: Clivia — Empresa Própria (mar 2024 – dez 2025)
         text: >
-          Em 2025, fundei a Clivia, um sistema multiagente para clínicas médicas
-          que converte leads no WhatsApp e reduz no-shows. Uma experiência de
-          empreendedorismo que combinou pesquisa em IA com impacto real no
-          setor de saúde (fev 2025 – jan 2026).
+          Fundei e operei a Clivia, plataforma multi-agente LLM para clínicas
+          médicas (SDR inteligente via WhatsApp). Arquitetei toda a stack de
+          zero — FastAPI, LangGraph Supervisor, LiteLLM, Redis checkpointer,
+          Docker Swarm com 40+ containers. **Encerrada em dez/2025** ao
+          iniciar a jornada na Count on Sheep.
         actions: []
         elementId: ''
         styles:
@@ -142,28 +145,35 @@ sections:
     subtitle: Stack tecnológico e áreas de especialização
     text: |
       **Desenvolvimento Back-end:**
-      • Java e Spring Boot - 4+ anos de experiência (GoiásPrev + Count on Sheep)
-      • SQL, Git e GitLab
-      • Linux (Servidor Linux)
-      • Metodologias ágeis e boas práticas de engenharia de software
-      • Desenvolvimento de sistemas para órgãos públicos
-      • Arquitetura de software e APIs RESTful
-      • Bancos de dados relacionais e NoSQL
+      • Java e Spring Boot — 4+ anos; Flyway (60+ migrations), RabbitMQ,
+        Spring Security OAuth2 (GoiásPrev + Count on Sheep)
+      • Python — FastAPI, Pydantic v2, asyncio
+      • SQL — PostgreSQL, Supabase, pgvector
+      • APIs RESTful, arquitetura de microsserviços, Linux
 
-      **Inteligência Artificial:**
-      • Processamento de Linguagem Natural (NLP)
-      • Large Language Models (LLMs) e RAG
-      • Agentes de IA e sistemas multiagentes (LangGraph, MCP)
-      • IA Prompting e GPTs Personalizados
-      • n8n — automação de fluxos com IA
-      • Desenvolvimento de chatbots e agentes conversacionais
-      • Integração de IA em sistemas de saúde
+      **Inteligência Artificial e LLMOps:**
+      • Sistemas multi-agente — LangGraph (Supervisor, StateGraph, RedisSaver
+        & AsyncPostgresSaver checkpointers), CrewAI, LangChain (LCEL)
+      • MCP (Model Context Protocol) — cliente customizado e servidor
+        FastMCP implementados do zero
+      • RAG / GraphRAG — pgvector, FAISS, Supabase vector store
+      • LLMOps — LiteLLM (proxy self-hosted com router e fallback), OpenLit,
+        Helicone, Langfuse (tracing + llm-as-a-judge Evaluator)
+      • Red Team e Guardrails — DeepTeam (prompt injection, adversarial),
+        Deepeval (toxicidade, preconceito, hate speech)
+      • STT em tempo real — AWS Transcribe Streaming (WebSocket state
+        machine, KWS sidecar), Deepgram Nova-3, OpenAI Whisper
+      • Text2SQL / GenBI customizado, Ollama local
+
+      **Infraestrutura e DevOps:**
+      • Docker Swarm — 40+ containers em produção (Clivia)
+      • CI/CD — GitHub Actions → Docker Hub → Portainer redeploy
+      • Observabilidade — Langfuse, LangSmith, Prometheus, Grafana, Loki
 
       **Empreendedorismo e Liderança:**
-      • Fundação e gestão de startups de tecnologia
-      • Community building e networking
-      • Palestras e eventos sobre IA e empreendedorismo
-      • Mentoria em projetos de inovação
+      • Fundação, operação e encerramento de startup LLM (Clivia)
+      • Community building — Go.IAs (450+ membros) e Magnatas.hub
+      • Palestras regulares sobre IA e empreendedorismo
     actions:
       - label: Ver Projetos
         altText: Ver meus projetos
@@ -199,21 +209,27 @@ sections:
     subtitle: Trajetória acadêmica e científica
     text: |
       **Formação Acadêmica:**
-      • **Bacharelado em Ciência da Computação** - UFG (2019-presente)
-      • Especialização em desenvolvimento back-end com Java
+      • **Bacharelado em Ciência da Computação** — UFG (2019–presente, ~83%
+        concluído)
       • Participação ativa em iniciativas de pesquisa e extensão
 
-      **Pesquisa Atual:**
-      • **Pesquisador de NLP no CEIA-UFG** - Bolsista CNPq (2024-presente)
-      • Líder da equipe de IA do projeto Sobrevidas
-      • Desenvolvimento de chatbots para integração com SUS
-      • Pesquisa em modelos de linguagem para aplicações médicas
+      **Pesquisa Atual (dois projetos distintos):**
+      • **Projeto Sobrevidas — Bolsista CNPq (2024–presente)**
+        — NLP aplicado à saúde; chatbot para rastreamento de câncer de boca
+        integrado ao SUS. Projeto premiado no SBCAS 2025.
+      • **Projeto Koru — Pesquisador NLP no CEIA-UFG/AKCIT
+        (dez 2024–presente)**
+        — sistema multi-agente com LangGraph para avaliação de soft skills
+        e competências de liderança. Desenvolvo o koru-dashboard
+        (Streamlit + Plotly + TimescaleDB) e conduzo testes de Red Team
+        adversarial com DeepTeam.
 
       **Publicações e Reconhecimentos:**
-      • Artigo premiado como melhor do Brasil no SBCAS 2025
-      • Pesquisas em processamento de linguagem natural aplicado à saúde
-      • Apresentações em eventos científicos e técnicos
-      • Contribuições para o avanço da IA ética e responsável
+      • 🏆 Artigo **premiado como melhor do Brasil no SBCAS 2025** (categoria
+        ferramentas) — projeto Sobrevidas
+      • Líder destaque entre 60 bolsistas do programa EMBRAPII,
+        acompanhado por 8 mentores doutores
+      • Palestras regulares sobre IA e empreendedorismo
     actions:
       - label: Ver Experiência
         altText: Ver experiência detalhada
@@ -256,9 +272,10 @@ sections:
 
 
       No projeto Sobrevidas, por exemplo, desenvolvemos uma solução que pode
-      salvar vidas através do diagnóstico precoce de câncer de boca. Na Clivia,
-      construí ferramentas que humanizaram o atendimento médico através da
-      tecnologia, aplicando pesquisa em produto real.
+      salvar vidas através do diagnóstico precoce de câncer de boca. Na Clivia
+      (mar 2024 – dez 2025), construí ferramentas que humanizaram o atendimento
+      médico através de sistemas multi-agente, aplicando pesquisa em produto
+      real em escala de produção.
 
 
       Como líder de comunidades, promovo o networking e a colaboração entre

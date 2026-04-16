@@ -9,6 +9,7 @@
     "dependencies": {
         "@algolia/autocomplete-js": "^1.19.4",
         "@algolia/autocomplete-theme-classic": "^1.19.4",
+        "@gsap/react": "^2.1.2",
         "@studio-freight/lenis": "^1.0.42",
         "aceternity-ui": "^0.2.2",
         "algoliasearch": "^4.25.3",

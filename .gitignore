@@ -48,5 +48,16 @@ yarn-error.log*
 
 tmp*
 
-# Brainstorming session files
+# Brainstorming / agent session files
 .superpowers/
+.playwright-mcp/
+docs/superpowers/
+
+# Dev / test screenshots at repo root
+/marquee-*.png
+/robot-demo-*.png
+/v*-*.png
+
+# Generated TS
+/next-env.d.ts
+/tsconfig.tsbuildinfo

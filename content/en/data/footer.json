@@ -23,7 +23,7 @@
     { "label": "LinkedIn", "altText": "LinkedIn", "url": "https://www.linkedin.com/in/thiago-peraro/", "icon": "linkedin", "type": "Social" },
     { "label": "GitHub", "altText": "GitHub", "url": "https://github.com/tperaro", "icon": "github", "type": "Social" }
   ],
-  "legalLinks": [ { "label": "Privacy Policy", "url": "/privacy", "type": "Link" } ],
+  "legalLinks": [],
   "copyrightText": "© 2025 Thiago Peraro. CNPq Researcher | Clivia Founder | All rights reserved.",
   "styles": { "self": { "padding": ["pt-16", "pb-8"] } },
   "type": "Footer"

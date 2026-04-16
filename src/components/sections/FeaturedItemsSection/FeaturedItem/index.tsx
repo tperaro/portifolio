@@ -5,7 +5,6 @@ import Markdown from 'markdown-to-jsx';
 import { mapStylesToClassNames as mapStyles } from '../../../../utils/map-styles-to-class-names';
 import Action from '../../../atoms/Action';
 import ImageBlock from '../../../blocks/ImageBlock';
-import AnimatedWrapper from '../../../atoms/AnimatedWrapper';
 
 export default function FeaturedItem(props) {
     const { elementId, title, tagline, subtitle, text, image, actions = [], colors = 'bg-light-fg-dark', styles = {}, hasSectionTitle } = props;
@@ -16,11 +15,11 @@ export default function FeaturedItem(props) {
     const hasImage = !!image?.url;
 
     return (
-        <AnimatedWrapper
-            direction="up"
-            preset="moderate"
+        <div
             className={classNames(
                 'sb-card',
+                'group',
+                'relative',
                 'h-full',
                 'flex',
                 'flex-col',
@@ -38,10 +37,11 @@ export default function FeaturedItem(props) {
                 styles?.self?.textAlign ? mapStyles({ textAlign: styles?.self?.textAlign }) : undefined,
                 'overflow-hidden',
                 'transition-all duration-300',
-                'hover:scale-[1.02] hover:shadow-lg'
+                'hover:-translate-y-1 hover:shadow-xl',
+                'before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-[3px] before:bg-gradient-to-r before:from-transparent before:via-primary before:to-transparent before:opacity-0 before:transition-opacity before:duration-300 group-hover:before:opacity-100'
             )}
         >
-            <div 
+            <div
                 id={elementId}
                 className={classNames('w-full', 'flex', 'flex-1', mapFlexDirectionStyles(flexDirection, hasTextContent, hasImage), 'gap-6')}
                 data-sb-field-path={fieldPath}
@@ -49,9 +49,14 @@ export default function FeaturedItem(props) {
                 {hasImage && (
                     <ImageBlock
                         {...image}
-                        className={classNames('flex', mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }), {
-                            'xs:w-[28.4%] xs:shrink-0': hasTextContent && (flexDirection === 'row' || flexDirection === 'row-reversed')
-                        })}
+                        className={classNames(
+                            'flex',
+                            '[&_img]:grayscale [&_img]:transition-[filter] [&_img]:duration-500 group-hover:[&_img]:grayscale-0',
+                            mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }),
+                            {
+                                'xs:w-[28.4%] xs:shrink-0': hasTextContent && (flexDirection === 'row' || flexDirection === 'row-reversed')
+                            }
+                        )}
                         {...(fieldPath && { 'data-sb-field-path': '.image' })}
                     />
                 )}
@@ -125,7 +130,7 @@ export default function FeaturedItem(props) {
                     </div>
                 )}
             </div>
-        </AnimatedWrapper>
+        </div>
     );
 }
 

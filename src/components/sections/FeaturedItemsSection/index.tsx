@@ -1,6 +1,10 @@
 import * as React from 'react';
+import { useRef } from 'react';
 import classNames from 'classnames';
 import { m, cubicBezier } from 'framer-motion';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 
 import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
 import { getComponent } from '../../components-registry';
@@ -8,6 +12,10 @@ import { getDataAttrs } from '../../../utils/get-data-attrs';
 import Section from '../Section';
 import { Action, Badge } from '../../atoms';
 import TitleBlock from '../../blocks/TitleBlock';
+
+if (typeof window !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger, useGSAP);
+}
 
 // Container variant: triggers stagger on children
 const containerVariants = {
@@ -106,9 +114,112 @@ function FeaturedItemVariants(props) {
             return <FeaturedItemsBigList {...rest} />;
         case 'toggle-list':
             return <FeaturedItemsToggleList {...rest} />;
+        case 'timeline':
+            return <FeaturedItemsTimeline {...rest} />;
         default:
             return <FeaturedItemsThreeColGrid {...rest} />;
     }
+}
+
+function FeaturedItemsTimeline(props) {
+    const { items = [], hasTopMargin, hasSectionTitle, hasAnnotations } = props;
+    const scopeRef = useRef<HTMLDivElement>(null);
+
+    useGSAP(
+        () => {
+            const scope = scopeRef.current;
+            if (!scope) return;
+
+            const lineFill = scope.querySelector<HTMLDivElement>('.timeline-line-fill');
+            if (lineFill) {
+                gsap.fromTo(
+                    lineFill,
+                    { scaleY: 0 },
+                    {
+                        scaleY: 1,
+                        ease: 'none',
+                        scrollTrigger: {
+                            trigger: scope,
+                            start: 'top 75%',
+                            end: 'bottom 60%',
+                            scrub: 0.6
+                        }
+                    }
+                );
+            }
+
+            const dots = scope.querySelectorAll<HTMLSpanElement>('.timeline-dot');
+            dots.forEach((dot) => {
+                gsap.fromTo(
+                    dot,
+                    { scale: 0.5, opacity: 0.5 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.5,
+                        ease: 'back.out(2.2)',
+                        scrollTrigger: {
+                            trigger: dot,
+                            start: 'top 80%',
+                            toggleActions: 'play none none reverse'
+                        }
+                    }
+                );
+            });
+        },
+        { scope: scopeRef }
+    );
+
+    if (items.length === 0) {
+        return null;
+    }
+    const FeaturedItem = getComponent('FeaturedItem');
+    return (
+        <m.div
+            ref={scopeRef}
+            className={classNames('w-full', 'max-w-3xl', 'relative', 'pl-10', 'md:pl-14', { 'mt-12': hasTopMargin })}
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0 }}
+            {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
+        >
+            <div
+                aria-hidden
+                className="pointer-events-none absolute left-3 top-2 bottom-2 w-px md:left-5"
+                style={{ background: 'rgba(102,126,234,0.18)' }}
+            />
+            <div
+                aria-hidden
+                className="timeline-line-fill pointer-events-none absolute left-3 top-2 bottom-2 w-[2px] origin-top md:left-[19px]"
+                style={{
+                    background: 'linear-gradient(to bottom, #667eea 0%, #8aa5ee 100%)',
+                    boxShadow: '0 0 8px rgba(102,126,234,0.55)'
+                }}
+            />
+            {items.map((item, index) => (
+                <m.div
+                    key={index}
+                    variants={itemVariants}
+                    className={classNames('relative', index === 0 ? '' : 'mt-8')}
+                >
+                    <span
+                        aria-hidden
+                        className="timeline-dot absolute left-[-28px] top-6 h-3 w-3 rounded-full md:left-[-37px]"
+                        style={{
+                            background: '#ffffff',
+                            boxShadow: '0 0 0 2px #667eea, 0 0 0 6px rgba(102,126,234,0.22)'
+                        }}
+                    />
+                    <FeaturedItem
+                        {...item}
+                        hasSectionTitle={hasSectionTitle}
+                        {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })}
+                    />
+                </m.div>
+            ))}
+        </m.div>
+    );
 }
 
 function FeaturedItemsThreeColGrid(props) {
@@ -132,7 +243,7 @@ function FeaturedItemsThreeColGrid(props) {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '200px' }}
+            viewport={{ once: true, amount: 0 }}
             {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
         >
             {items.map((item, index) => (
@@ -164,7 +275,7 @@ function FeaturedItemsTwoColGrid(props) {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '200px' }}
+            viewport={{ once: true, amount: 0 }}
             {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
         >
             {items.map((item, index) => (
@@ -188,7 +299,7 @@ function FeaturedItemsSmallList(props) {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '200px' }}
+            viewport={{ once: true, amount: 0 }}
             {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
         >
             {items.map((item, index) => (
@@ -212,7 +323,7 @@ function FeaturedItemsBigList(props) {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '200px' }}
+            viewport={{ once: true, amount: 0 }}
             {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
         >
             {items.map((item, index) => (

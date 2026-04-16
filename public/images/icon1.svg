@@ -1,6 +1,16 @@
-<svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="42" cy="42" r="42" fill="white"/>
-<circle opacity="0.8" cx="41.7988" cy="31.1032" r="10.1032" fill="#4A4A4A"/>
-<circle cx="27.1032" cy="53.6057" r="10.1032" fill="#D9D9D9"/>
-<circle cx="56.4943" cy="53.6057" r="9.92962" stroke="#222222" stroke-width="0.347229"/>
+<svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <g stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M30 20.5c-4.7 0-8.5 3.8-8.5 8.5 0 1.7.5 3.3 1.4 4.6-2.9 1.4-4.9 4.4-4.9 7.9 0 3 1.5 5.7 3.9 7.3-1 1.4-1.5 3.1-1.5 4.9 0 4.7 3.8 8.5 8.5 8.5 1.2 0 2.4-.3 3.5-.8V20.8c-.8-.2-1.6-.3-2.4-.3Z"/>
+    <path d="M54 20.5c4.7 0 8.5 3.8 8.5 8.5 0 1.7-.5 3.3-1.4 4.6 2.9 1.4 4.9 4.4 4.9 7.9 0 3-1.5 5.7-3.9 7.3 1 1.4 1.5 3.1 1.5 4.9 0 4.7-3.8 8.5-8.5 8.5-1.2 0-2.4-.3-3.5-.8V20.8c.8-.2 1.6-.3 2.4-.3Z"/>
+    <path d="M34 32h4M34 42h4M34 52h4"/>
+    <path d="M46 32h4M46 42h4M46 52h4"/>
+    <path d="M42 66v4"/>
+    <path d="M38 70h8"/>
+  </g>
+  <circle cx="32" cy="32" r="1.8" fill="#2a2a2a"/>
+  <circle cx="32" cy="42" r="1.8" fill="#2a2a2a"/>
+  <circle cx="32" cy="52" r="1.8" fill="#2a2a2a"/>
+  <circle cx="52" cy="32" r="1.8" fill="#2a2a2a"/>
+  <circle cx="52" cy="42" r="1.8" fill="#2a2a2a"/>
+  <circle cx="52" cy="52" r="1.8" fill="#2a2a2a"/>
 </svg>

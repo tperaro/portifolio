@@ -14,7 +14,8 @@ const nextConfig = {
     },
     allowedDevOrigins: [
         '192.168.1.84'
-    ]
+    ],
+    devIndicators: false
 };
 
 module.exports = nextConfig;

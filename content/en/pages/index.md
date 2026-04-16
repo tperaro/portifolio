@@ -3,42 +3,68 @@ title: Thiago Peraro - Entrepreneur and AI Researcher
 slug: /
 type: PageLayout
 sections:
-  - type: AnimatedHeroSection
-    title: Thiago Peraro
-    subtitle: Entrepreneur, AI researcher and community leader
-    text: >
-      Combining a passion for technology and entrepreneurship, I am founder of
-      Clivia, a natural language processing researcher, and a leader of
-      innovation and entrepreneurship communities in Goiânia.
-    actions:
-      - label: View Projects
-        altText: View my projects
-        url: /projects
-        showIcon: true
-        icon: arrowRight
-        iconPosition: right
-        style: primary
-        elementId: ''
-        type: Button
-      - label: Download CV
-        altText: Download resume
-        url: /cv/thiago-peraro-cv.pdf
-        showIcon: true
-        icon: arrowDown
-        iconPosition: right
-        style: secondary
-        elementId: ''
-        type: Link
-    media:
-      url: /images/koru.png
-      altText: Thiago Peraro - Entrepreneur and AI Researcher
-      type: image
-    backgroundAnimation: gradient
-    typingEffect: true
-    typingSpeed: 15
-    preset: moderate
+  - type: ScrollHeroSection
     elementId: hero
-    colors: bg-light-fg-dark
+    videoUrl: /hero-robot/robot-cross-scrub.mp4
+    accentColor: '#667eea'
+    bgColor: '#0e0a18'
+    scrollHint: scroll ↓
+    phrases:
+      - before: "I'm Thiago —"
+        highlight: 'welcome to my portfolio.'
+      - before: 'I build solid and secure applications with'
+        highlight: 'AI.'
+      - before: 'Explore my experience, my skills —'
+        highlight: "let's talk!"
+    leftWords:
+      - Python
+      - Java
+      - Spring Boot
+      - FastAPI
+      - LangGraph
+      - LangChain
+      - CrewAI
+      - LiteLLM
+      - Langfuse
+      - DeepTeam
+      - MCP
+      - FastMCP
+      - RAG
+      - pgvector
+      - Postgres
+      - Supabase
+      - Redis
+      - Docker Swarm
+      - GitHub Actions
+      - AWS Transcribe
+      - Deepgram
+      - Whisper
+      - Ollama
+      - Text2SQL
+      - OAuth2
+      - RabbitMQ
+      - Prometheus
+      - Grafana
+      - Loki
+      - TimescaleDB
+      - Streamlit
+      - AI Agents
+      - LLM
+      - Fullstack
+      - Infrastructure
+      - Security
+    rightWords:
+      - Researcher
+      - Builder
+      - Founder
+      - CLIVIA
+      - CEIA-UFG
+      - Go.IAs
+      - Magnatas
+      - Community
+      - CNPq
+      - EMBRAPII
+      - UFG
   - type: GenericSection
     title:
       text: About Me
@@ -46,15 +72,17 @@ sections:
       type: TitleBlock
     subtitle: My work in AI and entrepreneurship
     text: >
-      I am an AI/LLM researcher at CEIA-UFG, founder of Clivia, and community
-      builder at Go.IAs. I lead the @magnatas.hub (entrepreneur community) and
-      develop social impact solutions using artificial intelligence.
+      Sole tech lead at Count on Sheep (US crypto tax consulting firm), NLP
+      researcher at CEIA-UFG (Koru project) and CNPq fellow (Sobrevidas
+      project). I lead Magnatas.hub and am a community builder at Go.IAs (450+
+      members).
 
 
-      Undergraduate in Computer Science at UFG (2019–Present), with a history
-      in back-end development using Java and Spring Boot. Experience in
-      academic research as a CNPq fellow at CEIA-UFG and EMBRAPII, systems
-      development for public agencies, my startup and clients.
+      Undergraduate in Computer Science at UFG (2019–present, ~83% complete).
+      My technical foundation comes from 4+ years of back-end with Java and
+      Spring Boot. Founded and operated Clivia (Mar 2024 – Dec 2025), a
+      multi-agent LLM platform for medical clinics. Currently open to new
+      opportunities in AI Engineering.
     actions:
       - label: Learn More
         altText: Learn more about my journey
@@ -119,9 +147,10 @@ sections:
       - type: FeaturedItem
         title: Entrepreneurship
         text: >
-          Founder of Clivia — AI agent for medical clinics that optimizes
-          patient interactions. Co-founder of Magnatas.hub community, promoting
-          networking and innovative business development.
+          Founder & CEO of Clivia (Mar 2024 – Dec 2025), a multi-agent LLM
+          platform for medical clinics — architected the full stack from scratch
+          (LangGraph Supervisor, LiteLLM, Docker Swarm with 40+ containers).
+          Co-founder of Magnatas.hub, a Goiânia entrepreneur community.
         actions: []
         elementId: ''
         styles:
@@ -140,8 +169,9 @@ sections:
       - type: FeaturedItem
         title: Community Leadership
         text: >
-          Community builder at Go.IAs, promoting events and networking in AI.
-          Public speaker advocating ethical tech and sharing knowledge on AI.
+          Community builder at Go.IAs (450+ members) and leader of Magnatas.hub
+          (~80–90 entrepreneurs). Regular speaker at AI and entrepreneurship
+          events, advocating ethical use of technology.
         actions: []
         elementId: ''
         styles:
@@ -233,13 +263,13 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: 2024–present · NLP Researcher
+        title: 2024–present · CNPq Fellow · Sobrevidas Project
         text: >
-          **CEIA-UFG | Sobrevidas Project**
+          **CNPq | Sobrevidas Project (NLP for public health)**
 
-          NLP researcher at CEIA-UFG and CNPq fellow. Lead of the AI team of
-          Sobrevidas, a SUS-integrated oral cancer screening system; co-author
-          of the paper awarded best in Brazil at SBCAS 2025 (tools category).
+          NLP researcher. Lead of the AI team at Sobrevidas — a SUS-integrated
+          oral cancer screening system. Co-author of the paper awarded **best
+          in Brazil at SBCAS 2025** (tools category).
         actions:
           - label: Download paper
             url: /35620-1093-28716-1-10-20250608-2.pdf
@@ -255,13 +285,15 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: Feb 2025 – Jan 2026 · Clivia Founder
+        title: Dec 2024–present · NLP Researcher · Koru Project
         text: >
-          **AI for Medical Clinics**
+          **CEIA-UFG & AKCIT | Koru Project**
 
-          Founder of Clivia, a multi-agent system for medical clinics that
-          converts WhatsApp leads and reduces no-shows. Combined entrepreneurship
-          with AI research to deliver real-world health impact.
+          NLP researcher at CEIA-UFG working on the Koru Project — a
+          multi-agent system (LangGraph) for soft-skill and leadership
+          competency assessment. Responsible for the koru-dashboard
+          (Streamlit + Plotly + TimescaleDB) and adversarial Red Team testing
+          with DeepTeam.
         actions: []
         elementId: ''
         styles:
@@ -273,13 +305,35 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: Dec 2025–present · Tech Lead
+        title: Mar 2024 – Dec 2025 · Founder & CEO · Clivia (closed)
+        text: >
+          **AI for Medical Clinics**
+
+          Founded and operated Clivia, a multi-agent LLM platform for medical
+          clinics — intelligent SDR via WhatsApp. Architected the full stack
+          (FastAPI, LangGraph Supervisor, LiteLLM, Redis checkpointer, Docker
+          Swarm with 40+ containers). Closed in Dec 2025.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-6
+              - pb-6
+              - pl-4
+              - pr-4
+      - type: FeaturedItem
+        title: Jan 2026 – present · Sole Tech Lead
         text: >
           **Count on Sheep — US Crypto Tax Firm**
 
-          Sole tech lead responsible for the entire technology stack. Built
-          from scratch: real-time STT pipeline, multi-agent AI system,
-          client onboarding platform, and internal tooling.
+          Sole person responsible for the entire technology stack. Built from
+          scratch `onboarding-AI` (FastAPI): extraction pipeline with **7
+          LangGraph agents** in 3 parallel phases, real-time STT (AWS
+          Transcribe + KWS sidecar + LLM corrector), email system with **140+
+          Jinja2 templates** and intelligent routing, integrations with HubSpot,
+          DocuSign, Stripe, Gmail and Google Workspace.
         actions: []
         elementId: ''
         styles:
@@ -292,7 +346,7 @@ sections:
               - pr-4
     actions: []
     elementId: ''
-    variant: small-list
+    variant: timeline
     colors: bg-neutral-fg-dark
     styles:
       self:
@@ -355,10 +409,11 @@ sections:
       actions:
         justifyContent: center
 seo:
-  metaTitle: Thiago Peraro - Entrepreneur and AI Researcher
+  metaTitle: Thiago Peraro - Tech Lead and AI Researcher
   metaDescription: >
-    Portfolio of Thiago Peraro — AI researcher at CEIA-UFG, entrepreneur at Clivia,
-    and tech community leader. Explore the career timeline.
+    Portfolio of Thiago Peraro — sole tech lead at Count on Sheep, NLP researcher
+    at CEIA-UFG, CNPq fellow (Sobrevidas Project) and leader of AI communities in
+    Goiânia.
   socialImage: /images/main-hero.jpg
   type: Seo
 ---

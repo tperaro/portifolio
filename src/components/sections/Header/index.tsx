@@ -22,8 +22,11 @@ export default function Header(props) {
                 'sb-component',
                 'sb-component-header',
                 colors,
-                'relative',
+                'sticky',
+                'top-0',
                 'shadow-header',
+                'backdrop-blur',
+                'bg-light/80',
                 styles?.self?.margin ? mapStyles({ padding: styles?.self?.margin }) : undefined,
                 styles?.self?.padding ? mapStyles({ padding: styles?.self?.padding }) : 'p-4',
                 'z-50'

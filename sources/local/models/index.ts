@@ -26,6 +26,7 @@ import { PostLayout } from './PostLayout';
 import { PricingPlan } from './PricingPlan';
 import { PricingSection } from './PricingSection';
 import { RecentPostsSection } from './RecentPostsSection';
+import { ScrollHeroSection } from './ScrollHeroSection';
 import { SelectFormControl } from './SelectFormControl';
 import { Social } from './Social';
 import { SubNav } from './SubNav';
@@ -72,6 +73,7 @@ export const allModels = {
     PricingPlan,
     PricingSection,
     RecentPostsSection,
+    ScrollHeroSection,
     SelectFormControl,
     Social,
     SubNav,
