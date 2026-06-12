@@ -1,0 +1,24 @@
+PASTA DE ASSETS — "Nossa História" (homenagem)
+================================================
+
+Coloque os arquivos aqui com EXATAMENTE estes nomes (a página já aponta pra eles):
+
+FOTOS (jpg ou png — pode ser .jpg):
+  foto-1.jpg
+  foto-2.jpg
+  foto-3.jpg
+  foto-4.jpg
+  foto-5.jpg
+  foto-6.jpg
+  foto-7.jpg
+  foto-8.jpg
+  (quantas quiser — depois a gente ajusta o array STORIES na página)
+
+MÚSICA:
+  musica.mp3   <- o Claude gera esse a partir do link do YouTube
+
+Enquanto os arquivos não existem, a página mostra placeholders bonitos
+(blocos com gradiente + "SUA FOTO"). Assim que você soltar os arquivos
+com os nomes acima, eles aparecem automaticamente.
+
+Dica: fotos na vertical (retrato) ficam melhores no formato stories.
