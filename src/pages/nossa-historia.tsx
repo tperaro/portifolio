@@ -22,6 +22,12 @@ type Slide =
     | { type: 'np'; eyebrow: string; title: string; text: string; song: string; meta: string; dur?: number }
     | { type: 'final'; title: string; sub: string; dur?: number };
 
+function daysSince(isoDate: string): string {
+    const start = new Date(isoDate).getTime();
+    const diff = Date.now() - start;
+    return String(Math.floor(diff / 86_400_000));
+}
+
 // 👉 EDITE AQUI. Legendas escritas a partir dos contextos reais — ajuste à vontade.
 const STORIES: Slide[] = [
     { type: 'cover', kicker: 'um replay de nós dois', big: 'NOSSA\nHISTÓRIA', sub: 'toque para começar ▶' },
@@ -32,7 +38,7 @@ const STORIES: Slide[] = [
 
     { type: 'photo', image: '/nossa-historia/foto-2.jpg', eyebrow: '2º encontro', title: 'A noite que tudo acendeu', text: 'Voltei de São Paulo depois de 15 dias só conversando com você. Cheguei e já te chamei pra ver o Natal. Mil luzes — e eu só olhando pra você.' },
 
-    { type: 'stat', pre: 'a gente já colecionou', value: '365+', label: 'dias — e nenhum repetido', bg: 'b' },
+    { type: 'stat', pre: 'a gente já colecionou', value: daysSince('2025-11-15'), label: 'dias — e nenhum repetido', bg: 'b' },
 
     { type: 'photo', image: '/nossa-historia/foto-3.jpg', title: 'Nossa primeira viagem', text: 'Na chácara do João, onde você pescou pela primeira vez — e, de quebra, me fisgou de vez.' },
     { type: 'photo', image: '/nossa-historia/foto-4.jpg', title: 'A pescadora oficial', text: 'Olha o tamanho do troféu! Sorte de principiante? Que nada — talento. 🎣' },
