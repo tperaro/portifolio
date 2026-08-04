@@ -119,7 +119,7 @@ sections:
         text: >
           **Go.IAs & Magnatas.hub | 2023 – present**
 
-          • Community builder at Go.IAs (**450+ members**) — events,
+          • Community builder at Go.IAs (**500+ members**) — events,
           networking and dissemination of university research
 
           • Co-founder and leader of Magnatas.hub (~80–90 entrepreneurs)
@@ -381,7 +381,7 @@ sections:
       • **Technical leadership** — sole tech owner at Count on Sheep; CEO of
       Clivia for ~21 months
 
-      • **Community Building** — Go.IAs (450+ members), Magnatas.hub (~80–90)
+      • **Community Building** — Go.IAs (500+ members), Magnatas.hub (~80–90)
 
       • **Public Speaking** — regular speaker at AI and entrepreneurship events
     actions:
@@ -443,7 +443,7 @@ sections:
 
       **👥 Community Leader**
 
-      Co-founder of Magnatas.hub and leader at Go.IAs (**450+ members**),
+      Co-founder of Magnatas.hub and leader at Go.IAs (**500+ members**),
       contributing to the innovation ecosystem in Goiânia.
 
 

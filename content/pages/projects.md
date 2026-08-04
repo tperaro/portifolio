@@ -247,7 +247,7 @@ sections:
       - type: FeaturedItem
         title: Go.IAs
         text: >
-          **Community Builder | 2023–presente | 450+ membros**
+          **Community Builder | 2023–presente | 500+ membros**
 
           Líder de comunidade focada em inteligência artificial, promovendo
           eventos, networking e disseminação de pesquisa universitária.
@@ -256,7 +256,7 @@ sections:
         actions:
           - label: Join Community
             altText: 'Participar da comunidade'
-            url: '#'
+            url: https://comunidade-goias.com.br/
             showIcon: true
             icon: arrowRight
             iconPosition: right

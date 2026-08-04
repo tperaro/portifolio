@@ -75,7 +75,7 @@ sections:
       Responsável por toda a tecnologia na Count on Sheep (consultoria
       americana de cripto taxes), pesquisador de NLP no CEIA-UFG — onde atuo no
       projeto Koru — e bolsista CNPq no projeto Sobrevidas. Lidero a comunidade
-      Magnatas.hub e sou community builder na Go.IAs (450+ membros).
+      Magnatas.hub e sou community builder na Go.IAs (500+ membros).
 
 
       Graduando em Ciência da Computação pela UFG (2019–presente, ~83%
@@ -169,7 +169,7 @@ sections:
       - type: FeaturedItem
         title: Liderança de Comunidades
         text: >
-          Community builder na Go.IAs (450+ membros) e líder do Magnatas.hub
+          Community builder na Go.IAs (500+ membros) e líder do Magnatas.hub
           (~80–90 empreendedores). Palestrante regular em eventos sobre IA e
           empreendedorismo, defendendo o uso ético da tecnologia.
         actions: []

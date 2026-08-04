@@ -172,7 +172,7 @@ sections:
 
       **Empreendedorismo e Liderança:**
       • Fundação, operação e encerramento de startup LLM (Clivia)
-      • Community building — Go.IAs (450+ membros) e Magnatas.hub
+      • Community building — Go.IAs (500+ membros) e Magnatas.hub
       • Palestras regulares sobre IA e empreendedorismo
     actions:
       - label: Ver Projetos

@@ -253,15 +253,15 @@ sections:
       - type: FeaturedItem
         title: Go.IAs
         text: >
-          **Community Builder | 2023–present | 450+ members**
+          **Community Builder | 2023–present | 500+ members**
 
-          AI-focused community with 450+ members, promoting events, networking
+          AI-focused community with 500+ members, promoting events, networking
           and dissemination of university research. Regular speaker. Connecting
           professionals, researchers and enthusiasts in Goiânia.
         actions:
           - label: Join Community
             altText: 'Join the community'
-            url: '#'
+            url: https://comunidade-goias.com.br/
             showIcon: true
             icon: arrowRight
             iconPosition: right

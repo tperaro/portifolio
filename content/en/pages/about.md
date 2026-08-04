@@ -167,7 +167,7 @@ sections:
 
       **Entrepreneurship & Leadership:**
       • Founded, operated, and closed an LLM startup (Clivia)
-      • Community building — Go.IAs (450+ members) and Magnatas.hub
+      • Community building — Go.IAs (500+ members) and Magnatas.hub
       • Regular speaker on AI and entrepreneurship
     actions:
       - label: View Projects

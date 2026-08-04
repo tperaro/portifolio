@@ -74,7 +74,7 @@ sections:
     text: >
       Sole tech lead at Count on Sheep (US crypto tax consulting firm), NLP
       researcher at CEIA-UFG (Koru project) and CNPq fellow (Sobrevidas
-      project). I lead Magnatas.hub and am a community builder at Go.IAs (450+
+      project). I lead Magnatas.hub and am a community builder at Go.IAs (500+
       members).
 
 
@@ -169,7 +169,7 @@ sections:
       - type: FeaturedItem
         title: Community Leadership
         text: >
-          Community builder at Go.IAs (450+ members) and leader of Magnatas.hub
+          Community builder at Go.IAs (500+ members) and leader of Magnatas.hub
           (~80–90 entrepreneurs). Regular speaker at AI and entrepreneurship
           events, advocating ethical use of technology.
         actions: []
