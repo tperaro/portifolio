@@ -22,7 +22,7 @@ sections:
         elementId: ''
         type: Button
     media:
-      url: /images/hero2.svg
+      url: /images/palestrante.webp
       altText: Experiência Profissional
       type: image
     backgroundAnimation: gradient
@@ -49,13 +49,11 @@ sections:
 
           • Único responsável técnico da empresa (consultoria de cripto taxes)
 
-          • Construí `onboarding-AI` (FastAPI) do zero
+          • Criei do zero e levei a produção o agente de IA `onboarding-AI`
 
-          • Pipeline LangGraph com 7 agentes em 3 fases paralelas
+          • Coordena o onboarding de ponta a ponta com um fluxo multiagente LangGraph
 
           • STT em tempo real (AWS Transcribe Streaming + KWS sidecar + LLM corrector)
-
-          • Sistema de email com 140+ templates Jinja2 e roteamento inteligente
 
           • Integrações HubSpot, DocuSign, Stripe, Gmail
         actions: []
@@ -70,8 +68,8 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/abstract-feature1.svg
-          altText: Count on Sheep
+          url: /images/onboarding-ai.svg
+          altText: Arquitetura de onboarding empresarial com IA
           elementId: ''
       - type: FeaturedItem
         title: Pesquisador NLP — CEIA-UFG (Projeto Koru)
@@ -100,7 +98,7 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/koru.png
+          url: /images/koru.webp
           altText: Projeto Koru
           elementId: ''
       - type: FeaturedItem
@@ -128,7 +126,7 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/sobrevidas.png
+          url: /images/sobrevidas.webp
           altText: Projeto Sobrevidas
           elementId: ''
       - type: FeaturedItem
@@ -156,7 +154,7 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/abstract-feature3.svg
+          url: /images/builders.webp
           altText: Community Builder
           elementId: ''
     actions: []
@@ -187,11 +185,11 @@ sections:
         text: >
           **Count on Sheep — Consultoria de Cripto Taxes (EUA)**
 
-          Único responsável por toda a tecnologia da empresa. Construí do zero
-          o `onboarding-AI` (FastAPI): pipeline de extração com 7 agentes
-          LangGraph em 3 fases paralelas, STT em tempo real com AWS Transcribe
-          Streaming, sistema de email com 140+ templates Jinja2 e integrações
-          HubSpot, DocuSign, Stripe e Gmail.
+          Único responsável por toda a tecnologia da empresa. Criei do zero e
+          levei ao deploy em produção o `onboarding-AI` (FastAPI), um agente de
+          IA que coordena o onboarding de ponta a ponta. A solução combina um
+          fluxo multiagente LangGraph, STT em tempo real com AWS Transcribe
+          Streaming e integrações com HubSpot, DocuSign, Stripe e Gmail.
         actions: []
         elementId: ''
         styles:
@@ -463,7 +461,7 @@ sections:
         elementId: ''
         type: Link
     media:
-      url: /images/hero3.svg
+      url: /images/thiago-peraro-magnatas.webp
       altText: Competências técnicas
       elementId: ''
       type: ImageBlock
@@ -566,4 +564,10 @@ sections:
         textAlign: center
       actions:
         justifyContent: center
+seo:
+  metaTitle: Experiência Profissional | Thiago Peraro
+  metaDescription: >-
+    Experiência de Thiago Peraro em liderança técnica, plataformas digitais,
+    inteligência artificial e produtos usados por organizações públicas e privadas.
+  type: Seo
 ---

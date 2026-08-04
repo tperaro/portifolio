@@ -6,7 +6,7 @@ date: '2025-09-08'
 excerpt: >-
   Explore valuable insights from the "Agent Brasil" live session on the Sandeco channel, with Thiago Peraro. Learn about entrepreneurial mindset, Business Model Canvas, MVPs, the Sprint method, and essential tools to validate and build your startup from scratch.
 featuredImage:
-  url: /images/liveEmpreendedorismo.jpeg
+  url: /images/live-empreendedorismo.webp
   altText: Entrepreneurship Live – Agent Brasil (Sandeco)
   type: ImageBlock
   styles:
@@ -52,7 +52,7 @@ Each phase requires attention and specific processes to deal with customers, emp
 ## The Power of Business Model Canvas (BMC)
 
 To transform an idea into a business, Thiago presented the **Business Model Canvas (BMC)**, a framework that helps list the essential components of a business model:
-![Business Model Canvas Example](https://www.google.com/url?sa=i&url=https%3A%2F%2Fpm3.com.br%2Fblog%2Fbusiness-model-canvas-como-aplicar-este-framework%2F&psig=AOvVaw0KJaRESl6gPgwcyWu8GVo-&ust=1757510451085000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCICD4uTiy48DFQAAAAAdAAAAABAE)
+![Business Model Canvas example](/images/business-model-canvas.webp)
 
 - **Key Partnerships:** Who are your partners (e.g., payment processors, map APIs for Uber).
 - **Key Activities:** What the company does to operate and survive (e.g., acquisition marketing, platform development).

@@ -38,7 +38,7 @@ sections:
         elementId: ''
         type: Link
     media:
-      url: /images/Thiago_Peraro-Magnatas.jpeg
+      url: /images/thiago-peraro-magnatas.webp
       altText: Thiago Peraro
       type: image
     backgroundAnimation: gradient
@@ -73,7 +73,7 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/sobrevidas.png
+          url: /images/sobrevidas.webp
           altText: Sobrevidas Project
           elementId: ''
       - type: FeaturedItem
@@ -117,7 +117,7 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/abstract-feature3.svg
+          url: /images/builders.webp
           altText: Community Leadership
           elementId: ''
     actions: []
@@ -180,7 +180,7 @@ sections:
         elementId: ''
         type: Link
     media:
-      url: /images/hero3.svg
+      url: /images/palestrante.webp
       altText: Technical experience
       elementId: ''
       type: ImageBlock
@@ -196,6 +196,62 @@ sections:
           - pl-4
           - pr-4
         justifyContent: center
+  - type: GenericSection
+    title:
+      text: Education & Research
+      color: text-dark
+      type: TitleBlock
+    subtitle: Academic and scientific journey
+    text: |
+      **Academic background**
+      • **BSc in Computer Science** — UFG (2019–present, ~83% complete)
+      • Active participation in research and extension initiatives
+
+      **Current research (two distinct projects)**
+      • **Sobrevidas Project — CNPq Fellow (2024–present)**
+      — NLP applied to healthcare; a SUS-integrated chatbot for oral cancer
+      screening. Nationally awarded at SBCAS 2025.
+      • **Koru Project — NLP Researcher at CEIA-UFG/AKCIT
+      (Dec 2024–present)**
+      — LangGraph multi-agent system for assessing soft skills and leadership
+      competencies. I develop the Koru dashboard (Streamlit + Plotly +
+      TimescaleDB) and run adversarial Red Team tests with DeepTeam.
+
+      **Publications & recognition**
+      • 🏆 Co-author of the **best tools paper in Brazil at SBCAS 2025** —
+      Sobrevidas Project
+      • Highlighted leader among 60 fellows in the EMBRAPII program, supported
+      by eight PhD mentors
+      • Regular speaker on AI and entrepreneurship
+    actions:
+      - label: View Experience
+        altText: View detailed experience
+        url: /experience
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: ''
+        type: Link
+    elementId: ''
+    colors: bg-neutral-fg-dark
+    styles:
+      self:
+        alignItems: center
+        flexDirection: col
+        padding:
+          - pt-16
+          - pb-16
+          - pl-4
+          - pr-4
+        justifyContent: center
+        textAlign: center
+      title:
+        textAlign: center
+      subtitle:
+        textAlign: center
+      text:
+        textAlign: center
   - type: GenericSection
     title:
       text: Philosophy & Vision
@@ -280,5 +336,10 @@ sections:
           - pb-12
           - pl-4
           - pr-4
+seo:
+  metaTitle: About Thiago Peraro | Technology, AI and Entrepreneurship
+  metaDescription: >-
+    Learn about Thiago Peraro's work in technology leadership, artificial
+    intelligence, applied research and product development.
+  type: Seo
 ---
-

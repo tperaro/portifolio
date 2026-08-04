@@ -15,7 +15,7 @@ featuredImage:
       borderRadius: medium
 bottomSections: []
 isFeatured: false
-isDraft: false
+isDraft: true
 seo:
   metaTitle: 5 Tips for Starting a Startup
   metaDescription: You can add the excerpt and main keywords of your blog post here.

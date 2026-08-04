@@ -7,6 +7,9 @@ const nextConfig = {
     },
     trailingSlash: true,
     reactStrictMode: true,
+    experimental: {
+        useTypeScriptCli: false
+    },
     i18n: {
         locales: ['en', 'pt'],
         defaultLocale: 'en',

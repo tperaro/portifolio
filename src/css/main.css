@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto+Slab:wght@400;500;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+    }
     body {
-        @apply text-base;
+        @apply bg-light text-base text-dark antialiased;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     h1,
     .h1,
@@ -20,6 +23,14 @@
     h6 {
         @apply break-words;
         line-height: 1.2;
+    }
+    ::selection {
+        color: #ffffff;
+        background: #4f5fd5;
+    }
+    :focus-visible {
+        outline: 3px solid #4f5fd5;
+        outline-offset: 3px;
     }
 }
 
@@ -125,12 +136,13 @@
 
     /* Buttons */
     .sb-component-button {
-        @apply inline-flex justify-center items-center text-center border transition duration-200 ease-in hover:-translate-y-1;
+        @apply inline-flex min-h-11 justify-center items-center text-center border font-semibold transition duration-200 ease-in hover:-translate-y-0.5;
+        border-radius: 0.75rem;
     }
 
     /* Links */
     .sb-component-link {
-        @apply inline-flex justify-center items-center text-center transition duration-200 ease-linear;
+        @apply inline-flex justify-center items-center text-center font-medium transition duration-200 ease-linear;
     }
     .sb-component-link-primary {
         @apply text-primary hover:underline;
@@ -292,6 +304,48 @@
     }
 }
 
+.sb-component-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+}
+
+.sb-component-section > div > div > p {
+    text-wrap: pretty;
+}
+
+@media (min-width: 768px) {
+    .sb-component-featured-items-section .grid .sb-card .h3 {
+        min-height: 2.4em;
+    }
+}
+
+.scroll-hero-lite-phrase {
+    animation: heroPhraseIn 0.45s ease-out both;
+}
+
+@keyframes heroPhraseIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    .scroll-hero-lite-phrase {
+        animation: none;
+    }
+}
+
 @layer utilities {
     .underline-line-through {
         text-decoration-line: underline line-through
@@ -324,30 +378,4 @@
             transform: translate3d(0,0,0)
         }
     }
-}
-
-/* Project images styling for consistent sizing */
-.sb-component-block-three-col-grid .sb-component-image img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 8px;
-}
-
-/* Specific adjustments for logo images to maintain aspect ratio */
-.sb-component-block-three-col-grid img[alt*="Logo"] {
-    height: 180px;
-    object-fit: contain;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-/* Sobrevidas project image adjustment */
-.sb-component-block-three-col-grid img[alt*="Sobrevidas"] {
-    height: 180px;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 8px;
 }

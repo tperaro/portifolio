@@ -1,6 +1,7 @@
 ---
 title: Home
-slug: /
+slug: /archive/index-backup
+isDraft: true
 sections:
   - type: GenericSection
     title:

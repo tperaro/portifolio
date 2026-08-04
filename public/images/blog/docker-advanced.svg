@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Docker beyond the basics</title>
+  <desc id="desc">Stylized containers floating over a blue technical grid</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="1" x2="1" y2="0">
+      <stop stop-color="#071728"/>
+      <stop offset="1" stop-color="#075b91"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" fill="none" stroke="#7dd3fc" stroke-opacity=".12"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" rx="36" fill="url(#bg)"/>
+  <rect width="1200" height="675" rx="36" fill="url(#grid)"/>
+  <g transform="translate(700 150)" fill="none" stroke="#bae6fd" stroke-width="6">
+    <rect x="0" y="0" width="180" height="120" rx="16" fill="#0ea5e9" fill-opacity=".28"/>
+    <rect x="205" y="0" width="180" height="120" rx="16" fill="#38bdf8" fill-opacity=".18"/>
+    <rect x="100" y="145" width="180" height="120" rx="16" fill="#7dd3fc" fill-opacity=".2"/>
+    <path d="M90 120v62m205-62v62M190 265v75" stroke-opacity=".55"/>
+    <path d="m160 335 30 30 30-30"/>
+  </g>
+  <g fill="#fff" font-family="Inter,Arial,sans-serif">
+    <text x="76" y="96" font-size="22" font-weight="700" letter-spacing="5" fill="#7dd3fc">ENGINEERING NOTES</text>
+    <text x="76" y="280" font-size="82" font-weight="800">Docker</text>
+    <text x="76" y="370" font-size="58" font-weight="700" fill="#bae6fd">beyond the basics</text>
+    <text x="80" y="442" font-size="25" opacity=".76">Smaller images. Safer builds. Better delivery.</text>
+  </g>
+</svg>

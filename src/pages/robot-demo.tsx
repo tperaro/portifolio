@@ -177,6 +177,7 @@ export default function RobotDemo() {
             <Head>
                 <title>Robot Demo — scroll-scrubbed hero</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="robots" content="noindex,nofollow" />
             </Head>
 
             <div ref={containerRef} className="bg-black text-white">

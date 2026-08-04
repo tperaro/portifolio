@@ -33,7 +33,7 @@ sections:
         elementId: ''
         type: Link
     media:
-      url: /images/hero.svg
+      url: /images/thiago-peraro-magnatas.webp
       altText: Contact
       elementId: ''
       type: ImageBlock
@@ -59,11 +59,11 @@ sections:
           For professional proposals, projects or technical questions, send a
           detailed email and I’ll reply as soon as possible.
           
-          **contato@thiagoperaro.dev**
+          **perarothiago@gmail.com**
         actions:
           - label: Send Email
             altText: Send email
-            url: mailto:contato@thiagoperaro.dev
+            url: mailto:perarothiago@gmail.com
             showIcon: true
             icon: mail
             iconPosition: right
@@ -145,84 +145,6 @@ sections:
 
   - type: GenericSection
     title:
-      text: Contact Form
-      color: text-dark
-      type: TitleBlock
-    subtitle: Prefer a form? Send your message here
-    text: >
-      A functional contact form will be implemented soon. For now, please use
-      the direct contact options above.
-    actions: []
-    media:
-      url: /images/hero2.svg
-      altText: Contact form
-      elementId: ''
-      type: ImageBlock
-    elementId: ''
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        alignItems: center
-        flexDirection: row-reverse
-        padding: [pt-16, pb-8, pl-4, pr-4]
-        justifyContent: center
-
-  - type: GenericSection
-    title:
-      text: ""
-      color: text-dark
-      type: TitleBlock
-    subtitle: ""
-    text: >
-      **Direct Email**
-      
-      
-      *Meanwhile, send a direct email with the subject and brief context.*
-      
-      
-      **Projects I’m interested in:**
-      
-      • Modern web applications
-      
-      • Scalable back-end and APIs
-      
-      • React, Next.js, Node.js
-      
-      • Technical consultancy and architecture
-      
-      • Mentorship and tech leadership
-      
-      • Interesting open-source projects
-    actions:
-      - label: Send Email Now
-        altText: Send email now
-        url: mailto:contato@thiagoperaro.dev?subject=Contact%20via%20Portfolio&body=Hi%20Thiago,%0A%0AI'd%20like%20to%20talk%20about...
-        showIcon: true
-        icon: mail
-        iconPosition: right
-        style: primary
-        elementId: ''
-        type: Button
-    elementId: ''
-    colors: bg-neutral-fg-dark
-    styles:
-      self:
-        alignItems: center
-        flexDirection: col
-        padding: [pt-8, pb-16, pl-4, pr-4]
-        justifyContent: center
-        textAlign: center
-      title:
-        textAlign: center
-      subtitle:
-        textAlign: center
-      text:
-        textAlign: center
-      actions:
-        justifyContent: center
-
-  - type: GenericSection
-    title:
       text: Response Time
       color: text-dark
       type: TitleBlock
@@ -253,5 +175,10 @@ sections:
         textAlign: center
       text:
         textAlign: center
+seo:
+  metaTitle: Contact | Thiago Peraro
+  metaDescription: >-
+    Contact Thiago Peraro about artificial intelligence, software engineering,
+    architecture and technology leadership projects.
+  type: Seo
 ---
-

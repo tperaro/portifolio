@@ -1,6 +1,7 @@
 ---
 title: Projetos - Thiago Peraro
-slug: /projects
+slug: /archive/projects-updated
+isDraft: true
 type: PageLayout
 sections:
   - type: GenericSection

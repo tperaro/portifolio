@@ -1,8 +1,8 @@
 {
     "favicon": "/images/favicon.svg",
     "footer": "content/data/footer.json",
-    "titleSuffix": "Thiago Peraro - Portfolio",
-    "defaultSocialImage": "/images/main-hero.jpg",
+    "titleSuffix": "Thiago Peraro",
+    "defaultSocialImage": "/images/liveEmpreendedorismo.jpeg",
     "type": "Config",
     "header": "content/data/header.json"
 }

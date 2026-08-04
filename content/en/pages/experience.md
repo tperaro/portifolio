@@ -21,7 +21,7 @@ sections:
         elementId: ''
         type: Button
     media:
-      url: /images/hero2.svg
+      url: /images/palestrante.webp
       altText: Professional Experience
       type: image
     backgroundAnimation: gradient
@@ -45,13 +45,11 @@ sections:
 
           • Sole technical owner of the company (US crypto tax consulting)
 
-          • Built `onboarding-AI` (FastAPI) from scratch
+          • Built the `onboarding-AI` agent from scratch and deployed it to production
 
-          • LangGraph pipeline with 7 agents across 3 parallel phases
+          • Coordinates onboarding end to end through a LangGraph multi-agent workflow
 
           • Real-time STT (AWS Transcribe Streaming + KWS sidecar + LLM corrector)
-
-          • Email system with 140+ Jinja2 templates and smart routing
 
           • Integrations with HubSpot, DocuSign, Stripe and Gmail
         actions: []
@@ -62,8 +60,8 @@ sections:
             padding: [pt-6, pb-6, pl-4, pr-4]
         image:
           type: ImageBlock
-          url: /images/abstract-feature1.svg
-          altText: Count on Sheep
+          url: /images/onboarding-ai.svg
+          altText: Enterprise AI onboarding architecture
           elementId: ''
       - type: FeaturedItem
         title: NLP Researcher — CEIA-UFG (Koru Project)
@@ -88,7 +86,7 @@ sections:
             padding: [pt-6, pb-6, pl-4, pr-4]
         image:
           type: ImageBlock
-          url: /images/koru.png
+          url: /images/koru.webp
           altText: Koru Project
           elementId: ''
       - type: FeaturedItem
@@ -113,7 +111,7 @@ sections:
             padding: [pt-6, pb-6, pl-4, pr-4]
         image:
           type: ImageBlock
-          url: /images/sobrevidas.png
+          url: /images/sobrevidas.webp
           altText: Sobrevidas Project
           elementId: ''
       - type: FeaturedItem
@@ -137,7 +135,7 @@ sections:
             padding: [pt-6, pb-6, pl-4, pr-4]
         image:
           type: ImageBlock
-          url: /images/abstract-feature3.svg
+          url: /images/builders.webp
           altText: Community Builder
           elementId: ''
     actions: []
@@ -162,10 +160,11 @@ sections:
           **Count on Sheep — US Crypto Tax Consulting**
 
           Sole person responsible for the entire technology stack. Built
-          `onboarding-AI` (FastAPI) from scratch: extraction pipeline with 7
-          LangGraph agents across 3 parallel phases, real-time STT with AWS
-          Transcribe Streaming, email system with 140+ Jinja2 templates, and
-          integrations with HubSpot, DocuSign, Stripe and Gmail.
+          `onboarding-AI` (FastAPI) from scratch and deployed it to production:
+          an AI agent that coordinates onboarding end to end. The solution
+          combines a LangGraph multi-agent workflow, real-time STT with AWS
+          Transcribe Streaming, and integrations with HubSpot, DocuSign, Stripe
+          and Gmail.
         actions: []
         elementId: ''
         styles:
@@ -396,7 +395,7 @@ sections:
         elementId: ''
         type: Link
     media:
-      url: /images/hero3.svg
+      url: /images/thiago-peraro-magnatas.webp
       altText: Technical skills
       elementId: ''
       type: ImageBlock
@@ -487,5 +486,10 @@ sections:
         textAlign: center
       actions:
         justifyContent: center
+seo:
+  metaTitle: Professional Experience | Thiago Peraro
+  metaDescription: >-
+    Thiago Peraro's experience in technology leadership, digital platforms,
+    artificial intelligence and products for public and private organizations.
+  type: Seo
 ---
-

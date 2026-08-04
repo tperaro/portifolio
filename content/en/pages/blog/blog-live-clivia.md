@@ -9,7 +9,7 @@ excerpt: >
   and freeing professionals' time for what really matters: human care and
   patient relationships.
 featuredImage:
-  url: /images/liveClivia.jpeg
+  url: /images/live-clivia.webp
   altText: Clívia Live - AI for Medical Clinics
   type: ImageBlock
   styles:
@@ -18,7 +18,9 @@ featuredImage:
 isFeatured: true
 seo:
   metaTitle: 'Clívia: How AI Transforms Patient Support and Sales in Medical Clinics'
-  metaDescription: 'Discover how Clívia, an innovative startup, is using AI agents to solve sales and support challenges in clinics and medical practices, optimizing processes and freeing professionals' time for what really matters: human care and patient relationships.'
+  metaDescription: >-
+    Discover how Clívia uses AI agents to improve sales and patient support in
+    clinics while freeing healthcare professionals for human-centered care.
   socialImage: /images/liveClivia.jpeg
   type: Seo
 colors: bg-light-fg-dark

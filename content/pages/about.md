@@ -39,7 +39,7 @@ sections:
         elementId: ''
         type: Link
     media:
-      url: /images/Thiago_Peraro-Magnatas.jpeg
+      url: /images/thiago-peraro-magnatas.webp
       altText: Thiago Peraro
       type: image
     backgroundAnimation: gradient
@@ -77,7 +77,7 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/sobrevidas.png
+          url: /images/sobrevidas.webp
           altText: Projeto Sobrevidas
           elementId: ''
       - type: FeaturedItem
@@ -122,7 +122,7 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/abstract-feature3.svg
+          url: /images/builders.webp
           altText: Liderança em Comunidades
           elementId: ''
     actions: []
@@ -185,7 +185,7 @@ sections:
         elementId: ''
         type: Link
     media:
-      url: /images/hero3.svg
+      url: /images/palestrante.webp
       altText: Experiência técnica
       elementId: ''
       type: ImageBlock
@@ -353,4 +353,10 @@ sections:
         textAlign: center
       actions:
         justifyContent: center
+seo:
+  metaTitle: Sobre Thiago Peraro | Tecnologia, IA e Empreendedorismo
+  metaDescription: >-
+    Conheça a trajetória de Thiago Peraro em liderança de tecnologia,
+    inteligência artificial, pesquisa aplicada e construção de produtos.
+  type: Seo
 ---

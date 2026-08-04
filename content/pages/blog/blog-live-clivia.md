@@ -9,7 +9,7 @@ excerpt: >-
   médicos, otimizando processos e liberando o tempo dos profissionais para o que
   realmente importa: o cuidado humano e o relacionamento com o paciente.
 featuredImage:
-  url: /images/liveClivia.jpeg
+  url: /images/live-clivia.webp
   altText: Live Clívia - IA para Clínicas Médicas
   type: ImageBlock
   styles:

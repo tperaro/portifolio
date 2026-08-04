@@ -65,3 +65,4 @@ docs/superpowers/
 # Local video work artifacts (backups / intermediate encodes)
 /public/hero-robot/*.backup.mp4
 /public/hero-robot/robot-cross.mp4
+.gitnexus

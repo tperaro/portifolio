@@ -1,6 +1,7 @@
 ---
 title: Thiago Peraro - Desenvolvedor Full Stack
-slug: /
+slug: /archive/index-fixed
+isDraft: true
 sections:
   - type: GenericSection
     title:

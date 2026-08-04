@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Next.js Server Actions</title>
+  <desc id="desc">A request moving directly between interface and server</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#08090d"/>
+      <stop offset="1" stop-color="#282c38"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#8fa1ff"/>
+      <stop offset="1" stop-color="#67e8f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" rx="36" fill="url(#bg)"/>
+  <g transform="translate(690 145)" fill="none" stroke="url(#accent)" stroke-width="7">
+    <rect x="0" y="0" width="390" height="260" rx="28" fill="#fff" fill-opacity=".04"/>
+    <path d="M0 65h390" opacity=".5"/>
+    <circle cx="38" cy="32" r="7" fill="#8fa1ff" stroke="none"/>
+    <circle cx="65" cy="32" r="7" fill="#77dff4" stroke="none"/>
+    <path d="M78 162h230"/>
+    <path d="m278 132 34 30-34 30"/>
+    <path d="M312 215H82" opacity=".55"/>
+    <path d="m112 185-34 30 34 30" opacity=".55"/>
+  </g>
+  <g fill="#fff" font-family="Inter,Arial,sans-serif">
+    <text x="76" y="96" font-size="22" font-weight="700" letter-spacing="5" fill="#8fa1ff">NEXT.JS</text>
+    <text x="76" y="280" font-size="80" font-weight="800">Server</text>
+    <text x="76" y="370" font-size="80" font-weight="800" fill="#aab7ff">Actions</text>
+    <text x="80" y="445" font-size="25" opacity=".76">Less ceremony between UI and server.</text>
+  </g>
+</svg>

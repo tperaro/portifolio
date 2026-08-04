@@ -7,7 +7,7 @@ excerpt: >
   Compartilho minha experiência migrando uma aplicação monolítica para 
   arquitetura de microserviços, incluindo desafios enfrentados e soluções adotadas.
 featuredImage:
-  url: /images/img-placeholder.svg
+  url: /images/blog/microservices.svg
   altText: Arquitetura de Microserviços
   type: ImageBlock
 seo:

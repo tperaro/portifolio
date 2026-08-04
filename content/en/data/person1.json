@@ -1,6 +1,6 @@
 {
     "name": "Thiago Peraro",
-    "role": "AI Researcher",
+    "role": "AI Architect and Researcher",
     "image": {
         "url": "/images/avatar1.svg",
         "altText": "Thiago Peraro",
@@ -32,6 +32,5 @@
         }
     },
     "type": "Person",
-    "bio": "AI researcher, entrepreneur, and tech community leader in Goiânia."
+    "bio": "AI architect and NLP researcher specializing in multi-agent systems, AIOS, and enterprise second brains."
 }
-

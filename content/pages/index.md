@@ -84,7 +84,7 @@ sections:
       multi-agente LLM para clínicas médicas. Atualmente aberto a novas
       oportunidades em AI Engineering.
     actions:
-      - label: Saiba Mais
+      - label: Conheça meu trabalho
         altText: Saiba mais sobre minha trajetória
         url: /about
         showIcon: true
@@ -94,7 +94,7 @@ sections:
         elementId: ''
         type: Link
     media:
-      url: /images/builders.jpg
+      url: /images/builders.webp
       altText: Sobre Thiago Peraro
       elementId: ''
       type: ImageBlock
@@ -331,11 +331,12 @@ sections:
         text: >
           **Count on Sheep — Consultoria de Cripto Taxes (EUA)**
 
-          Único responsável técnico da empresa. Construí do zero o `onboarding-AI`
-          (FastAPI): pipeline de extração com **7 agentes LangGraph** em 3 fases
-          paralelas, STT em tempo real (AWS Transcribe + KWS sidecar + LLM
-          corrector), sistema de email com **140+ templates Jinja2** e
-          integrações HubSpot, DocuSign, Stripe, Gmail e Google Workspace.
+          Único responsável técnico da empresa. Criei do zero e levei ao deploy
+          em produção o `onboarding-AI` (FastAPI), um **agente de IA que coordena
+          o onboarding de ponta a ponta**. A solução combina um fluxo multiagente
+          LangGraph, STT em tempo real (AWS Transcribe + KWS sidecar + LLM
+          corrector) e integrações com HubSpot, DocuSign, Stripe, Gmail e Google
+          Workspace.
         actions: []
         elementId: ''
         styles:
@@ -381,8 +382,8 @@ sections:
         elementId: ''
         type: Button
       - label: perarothiago@gmail.com
-        altText: Página de contato
-        url: /contact
+        altText: Enviar email para Thiago Peraro
+        url: mailto:perarothiago@gmail.com
         showIcon: true
         icon: mail
         iconPosition: right
@@ -416,6 +417,6 @@ seo:
     Portfólio de Thiago Peraro — responsável de tecnologia na Count on Sheep,
     pesquisador NLP no CEIA-UFG, bolsista CNPq (Projeto Sobrevidas) e líder de
     comunidades de IA em Goiânia.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/liveEmpreendedorismo.jpeg
   type: Seo
 ---

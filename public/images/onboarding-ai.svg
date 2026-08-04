@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise AI onboarding</title>
+  <desc id="desc">Abstract network representing a privacy-safe multi-agent onboarding workflow</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#11162d"/>
+      <stop offset="0.55" stop-color="#263a87"/>
+      <stop offset="1" stop-color="#5368dc"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#8fa1ff" stop-opacity=".65"/>
+      <stop offset="1" stop-color="#8fa1ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#050714" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="720" rx="42" fill="url(#bg)"/>
+  <circle cx="825" cy="315" r="270" fill="url(#glow)"/>
+  <g fill="none" stroke="#dbe1ff" stroke-opacity=".45" stroke-width="5">
+    <path d="M680 215 820 135 965 230 935 410 785 505 645 405Z"/>
+    <path d="m680 215 255 195M820 135l-35 370M965 230 645 405"/>
+  </g>
+  <g filter="url(#shadow)">
+    <circle cx="680" cy="215" r="42" fill="#fff"/>
+    <circle cx="820" cy="135" r="42" fill="#9daaff"/>
+    <circle cx="965" cy="230" r="42" fill="#fff"/>
+    <circle cx="935" cy="410" r="42" fill="#9daaff"/>
+    <circle cx="785" cy="505" r="52" fill="#fff"/>
+    <circle cx="645" cy="405" r="42" fill="#9daaff"/>
+  </g>
+  <g fill="#fff" font-family="Inter,Arial,sans-serif">
+    <text x="82" y="102" font-size="22" font-weight="700" letter-spacing="5" opacity=".72">ENTERPRISE AI</text>
+    <text x="82" y="290" font-size="80" font-weight="800">onboarding</text>
+    <text x="82" y="378" font-size="80" font-weight="800" fill="#aeb9ff">AI</text>
+    <text x="86" y="455" font-size="25" opacity=".8">Multi-agent orchestration. One reliable workflow.</text>
+  </g>
+</svg>

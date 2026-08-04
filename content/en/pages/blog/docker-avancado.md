@@ -7,7 +7,7 @@ excerpt: >
   Advanced Docker techniques to improve development workflow, including
   multi-stage builds, Docker Compose and performance optimizations.
 featuredImage:
-  url: /images/img-placeholder.svg
+  url: /images/blog/docker-advanced.svg
   altText: Docker Advanced Techniques
   type: ImageBlock
 seo:

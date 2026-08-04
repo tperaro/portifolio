@@ -30,6 +30,7 @@ export default function PostFeedItem(props) {
             className={classNames(
                 'sb-card',
                 'block',
+                'group',
                 post.colors ?? 'bg-light-fg-dark',
                 post.styles?.self?.margin ? mapStyles({ margin: post.styles?.self?.margin }) : undefined,
                 post.styles?.self?.padding ? mapStyles({ padding: post.styles?.self?.padding }) : undefined,
@@ -51,11 +52,14 @@ export default function PostFeedItem(props) {
                 {hasThumbnail && (
                     <ImageBlock
                         {...post.featuredImage}
-                        className={classNames({
+                        className={classNames('overflow-hidden rounded-xl bg-neutral/30', {
                             'xs:w-[50%] xs:shrink-0': hasBigThumbnail && (flexDirection === 'row' || flexDirection === 'row-reversed'),
                             'xs:w-[28.4%] xs:shrink-0': !hasBigThumbnail && (flexDirection === 'row' || flexDirection === 'row-reversed')
                         })}
-                        imageClassName="w-full h-full object-cover"
+                        imageClassName={classNames(
+                            'w-full object-cover transition-transform duration-500 motion-reduce:transition-none group-hover:scale-[1.02]',
+                            flexDirection === 'row' || flexDirection === 'row-reversed' ? 'h-full' : 'aspect-video'
+                        )}
                         {...(hasAnnotations && { 'data-sb-field-path': 'featuredImage' })}
                     />
                 )}

@@ -1,6 +1,6 @@
 {
-  "logo": { "url": "/images/logo-white.svg", "altText": "Thiago Peraro", "type": "ImageBlock" },
-  "text": "AI researcher, entrepreneur, and tech community leader in Goiânia",
+  "logo": { "url": "/images/logo-white.svg", "altText": "Thiago Peraro", "width": 46, "height": 24, "type": "ImageBlock" },
+  "text": "AI architect and NLP researcher specializing in multi-agent systems, AIOS, and enterprise second brains.",
   "primaryLinks": {
     "title": "Navigation",
     "links": [
@@ -15,7 +15,7 @@
     "links": [
       { "label": "LinkedIn", "altText": "LinkedIn profile", "url": "https://www.linkedin.com/in/thiago-peraro/", "icon": "linkedin", "iconPosition": "right", "style": "secondary", "type": "Link" },
       { "label": "GitHub", "altText": "GitHub profile", "url": "https://github.com/tperaro", "icon": "github", "iconPosition": "right", "style": "secondary", "type": "Link" },
-      { "label": "Email", "altText": "Send email", "url": "mailto:contato@thiagoperaro.dev", "icon": "mail", "iconPosition": "right", "style": "secondary", "type": "Link" }
+      { "label": "Email", "altText": "Send email", "url": "mailto:perarothiago@gmail.com", "icon": "mail", "iconPosition": "right", "style": "secondary", "type": "Link" }
     ],
     "type": "FooterLinksGroup"
   },
@@ -24,8 +24,7 @@
     { "label": "GitHub", "altText": "GitHub", "url": "https://github.com/tperaro", "icon": "github", "type": "Social" }
   ],
   "legalLinks": [],
-  "copyrightText": "© 2025 Thiago Peraro. CNPq Researcher | Clivia Founder | All rights reserved.",
+  "copyrightText": "© 2026 Thiago Peraro. AI Architect | Researcher | All rights reserved.",
   "styles": { "self": { "padding": ["pt-16", "pb-8"] } },
   "type": "Footer"
 }
-

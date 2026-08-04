@@ -2,6 +2,8 @@
   "logo": {
     "url": "/images/logo-dark.svg",
     "altText": "Thiago Peraro",
+    "width": 46,
+    "height": 24,
     "styles": {
       "self": {
         "margin": ["mr-3"]
@@ -23,4 +25,3 @@
   "type": "Header",
   "isTitleVisible": false
 }
-

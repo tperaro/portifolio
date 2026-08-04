@@ -1,10 +1,6 @@
 import * as React from 'react';
-import { useRef } from 'react';
 import classNames from 'classnames';
 import { m, cubicBezier } from 'framer-motion';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
 
 import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
 import { getComponent } from '../../components-registry';
@@ -12,10 +8,6 @@ import { getDataAttrs } from '../../../utils/get-data-attrs';
 import Section from '../Section';
 import { Action, Badge } from '../../atoms';
 import TitleBlock from '../../blocks/TitleBlock';
-
-if (typeof window !== 'undefined') {
-    gsap.registerPlugin(ScrollTrigger, useGSAP);
-}
 
 // Container variant: triggers stagger on children
 const containerVariants = {
@@ -123,52 +115,6 @@ function FeaturedItemVariants(props) {
 
 function FeaturedItemsTimeline(props) {
     const { items = [], hasTopMargin, hasSectionTitle, hasAnnotations } = props;
-    const scopeRef = useRef<HTMLDivElement>(null);
-
-    useGSAP(
-        () => {
-            const scope = scopeRef.current;
-            if (!scope) return;
-
-            const lineFill = scope.querySelector<HTMLDivElement>('.timeline-line-fill');
-            if (lineFill) {
-                gsap.fromTo(
-                    lineFill,
-                    { scaleY: 0 },
-                    {
-                        scaleY: 1,
-                        ease: 'none',
-                        scrollTrigger: {
-                            trigger: scope,
-                            start: 'top 75%',
-                            end: 'bottom 60%',
-                            scrub: 0.6
-                        }
-                    }
-                );
-            }
-
-            const dots = scope.querySelectorAll<HTMLSpanElement>('.timeline-dot');
-            dots.forEach((dot) => {
-                gsap.fromTo(
-                    dot,
-                    { scale: 0.5, opacity: 0.5 },
-                    {
-                        scale: 1,
-                        opacity: 1,
-                        duration: 0.5,
-                        ease: 'back.out(2.2)',
-                        scrollTrigger: {
-                            trigger: dot,
-                            start: 'top 80%',
-                            toggleActions: 'play none none reverse'
-                        }
-                    }
-                );
-            });
-        },
-        { scope: scopeRef }
-    );
 
     if (items.length === 0) {
         return null;
@@ -176,7 +122,6 @@ function FeaturedItemsTimeline(props) {
     const FeaturedItem = getComponent('FeaturedItem');
     return (
         <m.div
-            ref={scopeRef}
             className={classNames('w-full', 'max-w-3xl', 'relative', 'pl-10', 'md:pl-14', { 'mt-12': hasTopMargin })}
             variants={containerVariants}
             initial="hidden"

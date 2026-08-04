@@ -7,7 +7,7 @@ excerpt: >
   Como desenvolvemos um chatbot integrado ao SUS para rastreamento de câncer de boca 
   que foi premiado como melhor artigo do Brasil no SBCAS 2025.
 featuredImage:
-  url: /images/img-placeholder.svg
+  url: /images/sobrevidas.webp
   altText: Projeto Sobrevidas - IA no SUS
   type: ImageBlock
 seo:

@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import { ComponentType } from 'react';
+import PageLayout from './layouts/PageLayout';
 
 /**
  * The getComponent() function loads a component using dynamic import.
@@ -57,7 +58,7 @@ const components = {
     TextareaFormControl: dynamic(() => import('./blocks/FormBlock/TextareaFormControl')),
     TextFormControl: dynamic(() => import('./blocks/FormBlock/TextFormControl')),
     VideoBlock: dynamic(() => import('./blocks/VideoBlock')),
-    PageLayout: dynamic(() => import('./layouts/PageLayout')),
+    PageLayout,
     PostLayout: dynamic(() => import('./layouts/PostLayout')),
     PostFeedLayout: dynamic(() => import('./layouts/PostFeedLayout')),
     PostFeedCategoryLayout: dynamic(() => import('./layouts/PostFeedCategoryLayout'))

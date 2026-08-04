@@ -1,6 +1,7 @@
 ---
 title: Careers
-slug: careers
+slug: /archive/careers-demo
+isDraft: true
 sections:
   - type: AnimatedHeroSection
     title: A team that works closely together

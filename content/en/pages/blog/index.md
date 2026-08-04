@@ -8,9 +8,9 @@ topSections:
       text: Featured Article
       color: text-dark
       type: TitleBlock
-    subtitle: Selected writing on AI, software engineering and entrepreneurship
+    subtitle: AIOS, context engineering, and enterprise knowledge in practice
     posts:
-      - content/en/pages/blog/blog-live-clivia.md
+      - content/en/pages/blog/aios-second-brain-empresarial.md
     showThumbnail: true
     showExcerpt: true
     showDate: true
@@ -33,8 +33,8 @@ styles:
 seo:
   metaTitle: Blog | Thiago Peraro
   metaDescription: >-
-    Selected articles on applied AI, backend engineering, entrepreneurship and
-    building useful products.
+    Articles by Thiago Peraro on AIOS, enterprise second brains, AI agents,
+    context engineering, and software architecture.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PostFeedLayout

@@ -14,6 +14,7 @@ export default function Action(props) {
         : {};
     const type = props.__metadata?.modelName;
     const prefersReducedMotion = useReducedMotion();
+    const accessibleLabel = label ? undefined : altText;
 
     // Hover and tap animations (only for buttons)
     const isButton = type === 'Button';
@@ -46,7 +47,7 @@ export default function Action(props) {
             >
                 <Link
                     href={url}
-                    aria-label={altText}
+                    aria-label={accessibleLabel}
                     id={elementId}
                     className={classNames(
                         'sb-component',
@@ -69,7 +70,7 @@ export default function Action(props) {
     return (
         <Link
             href={url}
-            aria-label={altText}
+            aria-label={accessibleLabel}
             id={elementId}
             className={classNames(
                 'sb-component',

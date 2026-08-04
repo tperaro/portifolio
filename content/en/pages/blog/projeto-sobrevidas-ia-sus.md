@@ -7,7 +7,7 @@ excerpt: >
   How we developed a SUS-integrated chatbot for oral cancer screening that was
   awarded as Brazil's best paper at SBCAS 2025.
 featuredImage:
-  url: /images/img-placeholder.svg
+  url: /images/sobrevidas.webp
   altText: Sobrevidas Project - AI in SUS
   type: ImageBlock
 seo:

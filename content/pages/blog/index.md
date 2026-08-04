@@ -5,12 +5,12 @@ numOfPostsPerPage: 8
 enableSearch: true
 topSections:
   - title:
-      text: Featured Post
+      text: Artigo em destaque
       color: text-dark
       type: TitleBlock
-    subtitle: This is the subtitle
+    subtitle: AIOS, context engineering e conhecimento empresarial aplicados à operação
     posts:
-      - content/pages/blog/blog-live-clivia.md
+      - content/pages/blog/aios-second-brain-empresarial.md
     showThumbnail: true
     showExcerpt: true
     showDate: true
@@ -31,11 +31,11 @@ styles:
   title:
     textAlign: center
 seo:
-  metaTitle: Blog - Demo site
+  metaTitle: Blog | Thiago Peraro
   metaDescription: >-
-    This is the blog of the demo site where we post about technology, product,
-    and design.
-  socialImage: /images/img-placeholder.svg
+    Artigos de Thiago Peraro sobre AIOS, segundo cérebro empresarial, agentes de
+    IA, context engineering e arquitetura de software.
+  socialImage: /images/main-hero.jpg
   type: Seo
 type: PostFeedLayout
 bottomSections: []

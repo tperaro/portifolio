@@ -84,7 +84,7 @@ sections:
       multi-agent LLM platform for medical clinics. Currently open to new
       opportunities in AI Engineering.
     actions:
-      - label: Learn More
+      - label: Learn about my work
         altText: Learn more about my journey
         url: /about
         showIcon: true
@@ -94,7 +94,7 @@ sections:
         elementId: ''
         type: Link
     media:
-      url: /images/builders.jpg
+      url: /images/builders.webp
       altText: About Thiago Peraro
       elementId: ''
       type: ImageBlock
@@ -328,12 +328,12 @@ sections:
         text: >
           **Count on Sheep — US Crypto Tax Firm**
 
-          Sole person responsible for the entire technology stack. Built from
-          scratch `onboarding-AI` (FastAPI): extraction pipeline with **7
-          LangGraph agents** in 3 parallel phases, real-time STT (AWS
-          Transcribe + KWS sidecar + LLM corrector), email system with **140+
-          Jinja2 templates** and intelligent routing, integrations with HubSpot,
-          DocuSign, Stripe, Gmail and Google Workspace.
+          Sole person responsible for the entire technology stack. Built
+          `onboarding-AI` (FastAPI) from scratch and deployed it to production:
+          an **AI agent that coordinates onboarding end to end**. The solution
+          combines a LangGraph multi-agent workflow, real-time STT (AWS
+          Transcribe + KWS sidecar + LLM corrector), and integrations with
+          HubSpot, DocuSign, Stripe, Gmail and Google Workspace.
         actions: []
         elementId: ''
         styles:
@@ -379,8 +379,8 @@ sections:
         elementId: ''
         type: Button
       - label: perarothiago@gmail.com
-        altText: Contact page
-        url: /contact
+        altText: Email Thiago Peraro
+        url: mailto:perarothiago@gmail.com
         showIcon: true
         icon: mail
         iconPosition: right
@@ -414,7 +414,6 @@ seo:
     Portfolio of Thiago Peraro — sole tech lead at Count on Sheep, NLP researcher
     at CEIA-UFG, CNPq fellow (Sobrevidas Project) and leader of AI communities in
     Goiânia.
-  socialImage: /images/main-hero.jpg
+  socialImage: /images/liveEmpreendedorismo.jpeg
   type: Seo
 ---
-

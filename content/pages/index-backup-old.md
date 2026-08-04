@@ -1,6 +1,7 @@
 ---
 title: Thiago Peraro - Desenvolvedor Full Stack
-slug: /
+slug: /archive/index-backup-old
+isDraft: true
 type: PageLayout
 sections:
   - type: GenericSection

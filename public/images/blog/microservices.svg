@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">From monolith to microservices</title>
+  <desc id="desc">A monolith splitting into a connected service architecture</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#17132d"/>
+      <stop offset="1" stop-color="#493895"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" rx="36" fill="url(#bg)"/>
+  <g transform="translate(705 120)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="0" y="92" width="155" height="245" rx="28" fill="#fff" fill-opacity=".1" stroke="#d8d5ff" stroke-width="6"/>
+    <path d="M185 215h72" stroke="#ada4ff" stroke-width="8"/>
+    <path d="m238 190 28 25-28 25" stroke="#ada4ff" stroke-width="8"/>
+    <g stroke="#e4e2ff" stroke-width="5">
+      <rect x="300" y="0" width="130" height="105" rx="22" fill="#7c6ce5" fill-opacity=".3"/>
+      <rect x="300" y="160" width="130" height="105" rx="22" fill="#7c6ce5" fill-opacity=".3"/>
+      <rect x="300" y="320" width="130" height="105" rx="22" fill="#7c6ce5" fill-opacity=".3"/>
+      <path d="M265 215h35M365 105v55m0 105v55" stroke-opacity=".45"/>
+    </g>
+  </g>
+  <g fill="#fff" font-family="Inter,Arial,sans-serif">
+    <text x="76" y="96" font-size="22" font-weight="700" letter-spacing="5" fill="#b9b1ff">ARCHITECTURE</text>
+    <text x="76" y="260" font-size="68" font-weight="800">Monolith</text>
+    <text x="76" y="344" font-size="48" font-weight="500" opacity=".7">to</text>
+    <text x="76" y="430" font-size="68" font-weight="800" fill="#c9c3ff">microservices</text>
+  </g>
+</svg>

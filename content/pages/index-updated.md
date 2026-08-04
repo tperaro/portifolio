@@ -1,6 +1,7 @@
 ---
 title: Thiago Peraro - Empreendedor e Pesquisador de IA
-slug: /
+slug: /archive/index-updated
+isDraft: true
 type: PageLayout
 sections:
   - type: GenericSection

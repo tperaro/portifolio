@@ -13,6 +13,8 @@ export default function FeaturedItem(props) {
     const flexDirection = styles?.self?.flexDirection ?? 'col';
     const hasTextContent = !!(tagline || title || subtitle || text || actions.length > 0);
     const hasImage = !!image?.url;
+    const isIllustration = Boolean(image?.url && (/\.svg$/i.test(image.url) || /logo/i.test(image.altText ?? '')));
+    const isStacked = flexDirection === 'col' || flexDirection === 'col-reverse';
 
     return (
         <div
@@ -35,9 +37,12 @@ export default function FeaturedItem(props) {
                     : undefined,
                 styles?.self?.borderRadius ? mapStyles({ borderRadius: styles?.self?.borderRadius }) : undefined,
                 styles?.self?.textAlign ? mapStyles({ textAlign: styles?.self?.textAlign }) : undefined,
+                !styles?.self?.borderWidth && 'border border-dark/10',
+                !styles?.self?.borderRadius && 'rounded-2xl',
                 'overflow-hidden',
-                'transition-all duration-300',
-                'hover:-translate-y-1 hover:shadow-xl',
+                'shadow-[0_12px_35px_rgba(37,44,81,0.08)]',
+                'transition-all duration-300 motion-reduce:transition-none',
+                'hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(37,44,81,0.16)] motion-reduce:hover:translate-y-0',
                 'before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-[3px] before:bg-gradient-to-r before:from-transparent before:via-primary before:to-transparent before:opacity-0 before:transition-opacity before:duration-300 group-hover:before:opacity-100'
             )}
         >
@@ -51,11 +56,16 @@ export default function FeaturedItem(props) {
                         {...image}
                         className={classNames(
                             'flex',
-                            '[&_img]:grayscale [&_img]:transition-[filter] [&_img]:duration-500 group-hover:[&_img]:grayscale-0',
+                            'overflow-hidden rounded-xl bg-neutral/25',
                             mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }),
                             {
                                 'xs:w-[28.4%] xs:shrink-0': hasTextContent && (flexDirection === 'row' || flexDirection === 'row-reversed')
                             }
+                        )}
+                        imageClassName={classNames(
+                            'block w-full transition-transform duration-500 motion-reduce:transition-none group-hover:scale-[1.025] motion-reduce:group-hover:scale-100',
+                            isStacked ? 'aspect-[16/10]' : 'h-full min-h-40',
+                            isIllustration ? 'object-contain p-4' : 'object-cover'
                         )}
                         {...(fieldPath && { 'data-sb-field-path': '.image' })}
                     />

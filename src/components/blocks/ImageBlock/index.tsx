@@ -3,11 +3,41 @@ import classNames from 'classnames';
 
 import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
 
+const intrinsicImageDimensions = {
+    '/images/builders.webp': [900, 988],
+    '/images/thiago-peraro-magnatas.webp': [720, 772],
+    '/images/palestrante.webp': [900, 996],
+    '/images/koru.webp': [1000, 750],
+    '/images/sobrevidas.webp': [1000, 812],
+    '/images/goiasprev.webp': [200, 200],
+    '/images/live-clivia.webp': [960, 540],
+    '/images/live-empreendedorismo.webp': [960, 540],
+    '/images/business-model-canvas.webp': [960, 678],
+    '/images/onboarding-ai.svg': [1200, 720],
+    '/images/blog/docker-advanced.svg': [1200, 675],
+    '/images/blog/microservices.svg': [1200, 675],
+    '/images/blog/next-server-actions.svg': [1200, 675]
+};
+
 export default function ImageBlock(props) {
-    const { elementId, className, imageClassName, url, altText = '', styles = {} } = props;
+    const {
+        elementId,
+        className,
+        imageClassName,
+        url,
+        altText = '',
+        styles = {},
+        loading = 'lazy',
+        decoding = 'async',
+        fetchPriority,
+        width,
+        height,
+        sizes
+    } = props;
     if (!url) {
         return null;
     }
+    const intrinsicDimensions = intrinsicImageDimensions[url];
     const fieldPath = props['data-sb-field-path'];
     const annotations = fieldPath
         ? { 'data-sb-field-path': [fieldPath, `${fieldPath}.url#@src`, `${fieldPath}.altText#@alt`, `${fieldPath}.elementId#@id`].join(' ').trim() }
@@ -40,6 +70,12 @@ export default function ImageBlock(props) {
                 )}
                 src={url}
                 alt={altText}
+                loading={loading}
+                decoding={decoding}
+                fetchPriority={fetchPriority}
+                width={width ?? intrinsicDimensions?.[0]}
+                height={height ?? intrinsicDimensions?.[1]}
+                sizes={sizes}
             />
         </div>
     );

@@ -21,7 +21,7 @@ sections:
         elementId: ''
         type: Button
     media:
-      url: /images/hero.svg
+      url: /images/builders.webp
       altText: Projects by Thiago Peraro
       type: image
     backgroundAnimation: gradient
@@ -71,7 +71,7 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/sobrevidas.png
+          url: /images/sobrevidas.webp
           altText: Sobrevidas Project
           elementId: ''
       - type: FeaturedItem
@@ -80,14 +80,13 @@ sections:
           **Sole Tech Lead | Jan 2026 – present**
 
           Main FastAPI backend at Count on Sheep (US crypto tax consulting),
-          built from scratch as the sole technical owner. Transcript
-          extraction pipeline with **7 LangGraph agents** in 3 parallel phases
-          (participants, crypto/DeFi/tax profile, DCA, logistics, pain
-          points). **Real-time STT** via AWS Transcribe Streaming with
-          session state machine, KWS sidecar for crypto terms, and LLM
-          corrector. Email system with **140+ Jinja2 templates** routed by
-          stage, software and customer type. Integrations with HubSpot,
-          DocuSign, Stripe, Gmail and Google Workspace.
+          built from scratch and deployed to production as the sole technical
+          owner. I created an **AI agent that coordinates the end-to-end
+          onboarding workflow**. The solution combines a LangGraph multi-agent
+          pipeline with **real-time STT** via AWS Transcribe Streaming, a
+          session state machine, a KWS sidecar for crypto terms, and an LLM
+          corrector, plus integrations with HubSpot, DocuSign, Stripe, Gmail
+          and Google Workspace.
         actions:
           - label: Count on Sheep
             altText: 'Count on Sheep'
@@ -109,8 +108,8 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/abstract-feature1.svg
-          altText: onboarding-AI Count on Sheep
+          url: /images/onboarding-ai.svg
+          altText: Enterprise AI onboarding architecture
           elementId: ''
       - type: FeaturedItem
         title: Clivia — AI for Clinics (closed)
@@ -162,7 +161,7 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/koru.png
+          url: /images/koru.webp
           altText: Koru Project
           elementId: ''
       - type: FeaturedItem
@@ -194,7 +193,7 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/goiasprev.jpg
+          url: /images/goiasprev.webp
           altText: GoiásPrev Logo
           elementId: ''
     actions: []
@@ -311,7 +310,7 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/palestrante.png
+          url: /images/palestrante.webp
           altText: Speaker
           elementId: ''
     actions: []
@@ -491,4 +490,10 @@ sections:
         textAlign: center
       actions:
         justifyContent: center
+seo:
+  metaTitle: AI and Technology Projects | Thiago Peraro
+  metaDescription: >-
+    Projects led by Thiago Peraro across artificial intelligence, healthcare,
+    education, public platforms and digital transformation.
+  type: Seo
 ---

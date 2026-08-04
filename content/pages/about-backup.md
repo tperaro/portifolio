@@ -1,6 +1,7 @@
 ---
 title: Sobre Mim - Thiago Peraro
-slug: /about
+slug: /archive/about-backup
+isDraft: true
 type: PageLayout
 sections:
   - type: GenericSection

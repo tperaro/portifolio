@@ -7,7 +7,7 @@ excerpt: >
   I share my experience migrating a monolithic application to microservices
   architecture, including challenges faced and solutions adopted.
 featuredImage:
-  url: /images/img-placeholder.svg
+  url: /images/blog/microservices.svg
   altText: Microservices Architecture
   type: ImageBlock
 seo:

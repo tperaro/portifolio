@@ -79,7 +79,7 @@ function HeaderLogoLeftPrimaryLeft(props) {
                     <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
                 </ul>
             )}
-            <div className="hidden lg:flex ml-4"><LanguageSwitcher /></div>
+            <div className="hidden lg:flex ml-4"><LanguageSwitcher alternatePath={props.alternatePath} /></div>
             {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
         </div>
     );
@@ -107,7 +107,7 @@ function HeaderLogoLeftPrimaryCentered(props) {
                     <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
                 </ul>
             )}
-            <div className="hidden lg:flex ml-4"><LanguageSwitcher /></div>
+            <div className="hidden lg:flex ml-4"><LanguageSwitcher alternatePath={props.alternatePath} /></div>
             {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
         </div>
     );
@@ -135,7 +135,7 @@ function HeaderLogoLeftPrimaryRight(props) {
                     <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
                 </ul>
             )}
-            <div className="hidden lg:flex ml-4"><LanguageSwitcher /></div>
+            <div className="hidden lg:flex ml-4"><LanguageSwitcher alternatePath={props.alternatePath} /></div>
             {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
         </div>
     );
@@ -160,7 +160,7 @@ function HeaderLogoCenteredPrimaryLeft(props) {
                     <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
                 </ul>
             )}
-            <div className="hidden lg:flex ml-4"><LanguageSwitcher /></div>
+            <div className="hidden lg:flex ml-4"><LanguageSwitcher alternatePath={props.alternatePath} /></div>
             {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
         </div>
     );
@@ -181,7 +181,7 @@ function HeaderLogoCenteredPrimaryCentered(props) {
                         <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} />
                     </ul>
                 )}
-                <div className="hidden lg:flex ml-4"><LanguageSwitcher /></div>
+                <div className="hidden lg:flex ml-4"><LanguageSwitcher alternatePath={props.alternatePath} /></div>
                 {(primaryLinks.length > 0 || secondaryLinks.length > 0) && <MobileMenu {...props} />}
             </div>
             {primaryLinks.length > 0 && (
@@ -246,7 +246,7 @@ function MobileMenu(props) {
                         <ListOfLinks links={secondaryLinks} enableAnnotations={enableAnnotations} inMobileMenu />
                     </ul>
                 )}
-                <div className="mt-6"><LanguageSwitcher /></div>
+                <div className="mt-6"><LanguageSwitcher alternatePath={props.alternatePath} /></div>
             </div>
         </div>
     );
@@ -265,7 +265,7 @@ function MobileMenu(props) {
 function SiteLogoLink({ title, logo, enableAnnotations }) {
     return (
         <Link href="/" className="flex items-center">
-            {logo && <ImageBlock {...logo} {...(enableAnnotations && { 'data-sb-field-path': 'logo' })} />}
+            {logo && <ImageBlock {...logo} loading="eager" {...(enableAnnotations && { 'data-sb-field-path': 'logo' })} />}
             {title && (
                 <span className="h4" {...(enableAnnotations && { 'data-sb-field-path': 'title' })}>
                     {title}

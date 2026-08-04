@@ -1,28 +1,25 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 
-export default function LanguageSwitcher({ className = '' }: { className?: string }) {
+interface LanguageSwitcherProps {
+    className?: string;
+    alternatePath?: string | null;
+}
+
+export default function LanguageSwitcher({ className = '', alternatePath }: LanguageSwitcherProps) {
     const router = useRouter();
-    const { locale, asPath, pathname, query } = router;
+    const { locale } = router;
 
     const changeLocale = async (nextLocale: string) => {
-        try {
-            // Check if we're on a blog post page (not the blog index)
-            const isBlogPost = asPath.match(/^\/(?:(?:en|pt)\/)?blog\/[^/]+\/?$/) && !asPath.endsWith('/blog') && !asPath.endsWith('/blog/');
+        if (nextLocale === locale) return;
 
-            if (isBlogPost) {
-                // For blog posts, redirect to the blog index page in the target language
-                const blogPath = nextLocale === 'en' ? '/blog' : '/pt/blog';
-                await router.push(blogPath, blogPath, { locale: nextLocale, scroll: false });
-            } else {
-                // For other pages, try to navigate to the same path
-                await router.push({ pathname, query }, undefined, { locale: nextLocale, scroll: false });
-            }
-        } catch (e) {
-            // If navigation fails, try to go to the home page in the target locale
+        try {
+            const targetPath = alternatePath || '/';
+            await router.push(targetPath, targetPath, { locale: nextLocale, scroll: false });
+        } catch {
             try {
                 await router.push('/', '/', { locale: nextLocale });
-            } catch (err) {
+            } catch {
                 // no-op
             }
         }
@@ -32,14 +29,25 @@ export default function LanguageSwitcher({ className = '' }: { className?: strin
 
     return (
         <div className={`flex items-center space-x-2 ${className}`}>
-            <button type="button" className={`text-sm px-2 py-1 rounded ${isActive('en')}`} onClick={() => changeLocale('en')}>
+            <button
+                type="button"
+                aria-label="EN — View this page in English"
+                aria-pressed={locale === 'en'}
+                className={`text-sm px-2 py-1 rounded ${isActive('en')}`}
+                onClick={() => changeLocale('en')}
+            >
                 EN
             </button>
-            <span className="opacity-40">|</span>
-            <button type="button" className={`text-sm px-2 py-1 rounded ${isActive('pt')}`} onClick={() => changeLocale('pt')}>
+            <span className="opacity-40" aria-hidden="true">|</span>
+            <button
+                type="button"
+                aria-label="PT — Ver esta página em português"
+                aria-pressed={locale === 'pt'}
+                className={`text-sm px-2 py-1 rounded ${isActive('pt')}`}
+                onClick={() => changeLocale('pt')}
+            >
                 PT
             </button>
         </div>
     );
 }
-

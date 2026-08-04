@@ -34,7 +34,7 @@ sections:
         elementId: ''
         type: Link
     media:
-      url: /images/hero.svg
+      url: /images/thiago-peraro-magnatas.webp
       altText: Entre em contato
       elementId: ''
       type: ImageBlock
@@ -67,11 +67,11 @@ sections:
           Para propostas profissionais, projetos ou dúvidas técnicas, 
           envie um email detalhado e responderei o mais breve possível.
           
-          **contato@thiagoperaro.dev**
+          **perarothiago@gmail.com**
         actions:
           - label: Enviar Email
             altText: 'Enviar email'
-            url: mailto:contato@thiagoperaro.dev
+            url: mailto:perarothiago@gmail.com
             showIcon: true
             icon: mail
             iconPosition: right
@@ -169,94 +169,6 @@ sections:
 
   - type: GenericSection
     title:
-      text: Formulário de Contato
-      color: text-dark
-      type: TitleBlock
-    subtitle: Prefere usar um formulário? Envie sua mensagem aqui
-    text: >
-      Preencha o formulário abaixo com sua mensagem e entrarei em contato 
-      o mais breve possível. Seja específico sobre o tipo de projeto ou 
-      oportunidade para que eu possa dar uma resposta mais direcionada.
-    actions: []
-    media:
-      url: /images/hero2.svg
-      altText: Formulário de contato
-      elementId: ''
-      type: ImageBlock
-    elementId: ''
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        alignItems: center
-        flexDirection: row-reverse
-        padding:
-          - pt-16
-          - pb-8
-          - pl-4
-          - pr-4
-        justifyContent: center
-
-  - type: GenericSection
-    title:
-      text: ""
-      color: text-dark
-      type: TitleBlock
-    subtitle: ""
-    text: >
-      **Formulário de Contato**
-      
-      
-      *Em breve será implementado um formulário de contato funcional. 
-      Por enquanto, utilize as opções de contato direto acima.*
-      
-      
-      **Tipos de projeto que me interessam:**
-      
-      • Desenvolvimento de aplicações web modernas
-      
-      • APIs e sistemas backend escaláveis
-      
-      • Projetos em React, Next.js, Node.js
-      
-      • Consultoria técnica e arquitetura de software
-      
-      • Mentoria e liderança técnica
-      
-      • Projetos open source interessantes
-    actions:
-      - label: Enviar Email Direto
-        altText: 'Enviar email direto'
-        url: mailto:contato@thiagoperaro.dev?subject=Contato%20via%20Portfolio&body=Olá%20Thiago,%0A%0AGostaria%20de%20conversar%20sobre...
-        showIcon: true
-        icon: mail
-        iconPosition: right
-        style: primary
-        elementId: ''
-        type: Button
-    elementId: ''
-    colors: bg-neutral-fg-dark
-    styles:
-      self:
-        alignItems: center
-        flexDirection: col
-        padding:
-          - pt-8
-          - pb-16
-          - pl-4
-          - pr-4
-        justifyContent: center
-        textAlign: center
-      title:
-        textAlign: center
-      subtitle:
-        textAlign: center
-      text:
-        textAlign: center
-      actions:
-        justifyContent: center
-
-  - type: GenericSection
-    title:
       text: Horário de Resposta
       color: text-dark
       type: TitleBlock
@@ -292,4 +204,10 @@ sections:
         textAlign: center
       text:
         textAlign: center
+seo:
+  metaTitle: Contato | Thiago Peraro
+  metaDescription: >-
+    Entre em contato com Thiago Peraro para projetos de inteligência
+    artificial, engenharia de software, arquitetura e liderança técnica.
+  type: Seo
 ---

@@ -7,7 +7,7 @@ excerpt: >
   Explorando as novas Server Actions do Next.js 14 e como elas simplificam 
   o desenvolvimento full-stack com React.
 featuredImage:
-  url: /images/img-placeholder.svg
+  url: /images/blog/next-server-actions.svg
   altText: Next.js 14 Server Actions
   type: ImageBlock
 seo:

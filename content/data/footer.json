@@ -2,9 +2,11 @@
     "logo": {
         "url": "/images/logo-white.svg",
         "altText": "Thiago Peraro",
+        "width": 46,
+        "height": 24,
         "type": "ImageBlock"
     },
-    "text": "Pesquisador de IA, empreendedor e líder de comunidades tech em Goiânia",
+    "text": "Arquiteto de IA, pesquisador de NLP e especialista em sistemas multiagentes, AIOS e segundo cérebro empresarial.",
     "primaryLinks": {
         "title": "Navegação",
         "links": [
@@ -60,7 +62,7 @@
             {
                 "label": "Email",
                 "altText": "Enviar email",
-                "url": "mailto:contato@thiagoperaro.dev",
+                "url": "mailto:perarothiago@gmail.com",
                 "icon": "mail",
                 "iconPosition": "right",
                 "style": "secondary",
@@ -86,7 +88,7 @@
         }
     ],
     "legalLinks": [],
-    "copyrightText": "© 2025 Thiago Peraro. Pesquisador CNPq | Fundador da Clivia | Todos os direitos reservados.",
+    "copyrightText": "© 2026 Thiago Peraro. Arquiteto de IA | Pesquisador | Todos os direitos reservados.",
     "styles": {
         "self": {
             "padding": ["pt-16", "pb-8"]
