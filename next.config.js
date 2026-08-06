@@ -10,6 +10,12 @@ const nextConfig = {
     experimental: {
         useTypeScriptCli: false
     },
+    // sitemap.xml resolves content at request time via local-content's globSync,
+    // which reads content/ from disk. Without this the serverless bundle ships
+    // without those files and the sitemap renders empty.
+    outputFileTracingIncludes: {
+        '/sitemap.xml': ['./content/**/*', './sources/**/*']
+    },
     i18n: {
         locales: ['en', 'pt'],
         defaultLocale: 'en',
