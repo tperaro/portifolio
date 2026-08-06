@@ -154,11 +154,25 @@ test('SEO discovery and social metadata are rendered by the application', () => 
 test('the critical mobile path avoids global smooth-scrolling and render-blocking fonts', () => {
     const app = read('src/pages/_app.js');
     const css = read('src/css/main.css');
-    const scrollHero = read('src/components/sections/ScrollHeroSection/index.tsx');
 
     assert.doesNotMatch(app, /Lenis|gsap/);
     assert.doesNotMatch(css, /fonts\.googleapis\.com/);
-    assert.doesNotMatch(scrollHero, /gsap|ScrollTrigger|<video/);
+});
+
+test('the scrubbed hero runs only where a device can afford it', () => {
+    const scrollHero = read('src/components/sections/ScrollHeroSection/index.tsx');
+
+    // Desktop keeps the scroll-scrubbed video.
+    assert.match(scrollHero, /ScrollTrigger/);
+    assert.match(scrollHero, /scrub:/);
+    assert.match(scrollHero, /<video/);
+
+    // Mobile, coarse pointers and reduced-motion fall back to the static poster:
+    // the GSAP timeline must bail out before touching the video.
+    assert.match(scrollHero, /\(max-width: 767px\), \(hover: none\) and \(pointer: coarse\), \(prefers-reduced-motion: reduce\)/);
+    assert.match(scrollHero, /if \(mode !== 'desktop'\) return;/);
+
+    // The poster still carries the LCP hints and the mobile-safe viewport height.
     assert.match(scrollHero, /fetchPriority="high"/);
     assert.match(scrollHero, /min-h-\[calc\(100svh-5rem\)\]/);
 });
