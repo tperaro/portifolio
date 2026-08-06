@@ -47,7 +47,8 @@ sections:
 
           • Built the `onboarding-AI` agent from scratch and deployed it to production
 
-          • Coordinates onboarding end to end through a LangGraph multi-agent workflow
+          • Coordinates onboarding end to end through an extraction pipeline
+          with **7 LangGraph agents** across 3 parallel phases
 
           • Real-time STT (AWS Transcribe Streaming + KWS sidecar + LLM corrector)
 
@@ -162,9 +163,9 @@ sections:
           Sole person responsible for the entire technology stack. Built
           `onboarding-AI` (FastAPI) from scratch and deployed it to production:
           an AI agent that coordinates onboarding end to end. The solution
-          combines a LangGraph multi-agent workflow, real-time STT with AWS
-          Transcribe Streaming, and integrations with HubSpot, DocuSign, Stripe
-          and Gmail.
+          combines an extraction pipeline with **7 LangGraph agents** across 3
+          parallel phases, real-time STT with AWS Transcribe Streaming, and
+          integrations with HubSpot, DocuSign, Stripe and Gmail.
         actions: []
         elementId: ''
         styles:
@@ -415,6 +416,13 @@ sections:
       type: TitleBlock
     subtitle: Main professional awards and recognitions
     text: >
+      **🌟 1st AI Brasil Hero (2026)**
+
+      Recognized as the **1st AI Brasil Hero** at AI Brasil / CEIA Open Day,
+      after speaking on Second Brain + AI OS, hyper-productivity and agentic
+      coding. Award presented by Juliano Kimura.
+
+
       **🏆 SBCAS 2025 — Best Paper (Brazil)**
 
       Sobrevidas paper recognized as best in the Brazilian Symposium on Applied
@@ -449,8 +457,19 @@ sections:
 
       **🎤 Recognized Speaker**
 
-      Frequent speaker on ethical AI and innovative product development.
+      Speaker at **AI Brasil 2026** (CEIA Open Day / Go.IAs Experience) and a
+      frequent speaker on ethical AI, hyper-productivity and innovative product
+      development.
     actions:
+      - label: See talks
+        altText: See the talks and award page
+        url: /palestras
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: ''
+        type: Link
       - label: Invite to Speak
         altText: Speaking invitations
         url: /contact

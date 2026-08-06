@@ -82,8 +82,9 @@ sections:
           Main FastAPI backend at Count on Sheep (US crypto tax consulting),
           built from scratch and deployed to production as the sole technical
           owner. I created an **AI agent that coordinates the end-to-end
-          onboarding workflow**. The solution combines a LangGraph multi-agent
-          pipeline with **real-time STT** via AWS Transcribe Streaming, a
+          onboarding workflow**. The solution combines an extraction pipeline
+          with **7 LangGraph agents** across 3 parallel phases with **real-time
+          STT** via AWS Transcribe Streaming, a
           session state machine, a KWS sidecar for crypto terms, and an LLM
           corrector, plus integrations with HubSpot, DocuSign, Stripe, Gmail
           and Google Workspace.
@@ -283,13 +284,24 @@ sections:
           altText: Go.IAs Logo
           elementId: ''
       - type: FeaturedItem
-        title: Talks & Events
+        title: AI Brasil & Talks 🏆
         text: >
           **Speaker | 2024–present**
 
           Talks on AI, entrepreneurship and ethical technology. Sharing
-          knowledge on building AI products and leading tech communities.
+          knowledge on building AI products and leading tech communities. In
+          2026 I spoke on **Second Brain + AI OS** at **AI Brasil** (CEIA Open
+          Day / Go.IAs Experience) and was named the **1st AI Brasil Hero**.
         actions:
+          - label: See the talk
+            altText: 'See the talks and award page'
+            url: /palestras
+            showIcon: true
+            icon: arrowRight
+            iconPosition: right
+            style: primary
+            elementId: ''
+            type: Link
           - label: Invitations
             altText: 'Speaking invitations'
             url: '/contact'
@@ -310,8 +322,8 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/palestrante.webp
-          altText: Speaker
+          url: /palestras/palco-aibrasil.webp
+          altText: Thiago Peraro speaking at AI Brasil
           elementId: ''
     actions: []
     elementId: ''

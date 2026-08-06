@@ -125,6 +125,31 @@ sections:
           url: /images/builders.webp
           altText: Liderança em Comunidades
           elementId: ''
+      - type: FeaturedItem
+        title: 1º AI Brasil Hero — Prêmio (2026)
+        text: >
+          Reconhecido pela comunidade de IA brasileira no AI Brasil / CEIA Open
+          Day, após palestrar sobre **Second Brain + AI OS**, hiperprodutividade
+          e agentic coding. Prêmio entregue por Juliano Kimura.
+        actions:
+          - label: Ver a palestra
+            url: /palestras
+            style: primary
+            type: Link
+        elementId: ''
+        styles:
+          self:
+            textAlign: center
+            padding:
+              - pt-6
+              - pb-6
+              - pl-4
+              - pr-4
+        image:
+          type: ImageBlock
+          url: /palestras/trofeu-ai-brasil-hero.webp
+          altText: Troféu 1º AI Brasil Hero
+          elementId: ''
     actions: []
     elementId: ''
     variant: three-col-grid
@@ -227,9 +252,12 @@ sections:
       **Publicações e Reconhecimentos:**
       • 🏆 Artigo **premiado como melhor do Brasil no SBCAS 2025** (categoria
         ferramentas) — projeto Sobrevidas
+      • 🌟 **1º AI Brasil Hero (2026)** — reconhecimento da comunidade de IA
+        brasileira no AI Brasil / CEIA Open Day
       • Líder destaque entre 60 bolsistas do programa EMBRAPII,
         acompanhado por 8 mentores doutores
-      • Palestras regulares sobre IA e empreendedorismo
+      • 🎤 **Palestrante no AI Brasil 2026** — "Second Brain + AI OS" (CEIA Open
+        Day / Go.IAs Experience); palestras regulares sobre IA e empreendedorismo
     actions:
       - label: Ver Experiência
         altText: Ver experiência detalhada

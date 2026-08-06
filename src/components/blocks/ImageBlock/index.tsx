@@ -14,6 +14,11 @@ const intrinsicImageDimensions = {
     '/images/live-empreendedorismo.webp': [960, 540],
     '/images/business-model-canvas.webp': [960, 678],
     '/images/onboarding-ai.svg': [1200, 720],
+    '/palestras/palco-aibrasil.webp': [1600, 1200],
+    '/palestras/premio-ai-brasil-hero.webp': [1600, 1200],
+    '/palestras/trofeu-ai-brasil-hero.webp': [1200, 1600],
+    '/palestras/aibrasil-networking.webp': [1200, 1600],
+    '/palestras/palestra-second-brain.webp': [1284, 2282],
     '/images/blog/docker-advanced.svg': [1200, 675],
     '/images/blog/microservices.svg': [1200, 675],
     '/images/blog/next-server-actions.svg': [1200, 675]

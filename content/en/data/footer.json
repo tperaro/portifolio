@@ -6,7 +6,8 @@
     "links": [
       { "label": "About", "altText": "About me", "url": "/about", "icon": "arrowRight", "iconPosition": "right", "style": "secondary", "type": "Link" },
       { "label": "Projects", "url": "/projects", "icon": "arrowRight", "iconPosition": "right", "style": "secondary", "type": "Link" },
-      { "label": "Experience", "url": "/experience", "icon": "arrowRight", "iconPosition": "right", "style": "secondary", "type": "Link" }
+      { "label": "Experience", "url": "/experience", "icon": "arrowRight", "iconPosition": "right", "style": "secondary", "type": "Link" },
+      { "label": "Talks", "url": "/palestras", "icon": "arrowRight", "iconPosition": "right", "style": "secondary", "type": "Link" }
     ],
     "type": "FooterLinksGroup"
   },

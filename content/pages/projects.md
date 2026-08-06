@@ -83,8 +83,9 @@ sections:
           API FastAPI principal da Count on Sheep (consultoria americana de
           cripto taxes), construída do zero e levada ao deploy em produção como
           único responsável técnico. Criei um **agente de IA que coordena o
-          onboarding de ponta a ponta**. A solução combina um pipeline
-          multiagente em LangGraph com **STT em tempo real** via AWS Transcribe
+          onboarding de ponta a ponta**. A solução combina um pipeline de
+          extração com **7 agentes LangGraph** em 3 fases paralelas com **STT em
+          tempo real** via AWS Transcribe
           Streaming, state machine de sessão, KWS sidecar para termos cripto e
           LLM corrector, além de integrações com HubSpot, DocuSign, Stripe,
           Gmail e Google Workspace.
@@ -278,14 +279,25 @@ sections:
           altText: Logo Go.IAs
           elementId: ''
       - type: FeaturedItem
-        title: Palestras e Eventos
+        title: AI Brasil & Palestras 🏆
         text: >
           **Speaker | 2024-presente**
-          
-          Palestras sobre IA, empreendedorismo e uso ético da tecnologia em 
-          diversos eventos. Compartilho conhecimentos sobre desenvolvimento 
-          de produtos de IA e liderança em comunidades tech.
+
+          Palestras sobre IA, empreendedorismo e uso ético da tecnologia em
+          diversos eventos. Compartilho conhecimentos sobre desenvolvimento
+          de produtos de IA e liderança em comunidades tech. Em 2026 palestrei
+          **Second Brain + AI OS** no **AI Brasil** (CEIA Open Day / Go.IAs
+          Experience) e fui reconhecido como **1º AI Brasil Hero**.
         actions:
+          - label: Ver palestra
+            altText: 'Ver a página de palestras e o prêmio'
+            url: /palestras
+            showIcon: true
+            icon: arrowRight
+            iconPosition: right
+            style: primary
+            elementId: ''
+            type: Link
           - label: Convites
             altText: 'Convites para palestras'
             url: '/contact'
@@ -306,8 +318,8 @@ sections:
               - pr-4
         image:
           type: ImageBlock
-          url: /images/palestrante.webp
-          altText: Palestrante
+          url: /palestras/palco-aibrasil.webp
+          altText: Thiago Peraro palestrando no AI Brasil
           elementId: ''
     actions: []
     elementId: ''

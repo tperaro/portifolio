@@ -201,6 +201,55 @@ sections:
         justifyContent: center
       subtitle:
         textAlign: center
+  - type: GenericSection
+    title:
+      text: Recognized as the 1st AI Brasil Hero
+      color: text-light
+      type: TitleBlock
+    subtitle: 'AI Brasil · CEIA Open Day · Go.IAs Experience — Goiânia, Jun 2026'
+    text: >
+      I took the AI Brasil stage to talk about **Second Brain + AI OS**: how a
+      stack of agents turns into real hyper-productivity — the same SOTA
+      architecture I run at Count on Sheep. At the closing, I received the **1st
+      AI Brasil Hero** award from Juliano Kimura. The twist: this very portfolio
+      runs on exactly the architecture I presented — the LLM is the kernel, the
+      context window is the RAM, and `.md` files versioned in git are the disk.
+    actions:
+      - label: See the talk
+        altText: See the talks and award page
+        url: /palestras
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: ''
+        type: Link
+      - label: Speaking requests
+        altText: Speaking requests
+        url: /contact
+        showIcon: true
+        icon: mail
+        iconPosition: right
+        style: secondary
+        elementId: ''
+        type: Link
+    media:
+      url: /palestras/palco-aibrasil.webp
+      altText: Thiago Peraro speaking at AI Brasil
+      elementId: ''
+      type: ImageBlock
+    elementId: recognition
+    colors: bg-dark-fg-light
+    styles:
+      self:
+        alignItems: center
+        flexDirection: row
+        padding:
+          - pt-16
+          - pb-16
+          - pl-4
+          - pr-4
+        justifyContent: center
   - type: FeaturedItemsSection
     title:
       text: Timeline
@@ -331,9 +380,10 @@ sections:
           Sole person responsible for the entire technology stack. Built
           `onboarding-AI` (FastAPI) from scratch and deployed it to production:
           an **AI agent that coordinates onboarding end to end**. The solution
-          combines a LangGraph multi-agent workflow, real-time STT (AWS
-          Transcribe + KWS sidecar + LLM corrector), and integrations with
-          HubSpot, DocuSign, Stripe, Gmail and Google Workspace.
+          combines an extraction pipeline with **7 LangGraph agents** across 3
+          parallel phases, real-time STT (AWS Transcribe + KWS sidecar + LLM
+          corrector), and integrations with HubSpot, DocuSign, Stripe, Gmail and
+          Google Workspace.
         actions: []
         elementId: ''
         styles:

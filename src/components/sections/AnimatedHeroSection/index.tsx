@@ -62,6 +62,8 @@ export default function AnimatedHeroSection(props: AnimatedHeroSectionProps): Re
 
     const hasMedia = Boolean(media?.url);
     const showAmbientBackground = backgroundAnimation !== 'none';
+    // The section theme comes from the `colors` field, so every hardcoded tint below has a dark counterpart.
+    const isDark = colors === 'bg-dark-fg-light';
 
     return (
         <section
@@ -78,7 +80,14 @@ export default function AnimatedHeroSection(props: AnimatedHeroSectionProps): Re
                 <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
                     <div className="absolute -left-32 -top-36 h-80 w-80 rounded-full bg-primary/20 blur-3xl" />
                     <div className="absolute -bottom-44 right-[-5%] h-96 w-96 rounded-full bg-indigo-300/30 blur-3xl" />
-                    <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.82),rgba(238,241,251,0.5))]" />
+                    <div
+                        className={classNames(
+                            'absolute inset-0',
+                            isDark
+                                ? 'bg-[linear-gradient(120deg,rgba(32,34,56,0.78),rgba(32,34,56,0.45))]'
+                                : 'bg-[linear-gradient(120deg,rgba(255,255,255,0.82),rgba(238,241,251,0.5))]'
+                        )}
+                    />
                 </div>
             )}
             <NoiseOverlay />
@@ -94,7 +103,10 @@ export default function AnimatedHeroSection(props: AnimatedHeroSectionProps): Re
 
                     {subtitle && (
                         <p
-                            className="mt-6 max-w-2xl text-lg font-medium leading-snug text-dark/80 sm:text-xl lg:text-2xl"
+                            className={classNames(
+                                'mt-6 max-w-2xl text-lg font-medium leading-snug sm:text-xl lg:text-2xl',
+                                isDark ? 'text-light/85' : 'text-dark/80'
+                            )}
                             {...(fieldPath && { 'data-sb-field-path': '.subtitle' })}
                         >
                             {subtitle}
@@ -103,7 +115,10 @@ export default function AnimatedHeroSection(props: AnimatedHeroSectionProps): Re
 
                     {text && (
                         <p
-                            className="mt-6 max-w-2xl text-base leading-relaxed text-dark/75 sm:text-lg"
+                            className={classNames(
+                                'mt-6 max-w-2xl text-base leading-relaxed sm:text-lg',
+                                isDark ? 'text-light/80' : 'text-dark/75'
+                            )}
                             {...(fieldPath && { 'data-sb-field-path': '.text' })}
                         >
                             {text}
@@ -128,10 +143,19 @@ export default function AnimatedHeroSection(props: AnimatedHeroSectionProps): Re
 
                 {hasMedia && (
                     <div
-                        className="relative mx-auto aspect-[4/3] w-full max-w-xl overflow-hidden rounded-[2rem] border border-white/70 bg-white/55 p-2 shadow-[0_24px_70px_rgba(33,42,86,0.2)] sm:p-3 lg:aspect-[5/4]"
+                        className={classNames(
+                            'relative mx-auto aspect-[4/3] w-full max-w-xl overflow-hidden rounded-[2rem] border p-2 shadow-[0_24px_70px_rgba(33,42,86,0.2)] sm:p-3 lg:aspect-[5/4]',
+                            isDark ? 'border-white/15 bg-white/10' : 'border-white/70 bg-white/55'
+                        )}
                         {...(fieldPath && { 'data-sb-field-path': '.media' })}
                     >
-                        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-primary/15" />
+                        <div
+                            aria-hidden="true"
+                            className={classNames(
+                                'absolute inset-0 bg-gradient-to-br to-primary/15',
+                                isDark ? 'from-white/10 via-transparent' : 'from-white/30 via-transparent'
+                            )}
+                        />
                         {media?.type === 'video' ? (
                             <video
                                 src={media.url}

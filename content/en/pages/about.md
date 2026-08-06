@@ -120,6 +120,31 @@ sections:
           url: /images/builders.webp
           altText: Community Leadership
           elementId: ''
+      - type: FeaturedItem
+        title: 1st AI Brasil Hero — Award (2026)
+        text: >
+          Recognized by the Brazilian AI community at AI Brasil / CEIA Open Day
+          after speaking on **Second Brain + AI OS**, hyper-productivity and
+          agentic coding. Award presented by Juliano Kimura.
+        actions:
+          - label: See the talk
+            url: /palestras
+            style: primary
+            type: Link
+        elementId: ''
+        styles:
+          self:
+            textAlign: center
+            padding:
+              - pt-6
+              - pb-6
+              - pl-4
+              - pr-4
+        image:
+          type: ImageBlock
+          url: /palestras/trofeu-ai-brasil-hero.webp
+          altText: 1st AI Brasil Hero trophy
+          elementId: ''
     actions: []
     elementId: ''
     variant: three-col-grid
@@ -220,9 +245,12 @@ sections:
       **Publications & recognition**
       • 🏆 Co-author of the **best tools paper in Brazil at SBCAS 2025** —
       Sobrevidas Project
+      • 🌟 **1st AI Brasil Hero (2026)** — recognition from the Brazilian AI
+      community at AI Brasil / CEIA Open Day
       • Highlighted leader among 60 fellows in the EMBRAPII program, supported
       by eight PhD mentors
-      • Regular speaker on AI and entrepreneurship
+      • 🎤 **Speaker at AI Brasil 2026** — "Second Brain + AI OS" (CEIA Open Day
+      / Go.IAs Experience); regular speaker on AI and entrepreneurship
     actions:
       - label: View Experience
         altText: View detailed experience

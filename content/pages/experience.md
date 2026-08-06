@@ -51,7 +51,8 @@ sections:
 
           • Criei do zero e levei a produção o agente de IA `onboarding-AI`
 
-          • Coordena o onboarding de ponta a ponta com um fluxo multiagente LangGraph
+          • Coordena o onboarding de ponta a ponta com um pipeline de extração
+          com **7 agentes LangGraph** em 3 fases paralelas
 
           • STT em tempo real (AWS Transcribe Streaming + KWS sidecar + LLM corrector)
 
@@ -188,8 +189,9 @@ sections:
           Único responsável por toda a tecnologia da empresa. Criei do zero e
           levei ao deploy em produção o `onboarding-AI` (FastAPI), um agente de
           IA que coordena o onboarding de ponta a ponta. A solução combina um
-          fluxo multiagente LangGraph, STT em tempo real com AWS Transcribe
-          Streaming e integrações com HubSpot, DocuSign, Stripe e Gmail.
+          pipeline de extração com **7 agentes LangGraph** em 3 fases paralelas,
+          STT em tempo real com AWS Transcribe Streaming e integrações com
+          HubSpot, DocuSign, Stripe e Gmail.
         actions: []
         elementId: ''
         styles:
@@ -485,6 +487,13 @@ sections:
       type: TitleBlock
     subtitle: Principais prêmios e reconhecimentos profissionais
     text: >
+      **🌟 1º AI Brasil Hero (2026)**
+
+      Reconhecido como **1º AI Brasil Hero** no AI Brasil / CEIA Open Day, após
+      palestrar sobre Second Brain + AI OS, hiperprodutividade e agentic coding.
+      Prêmio entregue por Juliano Kimura.
+
+
       **🏆 SBCAS 2025 — Melhor Artigo do Brasil**
 
       Artigo sobre o projeto Sobrevidas reconhecido como melhor do país no
@@ -522,9 +531,19 @@ sections:
 
       **🎤 Speaker Reconhecido**
 
-      Palestrante regular em eventos de tecnologia, compartilhando conhecimento
-      sobre IA ética e desenvolvimento de produtos inovadores.
+      Palestrante no **AI Brasil 2026** (CEIA Open Day / Go.IAs Experience) e
+      regular em eventos de tecnologia, compartilhando conhecimento sobre IA
+      ética, hiperprodutividade e desenvolvimento de produtos inovadores.
     actions:
+      - label: Ver palestras
+        altText: 'Ver a página de palestras e o prêmio'
+        url: /palestras
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: ''
+        type: Link
       - label: Convite para Palestras
         altText: 'Convite para palestras'
         url: /contact

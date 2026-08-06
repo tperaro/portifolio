@@ -201,6 +201,56 @@ sections:
         justifyContent: center
       subtitle:
         textAlign: center
+  - type: GenericSection
+    title:
+      text: Reconhecido como 1º AI Brasil Hero
+      color: text-light
+      type: TitleBlock
+    subtitle: 'AI Brasil · CEIA Open Day · Go.IAs Experience — Goiânia, jun 2026'
+    text: >
+      Subi ao palco do AI Brasil para falar sobre **Second Brain + AI OS**: como
+      uma stack de agentes vira hiperprodutividade real — a mesma arquitetura
+      SOTA que rodo na Count on Sheep. No encerramento, recebi das mãos de
+      Juliano Kimura o prêmio **1º AI Brasil Hero**. Detalhe: este portfólio
+      roda exatamente sobre a arquitetura que apresentei — o LLM é o kernel, a
+      janela de contexto é a RAM e os arquivos `.md` versionados em git são o
+      disco.
+    actions:
+      - label: Ver a palestra
+        altText: Ver a página de palestras e o prêmio
+        url: /palestras
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: ''
+        type: Link
+      - label: Convites para palestras
+        altText: Convites para palestras
+        url: /contact
+        showIcon: true
+        icon: mail
+        iconPosition: right
+        style: secondary
+        elementId: ''
+        type: Link
+    media:
+      url: /palestras/palco-aibrasil.webp
+      altText: Thiago Peraro palestrando no AI Brasil
+      elementId: ''
+      type: ImageBlock
+    elementId: reconhecimento
+    colors: bg-dark-fg-light
+    styles:
+      self:
+        alignItems: center
+        flexDirection: row
+        padding:
+          - pt-16
+          - pb-16
+          - pl-4
+          - pr-4
+        justifyContent: center
   - type: FeaturedItemsSection
     title:
       text: Linha do Tempo
@@ -333,10 +383,10 @@ sections:
 
           Único responsável técnico da empresa. Criei do zero e levei ao deploy
           em produção o `onboarding-AI` (FastAPI), um **agente de IA que coordena
-          o onboarding de ponta a ponta**. A solução combina um fluxo multiagente
-          LangGraph, STT em tempo real (AWS Transcribe + KWS sidecar + LLM
-          corrector) e integrações com HubSpot, DocuSign, Stripe, Gmail e Google
-          Workspace.
+          o onboarding de ponta a ponta**. A solução combina um pipeline de
+          extração com **7 agentes LangGraph** em 3 fases paralelas, STT em
+          tempo real (AWS Transcribe + KWS sidecar + LLM corrector) e
+          integrações com HubSpot, DocuSign, Stripe, Gmail e Google Workspace.
         actions: []
         elementId: ''
         styles:

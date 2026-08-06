@@ -69,17 +69,31 @@ function ImageGalleryVariants(props) {
     }
 }
 
-function ImageGalleryStaticGrid({ images = [], hasTopMargin, justifyContent = 'flex-start', hasAnnotations }) {
+function ImageGalleryStaticGrid({ images = [], hasTopMargin, justifyContent = 'center', hasAnnotations }) {
     if (images.length === 0) {
         return null;
     }
     return (
         <div
-            className={classNames('w-full', 'flex', 'flex-wrap', 'items-center', mapStyles({ justifyContent: justifyContent }), { 'mt-12': hasTopMargin })}
+            className={classNames(
+                'w-full',
+                'flex',
+                'flex-wrap',
+                'items-center',
+                'gap-4',
+                'sm:gap-6',
+                mapStyles({ justifyContent: justifyContent }),
+                { 'mt-12': hasTopMargin }
+            )}
             {...(hasAnnotations && { 'data-sb-field-path': '.images' })}
         >
             {images.map((image, index) => (
-                <ImageBlock key={index} {...image} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                <ImageBlock
+                    key={index}
+                    {...image}
+                    imageClassName="h-44 sm:h-56 lg:h-64 w-auto max-w-full rounded-xl shadow-md object-cover"
+                    {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })}
+                />
             ))}
         </div>
     );

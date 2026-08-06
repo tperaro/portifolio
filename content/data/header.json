@@ -48,6 +48,15 @@
             "type": "Link"
         },
         {
+            "label": "Palestras",
+            "altText": "Palestras e reconhecimento",
+            "url": "/palestras",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "type": "Link"
+        },
+        {
             "label": "Blog",
             "altText": "Blog",
             "url": "/blog",
