@@ -19,7 +19,7 @@ seo:
 type: PostLayout
 ---
 
-The Sobrevidas project represents a milestone in my career as a researcher and a powerful example of how artificial intelligence can be applied to solve real problems and save lives. As the leader of the AI team at CEIA-UFG, I had the privilege of coordinating the development of a solution that received national recognition.
+The Sobrevidas project represents a milestone in my career as a researcher and a powerful example of how artificial intelligence can be applied to solve real problems and save lives. As the leader of the project's AI team — an undergraduate research project at UFG, where I am completing my Computer Science degree — I had the privilege of coordinating the development of a solution that received national recognition.
 
 ## The Problem: Late Diagnosis of Oral Cancer
 
@@ -36,26 +36,11 @@ Our mission was clear: develop an AI solution that could democratize access to e
 
 ### System Architecture
 
-We developed a conversational chatbot that uses advanced Natural Language Processing (NLP) techniques to:
+We developed a conversational chatbot that uses advanced Natural Language Processing (NLP) techniques. Each conversation runs through three chained layers:
 
-```python
-# Simplified example of analysis architecture
-class CancerScreeningBot:
-    def __init__(self):
-        self.nlp_model = load_specialized_model()
-        self.risk_classifier = RiskClassificationModel()
-        self.sus_integration = SUSIntegrationService()
-
-    def analyze_symptoms(self, user_input):
-        # Processes user's natural language
-        processed_text = self.nlp_model.process(user_input)
-
-        # Classifies risk level
-        risk_level = self.risk_classifier.predict(processed_text)
-
-        # Generates personalized recommendations
-        return self.generate_recommendations(risk_level)
-```
+1. **Interpretation** — the language model reads the patient's account in colloquial Portuguese and extracts the symptoms being described.
+2. **Risk classification** — the extracted symptoms, together with behavioral and demographic factors, feed the model that assigns an urgency level.
+3. **Referral** — the urgency level determines the recommendation and, when warranted, triggers the integration with the public health network.
 
 ### Main Features
 
@@ -78,48 +63,26 @@ class CancerScreeningBot:
 
 ### 1. Medical Natural Language Processing
 
-Developing a model that understands colloquial Brazilian language for medical symptoms:
+The hardest part was teaching the model how Brazilians actually describe a symptom. Nobody shows up saying "I present an ulcer on my oral mucosa" — they say "I've got a sore in my mouth that won't heal". We had to map that colloquial vocabulary onto clinical terminology:
 
-```python
-# Example of preprocessing for colloquial medical terms
-SYMPTOM_MAPPING = {
-    "mouth sore": ["oral ulcer", "mucosal lesion"],
-    "neck lump": ["palpable lymph node", "adenopathy"],
-    "hoarseness": ["dysphonia", "voice change"],
-    "sore throat": ["odynophagia", "pharyngeal pain"]
-}
+| How the patient says it | Clinical term |
+| --- | --- |
+| sore in the mouth | oral ulcer, mucosal lesion |
+| lump in the neck | palpable lymph node, adenopathy |
+| hoarseness | dysphonia |
+| sore throat | odynophagia |
 
-def normalize_symptoms(user_text):
-    normalized = user_text.lower()
-    for colloquial, medical_terms in SYMPTOM_MAPPING.items():
-        if colloquial in normalized:
-            normalized = normalized.replace(colloquial, medical_terms[0])
-    return normalized
-```
+This mapping is not a fixed table: regional wording varies a lot across Brazilian states, and much of the research work went into widening that coverage without producing false positives.
 
 ### 2. Risk Classification Model
 
-We created a scoring system that considers multiple factors:
+We created a scoring system that combines three groups of factors, each with its own weight:
 
-```python
-class RiskScoring:
-    def calculate_risk(self, patient_data):
-        risk_score = 0
+- **Behavioral** — smoking and drinking, weighted by length of exposure rather than a plain yes or no. Twenty years of cigarettes does not carry the same weight as two.
+- **Reported symptoms** — every symptom extracted from the conversation contributes a weight, and certain combinations raise the risk more than the sum of their parts.
+- **Demographic** — age bracket and other epidemiological markers for oral cancer.
 
-        # Behavioral factors
-        if patient_data.get('smoking'):
-            risk_score += self.smoking_weight(patient_data['smoking_years'])
-
-        # Reported symptoms
-        symptom_score = self.analyze_symptoms(patient_data['symptoms'])
-        risk_score += symptom_score
-
-        # Demographic data
-        age_factor = self.age_risk_factor(patient_data['age'])
-        risk_score += age_factor
-
-        return self.classify_risk_level(risk_score)
-```
+The total lands in a band that defines the course of action: preventive guidance, follow-up, or priority referral. Calibrating those weights was the most delicate work — in cancer screening a false negative costs far more than a false positive, and the model has to err on the safe side.
 
 ### 3. Integration with SUS Systems
 
@@ -147,31 +110,13 @@ Our research was recognized with the **best paper award in Brazil at SBCAS 2025*
 
 ## Technologies Used
 
-```yaml
-Backend:
-  - Python 3.9
-  - FastAPI
-  - SQLAlchemy
-  - Celery (asynchronous processing)
+**Backend** — Python 3.9, FastAPI, SQLAlchemy and Celery for asynchronous processing.
 
-AI/ML:
-  - spaCy (NLP in Portuguese)
-  - scikit-learn (classification)
-  - Transformers (BERT Portuguese)
-  - TensorFlow (neural networks)
+**AI/ML** — spaCy for Portuguese NLP, Transformers (BERT Portuguese) and scikit-learn for classification, TensorFlow for the neural networks.
 
-Integration:
-  - REST APIs
-  - FHIR (health data standard)
-  - OAuth 2.0 (security)
-  - Docker (containerization)
+**Integration** — REST APIs over the FHIR health data standard, OAuth 2.0 and Docker.
 
-Infrastructure:
-  - AWS (cloud computing)
-  - PostgreSQL (structured data)
-  - Redis (cache and queues)
-  - Nginx (reverse proxy)
-```
+**Infrastructure** — AWS, PostgreSQL for structured data, Redis for cache and queues, Nginx as reverse proxy.
 
 ## Lessons Learned
 
@@ -219,4 +164,4 @@ The national recognition at SBCAS 2025 is just the beginning. Our mission is to 
 
 ---
 
-*The Sobrevidas project is developed at CEIA-UFG with CNPq funding. For more information about research collaborations or solution application, contact through [LinkedIn](https://www.linkedin.com/in/thiago-peraro/).*
+*The Sobrevidas project is developed at UFG as an undergraduate research project with a CNPq scholarship. For more information about research collaborations or solution application, contact through [LinkedIn](https://www.linkedin.com/in/thiago-peraro/).*

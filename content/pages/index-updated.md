@@ -256,7 +256,7 @@ sections:
       - type: FeaturedItem
         title: 2024-presente
         text: >
-          **CEIA-UFG | Projeto Sobrevidas**
+          **UFG | Projeto Sobrevidas (iniciação científica, bolsa CNPq)**
 
           Pesquisador de NLP no CEIA-UFG, bolsista CNPq. Líder da equipe de IA
           do projeto Sobrevidas - chatbot integrado ao SUS para rastreamento

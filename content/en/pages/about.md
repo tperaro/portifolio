@@ -58,7 +58,8 @@ sections:
       - type: FeaturedItem
         title: Sobrevidas Project — National Award
         text: >
-          I lead the AI team of Sobrevidas at CEIA-UFG, building a SUS-integrated
+          I lead the AI team of Sobrevidas — an undergraduate research project at
+          UFG, with a CNPq scholarship — building a SUS-integrated
           chatbot for oral cancer screening. Our work received the best paper
           award in Brazil at SBCAS 2025, recognizing the project’s social impact.
         actions: []

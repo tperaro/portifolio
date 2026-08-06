@@ -19,7 +19,7 @@ seo:
 type: PostLayout
 ---
 
-O projeto Sobrevidas representa um marco na minha carreira como pesquisador e um exemplo poderoso de como a inteligência artificial pode ser aplicada para resolver problemas reais e salvar vidas. Como líder da equipe de IA no CEIA-UFG, tive o privilégio de coordenar o desenvolvimento de uma solução que recebeu reconhecimento nacional.
+O projeto Sobrevidas representa um marco na minha carreira como pesquisador e um exemplo poderoso de como a inteligência artificial pode ser aplicada para resolver problemas reais e salvar vidas. Como líder da equipe de IA do projeto — uma iniciação científica na UFG, onde me formo em Ciência da Computação —, tive o privilégio de coordenar o desenvolvimento de uma solução que recebeu reconhecimento nacional.
 
 ## O Problema: Diagnóstico Tardio do Câncer de Boca
 
@@ -36,26 +36,11 @@ Nossa missão era clara: desenvolver uma solução de IA que pudesse democratiza
 
 ### Arquitetura do Sistema
 
-Desenvolvemos um chatbot conversacional que utiliza técnicas avançadas de Processamento de Linguagem Natural (NLP) para:
+Desenvolvemos um chatbot conversacional que utiliza técnicas avançadas de Processamento de Linguagem Natural (NLP). A conversa passa por três camadas encadeadas:
 
-```python
-# Exemplo simplificado da arquitetura de análise
-class CancerScreeningBot:
-    def __init__(self):
-        self.nlp_model = load_specialized_model()
-        self.risk_classifier = RiskClassificationModel()
-        self.sus_integration = SUSIntegrationService()
-    
-    def analyze_symptoms(self, user_input):
-        # Processa linguagem natural do usuário
-        processed_text = self.nlp_model.process(user_input)
-        
-        # Classifica nível de risco
-        risk_level = self.risk_classifier.predict(processed_text)
-        
-        # Gera recomendações personalizadas
-        return self.generate_recommendations(risk_level)
-```
+1. **Interpretação** — o modelo de linguagem lê o relato do paciente em português coloquial e extrai os sintomas descritos.
+2. **Classificação de risco** — os sintomas extraídos, somados aos fatores comportamentais e demográficos, alimentam o modelo que atribui um nível de urgência.
+3. **Encaminhamento** — o nível de urgência determina a recomendação e, quando indicado, dispara a integração com a rede do SUS.
 
 ### Funcionalidades Principais
 
@@ -78,48 +63,26 @@ class CancerScreeningBot:
 
 ### 1. Processamento de Linguagem Natural Médica
 
-Desenvolver um modelo que compreendesse a linguagem coloquial brasileira para sintomas médicos:
+O maior desafio foi fazer o modelo entender como o brasileiro realmente descreve um sintoma. Ninguém chega dizendo "apresento uma úlcera na mucosa oral" — a pessoa fala "tô com uma ferida na boca que não sara". Precisamos mapear esse vocabulário coloquial para a terminologia clínica:
 
-```python
-# Exemplo de preprocessing para termos médicos coloquiais
-SYMPTOM_MAPPING = {
-    "ferida na boca": ["úlcera oral", "lesão mucosa"],
-    "caroço no pescoço": ["linfonodo palpável", "adenopatia"],
-    "rouquidão": ["disfonia", "alteração vocal"],
-    "dor de garganta": ["odinofagia", "dor faríngea"]
-}
+| Como o paciente fala | Termo clínico |
+| --- | --- |
+| ferida na boca | úlcera oral, lesão de mucosa |
+| caroço no pescoço | linfonodo palpável, adenopatia |
+| rouquidão | disfonia |
+| dor de garganta | odinofagia |
 
-def normalize_symptoms(user_text):
-    normalized = user_text.lower()
-    for colloquial, medical_terms in SYMPTOM_MAPPING.items():
-        if colloquial in normalized:
-            normalized = normalized.replace(colloquial, medical_terms[0])
-    return normalized
-```
+Esse mapeamento não é uma tabela fixa: regionalismos mudam bastante entre estados, e boa parte do trabalho de pesquisa foi ampliar essa cobertura sem gerar falso positivo.
 
 ### 2. Modelo de Classificação de Risco
 
-Criamos um sistema de scoring que considera múltiplos fatores:
+Criamos um sistema de scoring que combina três grupos de fatores, cada um com peso próprio:
 
-```python
-class RiskScoring:
-    def calculate_risk(self, patient_data):
-        risk_score = 0
-        
-        # Fatores comportamentais
-        if patient_data.get('smoking'):
-            risk_score += self.smoking_weight(patient_data['smoking_years'])
-        
-        # Sintomas reportados
-        symptom_score = self.analyze_symptoms(patient_data['symptoms'])
-        risk_score += symptom_score
-        
-        # Dados demográficos
-        age_factor = self.age_risk_factor(patient_data['age'])
-        risk_score += age_factor
-        
-        return self.classify_risk_level(risk_score)
-```
+- **Comportamentais** — tabagismo e etilismo, ponderados pelo tempo de exposição, não apenas pelo "sim ou não". Vinte anos de cigarro não pesam o mesmo que dois.
+- **Sintomas relatados** — cada sintoma extraído da conversa contribui com um peso, e algumas combinações elevam o risco mais do que a soma das partes.
+- **Demográficos** — faixa etária e outros marcadores epidemiológicos do câncer de boca.
+
+A soma cai numa faixa que define a conduta: orientação preventiva, acompanhamento ou encaminhamento prioritário. Calibrar esses pesos foi o trabalho mais delicado — num rastreamento de câncer, um falso negativo custa muito mais caro que um falso positivo, e o modelo precisa errar para o lado seguro.
 
 ### 3. Integração com Sistemas do SUS
 
@@ -147,31 +110,13 @@ Nossa pesquisa foi reconhecida com o **prêmio de melhor artigo do Brasil no SBC
 
 ## Tecnologias Utilizadas
 
-```yaml
-Backend:
-  - Python 3.9
-  - FastAPI
-  - SQLAlchemy
-  - Celery (processamento assíncrono)
+**Backend** — Python 3.9, FastAPI, SQLAlchemy e Celery para o processamento assíncrono.
 
-IA/ML:
-  - spaCy (NLP em português)
-  - scikit-learn (classificação)
-  - Transformers (BERT Portuguese)
-  - TensorFlow (redes neurais)
+**IA/ML** — spaCy para o NLP em português, Transformers (BERT Portuguese) e scikit-learn na classificação, TensorFlow nas redes neurais.
 
-Integração:
-  - REST APIs
-  - FHIR (padrão de dados de saúde)
-  - OAuth 2.0 (segurança)
-  - Docker (containerização)
+**Integração** — APIs REST sobre o padrão FHIR de dados de saúde, OAuth 2.0 e Docker.
 
-Infraestrutura:
-  - AWS (cloud computing)
-  - PostgreSQL (dados estruturados)
-  - Redis (cache e filas)
-  - Nginx (proxy reverso)
-```
+**Infraestrutura** — AWS, PostgreSQL para os dados estruturados, Redis para cache e filas, Nginx como proxy reverso.
 
 ## Lições Aprendidas
 
@@ -219,4 +164,4 @@ O reconhecimento nacional no SBCAS 2025 é apenas o começo. Nossa missão é co
 
 ---
 
-*O projeto Sobrevidas é desenvolvido no CEIA-UFG com financiamento do CNPq. Para mais informações sobre colaborações em pesquisa ou aplicação da solução, entre em contato através do [LinkedIn](https://www.linkedin.com/in/thiago-peraro/).*
+*O projeto Sobrevidas é desenvolvido na UFG, como projeto de iniciação científica com bolsa do CNPq. Para mais informações sobre colaborações em pesquisa ou aplicação da solução, entre em contato através do [LinkedIn](https://www.linkedin.com/in/thiago-peraro/).*

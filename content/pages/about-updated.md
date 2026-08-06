@@ -69,7 +69,7 @@ sections:
       - type: FeaturedItem
         title: Projeto Sobrevidas - Prêmio Nacional
         text: >
-          Lidero a equipe de IA do projeto Sobrevidas no CEIA-UFG, desenvolvendo um chatbot 
+          Lidero a equipe de IA do projeto Sobrevidas — iniciação científica na UFG, com bolsa do CNPq —, desenvolvendo um chatbot 
           integrado ao SUS para rastreamento de câncer de boca. Nossa solução recebeu o 
           prêmio de melhor artigo do Brasil no SBCAS 2025, reconhecendo o impacto social 
           da pesquisa aplicada.

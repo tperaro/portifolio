@@ -34,17 +34,14 @@ Nossa aplicação monolítica havia crescido significativamente ao longo de 3 an
 
 ### 1. Análise e Planejamento
 
-Antes de começar a migração, fizemos uma análise detalhada da aplicação:
+Antes de começar a migração, fizemos uma análise detalhada da aplicação, agrupando as tabelas e rotas do monólito nos domínios que elas de fato serviam:
 
-```javascript
-// Exemplo de como identificamos os domínios
-const dominios = {
-  autenticacao: ['users', 'auth', 'permissions'],
-  produtos: ['catalog', 'inventory', 'pricing'],
-  pedidos: ['orders', 'payment', 'shipping'],
-  notificacoes: ['emails', 'sms', 'push']
-};
-```
+- **Autenticação** — usuários, sessões e permissões
+- **Produtos** — catálogo, estoque e precificação
+- **Pedidos** — pedidos, pagamento e envio
+- **Notificações** — e-mail, SMS e push
+
+O critério não foi a estrutura do código, e sim quem mudava junto: se duas tabelas sempre eram alteradas na mesma release, elas pertenciam ao mesmo domínio.
 
 ### 2. Padrão Strangler Fig
 

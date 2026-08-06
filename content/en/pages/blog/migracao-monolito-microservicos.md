@@ -34,17 +34,14 @@ Our monolithic application had grown significantly over 3 years. With more than 
 
 ### 1. Analysis and Planning
 
-Before starting the migration, we did a detailed analysis of the application:
+Before starting the migration, we did a detailed analysis of the application, grouping the monolith's tables and routes into the domains they actually served:
 
-```javascript
-// Example of how we identified domains
-const domains = {
-  authentication: ['users', 'auth', 'permissions'],
-  products: ['catalog', 'inventory', 'pricing'],
-  orders: ['orders', 'payment', 'shipping'],
-  notifications: ['emails', 'sms', 'push']
-};
-```
+- **Authentication** — users, sessions and permissions
+- **Products** — catalog, inventory and pricing
+- **Orders** — orders, payment and shipping
+- **Notifications** — email, SMS and push
+
+The criterion was not the shape of the code but what changed together: if two tables were always modified in the same release, they belonged to the same domain.
 
 ### 2. Strangler Fig Pattern
 
