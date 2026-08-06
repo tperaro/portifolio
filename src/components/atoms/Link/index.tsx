@@ -14,13 +14,18 @@ import * as React from 'react';
 import NextLink from 'next/link';
 import { handleAnchorClick } from '../../../utils/smooth-scroll';
 
+// Files served straight out of public/ (a PDF deck, an image, a download). These
+// live outside the i18n routing table, so NextLink would locale-prefix them into
+// a 404 — e.g. /palestras/deck.pdf becoming /pt/palestras/deck.pdf.
+const STATIC_FILE = /\.[a-z0-9]{2,5}(?:[?#].*)?$/i;
+
 export default function Link({ children, href, ...other }) {
     // Check if it's an anchor link (starts with #)
     const isAnchor = href?.startsWith('#');
-    
+
     // Pass Any internal link to Next.js Link, for anything else, use <a> tag
-    const internal = /^\/(?!\/)/.test(href);
-    
+    const internal = /^\/(?!\/)/.test(href) && !STATIC_FILE.test(href);
+
     if (internal) {
         return (
             <NextLink href={href} {...other}>
