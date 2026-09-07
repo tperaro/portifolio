@@ -66,3 +66,13 @@ docs/superpowers/
 /public/hero-robot/*.backup.mp4
 /public/hero-robot/robot-cross.mp4
 .gitnexus
+
+# Claude Code local (skills e config de máquina)
+/.claude/
+
+# TBull — catálogo de estoque; vive em outro site, não neste portfólio
+/public/tbull-stock/
+/public/tbull-stock-img/
+/src/pages/estoque-tbull.tsx
+/src/pages/api/tbull-stock.js
+/scripts/
