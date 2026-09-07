@@ -83,8 +83,8 @@ test('every published Portuguese route has an English counterpart and vice versa
     assert.deepEqual(portugueseKeys, englishKeys);
     assert.equal(
         portugueseKeys.length,
-        23,
-        'expected eight portfolio pages, seven real articles, the guide hub and seven guides per locale'
+        24,
+        'expected eight portfolio pages, eight real articles, the guide hub and seven guides per locale'
     );
 });
 
