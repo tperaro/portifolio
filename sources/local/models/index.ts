@@ -13,6 +13,8 @@ import { FeaturedPostsSection } from './FeaturedPostsSection';
 import { Footer } from './Footer';
 import { FormBlock } from './FormBlock';
 import { GenericSection } from './GenericSection';
+import { GuideHubLayout } from './GuideHubLayout';
+import { GuideLayout } from './GuideLayout';
 import { Header } from './Header';
 import { ImageBlock } from './ImageBlock';
 import { ImageGallerySection } from './ImageGallerySection';
@@ -60,6 +62,8 @@ export const allModels = {
     Footer,
     FormBlock,
     GenericSection,
+    GuideHubLayout,
+    GuideLayout,
     Header,
     ImageBlock,
     ImageGallerySection,

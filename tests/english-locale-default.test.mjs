@@ -81,7 +81,11 @@ test('every published Portuguese route has an English counterpart and vice versa
     const englishKeys = english.map(translationIdentity).sort();
 
     assert.deepEqual(portugueseKeys, englishKeys);
-    assert.equal(portugueseKeys.length, 15, 'expected eight portfolio pages and seven real articles per locale');
+    assert.equal(
+        portugueseKeys.length,
+        23,
+        'expected eight portfolio pages, seven real articles, the guide hub and seven guides per locale'
+    );
 });
 
 test('paired pages retain the same information architecture in both languages', () => {

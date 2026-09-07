@@ -1,31 +1,117 @@
 {
-  "logo": { "url": "/images/logo-white.svg", "altText": "Thiago Peraro", "width": 46, "height": 24, "type": "ImageBlock" },
-  "text": "AI architect and NLP researcher specializing in multi-agent systems, AIOS, and enterprise second brains.",
-  "primaryLinks": {
-    "title": "Navigation",
-    "links": [
-      { "label": "About", "altText": "About me", "url": "/about", "icon": "arrowRight", "iconPosition": "right", "style": "secondary", "type": "Link" },
-      { "label": "Projects", "url": "/projects", "icon": "arrowRight", "iconPosition": "right", "style": "secondary", "type": "Link" },
-      { "label": "Experience", "url": "/experience", "icon": "arrowRight", "iconPosition": "right", "style": "secondary", "type": "Link" },
-      { "label": "Talks", "url": "/palestras", "icon": "arrowRight", "iconPosition": "right", "style": "secondary", "type": "Link" }
+    "logo": {
+        "url": "/images/logo-white.svg",
+        "altText": "Thiago Peraro",
+        "width": 46,
+        "height": 24,
+        "type": "ImageBlock"
+    },
+    "text": "AI architect and NLP researcher specializing in multi-agent systems, AIOS, and enterprise second brains.",
+    "primaryLinks": {
+        "title": "Navigation",
+        "links": [
+            {
+                "label": "About",
+                "altText": "About me",
+                "url": "/about",
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            },
+            {
+                "label": "Projects",
+                "url": "/projects",
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            },
+            {
+                "label": "Experience",
+                "url": "/experience",
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            },
+            {
+                "label": "Talks",
+                "url": "/palestras",
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            },
+            {
+                "label": "Guides",
+                "url": "/guides",
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            }
+        ],
+        "type": "FooterLinksGroup"
+    },
+    "secondaryLinks": {
+        "title": "Contact",
+        "links": [
+            {
+                "label": "LinkedIn",
+                "altText": "LinkedIn profile",
+                "url": "https://www.linkedin.com/in/thiago-peraro/",
+                "icon": "linkedin",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            },
+            {
+                "label": "GitHub",
+                "altText": "GitHub profile",
+                "url": "https://github.com/tperaro",
+                "icon": "github",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            },
+            {
+                "label": "Email",
+                "altText": "Send email",
+                "url": "mailto:perarothiago@gmail.com",
+                "icon": "mail",
+                "iconPosition": "right",
+                "style": "secondary",
+                "type": "Link"
+            }
+        ],
+        "type": "FooterLinksGroup"
+    },
+    "socialLinks": [
+        {
+            "label": "LinkedIn",
+            "altText": "LinkedIn",
+            "url": "https://www.linkedin.com/in/thiago-peraro/",
+            "icon": "linkedin",
+            "type": "Social"
+        },
+        {
+            "label": "GitHub",
+            "altText": "GitHub",
+            "url": "https://github.com/tperaro",
+            "icon": "github",
+            "type": "Social"
+        }
     ],
-    "type": "FooterLinksGroup"
-  },
-  "secondaryLinks": {
-    "title": "Contact",
-    "links": [
-      { "label": "LinkedIn", "altText": "LinkedIn profile", "url": "https://www.linkedin.com/in/thiago-peraro/", "icon": "linkedin", "iconPosition": "right", "style": "secondary", "type": "Link" },
-      { "label": "GitHub", "altText": "GitHub profile", "url": "https://github.com/tperaro", "icon": "github", "iconPosition": "right", "style": "secondary", "type": "Link" },
-      { "label": "Email", "altText": "Send email", "url": "mailto:perarothiago@gmail.com", "icon": "mail", "iconPosition": "right", "style": "secondary", "type": "Link" }
-    ],
-    "type": "FooterLinksGroup"
-  },
-  "socialLinks": [
-    { "label": "LinkedIn", "altText": "LinkedIn", "url": "https://www.linkedin.com/in/thiago-peraro/", "icon": "linkedin", "type": "Social" },
-    { "label": "GitHub", "altText": "GitHub", "url": "https://github.com/tperaro", "icon": "github", "type": "Social" }
-  ],
-  "legalLinks": [],
-  "copyrightText": "© 2026 Thiago Peraro. AI Architect | Researcher | All rights reserved.",
-  "styles": { "self": { "padding": ["pt-16", "pb-8"] } },
-  "type": "Footer"
+    "legalLinks": [],
+    "copyrightText": "© 2026 Thiago Peraro. AI Architect | Researcher | All rights reserved.",
+    "styles": {
+        "self": {
+            "padding": [
+                "pt-16",
+                "pb-8"
+            ]
+        }
+    },
+    "type": "Footer"
 }

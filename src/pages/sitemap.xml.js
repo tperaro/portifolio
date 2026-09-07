@@ -1,6 +1,6 @@
 import { buildLocaleUrl, normalizeSiteUrl } from '../utils/seo-utils';
 
-const INDEXABLE_MODELS = new Set(['PageLayout', 'PostFeedLayout', 'PostLayout']);
+const INDEXABLE_MODELS = new Set(['PageLayout', 'PostFeedLayout', 'PostLayout', 'GuideHubLayout', 'GuideLayout']);
 
 function requestOrigin(context) {
     const forwardedProto = context.req.headers['x-forwarded-proto'];

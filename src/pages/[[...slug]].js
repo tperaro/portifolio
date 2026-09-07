@@ -33,7 +33,7 @@ function Page(props) {
         : null;
     const englishUrl = locale === 'en' ? canonicalUrl : alternateUrl;
     const socialImage = seoGenerateOgImage(page, site, siteUrl);
-    const structuredData = seoGenerateStructuredData({ page, site, locale, canonicalUrl, socialImage });
+    const structuredData = seoGenerateStructuredData({ page, site, locale, canonicalUrl, socialImage, siteUrl });
     return (
         <>
             <Head>

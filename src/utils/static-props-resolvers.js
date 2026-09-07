@@ -1,4 +1,6 @@
 import {
+    getAllGuidesSorted,
+    toGuideEntry,
     getRootPagePath,
     resolveReferences,
     getAllPostsSorted,
@@ -8,6 +10,17 @@ import {
     isPublished,
     mapDeepAsync
 } from './data-utils';
+
+const GUIDE_HUB_MODEL = 'GuideHubLayout';
+
+function guideFileKey(guide) {
+    return (guide.__metadata?.id || '').split('/').pop()?.replace(/\.md$/, '') ?? '';
+}
+
+function guideHubUrlPath(data) {
+    const hub = data.pages.find((page) => page.__metadata?.modelName === GUIDE_HUB_MODEL);
+    return hub?.__metadata?.urlPath ?? '/guias';
+}
 
 export function resolveStaticProps(urlPath, data) {
     // get root path of paged path: /blog/page/2 => /blog
@@ -39,6 +52,33 @@ export function resolveStaticProps(urlPath, data) {
 }
 
 const StaticPropsResolvers = {
+    GuideHubLayout: (props, data) => {
+        let guides = getAllGuidesSorted(data.objects);
+        if (!process.env.stackbitPreview) {
+            guides = guides.filter(isPublished);
+        }
+        return {
+            ...props,
+            guides: guides.map(toGuideEntry)
+        };
+    },
+    GuideLayout: (props, data, debugContext) => {
+        const withAuthor = resolveReferences(props, ['author'], data.objects, debugContext);
+        const requested = props.related ?? [];
+        let guides = getAllGuidesSorted(data.objects);
+        if (!process.env.stackbitPreview) {
+            guides = guides.filter(isPublished);
+        }
+        const relatedGuides = requested
+            .map((key) => guides.find((guide) => guideFileKey(guide) === key))
+            .filter(Boolean)
+            .map(toGuideEntry);
+        return {
+            ...withAuthor,
+            relatedGuides,
+            hubUrlPath: guideHubUrlPath(data)
+        };
+    },
     PostLayout: (props, data, debugContext) => {
         return resolveReferences(props, ['author', 'category'], data.objects, debugContext);
     },

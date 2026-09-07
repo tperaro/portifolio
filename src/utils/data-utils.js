@@ -25,6 +25,49 @@ export function getAllNonFeaturedPostsSorted(objects) {
     return sortPosts(nonFeaturedPosts);
 }
 
+export function getAllGuides(objects) {
+    return objects.filter((object) => object.__metadata?.modelName === 'GuideLayout');
+}
+
+/**
+ * Ordem do catálogo: o campo `order` manda quando existe (é a curadoria da
+ * página); o resto entra por data de atualização, mais recente primeiro.
+ */
+export function getAllGuidesSorted(objects) {
+    return getAllGuides(objects).sort((guideA, guideB) => {
+        const orderA = Number.isFinite(guideA.order) ? guideA.order : Number.MAX_SAFE_INTEGER;
+        const orderB = Number.isFinite(guideB.order) ? guideB.order : Number.MAX_SAFE_INTEGER;
+        if (orderA !== orderB) {
+            return orderA - orderB;
+        }
+        const dateA = new Date(guideA.updatedDate || guideA.date).getTime();
+        const dateB = new Date(guideB.updatedDate || guideB.date).getTime();
+        return dateB - dateA;
+    });
+}
+
+/** Campos que o card do hub e o bloco de relacionados precisam. */
+export function toGuideEntry(guide) {
+    return {
+        title: guide.title,
+        subtitle: guide.subtitle ?? null,
+        urlPath: guide.__metadata?.urlPath,
+        kind: guide.kind ?? null,
+        topics: guide.topics ?? [],
+        level: guide.level ?? null,
+        pricing: guide.pricing ?? null,
+        vendor: guide.vendor ?? null,
+        readingTime: guide.readingTime ?? null,
+        order: guide.order ?? null,
+        date: guide.date ?? null,
+        updatedDate: guide.updatedDate ?? null,
+        icon: guide.icon ?? null,
+        iconUrl: guide.iconUrl ?? null,
+        accentColor: guide.accentColor ?? null,
+        tldr: guide.tldr ?? null
+    };
+}
+
 export function sortPosts(posts) {
     return posts.sort((postA, postB) => new Date(postB.date).getTime() - new Date(postA.date).getTime());
 }

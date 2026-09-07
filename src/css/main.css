@@ -134,6 +134,77 @@
         }
     }
 
+
+    /* Guias: corpo de tutorial. Reduz a escala tipográfica do tema, que é
+       dimensionada para hero de landing page e não para leitura longa. */
+    .sb-guide-markdown {
+        h2 {
+            @apply text-2xl font-bold tracking-tight sm:text-3xl;
+            margin-top: 3rem;
+            scroll-margin-top: 7rem;
+        }
+        h3 {
+            @apply text-lg font-semibold tracking-tight sm:text-xl;
+            margin-top: 2.25rem;
+            scroll-margin-top: 7rem;
+        }
+        h4 {
+            @apply text-base font-semibold;
+            margin-top: 1.75rem;
+        }
+        p,
+        li {
+            @apply text-dark/80;
+        }
+        strong {
+            @apply text-dark;
+        }
+        a {
+            @apply text-primary decoration-primary/40 underline-offset-4;
+        }
+        blockquote {
+            @apply border-l-[3px] border-primary text-dark;
+            font-size: 1.125em;
+        }
+        code {
+            @apply rounded bg-neutral px-1.5 py-0.5 font-mono text-[0.875em] text-dark;
+        }
+        pre {
+            @apply rounded-xl border-dark/15 bg-dark text-light;
+            code {
+                @apply bg-transparent p-0 text-light;
+            }
+        }
+        table {
+            @apply border-dark/15 text-sm;
+        }
+        th,
+        td {
+            @apply border-dark/10;
+            padding: 0.75em;
+        }
+        thead {
+            @apply bg-neutral/50;
+        }
+        figure > * + * {
+            margin-top: 0;
+        }
+        /* Os diagramas numeram os passos com o próprio rótulo; o marcador
+           nativo da lista duplicaria a contagem. */
+        figure ol,
+        figure ul {
+            @apply list-none;
+            padding-left: 0;
+        }
+    }
+
+    /* Os diagramas dos guias trazem o próprio ritmo vertical. O :where() zera a
+       especificidade do seletor interno para que as utilitárias de margem dos
+       componentes (mt-6, mt-3…) continuem vencendo. */
+    .sb-guide-markdown :where(.not-prose) :where(* + *) {
+        margin-top: 0;
+    }
+
     /* Buttons */
     .sb-component-button {
         @apply inline-flex min-h-11 justify-center items-center text-center border font-semibold transition duration-200 ease-in hover:-translate-y-0.5;

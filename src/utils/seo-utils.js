@@ -15,7 +15,7 @@ export function seoGenerateMetaTags(page, site, siteUrl) {
         ...pageMetaTags,
         ...(seoTitle && { 'og:title': seoTitle }),
         ...(metaDescription && { 'og:description': metaDescription }),
-        'og:type': page.__metadata?.modelName === 'PostLayout' ? 'article' : 'website',
+        'og:type': ['PostLayout', 'GuideLayout'].includes(page.__metadata?.modelName) ? 'article' : 'website',
         ...(ogImage && { 'og:image': ogImage }),
         'twitter:card': ogImage ? 'summary_large_image' : 'summary',
         ...(seoTitle && { 'twitter:title': seoTitle }),
@@ -55,8 +55,8 @@ export function seoGenerateTitle(page, site) {
 
 export function seoGenerateMetaDescription(page, site) {
     let metaDescription = null;
-    // Blog posts use the exceprt as the default meta description
-    if (page.__metadata.modelName === 'PostLayout') {
+    // Blog posts and guides use the excerpt as the default meta description
+    if (['PostLayout', 'GuideLayout'].includes(page.__metadata.modelName)) {
         metaDescription = page.excerpt;
     }
     // page metaDescription field overrides all others
@@ -72,8 +72,8 @@ export function seoGenerateOgImage(page, site, siteUrl) {
     if (site.defaultSocialImage) {
         ogImage = site.defaultSocialImage;
     }
-    // Blog posts use the featuredImage as the default og:image
-    if (page.__metadata.modelName === 'PostLayout') {
+    // Blog posts and guides use the featuredImage as the default og:image
+    if (['PostLayout', 'GuideLayout'].includes(page.__metadata.modelName)) {
         if (page.featuredImage?.url) {
             ogImage = page.featuredImage.url;
         }
@@ -118,13 +118,127 @@ export function buildLocaleUrl(siteUrl, locale, urlPath = '/') {
     return `${origin}${localizedPath === '/' ? '/' : `${localizedPath}/`}`;
 }
 
-export function seoGenerateStructuredData({ page, site, locale, canonicalUrl, socialImage }) {
+// Rótulos legíveis para o schema.org; as chaves internas ('coding') não dizem
+// nada para um buscador nem para um modelo lendo a página.
+const TOPIC_NAMES = {
+    coding: { pt: 'Codificação assistida por IA', en: 'AI-assisted coding' },
+    multiagent: { pt: 'Sistemas multiagentes', en: 'Multi-agent systems' },
+    nlp: { pt: 'Processamento de linguagem natural', en: 'Natural language processing' },
+    rag: { pt: 'Retrieval-augmented generation', en: 'Retrieval-augmented generation' },
+    context: { pt: 'Engenharia de contexto', en: 'Context engineering' },
+    ops: { pt: 'Operação de software', en: 'Software operations' }
+};
+
+function topicName(topic, locale) {
+    const entry = TOPIC_NAMES[topic];
+    if (!entry) return topic;
+    return locale === 'pt' ? entry.pt : entry.en;
+}
+
+function breadcrumbList({ siteUrl, locale, hubUrlPath, hubName, homeName, page, canonicalUrl }) {
+    const items = [
+        { name: homeName, url: buildLocaleUrl(siteUrl, locale, '/') },
+        { name: hubName, url: buildLocaleUrl(siteUrl, locale, hubUrlPath) },
+        { name: page.title, url: canonicalUrl }
+    ].filter((item) => item.url);
+
+    if (items.length === 0) {
+        return null;
+    }
+
+    return {
+        '@type': 'BreadcrumbList',
+        itemListElement: items.map((item, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            name: item.name,
+            item: item.url
+        }))
+    };
+}
+
+export function seoGenerateStructuredData({ page, site, locale, canonicalUrl, socialImage, siteUrl }) {
     const language = locale === 'pt' ? 'pt-BR' : 'en';
+    const isPt = locale === 'pt';
     const common = {
         '@context': 'https://schema.org',
         inLanguage: language,
         ...(canonicalUrl && { url: canonicalUrl })
     };
+
+    if (page.__metadata?.modelName === 'GuideHubLayout') {
+        const guides = page.guides ?? [];
+        return [
+            {
+                ...common,
+                '@type': 'CollectionPage',
+                name: seoGenerateTitle(page, site),
+                description: seoGenerateMetaDescription(page, site),
+                mainEntity: {
+                    '@type': 'ItemList',
+                    numberOfItems: guides.length,
+                    itemListElement: guides.map((guide, index) => ({
+                        '@type': 'ListItem',
+                        position: index + 1,
+                        name: guide.title,
+                        description: guide.tldr?.what || guide.subtitle || undefined,
+                        url: buildLocaleUrl(siteUrl, locale, guide.urlPath)
+                    }))
+                }
+            }
+        ];
+    }
+
+    if (page.__metadata?.modelName === 'GuideLayout') {
+        const nodes = [
+            {
+                ...common,
+                '@type': 'TechArticle',
+                headline: page.title,
+                description: seoGenerateMetaDescription(page, site),
+                datePublished: page.date,
+                ...(page.updatedDate && { dateModified: page.updatedDate }),
+                ...(socialImage && { image: socialImage }),
+                ...(page.level && {
+                    proficiencyLevel: page.level === 'beginner' ? 'Beginner' : page.level === 'advanced' ? 'Expert' : 'Intermediate'
+                }),
+                ...(page.prerequisites?.length && { dependencies: page.prerequisites.join(', ') }),
+                author: {
+                    '@type': 'Person',
+                    name: page.author?.name || 'Thiago Peraro',
+                    url: 'https://www.linkedin.com/in/thiago-peraro/'
+                },
+                ...(canonicalUrl && { mainEntityOfPage: canonicalUrl }),
+                ...(page.topics?.length && {
+                    about: page.topics.map((topic) => ({ '@type': 'Thing', name: topicName(topic, locale) }))
+                })
+            },
+            breadcrumbList({
+                siteUrl,
+                locale,
+                hubUrlPath: page.hubUrlPath || (isPt ? '/guias' : '/guides'),
+                hubName: isPt ? 'Guias' : 'Guides',
+                homeName: isPt ? 'Início' : 'Home',
+                page,
+                canonicalUrl
+            })
+        ].filter(Boolean);
+
+        if (page.faq?.length) {
+            nodes.push({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                inLanguage: language,
+                mainEntity: page.faq.map((item) => ({
+                    '@type': 'Question',
+                    name: item.question,
+                    acceptedAnswer: { '@type': 'Answer', text: item.answer }
+                }))
+            });
+        }
+
+        return nodes;
+    }
 
     if (page.__metadata?.modelName === 'PostLayout') {
         return {
