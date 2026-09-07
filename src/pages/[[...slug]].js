@@ -89,6 +89,9 @@ export async function getStaticProps({ params, locale }) {
     const data = allContent({ locale });
     const urlPath = '/' + (params.slug || []).join('/');
     const resolvedProps = await resolveStaticProps(urlPath, data);
+    if (!resolvedProps) {
+        return { notFound: true };
+    }
     const alternateLocale = locale === 'pt' ? 'en' : 'pt';
     const alternateData = allContent({ locale: alternateLocale });
     const currentContentId = resolvedProps.page.__metadata.id;

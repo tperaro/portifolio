@@ -122,7 +122,7 @@ test('only substantive portfolio content is public', () => {
     });
 
     const archived = loadContent('content/pages').filter((entry) => entry.attributes.isDraft);
-    assert.ok(archived.length >= 20, 'template posts and duplicate page backups should remain unpublished');
+    assert.ok(archived.length >= 10, 'duplicate page backups should remain unpublished');
 });
 
 test('all local images referenced by published content exist', () => {
@@ -179,4 +179,48 @@ test('the scrubbed hero runs only where a device can afford it', () => {
     // The poster still carries the LCP hints and the mobile-safe viewport height.
     assert.match(scrollHero, /fetchPriority="high"/);
     assert.match(scrollHero, /min-h-\[calc\(100svh-5rem\)\]/);
+});
+
+test('template demo pages are gone from both locales', () => {
+    const removedTemplateFiles = [
+        'content/pages/careers.md',
+        'content/pages/pricing.md',
+        'content/pages/blog/case-study-1.md',
+        'content/pages/blog/case-study-2.md',
+        'content/pages/blog/case-study-3.md',
+        'content/pages/blog/five-tips-for-starting-a-startup.md',
+        'content/pages/blog/how-to-write-a-blog-post-that-will-get-you-more-traffic.md',
+        'content/pages/blog/surround-yourself-with-right-people.md',
+        'content/pages/blog/top-twenty-ways-to-save-time.md',
+        'content/pages/blog/track-the-right-metrics-for-your-business.md',
+        'content/pages/blog/what-is-a-design-system.md',
+        'content/en/pages/careers.md',
+        'content/en/pages/pricing.md',
+        'content/en/pages/blog/case-study-1.md',
+        'content/en/pages/blog/case-study-2.md',
+        'content/en/pages/blog/case-study-3.md',
+        'content/en/pages/blog/five-tips-for-starting-a-startup.md',
+        'content/en/pages/blog/how-to-write-a-blog-post-that-will-get-you-more-traffic.md',
+        'content/en/pages/blog/surround-yourself-with-right-people.md',
+        'content/en/pages/blog/top-twenty-ways-to-save-time.md',
+        'content/en/pages/blog/track-the-right-metrics-for-your-business.md',
+        'content/en/pages/blog/what-is-a-design-system.md',
+        'content/en/data/person2.json',
+        'content/en/data/person3.json',
+        'content/en/data/person4.json',
+        'content/en/data/person5.json',
+        'content/en/data/person6.json'
+    ];
+
+    removedTemplateFiles.forEach((relativePath) => {
+        assert.equal(fs.existsSync(path.join(rootDir, relativePath)), false, `${relativePath} should not exist`);
+    });
+});
+
+test('a url with no matching page becomes a 404 instead of crashing the build', () => {
+    const pageLoader = read('src/pages/[[...slug]].js');
+    const propsResolver = read('src/utils/static-props-resolvers.js');
+
+    assert.match(propsResolver, /if \(!page\) \{\s*return null;\s*\}/);
+    assert.match(pageLoader, /if \(!resolvedProps\) \{\s*return \{ notFound: true \};\s*\}/);
 });
