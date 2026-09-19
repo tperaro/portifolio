@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Vídeo-tutorial narrado sem gravar a tela</title>
+  <desc id="description">Tres screenshots de um sistema web, cada uma com uma area em destaque, ligadas a uma onda de narracao e a um botao de play</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#090d18"/>
+      <stop offset="0.55" stop-color="#131932"/>
+      <stop offset="1" stop-color="#241b36"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f28a4b" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#f28a4b" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#b7c0df" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" rx="28" fill="url(#background)"/>
+  <rect width="1200" height="630" rx="28" fill="url(#grid)"/>
+  <circle cx="880" cy="300" r="330" fill="url(#glow)"/>
+
+  <g transform="translate(78 86)">
+    <rect width="92" height="7" rx="3.5" fill="#f28a4b"/>
+    <text x="0" y="72" fill="#f5f7ff" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800" letter-spacing="-2">VÍDEO-TUTORIAL</text>
+    <text x="0" y="136" fill="#f5f7ff" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800" letter-spacing="-2">SEM GRAVAR</text>
+    <text x="0" y="200" fill="#f5f7ff" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800" letter-spacing="-2">A TELA</text>
+    <text x="2" y="250" fill="#b7c0df" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="500">Screenshots com destaque, voz local e ffmpeg.</text>
+    <text x="2" y="280" fill="#b7c0df" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="500">O agente monta o tour sozinho.</text>
+    <g transform="translate(2 336)">
+      <rect width="118" height="32" rx="16" fill="none" stroke="#7f8ab5" stroke-width="1.5"/>
+      <text x="59" y="21" text-anchor="middle" fill="#b7c0df" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">PLAYWRIGHT</text>
+      <rect x="130" width="86" height="32" rx="16" fill="none" stroke="#7f8ab5" stroke-width="1.5"/>
+      <text x="173" y="21" text-anchor="middle" fill="#b7c0df" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">TTS</text>
+      <rect x="228" width="96" height="32" rx="16" fill="none" stroke="#7f8ab5" stroke-width="1.5"/>
+      <text x="276" y="21" text-anchor="middle" fill="#b7c0df" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">FFMPEG</text>
+    </g>
+  </g>
+
+  <!-- três quadros, cada um com um destaque diferente -->
+  <g transform="translate(660 92)" filter="url(#shadow)">
+    <g>
+      <rect width="250" height="150" rx="12" fill="#1b2340" stroke="#3a4570" stroke-width="1.5"/>
+      <rect width="250" height="24" rx="12" fill="#232c52"/>
+      <circle cx="16" cy="12" r="4" fill="#f28a4b"/><circle cx="30" cy="12" r="4" fill="#7f8ab5"/><circle cx="44" cy="12" r="4" fill="#7f8ab5"/>
+      <rect x="16" y="38" width="218" height="96" rx="6" fill="#0d1226" fill-opacity="0.75"/>
+      <rect x="22" y="44" width="96" height="40" rx="6" fill="#2b3563"/>
+      <rect x="22" y="44" width="96" height="40" rx="6" fill="none" stroke="#b1e358" stroke-width="3"/>
+      <rect x="128" y="44" width="100" height="40" rx="6" fill="#161d36"/>
+      <rect x="22" y="92" width="206" height="36" rx="6" fill="#161d36"/>
+      <text x="236" y="-10" text-anchor="end" fill="#7f8ab5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" letter-spacing="2">01</text>
+    </g>
+    <g transform="translate(40 184)">
+      <rect width="250" height="150" rx="12" fill="#1b2340" stroke="#3a4570" stroke-width="1.5"/>
+      <rect width="250" height="24" rx="12" fill="#232c52"/>
+      <circle cx="16" cy="12" r="4" fill="#f28a4b"/><circle cx="30" cy="12" r="4" fill="#7f8ab5"/><circle cx="44" cy="12" r="4" fill="#7f8ab5"/>
+      <rect x="16" y="38" width="218" height="96" rx="6" fill="#0d1226" fill-opacity="0.75"/>
+      <rect x="22" y="44" width="96" height="40" rx="6" fill="#161d36"/>
+      <rect x="128" y="44" width="100" height="40" rx="6" fill="#161d36"/>
+      <rect x="22" y="92" width="206" height="36" rx="6" fill="#2b3563"/>
+      <rect x="22" y="92" width="206" height="36" rx="6" fill="none" stroke="#b1e358" stroke-width="3"/>
+      <text x="276" y="80" fill="#7f8ab5" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" letter-spacing="2">02</text>
+    </g>
+  </g>
+
+  <!-- onda de narração e play -->
+  <g transform="translate(660 470)">
+    <g fill="#f28a4b">
+      <rect x="0" y="22" width="6" height="16" rx="3"/>
+      <rect x="12" y="12" width="6" height="36" rx="3"/>
+      <rect x="24" y="4" width="6" height="52" rx="3"/>
+      <rect x="36" y="16" width="6" height="28" rx="3"/>
+      <rect x="48" y="8" width="6" height="44" rx="3"/>
+      <rect x="60" y="20" width="6" height="20" rx="3"/>
+      <rect x="72" y="10" width="6" height="40" rx="3"/>
+      <rect x="84" y="0" width="6" height="60" rx="3"/>
+      <rect x="96" y="14" width="6" height="32" rx="3"/>
+      <rect x="108" y="22" width="6" height="16" rx="3"/>
+      <rect x="120" y="6" width="6" height="48" rx="3"/>
+      <rect x="132" y="18" width="6" height="24" rx="3"/>
+      <rect x="144" y="12" width="6" height="36" rx="3"/>
+      <rect x="156" y="24" width="6" height="12" rx="3"/>
+    </g>
+    <path d="M186 30 L262 30 M250 20 L264 30 L250 40" stroke="#7f8ab5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="316" cy="30" r="34" fill="#f28a4b"/>
+    <path d="M304 12 L336 30 L304 48 Z" fill="#111420"/>
+    <text x="370" y="37" fill="#f5f7ff" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">tour.mp4</text>
+  </g>
+</svg>
