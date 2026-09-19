@@ -382,8 +382,11 @@ sections:
           an **AI agent that coordinates onboarding end to end**. The solution
           combines an extraction pipeline with **7 LangGraph agents** across 3
           parallel phases, real-time STT (AWS Transcribe + KWS sidecar + LLM
-          corrector), and integrations with HubSpot, DocuSign, Stripe, Gmail and
-          Google Workspace.
+          corrector), and integrations with Pipedrive, DocuSign, Stripe, Gmail
+          and Google Workspace. Together with the CEO, we tripled organic
+          visits and grew AI-answer impressions 5x on the website in 3 months
+          (Google Search Console), and I moved the company off HubSpot before
+          the shutdown deadline, migrating the CRM to Pipedrive.
         actions: []
         elementId: ''
         styles:

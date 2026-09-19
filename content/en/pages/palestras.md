@@ -79,6 +79,48 @@ sections:
         justifyContent: center
   - type: GenericSection
     title:
+      text: go.IAs Talks
+      color: text-dark
+      type: TitleBlock
+    subtitle: '"Desenvolvimento com IA: SDLC na prática" — Aug 27, 2026'
+    text: >
+      I closed out the go.IAs Talks live stream — **"Desenvolvimento com IA:
+      SDLC na prática"** — with a ~20-minute talk on the AI-native SDLC:
+      agents running in the background, AI-reviewed PRs and TDD as the
+      central practice of the new development cycle.
+    actions:
+      - label: Read the post
+        altText: Read the post on the AI-native SDLC
+        url: /blog/the-bottleneck-moved-ai-native-sdlc
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: ''
+        type: Link
+    elementId: ''
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        alignItems: center
+        flexDirection: col
+        padding:
+          - pt-16
+          - pb-16
+          - pl-4
+          - pr-4
+        justifyContent: center
+        textAlign: center
+      title:
+        textAlign: center
+      subtitle:
+        textAlign: center
+      text:
+        textAlign: center
+      actions:
+        justifyContent: center
+  - type: GenericSection
+    title:
       text: 'The thesis: Second Brain + AI OS'
       color: text-light
       type: TitleBlock
@@ -250,7 +292,8 @@ seo:
   metaTitle: Talks & Recognition | Thiago Peraro
   metaDescription: >-
     Thiago Peraro at AI Brasil 2026 — the "Second Brain + AI OS" talk at CEIA
-    Open Day and Go.IAs Experience, and the 1st AI Brasil Hero award.
+    Open Day and Go.IAs Experience, the 1st AI Brasil Hero award, and the
+    go.IAs Talks live on AI-native SDLC.
   socialImage: /palestras/palco-aibrasil.webp
   type: Seo
 ---

@@ -49,14 +49,58 @@ sections:
 
           • Único responsável técnico da empresa (consultoria de cripto taxes)
 
-          • Criei do zero e levei a produção o agente de IA `onboarding-AI`
+          • Criei do zero e levei a produção o agente de IA `onboarding-AI`,
+          que coordena o onboarding de ponta a ponta com um pipeline de
+          extração com **7 agentes LangGraph** em 3 fases paralelas
 
-          • Coordena o onboarding de ponta a ponta com um pipeline de extração
-          com **7 agentes LangGraph** em 3 fases paralelas
+          • STT em tempo real (AWS Transcribe Streaming + KWS sidecar + LLM
+          corrector); integrações com Pipedrive, Cal.com, DocuSign, Stripe,
+          Slack e Gmail
 
-          • STT em tempo real (AWS Transcribe Streaming + KWS sidecar + LLM corrector)
+          • Junto com o CEO, triplicamos as visitas orgânicas e
+          quintuplicamos as impressões em respostas de IA do site da Count
+          on Sheep em 3 meses (Google Search Console)
 
-          • Integrações HubSpot, DocuSign, Stripe, Gmail
+          • Tirei a Count on Sheep do HubSpot antes do desligamento: site
+          reconstruído em Astro e Next.js na Vercel, agendamento no Cal.com,
+          CRM migrado para o Pipedrive e uma auditoria multiagente para não
+          sobrar nenhum resíduo
+
+          • Criei um radar semanal de visibilidade em IA: mede se ChatGPT,
+          Gemini, AI Overview, Perplexity e Copilot citam a Count on Sheep,
+          compara com os concorrentes e entrega um relatório em PDF no Slack
+          do marketing
+
+          • SEO técnico, GEO e performance: sitemaps consolidados com 104
+          URLs antes inacessíveis ao Google, hreflang, fim das cadeias de
+          redirecionamento, 52 páginas órfãs religadas e 96 URLs migradas
+          sem sair do ar; llms.txt e JSON-LD (Organization, FAQPage, Person)
+          para citação por IA; CLS do blog da COS Elite caiu de 0,17 para
+          0,004 e as imagens das páginas de localização ficaram 12x mais
+          leves
+
+          • Montei a atribuição ponta a ponta do marketing: do UTM do
+          primeiro clique até a reunião agendada no Cal.com, passando por
+          n8n, CRM e Postgres, com um ranking de páginas por reunião
+          agendada para decidir onde investir em link building
+
+          • Co-construí o Shepherd, a plataforma que substitui a planilha
+          de ~1.000 abas da operação (vendas, entrega, faturamento e
+          capacidade): Next.js 16, Drizzle, Neon e Clerk na Vercel; fiquei
+          com dados e integrações — ETL da planilha e do CRM, bot do Slack,
+          detecção de no-show pelo Google Meet e pagamentos no Stripe — e
+          com o ambiente de staging
+
+          • Levei DevSecOps para todos os repositórios da empresa: scanner
+          de CVE bloqueando o CI, detecção de segredos no pre-commit e 27
+          alertas do Supabase resolvidos numa migração só
+
+          • Evolução do onboarding-AI: avaliação contínua do STT por WER
+          (taxa de erro de palavras) com erros classificados por tipo,
+          observabilidade com Sentry (tracing, profiling e monitor dos
+          jobs), staging serverless em Vercel Functions (Python), extensão
+          do Chrome que captura o áudio do Google Meet e intake automático
+          da call de vendas para o CRM via n8n
         actions: []
         elementId: ''
         styles:
@@ -87,6 +131,16 @@ sections:
           • Testes de Red Team adversarial com DeepTeam (prompt injection)
 
           • Cuida da infraestrutura dos serviços do time
+
+          • Segundo provedor de LLM (Cerebras) com circuit breaker e rotação
+          de chaves
+
+          • Custo e latência por sessão, reconciliados com a fatura real
+
+          • Benchmark que embasou a escolha da arquitetura multiagente com
+          LLM em vez de classificadores BERT
+
+          • Deploy com checagem prévia, backup e rollback; Keycloak com PKCE
         actions: []
         elementId: ''
         styles:
@@ -115,6 +169,14 @@ sections:
           (categoria ferramentas)
 
           • Projeto distinto do Koru — foco em saúde pública e vigilância epidemiológica
+
+          • Servidor MCP em Go que dá ao Claude Code acesso somente leitura
+          aos logs de erro da infraestrutura, com consultas em LogQL, a
+          linguagem de consulta do Grafana Loki
+
+          • Migrei o monitoramento de pacientes de n8n para 10 StateGraphs
+          em LangGraph, com fila RabbitMQ e retentativa (lembretes,
+          roteamento de mensagens e agendamento via WhatsApp)
         actions: []
         elementId: ''
         styles:

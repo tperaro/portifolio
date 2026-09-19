@@ -259,6 +259,9 @@ sections:
         acompanhado por 8 mentores doutores
       • 🎤 **Palestrante no AI Brasil 2026** — "Second Brain + AI OS" (CEIA Open
         Day / Go.IAs Experience); palestras regulares sobre IA e empreendedorismo
+      • 🎤 **go.IAs Talks (ago/2026)** — "Desenvolvimento com IA: SDLC na
+        prática", sobre SDLC AI-native: agentes em segundo plano, PRs
+        revisados por IA e TDD
     actions:
       - label: Ver Experiência
         altText: Ver experiência detalhada

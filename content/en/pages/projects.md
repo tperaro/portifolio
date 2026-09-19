@@ -86,8 +86,8 @@ sections:
           with **7 LangGraph agents** across 3 parallel phases with **real-time
           STT** via AWS Transcribe Streaming, a
           session state machine, a KWS sidecar for crypto terms, and an LLM
-          corrector, plus integrations with HubSpot, DocuSign, Stripe, Gmail
-          and Google Workspace.
+          corrector, plus integrations with CRM (Pipedrive), DocuSign, Stripe,
+          Gmail and Google Workspace.
         actions:
           - label: Count on Sheep
             altText: 'Count on Sheep'
@@ -205,6 +205,251 @@ sections:
       self:
         padding:
           - pt-8
+          - pb-16
+          - pl-4
+          - pr-4
+        justifyContent: center
+
+  - type: FeaturedItemsSection
+    title:
+      text: Count on Sheep in 2026
+      color: text-dark
+      styles:
+        self:
+          textAlign: center
+      type: TitleBlock
+    subtitle: Technology, growth and product at Count on Sheep
+    items:
+      - type: FeaturedItem
+        title: AI-visibility radar
+        text: >
+          **Count on Sheep | Aug–Sep 2026**
+
+          I built a weekly AI-visibility radar: it measures whether ChatGPT,
+          Gemini, AI Overview, Perplexity and Copilot cite Count on Sheep
+          and benchmarks it against competitors. Sources are DataForSEO's AI Optimization
+          API (brand mentions in LLM answers, share of voice against
+          competitors, AI search volume), Google Search Console, Bing
+          Webmaster (AI Performance) and AI-crawler logs on Vercel. Every
+          week a branded PDF lands in the marketing Slack channel on its
+          own, with a prioritized action queue that only names a cause when
+          there is evidence. Daily Google rank tracking (share of voice,
+          cannibalization, content gaps) for countonsheep.com and
+          coselite.com completes the picture.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+      - type: FeaturedItem
+        title: Shepherd
+        text: >
+          **Count on Sheep | Jul–Sep 2026**
+
+          I co-built Shepherd, the platform that replaces the operation's
+          ~1,000-tab spreadsheet (sales, delivery, billing and capacity):
+          Next.js 16, Drizzle, Neon and Clerk on Vercel. I own data and
+          integrations — ETL from the spreadsheet and CRM, the Slack bot,
+          no-show detection via Google Meet and Stripe payments — plus the
+          staging environment.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+      - type: FeaturedItem
+        title: Process Hub
+        text: >
+          **Count on Sheep | Mar–Sep 2026**
+
+          I created Count on Sheep's Process Hub: the company's second
+          brain, with ~378 documents and 29 architecture decisions, operated
+          through my own Claude Code and Codex skills, with nightly LLM
+          memory consolidation in read-only mode. It's the practice behind
+          the "Second Brain + AI OS" talk.
+        actions:
+          - label: Read the post
+            altText: 'Read the post on the Process Hub'
+            url: /blog/aios-enterprise-second-brain
+            showIcon: true
+            icon: arrowRight
+            iconPosition: right
+            style: primary
+            elementId: ''
+            type: Link
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+      - type: FeaturedItem
+        title: Attribution and first-party analytics
+        text: >
+          **Count on Sheep | May–Sep 2026**
+
+          I built end-to-end marketing attribution: from the first click's
+          UTM to the call booked on Cal.com, through n8n, the CRM and
+          Postgres, with a ranking of pages by booked calls to decide where
+          to invest in link building. I also built the sites' first-party
+          analytics (Supabase, FingerprintJS and web-vitals), consent-aware
+          (LGPD/GDPR) with a dedicated GTM container per brand. In the COS
+          Data Hub it shows live active visitors, sessions and unique
+          visitors, booked calls, UTM acquisition, device and browser, pages
+          per session and session duration, top sections viewed, navigation
+          clicks, a click heatmap and Web Vitals (p75), plus visits coming
+          from AI, paid search and ambassadors.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+      - type: FeaturedItem
+        title: COS Data Hub
+        text: >
+          **Count on Sheep | Jul–Sep 2026**
+
+          I built the COS Data Hub, a multi-brand dashboard
+          (countonsheep.com and coselite.com) that reconciles GA4, BigQuery,
+          Vercel Analytics, first-party analytics and Search Console page by
+          page — the "three truths" — alerting when sources diverge by more
+          than 15%, with an AI-visibility tab. Design rule: a metric that
+          wasn't collected never shows up as zero. Stack: React 19 +
+          TypeScript + TanStack Query + Recharts, data from onboarding-AI
+          (FastAPI) and Supabase.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+      - type: FeaturedItem
+        title: Automatic review of SEO pages
+        text: >
+          **Count on Sheep | Sep 2026**
+
+          The website receives changes made by other people's AI agents. I
+          built an automatic review that protects the most important SEO
+          pages: on every pull request it renders those pages before and
+          after the change (build + Playwright) and flags what changed in the
+          HTML, schema, call-to-action buttons and visuals. Decisions follow
+          fixed rules, with no LLM, so the same change always gets the same
+          result.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+      - type: FeaturedItem
+        title: COS Elite
+        text: >
+          **Count on Sheep | Apr–Sep 2026**
+
+          I migrated the COS Elite website from HubSpot to Next.js 16 +
+          Sanity on Vercel, with its own analytics and SEO/GEO, cutting
+          about US$1k per month in tooling.
+        actions:
+          - label: COS Elite
+            altText: 'See the COS Elite website'
+            url: https://coselite.com
+            showIcon: true
+            icon: arrowRight
+            iconPosition: right
+            style: primary
+            elementId: ''
+            type: Link
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+      - type: FeaturedItem
+        title: Client portal
+        text: >
+          **Count on Sheep | Mar–Sep 2026**
+
+          I built and maintain the client onboarding portal
+          (onramp.countonsheep.com, React 19): each client follows their own
+          steps through a unique link, no login required, with animated
+          tutorials for each crypto-tax software. Hosted on Vercel, with
+          Sentry and a mobile version.
+        actions:
+          - label: See the portal
+            altText: 'See the client onboarding portal'
+            url: https://onramp.countonsheep.com
+            showIcon: true
+            icon: arrowRight
+            iconPosition: right
+            style: secondary
+            elementId: ''
+            type: Link
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+      - type: FeaturedItem
+        title: Referral program
+        text: >
+          **Count on Sheep | Jun–Aug 2026**
+
+          I built the company's referral and ambassador program end to end:
+          unique codes, cookie-based tracking, automatic deal creation in
+          the CRM via Cal.com and n8n, a payout webhook and an admin panel,
+          with security hardening.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+    actions: []
+    elementId: ''
+    variant: three-col-grid
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-0
           - pb-16
           - pl-4
           - pr-4
@@ -443,6 +688,71 @@ sections:
     elementId: ''
     variant: three-col-grid
     colors: bg-neutral-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-0
+          - pb-16
+          - pl-4
+          - pr-4
+        justifyContent: center
+
+  - type: FeaturedItemsSection
+    title:
+      text: Tools and side projects
+      color: text-dark
+      styles:
+        self:
+          textAlign: center
+      type: TitleBlock
+    subtitle: Automation for AI agents and a personal data project
+    items:
+      - type: FeaturedItem
+        title: Tools I built for agents
+        text: >
+          **Tools for AI agents | 2026**
+
+          My own skills and tools for Claude Code and Codex: auto-generated
+          narrated video tutorials (Playwright + offline TTS + ffmpeg); a
+          bridge that lets Playwright reuse a Firefox login by
+          re-implementing Chrome's cookie encryption; audio explanations
+          with offline TTS; offline voice dictation (Parakeet on ONNX);
+          Slack Lists automation; hooks that run local CI before a PR is
+          opened; and a rubric-scored research loop that writes specs on
+          its own.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+      - type: FeaturedItem
+        title: flight-miles
+        text: >
+          **Personal project | 2026**
+
+          A personal project that compares cash fares against the cost in
+          miles: circuit-breaker scrapers for the main miles marketplaces,
+          real fare lookup with Playwright, scheduled jobs and encrypted API
+          keys. FastAPI + async SQLAlchemy + React.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+    actions: []
+    elementId: ''
+    variant: three-col-grid
+    colors: bg-light-fg-dark
     styles:
       self:
         padding:

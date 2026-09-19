@@ -386,7 +386,11 @@ sections:
           o onboarding de ponta a ponta**. A solução combina um pipeline de
           extração com **7 agentes LangGraph** em 3 fases paralelas, STT em
           tempo real (AWS Transcribe + KWS sidecar + LLM corrector) e
-          integrações com HubSpot, DocuSign, Stripe, Gmail e Google Workspace.
+          integrações com Pipedrive, DocuSign, Stripe, Gmail e Google
+          Workspace. Junto com o CEO, triplicamos as visitas orgânicas e
+          quintuplicamos as impressões em respostas de IA do site em 3 meses
+          (Google Search Console), e tirei a empresa do HubSpot antes do
+          desligamento, migrando o CRM para o Pipedrive.
         actions: []
         elementId: ''
         styles:

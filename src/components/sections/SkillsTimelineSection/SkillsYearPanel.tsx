@@ -55,7 +55,7 @@ export default function SkillsYearPanel({ year, onSkillClick, locale = 'pt' }: S
   const newSkills = SKILLS.filter(s => s.start === year);
   const achievements = ACHIEVEMENTS.filter(a => a.year === year);
 
-  const catOrder = ['ai', 'python', 'java', 'frontend', 'devops', 'integrations'];
+  const catOrder = ['ai', 'python', 'java', 'frontend', 'devops', 'integrations', 'growth'];
   const grouped: Record<string, Skill[]> = {};
   catOrder.forEach(cat => {
     const inCat = skillsThisYear.filter(s => s.cat === cat);

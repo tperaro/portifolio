@@ -45,14 +45,59 @@ sections:
 
           • Sole technical owner of the company (US crypto tax consulting)
 
-          • Built the `onboarding-AI` agent from scratch and deployed it to production
+          • Built the `onboarding-AI` agent from scratch and deployed it to
+          production; it coordinates onboarding end to end through an
+          extraction pipeline with **7 LangGraph agents** across 3 parallel
+          phases
 
-          • Coordinates onboarding end to end through an extraction pipeline
-          with **7 LangGraph agents** across 3 parallel phases
+          • Real-time STT (AWS Transcribe Streaming + KWS sidecar + LLM
+          corrector); integrations with Pipedrive, Cal.com, DocuSign,
+          Stripe, Slack and Gmail
 
-          • Real-time STT (AWS Transcribe Streaming + KWS sidecar + LLM corrector)
+          • Together with the CEO, we tripled organic visits and grew
+          AI-answer impressions 5x on the Count on Sheep website in 3
+          months (Google Search Console)
 
-          • Integrations with HubSpot, DocuSign, Stripe and Gmail
+          • I moved Count on Sheep off HubSpot before the shutdown
+          deadline: website rebuilt on Astro and Next.js on Vercel,
+          scheduling on Cal.com, CRM migrated to Pipedrive, and a
+          multi-agent audit to make sure nothing was left behind
+
+          • I built a weekly AI-visibility radar: it measures whether
+          ChatGPT, Gemini, AI Overview, Perplexity and Copilot cite Count
+          on Sheep, benchmarks against competitors, and delivers a PDF
+          report to marketing's Slack channel
+
+          • Technical SEO, GEO and performance: consolidated sitemaps with
+          104 URLs Google couldn't reach made crawlable, hreflang set up
+          for international markets, removed redirect chains, 52 orphan
+          pages reconnected and 96 URLs migrated with zero downtime;
+          llms.txt and JSON-LD (Organization, FAQPage, Person) for AI
+          citation; the COS Elite blog's CLS dropped from 0.17 to 0.004 and
+          location-page images became 12x lighter
+
+          • I built end-to-end marketing attribution: from the first
+          click's UTM to the call booked on Cal.com, through n8n, the CRM
+          and Postgres, with a ranking of pages by booked calls to decide
+          where to invest in link building
+
+          • I co-built Shepherd, the platform that replaces the
+          operation's ~1,000-tab spreadsheet (sales, delivery, billing and
+          capacity): Next.js 16, Drizzle, Neon and Clerk on Vercel; I own
+          data and integrations — ETL from the spreadsheet and CRM, the
+          Slack bot, no-show detection via Google Meet and Stripe payments
+          — plus the staging environment
+
+          • I brought DevSecOps to every company repository: CVE scanning
+          that blocks CI, secret detection in pre-commit, and 27 Supabase
+          advisor warnings resolved in a single migration
+
+          • onboarding-AI evolution: continuous STT evaluation by WER (word
+          error rate) with errors classified by type, Sentry observability
+          (tracing, profiling and job monitoring), serverless staging on
+          Vercel Functions (Python), a Chrome extension that captures
+          Google Meet audio, and automatic sales-call intake into the CRM
+          via n8n
         actions: []
         elementId: ''
         styles:
@@ -79,6 +124,17 @@ sections:
           • Adversarial Red Team testing with DeepTeam (prompt injection)
 
           • Maintains the team's service infrastructure
+
+          • A second LLM provider (Cerebras) with circuit breaker and key
+          rotation
+
+          • Per-session cost and latency, reconciled with the real invoice
+
+          • A benchmark that backed choosing the LLM multi-agent
+          architecture over BERT classifiers
+
+          • Deploys with preflight checks, backup and rollback; Keycloak
+          with PKCE
         actions: []
         elementId: ''
         styles:
@@ -104,6 +160,14 @@ sections:
 
           • Distinct from Koru — focus on public health and epidemiological
           surveillance
+
+          • An MCP server in Go that gives Claude Code read-only access to
+          the infrastructure's error logs, querying them in LogQL, Grafana
+          Loki's query language
+
+          • Migrated patient monitoring from n8n to 10 LangGraph
+          StateGraphs, with a RabbitMQ queue and retries (reminders,
+          message routing and WhatsApp scheduling)
         actions: []
         elementId: ''
         styles:
