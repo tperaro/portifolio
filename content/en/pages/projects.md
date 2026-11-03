@@ -273,7 +273,7 @@ sections:
           **Count on Sheep | Mar–Sep 2026**
 
           I created Count on Sheep's Process Hub: the company's second
-          brain, with ~378 documents and 29 architecture decisions, operated
+          brain, with ~378 documents and 31 architecture decisions, operated
           through my own Claude Code and Codex skills, with nightly LLM
           memory consolidation in read-only mode. It's the practice behind
           the "Second Brain + AI OS" talk.
