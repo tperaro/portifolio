@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Triagem de e-mail com IA que não pode apagar</title>
+  <desc id="description">Mensagens passam por uma trava e saem com etiquetas coloridas; a lixeira está riscada e uma mensagem segue sem etiqueta</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#090d18"/><stop offset="0.55" stop-color="#131932"/><stop offset="1" stop-color="#1b2146"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#5b6ef5" stop-opacity="0.34"/><stop offset="1" stop-color="#5b6ef5" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#b7c0df" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+    <g id="row">
+      <rect width="330" height="62" rx="12" fill="#1d2445" stroke="#3a4470" stroke-width="1.5"/>
+      <rect x="18" y="17" width="38" height="28" rx="5" fill="none" stroke="#aeb8e0" stroke-width="2.5"/>
+      <path d="M19 20 L37 33 L55 20" fill="none" stroke="#aeb8e0" stroke-width="2.5" stroke-linejoin="round"/>
+      <rect x="72" y="19" width="150" height="9" rx="4.5" fill="#7f8ab8"/>
+      <rect x="72" y="36" width="104" height="8" rx="4" fill="#4b5582"/>
+    </g>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="600" cy="300" r="340" fill="url(#glow)"/>
+
+  <!-- entrada -->
+  <g opacity="0.9">
+    <use href="#row" x="60" y="108"/><use href="#row" x="60" y="186"/><use href="#row" x="60" y="264"/><use href="#row" x="60" y="342"/><use href="#row" x="60" y="420"/>
+  </g>
+  <!-- setas -->
+  <path d="M410 293 H486" stroke="#7f8ab8" stroke-width="5" stroke-linecap="round"/><path d="M474 279 L490 293 L474 307" fill="none" stroke="#7f8ab8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M714 293 H790" stroke="#7f8ab8" stroke-width="5" stroke-linecap="round"/><path d="M778 279 L794 293 L778 307" fill="none" stroke="#7f8ab8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- trava -->
+  <path d="M600 124 L694 160 V284 C694 352 648 394 600 416 C552 394 506 352 506 284 V160 Z" fill="#5b6ef5"/>
+  <path d="M600 124 L694 160 V284 C694 352 648 394 600 416 Z" fill="#4655d8"/>
+  <path d="M556 268 L588 300 L648 228" fill="none" stroke="#ffffff" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- lixeira riscada -->
+  <g transform="translate(600 500)">
+    <rect x="-23" y="-12" width="46" height="52" rx="6" fill="none" stroke="#cdd4f0" stroke-width="5"/>
+    <path d="M-32 -14 H32 M-11 -14 V-24 H11 V-14" fill="none" stroke="#cdd4f0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-9 3 V27 M9 3 V27" stroke="#cdd4f0" stroke-width="4" stroke-linecap="round"/>
+    <path d="M-46 -34 L46 52" stroke="#f28a4b" stroke-width="9" stroke-linecap="round"/>
+  </g>
+
+  <!-- saída -->
+  <use href="#row" x="810" y="108"/><rect x="1038" y="123" width="82" height="32" rx="16" fill="#f28a4b"/>
+  <use href="#row" x="810" y="186"/><rect x="1038" y="201" width="82" height="32" rx="16" fill="#5b6ef5"/>
+  <use href="#row" x="810" y="264"/><rect x="1038" y="279" width="82" height="32" rx="16" fill="#a78bfa"/>
+  <use href="#row" x="810" y="342"/><rect x="1038" y="357" width="82" height="32" rx="16" fill="#38bdf8"/>
+  <use href="#row" x="810" y="420"/><rect x="1038" y="435" width="82" height="32" rx="16" fill="none" stroke="#5a648f" stroke-width="2.5" stroke-dasharray="7 7"/>
+</svg>
