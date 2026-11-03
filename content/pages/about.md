@@ -238,6 +238,8 @@ sections:
       • **Bacharelado em Ciência da Computação** — UFG (2019–presente, ~83%
         concluído)
       • Participação ativa em iniciativas de pesquisa e extensão
+      • **CEIA Global Voice (set–nov 2026)** — workshop de inglês falado do
+        CEIA-UFG para networking, apresentações e reuniões entre culturas
 
       **Pesquisa Atual (dois projetos distintos):**
       • **Projeto Sobrevidas — Bolsista CNPq (2024–presente)**
@@ -259,6 +261,8 @@ sections:
         acompanhado por 8 mentores doutores
       • 🎤 **Palestrante no AI Brasil 2026** — "Second Brain + AI OS" (CEIA Open
         Day / Go.IAs Experience); palestras regulares sobre IA e empreendedorismo
+      • 🎤 **PRIA (out/2026)** — mentor e palestrante para 30 startups de IA no
+        inovabra habitat, em São Paulo, sobre harness engineering
       • 🎤 **go.IAs Talks (ago/2026)** — "Desenvolvimento com IA: SDLC na
         prática", sobre SDLC AI-native: agentes em segundo plano, PRs
         revisados por IA e TDD

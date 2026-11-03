@@ -251,6 +251,45 @@ sections:
           - pl-4
           - pr-4
         justifyContent: center
+  - type: GenericSection
+    title:
+      text: Mentor no PRIA, dentro do hub de inovação do Bradesco
+      color: text-dark
+      type: TitleBlock
+    subtitle: 'inovabra habitat, São Paulo — out 2026'
+    text: >
+      Em outubro mentorei 30 startups de IA no **PRIA**, o Programa de Residência
+      em IA do inovabra, com o CEIA e o AKCIT da Universidade Federal de Goiás e
+      participação de Google e NVIDIA. Levei os dois harnesses que fazem a IA
+      funcionar no negócio: a bancada de desenvolvimento, onde agentes escrevem
+      o seu código, e o harness de produto, o agente que atende o seu cliente.
+    actions:
+      - label: Ver a palestra
+        altText: Ver o PRIA na página de palestras
+        url: /palestras
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: ''
+        type: Link
+    media:
+      url: /palestras/pria-day3-turma.webp
+      altText: A turma do PRIA Day 3 de mãos para cima em frente ao painel de LED do inovabra habitat, em São Paulo
+      elementId: ''
+      type: ImageBlock
+    elementId: pria
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        alignItems: center
+        flexDirection: row-reverse
+        padding:
+          - pt-16
+          - pb-16
+          - pl-4
+          - pr-4
+        justifyContent: center
   - type: FeaturedItemsSection
     title:
       text: Linha do Tempo

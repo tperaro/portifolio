@@ -250,6 +250,45 @@ sections:
           - pl-4
           - pr-4
         justifyContent: center
+  - type: GenericSection
+    title:
+      text: Mentor at PRIA, inside Bradesco's innovation hub
+      color: text-dark
+      type: TitleBlock
+    subtitle: 'inovabra habitat, São Paulo — Oct 2026'
+    text: >
+      In October I mentored 30 AI startups at **PRIA**, inovabra's AI Residency
+      Program, run with CEIA and AKCIT at the Federal University of Goiás, with
+      Google and NVIDIA on board. I brought the two harnesses that make AI work
+      in the business: the dev workbench, where agents write your code, and the
+      product harness, the agent that serves your customer.
+    actions:
+      - label: See the talk
+        altText: See PRIA on the talks page
+        url: /palestras
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: ''
+        type: Link
+    media:
+      url: /palestras/pria-day3-turma.webp
+      altText: The PRIA Day 3 group with hands up in front of the LED wall at inovabra habitat, São Paulo
+      elementId: ''
+      type: ImageBlock
+    elementId: pria
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        alignItems: center
+        flexDirection: row-reverse
+        padding:
+          - pt-16
+          - pb-16
+          - pl-4
+          - pr-4
+        justifyContent: center
   - type: FeaturedItemsSection
     title:
       text: Timeline

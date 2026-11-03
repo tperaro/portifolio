@@ -244,6 +244,25 @@ sections:
     subtitle: Principais posições e conquistas ao longo da carreira
     items:
       - type: FeaturedItem
+        title: out 2026 | Mentor e Palestrante (PRIA)
+        text: >
+          **inovabra/Bradesco, AKCIT e CEIA-UFG — São Paulo**
+
+          Mentor e palestrante no PRIA, o Programa de Residência em IA do
+          inovabra, no dia de harness engineering: trabalhei com 30 startups de
+          IA a bancada de desenvolvimento num SDLC AI-native, o custo de cada
+          conversa do agente e a segurança em CI/CD.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+      - type: FeaturedItem
         title: jan 2026 – presente | Responsável de Tecnologia
         text: >
           **Count on Sheep — Consultoria de Cripto Taxes (EUA)**
@@ -253,7 +272,7 @@ sections:
           IA que coordena o onboarding de ponta a ponta. A solução combina um
           pipeline de extração com **7 agentes LangGraph** em 3 fases paralelas,
           STT em tempo real com AWS Transcribe Streaming e integrações com
-          HubSpot, DocuSign, Stripe e Gmail.
+          Pipedrive, DocuSign, Stripe e Gmail.
         actions: []
         elementId: ''
         styles:
@@ -593,7 +612,8 @@ sections:
 
       **🎤 Speaker Reconhecido**
 
-      Palestrante no **AI Brasil 2026** (CEIA Open Day / Go.IAs Experience) e
+      Mentor e palestrante no **PRIA** (inovabra/Bradesco, São Paulo, 2026),
+      palestrante no **AI Brasil 2026** (CEIA Open Day / Go.IAs Experience) e
       regular em eventos de tecnologia, compartilhando conhecimento sobre IA
       ética, hiperprodutividade e desenvolvimento de produtos inovadores.
     actions:

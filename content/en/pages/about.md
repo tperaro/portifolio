@@ -232,6 +232,8 @@ sections:
       **Academic background**
       • **BSc in Computer Science** — UFG (2019–present, ~83% complete)
       • Active participation in research and extension initiatives
+      • **CEIA Global Voice (Sep–Nov 2026)** — CEIA-UFG's spoken-English workshop
+      for networking, presentations and meetings across cultures
 
       **Current research (two distinct projects)**
       • **Sobrevidas Project — CNPq Fellow (2024–present)**
@@ -252,6 +254,8 @@ sections:
       by eight PhD mentors
       • 🎤 **Speaker at AI Brasil 2026** — "Second Brain + AI OS" (CEIA Open Day
       / Go.IAs Experience); regular speaker on AI and entrepreneurship
+      • 🎤 **PRIA (Oct 2026)** — mentor and speaker for 30 AI startups at
+      inovabra habitat, São Paulo, on harness engineering
       • 🎤 **go.IAs Talks (Aug 2026)** — "Desenvolvimento com IA: SDLC na
       prática," on AI-native SDLC: background agents, AI-reviewed PRs and TDD
     actions:

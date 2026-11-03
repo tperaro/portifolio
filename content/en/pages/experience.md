@@ -220,6 +220,21 @@ sections:
     subtitle: Highlights across the years
     items:
       - type: FeaturedItem
+        title: Oct 2026 | Mentor and Speaker (PRIA)
+        text: >
+          **inovabra/Bradesco, AKCIT and CEIA-UFG — São Paulo**
+
+          Mentor and speaker at PRIA, inovabra's AI Residency Program, on the
+          harness engineering day: I worked with 30 AI startups on the dev
+          workbench in an AI-native SDLC, the cost of each agent conversation
+          and security in CI/CD.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding: [pt-4, pb-4, pl-4, pr-4]
+      - type: FeaturedItem
         title: Jan 2026 – present | Sole Tech Lead
         text: >
           **Count on Sheep — US Crypto Tax Consulting**
@@ -229,7 +244,7 @@ sections:
           an AI agent that coordinates onboarding end to end. The solution
           combines an extraction pipeline with **7 LangGraph agents** across 3
           parallel phases, real-time STT with AWS Transcribe Streaming, and
-          integrations with HubSpot, DocuSign, Stripe and Gmail.
+          integrations with Pipedrive, DocuSign, Stripe and Gmail.
         actions: []
         elementId: ''
         styles:
@@ -521,7 +536,8 @@ sections:
 
       **🎤 Recognized Speaker**
 
-      Speaker at **AI Brasil 2026** (CEIA Open Day / Go.IAs Experience) and a
+      Mentor and speaker at **PRIA** (inovabra/Bradesco, São Paulo, 2026),
+      speaker at **AI Brasil 2026** (CEIA Open Day / Go.IAs Experience) and a
       frequent speaker on ethical AI, hyper-productivity and innovative product
       development.
     actions:
