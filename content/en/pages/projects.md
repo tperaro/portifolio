@@ -368,6 +368,35 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
+        title: Shared inbox triage with AI
+        text: >
+          **Count on Sheep | Oct 2026**
+
+          The company's shared inbox mixed client documents,
+          payment receipts, marketing and the few messages that
+          really needed a reply. I built a daily classifier: free
+          header rules first, then Jev, a decision model, asked
+          three separate questions with zero data retention
+          enforced in code. Each message gets one Gmail label, and
+          a daily Slack report lists only what needs a person. It
+          can't lose mail: a guard refuses any request that isn't
+          reading or adding a label, so deleting, archiving and
+          sending never leave the container, and whatever the
+          model isn't sure about stays untouched. I set the
+          thresholds on 214 real messages labeled blind, and
+          classifying the whole inbox, about 3,400 messages, cost
+          US$ 0.13.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+      - type: FeaturedItem
         title: COS Elite
         text: >
           **Count on Sheep | Apr–Sep 2026**
@@ -593,6 +622,30 @@ sections:
       type: TitleBlock
     subtitle: Research projects and technological innovation
     items:
+      - type: FeaturedItem
+        title: Fine-tuning classifiers to assess competencies
+        text: >
+          **Koru Project, CEIA-UFG | Aug 2026**
+
+          I trained and evaluated transformer classifiers on my
+          own GPU, one model for each of 11 competencies, scoring
+          open answers on the six Bloom levels. BERTimbau reached
+          88.7% exact accuracy per skill and 96.5% within one
+          level; BloomBERT (DistilBERT) reached 85.8% and 95.9%.
+          The honest finding is that classical models did better
+          on the same data, with Extra Trees at 91.6%. This was
+          research on a synthetic dataset built by the team, not a
+          production model.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
       - type: FeaturedItem
         title: Natural Language Processing
         text: >

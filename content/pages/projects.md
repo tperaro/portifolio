@@ -372,6 +372,36 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
+        title: Triagem da caixa compartilhada com IA
+        text: >
+          **Count on Sheep | out 2026**
+
+          A caixa compartilhada da empresa misturava documentos de
+          clientes, recibos de pagamento, marketing e as poucas
+          mensagens que realmente pediam resposta. Construí um
+          classificador diário: primeiro regras de cabeçalho, de
+          graça, depois o Jev, um modelo de decisão, com três
+          perguntas separadas e retenção zero de dados garantida
+          no código. Cada mensagem recebe uma etiqueta no Gmail, e
+          um relatório diário no Slack lista só o que precisa de
+          uma pessoa. Ele não tem como perder e-mail: uma trava
+          recusa qualquer pedido que não seja ler ou adicionar
+          etiqueta, então apagar, arquivar e enviar nunca saem do
+          contêiner, e o que o modelo não tem certeza fica
+          intocado. Ajustei os limiares em 214 mensagens reais
+          rotuladas às cegas, e classificar a caixa inteira, cerca
+          de 3.400 mensagens, custou US$ 0,13.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+      - type: FeaturedItem
         title: COS Elite
         text: >
           **Count on Sheep | abr–set 2026**
@@ -591,6 +621,31 @@ sections:
       type: TitleBlock
     subtitle: Projetos de pesquisa e inovação tecnológica
     items:
+      - type: FeaturedItem
+        title: Fine-tuning de classificadores para avaliar competências
+        text: >
+          **Projeto Koru, CEIA-UFG | ago 2026**
+
+          Treinei e avaliei classificadores transformer na minha
+          própria GPU, um modelo para cada uma de 11 competências,
+          pontuando respostas abertas nos seis níveis de Bloom. O
+          BERTimbau chegou a 88,7% de acerto exato por skill e
+          96,5% com tolerância de um nível; o BloomBERT
+          (DistilBERT), a 85,8% e 95,9%. O achado honesto é que
+          modelos clássicos foram melhores nos mesmos dados, com o
+          Extra Trees em 91,6%. Foi pesquisa, sobre um dataset
+          sintético construído pelo time, não um modelo em
+          produção.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
       - type: FeaturedItem
         title: Processamento de Linguagem Natural
         text: >
