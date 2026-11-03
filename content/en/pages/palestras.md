@@ -5,11 +5,12 @@ type: PageLayout
 sections:
   - type: AnimatedHeroSection
     title: Talks & Recognition
-    subtitle: 'AI Brasil · CEIA Open Day · Go.IAs Experience — Goiânia, Jun 2026'
+    subtitle: 'PRIA · AI Brasil · CEIA Open Day · Go.IAs Experience — 2026'
     text: >
       I take the stage to talk about what I live every day: turning AI into
       real hyper-productivity. In June 2026 I presented "Second Brain + AI OS"
-      at AI Brasil and was recognized as the 1st AI Brasil Hero.
+      at AI Brasil and was recognized as the 1st AI Brasil Hero. In October I
+      mentored 30 AI startups at PRIA, inside Bradesco's innovation hub.
     actions:
       - label: View the slides
         altText: Download the talk slides
@@ -37,6 +38,37 @@ sections:
     preset: moderate
     elementId: palestras-hero
     colors: bg-dark-fg-light
+  - type: GenericSection
+    title:
+      text: 'PRIA Day 3: Harness Engineering'
+      color: text-dark
+      type: TitleBlock
+    subtitle: 'inovabra habitat, São Paulo — Oct 16, 2026'
+    text: >
+      On October 16 I went to São Paulo to mentor 30 AI startups at **inovabra habitat**, the innovation hub of Bradesco, Brazil's second-largest private bank. It was part of **PRIA**, inovabra's AI Residency Program, run with two research centers at the Federal University of Goiás (UFG), **CEIA** and **AKCIT**, with Google and NVIDIA on board.
+
+
+      The whole day was about harness engineering: everything you build around the model so AI works in the business. I brought the difference between two harnesses: the dev workbench, where agents write your code in an AI-native SDLC, and the product harness, the agent that serves your customer.
+
+
+      I know what these startups are going through because I've been there. I founded Clivia in 2024, and what I learned building it became the material: prompt order is money, the prompt follows the user's journey, and every step possible goes into deterministic code. I also showed security in CI/CD with Trivy, pip-audit and deepteam.
+    media:
+      url: /palestras/pria-day3-turma.webp
+      altText: The PRIA Day 3 group with hands up in front of the LED wall at inovabra habitat, São Paulo
+      elementId: ''
+      type: ImageBlock
+    elementId: pria-day-3
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        alignItems: center
+        flexDirection: row-reverse
+        padding:
+          - pt-16
+          - pb-16
+          - pl-4
+          - pr-4
+        justifyContent: center
   - type: GenericSection
     title:
       text: What it was like to speak
@@ -238,6 +270,63 @@ sections:
           - pl-4
           - pr-4
         justifyContent: center
+  - type: FeaturedItemsSection
+    title:
+      text: Earlier talks
+      color: text-dark
+      styles:
+        self:
+          textAlign: center
+      type: TitleBlock
+    subtitle: Where these ideas started
+    items:
+      - type: FeaturedItem
+        title: 'Intelligent agents: the future of automation and human-computer interaction'
+        text: >
+          **Campus Party | Late 2024**
+
+
+          What an intelligent agent is, the six best-known multi-agent architectures and how multimodal data changes the way people interact with software. I was already arguing that the overhead of multi-agent systems is the tokens they pass to each other, and that the fix is an acyclic flow with little handoff, the idea I took to PRIA two years later.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+      - type: FeaturedItem
+        title: 'What to worry about when scaling your agentic system'
+        text: >
+          **AI Brasil · Campus Party | 2025**
+
+
+          How do you trust software that gives a different answer every time it runs? I compared classic and agentic reliability, then went through what breaks at scale, starting with latency between agents, and closed with practical tips on security and cost.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+    variant: two-col-grid
+    elementId: ''
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-12
+          - pb-16
+          - pl-4
+          - pr-4
+        justifyContent: center
+      subtitle:
+        textAlign: center
   - type: GenericSection
     title:
       text: Want me on your stage?
@@ -291,7 +380,8 @@ sections:
 seo:
   metaTitle: Talks & Recognition | Thiago Peraro
   metaDescription: >-
-    Thiago Peraro at AI Brasil 2026 — the "Second Brain + AI OS" talk at CEIA
+    Thiago Peraro as mentor and speaker at PRIA, inside Bradesco's innovation
+    hub, and at AI Brasil 2026 — the "Second Brain + AI OS" talk at CEIA
     Open Day and Go.IAs Experience, the 1st AI Brasil Hero award, and the
     go.IAs Talks live on AI-native SDLC.
   socialImage: /palestras/palco-aibrasil.webp

@@ -5,11 +5,13 @@ type: PageLayout
 sections:
   - type: AnimatedHeroSection
     title: Palestras & Reconhecimento
-    subtitle: 'AI Brasil · CEIA Open Day · Go.IAs Experience — Goiânia, jun 2026'
+    subtitle: 'PRIA · AI Brasil · CEIA Open Day · Go.IAs Experience — 2026'
     text: >
       Subo ao palco para falar do que vivo todo dia: transformar IA em
       hiperprodutividade real. Em junho de 2026 apresentei "Second Brain +
       AI OS" no AI Brasil e fui reconhecido como 1º AI Brasil Hero.
+      Em outubro mentorei 30 startups de IA no PRIA, dentro do hub de inovação
+      do Bradesco.
     actions:
       - label: Ver os slides
         altText: Baixar os slides da palestra
@@ -37,6 +39,37 @@ sections:
     preset: moderate
     elementId: palestras-hero
     colors: bg-dark-fg-light
+  - type: GenericSection
+    title:
+      text: 'PRIA Day 3: Harness Engineering'
+      color: text-dark
+      type: TitleBlock
+    subtitle: 'inovabra habitat, São Paulo — 16 out 2026'
+    text: >
+      Em 16 de outubro fui a São Paulo mentorar 30 startups de IA no **inovabra habitat**, o hub de inovação do Bradesco, o segundo maior banco privado do Brasil. O encontro faz parte do **PRIA**, o Programa de Residência em IA do inovabra, realizado com dois centros de pesquisa da Universidade Federal de Goiás (UFG), o **CEIA** e o **AKCIT**, com participação de Google e NVIDIA.
+
+
+      O dia inteiro foi sobre harness engineering: tudo o que você constrói ao redor do modelo para que a IA funcione no negócio. Levei a diferença entre dois harnesses: a bancada de desenvolvimento, onde agentes escrevem o seu código num SDLC AI-native, e o harness de produto, o agente que atende o seu cliente.
+
+
+      Eu sei o que essas startups estão vivendo porque já estive lá. Fundei a Clivia em 2024, e o que aprendi construindo virou o material: a ordem do prompt é dinheiro, o prompt segue a jornada do usuário e todo passo possível vai para código determinístico. Também mostrei segurança em CI/CD com Trivy, pip-audit e deepteam.
+    media:
+      url: /palestras/pria-day3-turma.webp
+      altText: A turma do PRIA Day 3 de mãos para cima em frente ao painel de LED do inovabra habitat, em São Paulo
+      elementId: ''
+      type: ImageBlock
+    elementId: pria-day-3
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        alignItems: center
+        flexDirection: row-reverse
+        padding:
+          - pt-16
+          - pb-16
+          - pl-4
+          - pr-4
+        justifyContent: center
   - type: GenericSection
     title:
       text: Como foi palestrar
@@ -238,6 +271,63 @@ sections:
           - pl-4
           - pr-4
         justifyContent: center
+  - type: FeaturedItemsSection
+    title:
+      text: Palestras anteriores
+      color: text-dark
+      styles:
+        self:
+          textAlign: center
+      type: TitleBlock
+    subtitle: De onde essas ideias vieram
+    items:
+      - type: FeaturedItem
+        title: 'Agentes inteligentes: o futuro da automação e da interação humano-computador'
+        text: >
+          **Campus Party | Fim de 2024**
+
+
+          O que é um agente inteligente, as seis arquiteturas multiagente mais conhecidas e como a multimodalidade de dados muda a forma de as pessoas usarem software. Eu já defendia que o overhead de multiagente é o repasse de tokens e que o remédio é um fluxo acíclico com pouco repasse, a ideia que levei ao PRIA dois anos depois.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+      - type: FeaturedItem
+        title: 'Com o que se preocupar na hora de escalar seu sistema agêntico?'
+        text: >
+          **AI Brasil · Campus Party | 2025**
+
+
+          Como confiar num software que dá uma resposta diferente a cada execução? Comparei a confiabilidade clássica com a agêntica, passei pelo que quebra ao escalar, a começar pela latência entre agentes, e fechei com dicas práticas de segurança e de custo.
+        actions: []
+        elementId: ''
+        styles:
+          self:
+            textAlign: left
+            padding:
+              - pt-4
+              - pb-4
+              - pl-4
+              - pr-4
+    variant: two-col-grid
+    elementId: ''
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-12
+          - pb-16
+          - pl-4
+          - pr-4
+        justifyContent: center
+      subtitle:
+        textAlign: center
   - type: GenericSection
     title:
       text: Quer me ver palestrar?
@@ -291,7 +381,8 @@ sections:
 seo:
   metaTitle: Palestras & Reconhecimento | Thiago Peraro
   metaDescription: >-
-    Thiago Peraro no AI Brasil 2026 — palestra "Second Brain + AI OS" no CEIA
+    Thiago Peraro como mentor e palestrante no PRIA, dentro do hub de inovação
+    do Bradesco, e no AI Brasil 2026 — palestra "Second Brain + AI OS" no CEIA
     Open Day e Go.IAs Experience, o prêmio 1º AI Brasil Hero e a live go.IAs
     Talks sobre SDLC AI-native.
   socialImage: /palestras/palco-aibrasil.webp
