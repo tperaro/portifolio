@@ -44,11 +44,11 @@ sections:
       - type: FeaturedItem
         title: Projeto Sobrevidas 🏆
         text: >
-          **Bolsista CNPq | 2024 – presente | Prêmio Nacional SBCAS 2025**
+          **Bolsista CNPq | 2024 – 2026 | Prêmio Nacional SBCAS 2025**
 
           Chatbot integrado ao SUS para rastreamento de câncer de boca,
           desenvolvido com técnicas avançadas de NLP. Como líder da equipe de
-          IA, coordeno o desenvolvimento de uma solução que pode salvar vidas
+          IA, coordenei o desenvolvimento de uma solução que pode salvar vidas
           através do diagnóstico precoce. **Co-autor do artigo premiado como
           melhor do Brasil no SBCAS 2025** (categoria ferramentas).
         actions:
@@ -140,12 +140,12 @@ sections:
           altText: Logo da Clivia
           elementId: ''
       - type: FeaturedItem
-        title: Projeto Koru — CEIA-UFG
+        title: Projeto Koru
         text: >
-          **Pesquisador NLP | dez 2024 – presente**
+          **Pesquisa aplicada | LangGraph**
 
           Sistema multi-agente (LangGraph) para avaliação de soft skills e
-          competências de liderança, no CEIA-UFG/AKCIT. Responsável pelo
+          competências de liderança. Responsável pelo
           **koru-dashboard** (Streamlit + Plotly + TimescaleDB) com
           observabilidade em tempo real e pelos testes de **Red Team
           adversarial com DeepTeam** (prompt injection e vulnerabilidades).
@@ -624,7 +624,7 @@ sections:
       - type: FeaturedItem
         title: Fine-tuning de classificadores para avaliar competências
         text: >
-          **Projeto Koru, CEIA-UFG | ago 2026**
+          **Projeto Koru | ago 2026**
 
           Treinei e avaliei classificadores transformer na minha
           própria GPU, um modelo para cada uma de 11 competências,

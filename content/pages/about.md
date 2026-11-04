@@ -15,10 +15,9 @@ sections:
 
       Graduando em Ciência da Computação pela UFG (2019–presente, ~83%
       concluído). Atualmente sou responsável por toda a tecnologia na Count on
-      Sheep (consultoria americana de cripto taxes), pesquisador NLP no
-      CEIA-UFG no projeto Koru e bolsista CNPq no projeto Sobrevidas. Fundei e
-      operei a Clivia (mar 2024 – dez 2025). Estou aberto a novas
-      oportunidades em AI Engineering.
+      Sheep (consultoria americana de cripto taxes). Fui bolsista CNPq no
+      projeto Sobrevidas. Fundei e operei a Clivia (mar 2024 – dez 2025). Estou
+      aberto a novas oportunidades em AI Engineering.
     actions:
       - label: LinkedIn
         altText: Conectar no LinkedIn
@@ -61,7 +60,7 @@ sections:
       - type: FeaturedItem
         title: Projeto Sobrevidas - Prêmio Nacional
         text: >
-          Lidero a equipe de IA do projeto Sobrevidas — iniciação científica na
+          Liderei a equipe de IA do projeto Sobrevidas — iniciação científica na
           UFG, com bolsa do CNPq —, desenvolvendo
           um chatbot  integrado ao SUS para rastreamento de câncer de boca.
           Nossa solução recebeu o  prêmio de melhor artigo do Brasil no SBCAS
@@ -241,16 +240,10 @@ sections:
       • **CEIA Global Voice (set–nov 2026)** — workshop de inglês falado do
         CEIA-UFG para networking, apresentações e reuniões entre culturas
 
-      **Pesquisa Atual (dois projetos distintos):**
-      • **Projeto Sobrevidas — Bolsista CNPq (2024–presente)**
+      **Pesquisa:**
+      • **Projeto Sobrevidas — Bolsista CNPq (2024–2026)**
         — NLP aplicado à saúde; chatbot para rastreamento de câncer de boca
         integrado ao SUS. Projeto premiado no SBCAS 2025.
-      • **Projeto Koru — Pesquisador NLP no CEIA-UFG/AKCIT
-        (dez 2024–presente)**
-        — sistema multi-agente com LangGraph para avaliação de soft skills
-        e competências de liderança. Desenvolvo o koru-dashboard
-        (Streamlit + Plotly + TimescaleDB) e conduzo testes de Red Team
-        adversarial com DeepTeam.
 
       **Publicações e Reconhecimentos:**
       • 🏆 Artigo **premiado como melhor do Brasil no SBCAS 2025** (categoria

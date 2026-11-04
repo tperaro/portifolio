@@ -34,7 +34,7 @@ The Sandeco startup program aims to be a complete roadmap for those who want to 
 
 ### Who is Thiago Peraro?
 
-Thiago Peraro, the distinguished guest of the live session, is the founder of **Clívia** (an SDR that supports medical clinics), acts in the leadership of the entrepreneurs group at **Magnatas Hub Goiás**, participates in **Go IA** (AI community in Goiás), is a researcher at **CEIA at UFG**, and a Computer Science student. Additionally, he coordinates the AI team of the **"Sobre Vidas"** project, a tool for tracking and monitoring oral cancer risk, and has experience as a backend programmer. A robust resume that ensures authority in his statements.
+Thiago Peraro, the distinguished guest of the live session, is the founder of **Clívia** (an SDR that supports medical clinics), acts in the leadership of the entrepreneurs group at **Magnatas Hub Goiás**, participates in **Go IA** (AI community in Goiás), and is a Computer Science student. Additionally, he coordinates the AI team of the **"Sobre Vidas"** project, a tool for tracking and monitoring oral cancer risk, and has experience as a backend programmer. A robust resume that ensures authority in his statements.
 
 ## After All, What is a Startup?
 

@@ -34,7 +34,7 @@ O programa de startups do Sandeco se propõe a ser um roteiro completo para quem
 
 ### Quem é Thiago Peraro?
 
-Thiago Peraro, convidado ilustre da live, é fundador da **Clívia** (uma SDR que apoia clínicas médicas), atua na liderança do grupo de empreendedores do **Magnatas Hub Goiás**, participa do **Go IA** (comunidade de IA em Goiás), é pesquisador no **CEIA da UFG** e estudante de Ciência da Computação. Além disso, coordena a equipe de IA do projeto **"Sobre Vidas"**, uma ferramenta para rastreamento e monitoramento de risco de câncer de boca, e tem experiência como programador backend. Um currículo robusto que garante propriedade em suas falas.
+Thiago Peraro, convidado ilustre da live, é fundador da **Clívia** (uma SDR que apoia clínicas médicas), atua na liderança do grupo de empreendedores do **Magnatas Hub Goiás**, participa do **Go IA** (comunidade de IA em Goiás), e é estudante de Ciência da Computação. Além disso, coordena a equipe de IA do projeto **"Sobre Vidas"**, uma ferramenta para rastreamento e monitoramento de risco de câncer de boca, e tem experiência como programador backend. Um currículo robusto que garante propriedade em suas falas.
 
 ## Afinal, o que é uma Startup?
 

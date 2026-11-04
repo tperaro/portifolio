@@ -48,7 +48,6 @@ const DEFAULT_RIGHT: string[] = [
     'Builder',
     'Fundador',
     'CLIVIA',
-    'CEIA-UFG',
     'Go.IAs',
     'Magnatas',
     'Comunidade',

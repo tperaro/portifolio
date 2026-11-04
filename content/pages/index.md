@@ -58,7 +58,6 @@ sections:
       - Builder
       - Fundador
       - CLIVIA
-      - CEIA-UFG
       - Go.IAs
       - Magnatas
       - Comunidade
@@ -73,9 +72,9 @@ sections:
     subtitle: Minha atuação em IA e empreendedorismo
     text: >
       Responsável por toda a tecnologia na Count on Sheep (consultoria
-      americana de cripto taxes), pesquisador de NLP no CEIA-UFG — onde atuo no
-      projeto Koru — e bolsista CNPq no projeto Sobrevidas. Lidero a comunidade
-      Magnatas.hub e sou community builder na Go.IAs (500+ membros).
+      americana de cripto taxes). Fui bolsista CNPq no projeto Sobrevidas.
+      Lidero a comunidade Magnatas.hub e sou community builder na Go.IAs (500+
+      membros).
 
 
       Graduando em Ciência da Computação pela UFG (2019–presente, ~83%
@@ -123,12 +122,12 @@ sections:
       - type: FeaturedItem
         title: Pesquisa em IA/NLP
         text: >
-          Pesquisador de Processamento de Linguagem Natural no CEIA-UFG e
-          bolsista CNPq (projeto sobrevidas).
+          Pesquisa em Processamento de Linguagem Natural como bolsista CNPq
+          (2024–2026, projeto Sobrevidas).
 
-          Líder da equipe de IA do projeto Sobrevidas software para rastreamento
-          de câncer  de boca integrado ao SUS, onde fui co-autor do Artigo
-          premiado como melhor do Brasil no SBCAS 2025 na categoria ferramentas.
+          Liderei a equipe de IA do Sobrevidas, software para rastreamento de
+          câncer de boca integrado ao SUS, e fui co-autor do artigo premiado
+          como melhor do Brasil no SBCAS 2025 na categoria ferramentas.
         actions: []
         elementId: ''
         styles:
@@ -355,11 +354,11 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: 2024–presente · Bolsista CNPq · Projeto Sobrevidas
+        title: 2024–2026 · Bolsista CNPq · Projeto Sobrevidas
         text: >
           **CNPq | Projeto Sobrevidas (NLP aplicado à saúde pública)**
 
-          Pesquisador de NLP. Líder da equipe de IA do Sobrevidas, software
+          Pesquisador de NLP. Liderei a equipe de IA do Sobrevidas, software
           para rastreamento de câncer de boca integrado ao SUS. Co-autor do
           artigo premiado como **melhor do Brasil no SBCAS 2025** (categoria
           ferramentas).
@@ -368,25 +367,6 @@ sections:
             url: /35620-1093-28716-1-10-20250608-2.pdf
             style: primary
             type: Link
-        elementId: ''
-        styles:
-          self:
-            textAlign: left
-            padding:
-              - pt-6
-              - pb-6
-              - pl-4
-              - pr-4
-      - type: FeaturedItem
-        title: dez 2024–presente · Pesquisador NLP · Projeto Koru
-        text: >
-          **CEIA-UFG & AKCIT | Projeto Koru**
-
-          Pesquisador NLP no CEIA-UFG trabalhando no Projeto Koru — sistema
-          multi-agente (LangGraph) para avaliação de soft skills e competências
-          de liderança. Responsável pelo koru-dashboard (Streamlit + Plotly +
-          TimescaleDB) e por testes de Red Team adversarial com DeepTeam.
-        actions: []
         elementId: ''
         styles:
           self:
@@ -508,8 +488,7 @@ seo:
   metaTitle: Thiago Peraro - Responsável de Tecnologia e Pesquisador de IA
   metaDescription: >
     Portfólio de Thiago Peraro — responsável de tecnologia na Count on Sheep,
-    pesquisador NLP no CEIA-UFG, bolsista CNPq (Projeto Sobrevidas) e líder de
-    comunidades de IA em Goiânia.
+    mentor e palestrante em IA e líder de comunidades de IA em Goiânia.
   socialImage: /images/liveEmpreendedorismo.jpeg
   type: Seo
 ---

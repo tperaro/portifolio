@@ -110,55 +110,18 @@ sections:
           altText: Enterprise AI onboarding architecture
           elementId: ''
       - type: FeaturedItem
-        title: NLP Researcher — CEIA-UFG (Koru Project)
-        text: >
-          **CEIA-UFG & AKCIT | Dec 2024 – present**
-
-          • NLP researcher on the Koru Project — multi-agent system for
-          soft-skill and leadership assessment
-
-          • LangGraph architecture (Supervisor, StateGraph)
-
-          • Owner of the koru-dashboard (Streamlit + Plotly + TimescaleDB)
-
-          • Adversarial Red Team testing with DeepTeam (prompt injection)
-
-          • Maintains the team's service infrastructure
-
-          • A second LLM provider (Cerebras) with circuit breaker and key
-          rotation
-
-          • Per-session cost and latency, reconciled with the real invoice
-
-          • A benchmark that backed choosing the LLM multi-agent
-          architecture over BERT classifiers
-
-          • Deploys with preflight checks, backup and rollback; Keycloak
-          with PKCE
-        actions: []
-        elementId: ''
-        styles:
-          self:
-            textAlign: left
-            padding: [pt-6, pb-6, pl-4, pr-4]
-        image:
-          type: ImageBlock
-          url: /images/koru.webp
-          altText: Koru Project
-          elementId: ''
-      - type: FeaturedItem
         title: CNPq Fellow — Sobrevidas Project
         text: >
-          **CNPq | 2024 – present**
+          **CNPq | 2024 – 2026**
 
           • NLP researcher — CNPq fellow
 
-          • Lead of the AI team at the Sobrevidas Project (oral cancer / SUS)
+          • Led the AI team at the Sobrevidas Project (oral cancer / SUS)
 
           • Co-author of the paper **awarded best in Brazil at SBCAS 2025**
           (tools category)
 
-          • Distinct from Koru — focus on public health and epidemiological
+          • Focus on public health and epidemiological
           surveillance
 
           • An MCP server in Go that gives Claude Code read-only access to
@@ -252,30 +215,14 @@ sections:
             textAlign: left
             padding: [pt-4, pb-4, pl-4, pr-4]
       - type: FeaturedItem
-        title: Dec 2024 – present | NLP Researcher (CEIA)
-        text: >
-          **CEIA-UFG & AKCIT — Koru Project**
-
-          NLP researcher on the Koru Project, a LangGraph-based multi-agent
-          system for soft-skill and leadership assessment. Owner of the
-          koru-dashboard (Streamlit + Plotly + TimescaleDB) and adversarial
-          Red Team tests with DeepTeam. Started as NLP Junior, progressed to
-          NLP Researcher.
-        actions: []
-        elementId: ''
-        styles:
-          self:
-            textAlign: left
-            padding: [pt-4, pb-4, pl-4, pr-4]
-      - type: FeaturedItem
-        title: 2024 – present | CNPq Fellow (Sobrevidas Project)
+        title: 2024 – 2026 | CNPq Fellow (Sobrevidas Project)
         text: >
           **CNPq — Sobrevidas Project (SUS)**
 
           CNPq fellow and lead of the AI team at the Sobrevidas Project — a
           SUS-integrated chatbot for oral cancer screening. Co-author of the
           paper **awarded best in Brazil at SBCAS 2025** (tools category).
-          Distinct from Koru — focus on public health and NLP for
+          Focus on public health and NLP for
           epidemiological surveillance.
         actions: []
         elementId: ''

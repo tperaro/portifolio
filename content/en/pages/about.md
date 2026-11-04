@@ -14,10 +14,9 @@ sections:
 
 
       Computer Science undergrad at UFG (2019–present, ~83% complete).
-      Currently sole tech lead at Count on Sheep (US crypto tax consulting),
-      NLP researcher at CEIA-UFG on the Koru project, and CNPq fellow on the
-      Sobrevidas project. Founded and operated Clivia (Mar 2024 – Dec 2025).
-      Open to new opportunities in AI Engineering.
+      Currently sole tech lead at Count on Sheep (US crypto tax consulting).
+      Former CNPq fellow on the Sobrevidas project. Founded and operated Clivia
+      (Mar 2024 – Dec 2025). Open to new opportunities in AI Engineering.
     actions:
       - label: LinkedIn
         altText: Connect on LinkedIn
@@ -58,7 +57,7 @@ sections:
       - type: FeaturedItem
         title: Sobrevidas Project — National Award
         text: >
-          I lead the AI team of Sobrevidas — an undergraduate research project at
+          I led the AI team of Sobrevidas — an undergraduate research project at
           UFG, with a CNPq scholarship — building a SUS-integrated
           chatbot for oral cancer screening. Our work received the best paper
           award in Brazil at SBCAS 2025, recognizing the project’s social impact.
@@ -235,15 +234,10 @@ sections:
       • **CEIA Global Voice (Sep–Nov 2026)** — CEIA-UFG's spoken-English workshop
       for networking, presentations and meetings across cultures
 
-      **Current research (two distinct projects)**
-      • **Sobrevidas Project — CNPq Fellow (2024–present)**
+      **Research**
+      • **Sobrevidas Project — CNPq Fellow (2024–2026)**
       — NLP applied to healthcare; a SUS-integrated chatbot for oral cancer
       screening. Nationally awarded at SBCAS 2025.
-      • **Koru Project — NLP Researcher at CEIA-UFG/AKCIT
-      (Dec 2024–present)**
-      — LangGraph multi-agent system for assessing soft skills and leadership
-      competencies. I develop the Koru dashboard (Streamlit + Plotly +
-      TimescaleDB) and run adversarial Red Team tests with DeepTeam.
 
       **Publications & recognition**
       • 🏆 Co-author of the **best tools paper in Brazil at SBCAS 2025** —

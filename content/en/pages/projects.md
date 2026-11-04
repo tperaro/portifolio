@@ -44,10 +44,10 @@ sections:
       - type: FeaturedItem
         title: Sobrevidas Project 🏆
         text: >
-          **CNPq Fellow | 2024 – present | National Award SBCAS 2025**
+          **CNPq Fellow | 2024 – 2026 | National Award SBCAS 2025**
 
           SUS-integrated chatbot for oral cancer screening using advanced NLP.
-          As AI team lead, I coordinate a solution that helps save lives via
+          As AI team lead, I coordinated a solution that helps save lives via
           early diagnosis. **Co-author of the paper awarded best in Brazil at
           SBCAS 2025** (tools category).
         actions:
@@ -139,12 +139,12 @@ sections:
           altText: Clivia Logo
           elementId: ''
       - type: FeaturedItem
-        title: Koru Project — CEIA-UFG
+        title: Koru Project
         text: >
-          **NLP Researcher | Dec 2024 – present**
+          **Applied research | LangGraph**
 
           Multi-agent system (LangGraph) for assessing soft skills and
-          leadership competencies, at CEIA-UFG/AKCIT. Responsible for the
+          leadership competencies. Responsible for the
           **koru-dashboard** (Streamlit + Plotly + TimescaleDB) with real-time
           observability and adversarial **Red Team testing with DeepTeam**
           (prompt injection and vulnerabilities). Distinct from Sobrevidas —
@@ -625,7 +625,7 @@ sections:
       - type: FeaturedItem
         title: Fine-tuning classifiers to assess competencies
         text: >
-          **Koru Project, CEIA-UFG | Aug 2026**
+          **Koru Project | Aug 2026**
 
           I trained and evaluated transformer classifiers on my
           own GPU, one model for each of 11 competencies, scoring

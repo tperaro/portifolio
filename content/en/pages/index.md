@@ -58,7 +58,6 @@ sections:
       - Builder
       - Founder
       - CLIVIA
-      - CEIA-UFG
       - Go.IAs
       - Magnatas
       - Community
@@ -72,10 +71,9 @@ sections:
       type: TitleBlock
     subtitle: My work in AI and entrepreneurship
     text: >
-      Sole tech lead at Count on Sheep (US crypto tax consulting firm), NLP
-      researcher at CEIA-UFG (Koru project) and CNPq fellow (Sobrevidas
-      project). I lead Magnatas.hub and am a community builder at Go.IAs (500+
-      members).
+      Sole tech lead at Count on Sheep (US crypto tax consulting firm). Former
+      CNPq fellow on the Sobrevidas project. I lead Magnatas.hub and am a
+      community builder at Go.IAs (500+ members).
 
 
       Undergraduate in Computer Science at UFG (2019–present, ~83% complete).
@@ -123,11 +121,11 @@ sections:
       - type: FeaturedItem
         title: AI/NLP Research
         text: >
-          Natural Language Processing researcher at CEIA-UFG and CNPq fellow
-          (Sobrevidas project).
+          Natural Language Processing research as a CNPq fellow (2024–2026,
+          Sobrevidas project).
 
-          Lead of the AI team of Sobrevidas, a SUS-integrated oral cancer
-          screening system, co-author of the paper awarded Best in Brazil at
+          I led the AI team of Sobrevidas, a SUS-integrated oral cancer
+          screening system, and co-authored the paper awarded Best in Brazil at
           SBCAS 2025 (tools category).
         actions: []
         elementId: ''
@@ -351,11 +349,11 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: 2024–present · CNPq Fellow · Sobrevidas Project
+        title: 2024–2026 · CNPq Fellow · Sobrevidas Project
         text: >
           **CNPq | Sobrevidas Project (NLP for public health)**
 
-          NLP researcher. Lead of the AI team at Sobrevidas — a SUS-integrated
+          NLP researcher. Led the AI team at Sobrevidas — a SUS-integrated
           oral cancer screening system. Co-author of the paper awarded **best
           in Brazil at SBCAS 2025** (tools category).
         actions:
@@ -363,26 +361,6 @@ sections:
             url: /35620-1093-28716-1-10-20250608-2.pdf
             style: primary
             type: Link
-        elementId: ''
-        styles:
-          self:
-            textAlign: left
-            padding:
-              - pt-6
-              - pb-6
-              - pl-4
-              - pr-4
-      - type: FeaturedItem
-        title: Dec 2024–present · NLP Researcher · Koru Project
-        text: >
-          **CEIA-UFG & AKCIT | Koru Project**
-
-          NLP researcher at CEIA-UFG working on the Koru Project — a
-          multi-agent system (LangGraph) for soft-skill and leadership
-          competency assessment. Responsible for the koru-dashboard
-          (Streamlit + Plotly + TimescaleDB) and adversarial Red Team testing
-          with DeepTeam.
-        actions: []
         elementId: ''
         styles:
           self:
@@ -503,9 +481,8 @@ sections:
 seo:
   metaTitle: Thiago Peraro - Tech Lead and AI Researcher
   metaDescription: >
-    Portfolio of Thiago Peraro — sole tech lead at Count on Sheep, NLP researcher
-    at CEIA-UFG, CNPq fellow (Sobrevidas Project) and leader of AI communities in
-    Goiânia.
+    Portfolio of Thiago Peraro — sole tech lead at Count on Sheep, AI mentor and
+    speaker, and leader of AI communities in Goiânia.
   socialImage: /images/liveEmpreendedorismo.jpeg
   type: Seo
 ---

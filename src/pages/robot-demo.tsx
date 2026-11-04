@@ -29,7 +29,6 @@ const RIGHT_WORDS = [
     'Builder',
     'Fundador',
     'CLIVIA',
-    'CEIA-UFG',
     'Go.IAs',
     'Magnatas',
     'Comunidade',

@@ -117,58 +117,18 @@ sections:
           altText: Arquitetura de onboarding empresarial com IA
           elementId: ''
       - type: FeaturedItem
-        title: Pesquisador NLP — CEIA-UFG (Projeto Koru)
-        text: >
-          **CEIA-UFG & AKCIT | dez 2024 – presente**
-
-          • Pesquisador NLP no Projeto Koru — sistema multi-agente para
-          avaliação de soft skills e competências de liderança
-
-          • Arquitetura com LangGraph (Supervisor, StateGraph)
-
-          • Responsável pelo koru-dashboard (Streamlit + Plotly + TimescaleDB)
-
-          • Testes de Red Team adversarial com DeepTeam (prompt injection)
-
-          • Cuida da infraestrutura dos serviços do time
-
-          • Segundo provedor de LLM (Cerebras) com circuit breaker e rotação
-          de chaves
-
-          • Custo e latência por sessão, reconciliados com a fatura real
-
-          • Benchmark que embasou a escolha da arquitetura multiagente com
-          LLM em vez de classificadores BERT
-
-          • Deploy com checagem prévia, backup e rollback; Keycloak com PKCE
-        actions: []
-        elementId: ''
-        styles:
-          self:
-            textAlign: left
-            padding:
-              - pt-6
-              - pb-6
-              - pl-4
-              - pr-4
-        image:
-          type: ImageBlock
-          url: /images/koru.webp
-          altText: Projeto Koru
-          elementId: ''
-      - type: FeaturedItem
         title: Bolsista CNPq — Projeto Sobrevidas
         text: >
-          **CNPq | 2024 – presente**
+          **CNPq | 2024 – 2026**
 
           • Pesquisador de NLP — Bolsista CNPq
 
-          • Líder da equipe de IA do Projeto Sobrevidas (câncer de boca / SUS)
+          • Liderei a equipe de IA do Projeto Sobrevidas (câncer de boca / SUS)
 
           • Co-autor do artigo **premiado como melhor do Brasil no SBCAS 2025**
           (categoria ferramentas)
 
-          • Projeto distinto do Koru — foco em saúde pública e vigilância epidemiológica
+          • Foco em saúde pública e vigilância epidemiológica
 
           • Servidor MCP em Go que dá ao Claude Code acesso somente leitura
           aos logs de erro da infraestrutura, com consultas em LogQL, a
@@ -284,34 +244,14 @@ sections:
               - pl-4
               - pr-4
       - type: FeaturedItem
-        title: dez 2024 – presente | Pesquisador NLP (CEIA)
-        text: >
-          **CEIA-UFG & AKCIT — Projeto Koru**
-
-          Pesquisador NLP no Projeto Koru, sistema multi-agente (LangGraph)
-          para avaliação de soft skills e competências de liderança. Responsável
-          pelo koru-dashboard (Streamlit + Plotly + TimescaleDB) e pelos testes
-          de Red Team adversarial com DeepTeam. Iniciou como NLP Junior,
-          evoluiu para NLP Researcher.
-        actions: []
-        elementId: ''
-        styles:
-          self:
-            textAlign: left
-            padding:
-              - pt-4
-              - pb-4
-              - pl-4
-              - pr-4
-      - type: FeaturedItem
-        title: 2024 – presente | Bolsista CNPq (Projeto Sobrevidas)
+        title: 2024 – 2026 | Bolsista CNPq (Projeto Sobrevidas)
         text: >
           **CNPq — Projeto Sobrevidas (SUS)**
 
           Bolsista CNPq e líder da equipe de IA do Projeto Sobrevidas,
           chatbot integrado ao SUS para rastreamento de câncer de boca.
           Co-autor do artigo **premiado como melhor do Brasil no SBCAS 2025**
-          (categoria ferramentas). Projeto distinto do Koru — foco em saúde
+          (categoria ferramentas). Foco em saúde
           pública e NLP aplicado à vigilância epidemiológica.
         actions: []
         elementId: ''
