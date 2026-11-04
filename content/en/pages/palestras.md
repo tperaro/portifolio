@@ -52,6 +52,16 @@ sections:
 
 
       I know what these startups are going through because I've been there. I founded Clivia in 2024, and what I learned building it became the material: prompt order is money, the prompt follows the user's journey, and every step possible goes into deterministic code. I also showed security in CI/CD with Trivy, pip-audit and deepteam.
+    actions:
+      - label: Read the post
+        altText: Read the post on harness engineering at PRIA
+        url: /blog/the-receipt-for-one-conversation-harness-engineering
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: ''
+        type: Link
     media:
       url: /palestras/pria-day3-turma.webp
       altText: The PRIA Day 3 group with hands up in front of the LED wall at inovabra habitat, São Paulo

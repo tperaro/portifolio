@@ -53,6 +53,16 @@ sections:
 
 
       Eu sei o que essas startups estão vivendo porque já estive lá. Fundei a Clivia em 2024, e o que aprendi construindo virou o material: a ordem do prompt é dinheiro, o prompt segue a jornada do usuário e todo passo possível vai para código determinístico. Também mostrei segurança em CI/CD com Trivy, pip-audit e deepteam.
+    actions:
+      - label: Ler o post
+        altText: Ler o post sobre harness engineering no PRIA
+        url: /blog/a-nota-fiscal-de-uma-conversa-harness-engineering
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: ''
+        type: Link
     media:
       url: /palestras/pria-day3-turma.webp
       altText: A turma do PRIA Day 3 de mãos para cima em frente ao painel de LED do inovabra habitat, em São Paulo
