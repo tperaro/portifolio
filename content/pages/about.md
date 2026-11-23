@@ -150,6 +150,31 @@ sections:
           url: /palestras/trofeu-ai-brasil-hero.webp
           altText: Troféu 1º AI Brasil Hero
           elementId: ''
+      - type: FeaturedItem
+        title: AI Global Voice — Academic Distinction (2026)
+        text: >
+          Um dos 22 selecionados para a primeira edição do programa de inglês
+          para pesquisadores de IA da **Embaixada dos EUA (RELO)**, do CEIA e da
+          Faculdade de Letras da UFG. Concluí com distinção acadêmica.
+        actions:
+          - label: Ler o post
+            url: /blog/ai-global-voice-embaixada-eua-ceia-ufg
+            style: primary
+            type: Link
+        elementId: ''
+        styles:
+          self:
+            textAlign: center
+            padding:
+              - pt-6
+              - pb-6
+              - pl-4
+              - pr-4
+        image:
+          type: ImageBlock
+          url: /images/blog/ai-global-voice-cerimonia.webp
+          altText: Thiago Peraro com o certificado do AI Global Voice na cerimônia de encerramento
+          elementId: ''
     actions: []
     elementId: ''
     variant: three-col-grid
@@ -237,8 +262,10 @@ sections:
       • **Bacharelado em Ciência da Computação** — UFG (2019–presente, ~83%
         concluído)
       • Participação ativa em iniciativas de pesquisa e extensão
-      • **CEIA Global Voice (set–nov 2026)** — workshop de inglês falado do
-        CEIA-UFG para networking, apresentações e reuniões entre culturas
+      • **AI Global Voice (set–nov 2026)** — programa de inglês para
+        pesquisadores de IA do RELO da Embaixada dos EUA, do CEIA e da
+        Faculdade de Letras da UFG; 1ª edição, 22 selecionados; certificado com
+        *Academic Distinction*
 
       **Pesquisa:**
       • **Projeto Sobrevidas — Bolsista CNPq (2024–2026)**

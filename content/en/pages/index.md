@@ -287,6 +287,47 @@ sections:
           - pl-4
           - pr-4
         justifyContent: center
+  - type: GenericSection
+    title:
+      text: Academic Distinction at AI Global Voice
+      color: text-light
+      type: TitleBlock
+    subtitle: 'U.S. Embassy (RELO) · CEIA · UFG School of Letters — Goiânia, Nov 2026'
+    text: >
+      I was one of 22 people selected for the first edition of **AI Global
+      Voice**, an English program for AI researchers run by the U.S. Embassy's
+      English language office with CEIA and the School of Letters at the
+      Federal University of Goiás. In 32 hours, I practiced networking,
+      cross-cultural communication and three presentations in English, the last
+      one about my second brain method. I finished with a certificate with
+      *Academic Distinction*.
+    actions:
+      - label: Read the post
+        altText: Read the post about AI Global Voice
+        url: /blog/ai-global-voice-us-embassy-ceia-ufg
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: ''
+        type: Link
+    media:
+      url: /images/blog/ai-global-voice-cerimonia.webp
+      altText: Thiago Peraro holds his certificate with Academic Distinction next to instructor Carol Binder and the organizing team, in front of the AI Global Voice closing ceremony screen
+      elementId: ''
+      type: ImageBlock
+    elementId: ai-global-voice
+    colors: bg-dark-fg-light
+    styles:
+      self:
+        alignItems: center
+        flexDirection: row
+        padding:
+          - pt-16
+          - pb-16
+          - pl-4
+          - pr-4
+        justifyContent: center
   - type: FeaturedItemsSection
     title:
       text: Timeline

@@ -145,6 +145,31 @@ sections:
           url: /palestras/trofeu-ai-brasil-hero.webp
           altText: 1st AI Brasil Hero trophy
           elementId: ''
+      - type: FeaturedItem
+        title: AI Global Voice — Academic Distinction (2026)
+        text: >
+          One of 22 people selected for the first edition of the English program
+          for AI researchers run by the **U.S. Embassy (RELO)**, CEIA and UFG's
+          School of Letters. Completed with Academic Distinction.
+        actions:
+          - label: Read the post
+            url: /blog/ai-global-voice-us-embassy-ceia-ufg
+            style: primary
+            type: Link
+        elementId: ''
+        styles:
+          self:
+            textAlign: center
+            padding:
+              - pt-6
+              - pb-6
+              - pl-4
+              - pr-4
+        image:
+          type: ImageBlock
+          url: /images/blog/ai-global-voice-cerimonia.webp
+          altText: Thiago Peraro with his AI Global Voice certificate at the closing ceremony
+          elementId: ''
     actions: []
     elementId: ''
     variant: three-col-grid
@@ -231,8 +256,9 @@ sections:
       **Academic background**
       • **BSc in Computer Science** — UFG (2019–present, ~83% complete)
       • Active participation in research and extension initiatives
-      • **CEIA Global Voice (Sep–Nov 2026)** — CEIA-UFG's spoken-English workshop
-      for networking, presentations and meetings across cultures
+      • **AI Global Voice (Sep–Nov 2026)** — English program for AI researchers
+      by the U.S. Embassy's RELO, CEIA and UFG's School of Letters; first
+      edition, 22 selected; certificate with *Academic Distinction*
 
       **Research**
       • **Sobrevidas Project — CNPq Fellow (2024–2026)**
