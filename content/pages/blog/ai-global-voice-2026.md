@@ -56,7 +56,7 @@ Neste post, conto primeiro como o curso funcionava. Em seguida, passo pelo que a
 
 As aulas foram com a **Carol Binder**, professora ligada à Faculdade de Letras da UFG e *Fellow* da Embaixada dos Estados Unidos. Antes de Goiânia, ela ensinou inglês a universitários em Singapura, na Coreia do Sul e no Vietnã, e foi examinadora do IELTS, um dos principais testes de proficiência em inglês do mundo.
 
-Cada aula vinha com um roteiro escrito pelos professores, com diálogos, exercícios e frases-modelo. A gente lia em voz alta, praticava em dupla e depois apresentava para a turma. Um colega gravava cada apresentação, e pelo menos outro tinha a tarefa de pedir esclarecimento, como aconteceria numa conferência. Depois, a turma e a professora davam feedback sobre os mesmos cinco pontos: estrutura e tempo, linguagem corporal e contato visual, transições, ritmo e pausas, e clareza da pronúncia. Além disso, havia atendimentos individuais às quartas-feiras.
+Cada aula vinha com um roteiro escrito pelos professores, com diálogos, exercícios e frases-modelo. A gente lia em voz alta, praticava em dupla e depois apresentava para a turma. Um colega gravava cada apresentação, e pelo menos outro tinha a tarefa de pedir esclarecimento, como aconteceria numa conferência. Depois, a turma e a professora davam feedback sobre os mesmos cinco pontos: estrutura e tempo, linguagem corporal e contato visual, transições, ritmo e pausas, e clareza da pronúncia.
 
 ![Participantes do AI Global Voice rindo durante a cerimônia de encerramento, no Instituto de Informática da UFG](/images/blog/ai-global-voice-aula.webp)
 

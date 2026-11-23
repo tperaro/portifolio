@@ -56,7 +56,7 @@ In this post, I first describe how the course worked. Next, I cover what I learn
 
 Our instructor was **Carol Binder**, who is affiliated with UFG's School of Letters and is a Fellow of the U.S. Embassy. Before Goiânia, she taught English to university students in Singapore, South Korea and Vietnam, and she was an examiner for IELTS, one of the world's main English proficiency tests.
 
-Each class came with a script written by the teachers, with dialogues, exercises and model phrases. We read aloud, practiced in pairs and then presented to the group. One classmate recorded each presentation, and at least one other had the job of asking for clarification, just as someone would at a conference. Then the class and the instructor gave feedback on the same five points: structure and timing, body language and eye contact, transitions, rhythm and pauses, and clarity of pronunciation. In addition, there were one-on-one sessions on Wednesdays.
+Each class came with a script written by the teachers, with dialogues, exercises and model phrases. We read aloud, practiced in pairs and then presented to the group. One classmate recorded each presentation, and at least one other had the job of asking for clarification, just as someone would at a conference. Then the class and the instructor gave feedback on the same five points: structure and timing, body language and eye contact, transitions, rhythm and pauses, and clarity of pronunciation.
 
 ![AI Global Voice participants laughing during the closing ceremony at UFG's Institute of Informatics](/images/blog/ai-global-voice-aula.webp)
 
